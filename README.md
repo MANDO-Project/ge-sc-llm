@@ -4,7 +4,7 @@
 [![slither](https://img.shields.io/badge/dgl-0.6.1-green)](https://www.dgl.ai/)
 
 # Multi-Level Graph Embeddings
-[![GE-SC overview](./assets/MANDO-LLM-full.pdd)](https://github.com/MANDO-Project/ge-sc-llm)
+[![GE-SC overview](./assets/MANDO-LLM-full.pdf)](https://github.com/MANDO-Project/ge-sc-llm)
 This repository is an implementation of MANDO-LLM: Heterogeneous Graph Transformers with Large Language Models for Smart Contract Vulnerability Detection.
 The source code is the next version of our two preivious frameworks [MANDO](https://github.com/MANDO-Project/ge-sc) and [MANDO-HGT](https://github.com/MANDO-Project/ge-sc-transformer) which based on the implementation of [HAN](https://github.com/dmlc/dgl/tree/master/examples/pytorch/han) and [GAT](https://github.com/dmlc/dgl/tree/master/examples/pytorch/gat) model using [Deep Graph Library](https://www.dgl.ai/).
 
