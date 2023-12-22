@@ -1,0 +1,21 @@
+digraph  {
+12 [label="2_ address[] private refundAddresses;\n12-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ mapping (address => uint) public refunds;\n18-new_variable-4-4", method="", type_label=new_variable];
+27 [label="5_ refundAddresses.push(0x79B483371E87d664cd39491b5F06250165e4b184);\n27-expression_statement-6-6", method="", type_label=expression_statement];
+34 [label="6_ refundAddresses.push(0x79B483371E87d664cd39491b5F06250165e4b185);\n34-expression_statement-7-7", method="", type_label=expression_statement];
+41 [label="8_ function refundAll() public {\n        for(uint x; x < refundAddresses.length; x++) {  \n            require(refundAddresses[x].send(refunds[refundAddresses[x]]));  \n        }\n    }\n41-function_definition-9-13", method="refundAll()", type_label=function_definition];
+45 [label="9_ for(x < refundAddresses.length;;x++)\n45-for-10-12", method="refundAll()", type_label=for];
+116 [label="9_ end_loop", method="refundAll()", type_label=end_loop];
+57 [label="9_ x++\n57-expression_statement-10-10", method="refundAll()", type_label=expression_statement];
+60 [label="10_ require(refundAddresses[x].send(refunds[refundAddresses[x]]));\n60-expression_statement-11-11", method="refundAll()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+12 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 34  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+41 -> 45  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+45 -> 60  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+45 -> 116  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+116 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+57 -> 45  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+60 -> 57  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+}

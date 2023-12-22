@@ -1,0 +1,25 @@
+digraph  {
+13 [code="address creator;", label="2_ address creator;\n13-new_variable-3-3", method="", type_label=new_variable];
+17 [code="mapping(address => uint256) balances;", label="3_ mapping(address => uint256) balances;\n17-new_variable-4-4", method="", type_label=new_variable];
+23 [code="function initWallet() public {\n         creator = msg.sender;\n     }", label="4_ function initWallet() public {\n         creator = msg.sender;\n     }\n23-function_definition-5-7", method="initWallet()", type_label=function_definition];
+27 [code="creator = msg.sender;", label="5_ creator = msg.sender;\n27-expression_statement-6-6", method="initWallet()", type_label=expression_statement];
+33 [code="function deposit() public payable {\n         assert(balances[msg.sender] + msg.value > balances[msg.sender]);\n         balances[msg.sender] += msg.value;\n     }", label="7_ function deposit() public payable {\n         assert(balances[msg.sender] + msg.value > balances[msg.sender]);\n         balances[msg.sender] += msg.value;\n     }\n33-function_definition-8-11", method="deposit()", type_label=function_definition];
+38 [code="assert(balances[msg.sender] + msg.value > balances[msg.sender]);", label="8_ assert(balances[msg.sender] + msg.value > balances[msg.sender]);\n38-expression_statement-9-9", method="deposit()", type_label=expression_statement];
+57 [code="balances[msg.sender] += msg.value;", label="9_ balances[msg.sender] += msg.value;\n57-expression_statement-10-10", method="deposit()", type_label=expression_statement];
+67 [code="function withdraw(uint256 amount) public {\n         require(amount <= balances[msg.sender]);\n         msg.sender.transfer(amount);\n         balances[msg.sender] -= amount;\n     }", label="11_ function withdraw(uint256 amount) public {\n         require(amount <= balances[msg.sender]);\n         msg.sender.transfer(amount);\n         balances[msg.sender] -= amount;\n     }\n67-function_definition-12-16", method="withdraw(uint256 amount)", type_label=function_definition];
+75 [code="require(amount <= balances[msg.sender]);", label="12_ require(amount <= balances[msg.sender]);\n75-expression_statement-13-13", method="withdraw(uint256 amount)", type_label=expression_statement];
+86 [code="msg.sender.transfer(amount);", label="13_ msg.sender.transfer(amount);\n86-expression_statement-14-14", method="withdraw(uint256 amount)", type_label=expression_statement];
+95 [code="balances[msg.sender] -= amount;", label="14_ balances[msg.sender] -= amount;\n95-expression_statement-15-15", method="withdraw(uint256 amount)", type_label=expression_statement];
+103 [code="function migrateTo(address to) public {\n         require(creator == msg.sender);\n         to.transfer(this.balance);\n     }", label="16_ function migrateTo(address to) public {\n         require(creator == msg.sender);\n         to.transfer(this.balance);\n     }\n103-function_definition-17-20", method="migrateTo(address to)", type_label=function_definition];
+111 [code="require(creator == msg.sender);", label="17_ require(creator == msg.sender);\n111-expression_statement-18-18", method="migrateTo(address to)", type_label=expression_statement];
+120 [code="to.transfer(this.balance);", label="18_ to.transfer(this.balance);\n120-expression_statement-19-19", method="migrateTo(address to)", type_label=expression_statement];
+13 -> 17  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+23 -> 27  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+33 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+38 -> 57  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+67 -> 75  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+75 -> 86  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+86 -> 95  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+103 -> 111  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+111 -> 120  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

@@ -1,0 +1,21 @@
+digraph  {
+13 [label="2_ function transfer(address from,address caddress,address[] _tos,uint v)public returns (bool){\n        require(_tos.length > 0);\n        bytes4 id=bytes4(keccak256(\"transferFrom(address,address,uint256)\"));\n        for(uint i=0;i<_tos.length;i++){\n            caddress.call(id,from,_tos[i],v);\n        }\n        return true;\n    }\n13-function_definition-3-10", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=function_definition];
+38 [label="3_ require(_tos.length > 0);\n38-expression_statement-4-4", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=expression_statement];
+47 [label="4_ bytes4 id=bytes4(keccak256(\"transferFrom(address,address,uint256)\"));\n47-new_variable-5-5", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=new_variable];
+59 [label="5_ for(i<_tos.length;;i++)\n59-for-6-8", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=for];
+147 [label="5_ end_loop", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=end_loop];
+72 [label="5_ i++\n72-expression_statement-6-6", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=expression_statement];
+75 [label="6_ caddress.call(id,from,_tos[i],v);\n75-expression_statement-7-7", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=expression_statement];
+90 [label="8_ return true;\n90-return-9-9", method="transfer(address from,address caddress,address[] _tos,uint v)", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+38 -> 47  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+47 -> 59  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+59 -> 75  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+59 -> 147  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+147 -> 90  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+72 -> 59  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+75 -> 72  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+90 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

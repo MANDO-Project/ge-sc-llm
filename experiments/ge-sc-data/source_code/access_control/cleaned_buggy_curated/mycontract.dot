@@ -1,0 +1,13 @@
+digraph  {
+13 [label="2_ address owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+17 [label="3_ function MyContract() public {\n        owner = msg.sender;\n    }\n17-function_definition-4-6", method="MyContract()", type_label=function_definition];
+21 [label="4_ owner = msg.sender;\n21-expression_statement-5-5", method="MyContract()", type_label=expression_statement];
+27 [label="6_ function sendTo(address receiver, uint amount) public {\n        require(tx.origin == owner);\n        receiver.transfer(amount);\n    }\n27-function_definition-7-10", method="sendTo(address receiver,uint amount)", type_label=function_definition];
+39 [label="7_ require(tx.origin == owner);\n39-expression_statement-8-8", method="sendTo(address receiver,uint amount)", type_label=expression_statement];
+48 [label="8_ receiver.transfer(amount);\n48-expression_statement-9-9", method="sendTo(address receiver,uint amount)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+17 -> 21  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+39 -> 48  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

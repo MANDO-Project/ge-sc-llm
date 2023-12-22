@@ -1,0 +1,13 @@
+digraph  {
+13 [label="2_ balanceOf\n13-function_definition-3-3", type_label=function_definition];
+25 [label="3_ burn\n25-function_definition-4-4", type_label=function_definition];
+35 [label="6_ BurnableERC20 public token;\n35-new_variable-7-7", type_label=new_variable];
+48 [label="8_ token = _token;\n48-expression_statement-9-9", type_label=expression_statement];
+52 [label="10_ burn\n52-function_definition-11-14", type_label=function_definition];
+56 [label="11_ uint balance = token.balanceOf(address(this));\n56-new_variable-12-12", type_label=new_variable];
+69 [label="12_ token.burn(balance);\n69-expression_statement-13-13", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+52 -> 56  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+56 -> 69  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

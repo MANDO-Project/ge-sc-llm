@@ -1,0 +1,18 @@
+digraph  {
+13 [label="2_ address fuck = 0xc63e7b1DEcE63A77eD7E4Aeef5efb3b05C81438D;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ function makeOldFucks(uint32 number) {\n        uint32 i;\n        for (i = 0; i < number; i++) {\n            fuck.call(bytes4(sha3(\"giveBlockReward()\")));\n        }\n    }\n18-function_definition-4-9", method="makeOldFucks(uint32 number)", type_label=function_definition];
+25 [label="4_ uint32 i;\n25-new_variable-5-5", method="makeOldFucks(uint32 number)", type_label=new_variable];
+30 [label="5_ for(i < number;;i++)\n30-for-6-8", method="makeOldFucks(uint32 number)", type_label=for];
+80 [label="5_ end_loop", method="makeOldFucks(uint32 number)", type_label=end_loop];
+39 [label="5_ i++\n39-expression_statement-6-6", method="makeOldFucks(uint32 number)", type_label=expression_statement];
+42 [label="6_ fuck.call(bytes4(sha3(\"giveBlockReward()\")));\n42-expression_statement-7-7", method="makeOldFucks(uint32 number)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+18 -> 25  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+25 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+30 -> 42  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+30 -> 80  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+80 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+39 -> 30  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+42 -> 39  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+}

@@ -1,0 +1,12 @@
+digraph  {
+15 [label="2_ mapping(uint256 => uint256) public hashTableValues;\n15-new_variable-3-3", type_label=new_variable];
+24 [label="5_ set\n24-function_definition-6-8", type_label=function_definition];
+36 [label="6_ hashTableValues[key] = value;\n36-expression_statement-7-7", type_label=expression_statement];
+42 [label="8_ get\n42-function_definition-9-11", type_label=function_definition];
+56 [label="9_ return hashTableValues[key];\n56-return-10-10", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+24 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+42 -> 56  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+56 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

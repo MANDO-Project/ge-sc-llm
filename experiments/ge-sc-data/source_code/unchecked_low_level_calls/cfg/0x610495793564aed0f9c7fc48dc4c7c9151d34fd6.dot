@@ -1,0 +1,26 @@
+digraph  {
+13 [label="2_ address public owner = msg.sender;\n13-new_variable-3-3", method="", type_label=new_variable];
+21 [label="3_ uint public depositsCount;\n21-new_variable-4-4", method="", type_label=new_variable];
+26 [label="4_ modifier onlyOwner {\n        require(msg.sender == owner);\n        _;\n    }\n26-expression_statement-5-8", method="", type_label=expression_statement];
+29 [label="5_ require(msg.sender == owner);\n29-expression_statement-6-6", method="", type_label=expression_statement];
+38 [label="6_ _;\n38-expression_statement-7-7", method="", type_label=expression_statement];
+44 [label="9_ depositsCount++;\n44-expression_statement-10-10", method="", type_label=expression_statement];
+45 [label="9_ depositsCount++\n45-expression_statement-10-10", method="", type_label=expression_statement];
+47 [label="11_ function withdrawAll() public onlyOwner {\n        withdraw(address(this).balance);\n    }\n47-function_definition-12-14", method="withdrawAll()", type_label=function_definition];
+50 [label="11_ onlyOwner\n50-expression_statement-12-12", method="withdrawAll()", type_label=expression_statement];
+53 [label="12_ withdraw(address(this).balance);\n53-expression_statement-13-13", method="withdrawAll()", type_label=expression_statement];
+62 [label="14_ function withdraw(uint _value) public onlyOwner {\n        msg.sender.transfer(_value);\n    }\n62-function_definition-15-17", method="withdraw(uint _value)", type_label=function_definition];
+69 [label="14_ onlyOwner\n69-expression_statement-15-15", method="withdraw(uint _value)", type_label=expression_statement];
+72 [label="15_ msg.sender.transfer(_value);\n72-expression_statement-16-16", method="withdraw(uint _value)", type_label=expression_statement];
+81 [label="17_ function sendMoney(address _target, uint _value, bytes _data) public onlyOwner {\n        _target.call.value(_value)(_data);\n    }\n81-function_definition-18-20", method="sendMoney(address _target,uint _value,bytes _data)", type_label=function_definition];
+96 [label="17_ onlyOwner\n96-expression_statement-18-18", method="sendMoney(address _target,uint _value,bytes _data)", type_label=expression_statement];
+99 [label="18_ _target.call.value(_value)(_data);\n99-expression_statement-19-19", method="sendMoney(address _target,uint _value,bytes _data)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 21  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+21 -> 26  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+47 -> 53  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+62 -> 72  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+81 -> 99  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

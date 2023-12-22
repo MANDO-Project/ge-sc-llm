@@ -1,0 +1,2503 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[8, 9, 10, 11]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	1	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin27)
+
+IRs:
+TMP_0(bool) = tx.origin == owner_txorigin27
+\
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(tx.origin == owner_txorigin27)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = tx.origin == owner_txorigin27
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[9]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_source_code_lines="[10]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin27(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[8, 9, 10, 11]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	3 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	5	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_3(bool) = tx.origin == owner_txorigin31
+\
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_3(bool) = tx.origin == owner_txorigin31
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_source_code_lines="[14]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	4 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_source_code_lines="[15]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	5 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	7 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	9	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_6(bool) = tx.origin == owner_txorigin13
+\
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_6(bool) = tx.origin == owner_txorigin13
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_source_code_lines="[19]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	8 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[20]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	11 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[24, 25, 26, 27]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	13	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin25)
+
+IRs:
+TMP_9(bool) = tx.origin == owner_txorigin25
+\
+TMP_10(None) = SOLIDITY_CALL require(bool)(TMP_9)",
+		node_expression="require(bool)(tx.origin == owner_txorigin25)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_9(bool) = tx.origin == owner_txorigin25
+TMP_10(None) = SOLIDITY_CALL require(bool)(TMP_9)",
+		node_source_code_lines="[25]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	12 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[26]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	13 -> 14	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_sendto_txorigin25(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[24, 25, 26, 27]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	15 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	16	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[29, 30, 31, 32]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	17	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_12(bool) = tx.origin == owner_txorigin19
+\
+TMP_13(None) = SOLIDITY_CALL require(bool)(TMP_12)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_12(bool) = tx.origin == owner_txorigin19
+TMP_13(None) = SOLIDITY_CALL require(bool)(TMP_12)",
+		node_source_code_lines="[30]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_6(None) -> to.call
+REF_7(None) -> REF_6.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_6(None) -> to.call
+REF_7(None) -> REF_6.value",
+		node_source_code_lines="[31]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	17 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[29, 30, 31, 32]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	19 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[34, 35, 36, 37]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	21	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin26)
+
+IRs:
+TMP_15(bool) = tx.origin == owner_txorigin26
+\
+TMP_16(None) = SOLIDITY_CALL require(bool)(TMP_15)",
+		node_expression="require(bool)(tx.origin == owner_txorigin26)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_15(bool) = tx.origin == owner_txorigin26
+TMP_16(None) = SOLIDITY_CALL require(bool)(TMP_15)",
+		node_source_code_lines="[35]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	20 -> 21	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_17 = CONVERT this to address
+REF_9 -> BALANCE \
+TMP_17
+Transfer dest:_recipient value:REF_9",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_17 = CONVERT this to address
+REF_9 -> BALANCE TMP_17
+Transfer dest:_recipient value:REF_9",
+		node_source_code_lines="[36]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	21 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	23	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="buggy_2.sol_CareerOnToken_withdrawAll_txorigin26(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[34, 35, 36, 37]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	23 -> 20	[key=0,
+		edge_type=next,
+		label=Next];
+	24	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[39, 40, 41]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	25	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin20)
+
+IRs:
+TMP_19(bool) = tx.origin == owner_txorigin20
+\
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_expression="require(bool)(tx.origin == owner_txorigin20)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_19(bool) = tx.origin == owner_txorigin20
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_source_code_lines="[40]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	24 -> 25	[key=0,
+		edge_type=next,
+		label=Next];
+	26	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin20(address)",
+		label="buggy_2.sol_CareerOnToken_bug_txorigin20(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[39, 40, 41]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	26 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	27	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[43, 44, 45]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	28	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin32)
+
+IRs:
+TMP_21(bool) = tx.origin == owner_txorigin32
+\
+TMP_22(None) = SOLIDITY_CALL require(bool)(TMP_21)",
+		node_expression="require(bool)(tx.origin == owner_txorigin32)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_21(bool) = tx.origin == owner_txorigin32
+TMP_22(None) = SOLIDITY_CALL require(bool)(TMP_21)",
+		node_source_code_lines="[44]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	27 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin32(address)",
+		label="buggy_2.sol_CareerOnToken_bug_txorigin32(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[43, 44, 45]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	29 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	30	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[47, 48, 49, 50]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	31	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin38)
+
+IRs:
+TMP_23(bool) = tx.origin == owner_txorigin38
+\
+TMP_24(None) = SOLIDITY_CALL require(bool)(TMP_23)",
+		node_expression="require(bool)(tx.origin == owner_txorigin38)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_23(bool) = tx.origin == owner_txorigin38
+TMP_24(None) = SOLIDITY_CALL require(bool)(TMP_23)",
+		node_source_code_lines="[48]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_25 = CONVERT this to address
+REF_11 -> BALANCE \
+TMP_25
+Transfer dest:_recipient value:REF_11",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_25 = CONVERT this to address
+REF_11 -> BALANCE TMP_25
+Transfer dest:_recipient value:REF_11",
+		node_source_code_lines="[49]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	31 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	33	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="buggy_2.sol_CareerOnToken_withdrawAll_txorigin38(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[47, 48, 49, 50]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	33 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[52, 53, 54]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	35	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_27(bool) = tx.origin == owner_txorigin4
+\
+TMP_28(None) = SOLIDITY_CALL require(bool)(TMP_27)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_27(bool) = tx.origin == owner_txorigin4
+TMP_28(None) = SOLIDITY_CALL require(bool)(TMP_27)",
+		node_source_code_lines="[53]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	34 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	36	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_2.sol_CareerOnToken_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[52, 53, 54]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	36 -> 34	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	38	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_29(bool) = tx.origin == owner_txorigin7
+\
+TMP_30(None) = SOLIDITY_CALL require(bool)(TMP_29)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_29(bool) = tx.origin == owner_txorigin7
+TMP_30(None) = SOLIDITY_CALL require(bool)(TMP_29)",
+		node_source_code_lines="[59]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	37 -> 38	[key=0,
+		edge_type=next,
+		label=Next];
+	39	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_12(None) -> to.call
+REF_13(None) -> REF_12.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_12(None) -> to.call
+REF_13(None) -> REF_12.value",
+		node_source_code_lines="[60]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	38 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	40	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	40 -> 37	[key=0,
+		edge_type=next,
+		label=Next];
+	41	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	42	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[68]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	41 -> 42	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: IF
+
+EXPRESSION:
+_initialAmount <= 0
+
+IRs:
+TMP_32(bool) = _initialAmount <= 0
+CONDITION TMP_32",
+		node_expression="_initialAmount <= 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_32(bool) = _initialAmount <= 0
+CONDITION TMP_32",
+		node_source_code_lines="[69]",
+		node_type=IF,
+		source_file="buggy_2.sol"];
+	42 -> 43	[key=0,
+		edge_type=next,
+		label=Next];
+	44	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+totalSupply = 100000000000000000
+
+IRs:
+totalSupply(uint256) := 100000000000000000(uint256)",
+		node_expression="totalSupply = 100000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="totalSupply(uint256) := 100000000000000000(uint256)",
+		node_source_code_lines="[70]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	43 -> 44	[key=0,
+		edge_type=if_true,
+		label=True];
+	46	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+totalSupply = _initialAmount
+
+IRs:
+totalSupply(uint256) := _initialAmount(uint256)",
+		node_expression="totalSupply = _initialAmount",
+		node_info_vulnerabilities=None,
+		node_irs="totalSupply(uint256) := _initialAmount(uint256)",
+		node_source_code_lines="[73]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	43 -> 46	[key=0,
+		edge_type=if_false,
+		label=False];
+	45	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[owner] = totalSupply
+
+IRs:
+REF_14(uint256) -> balances[owner]
+REF_14 (->balances) := \
+totalSupply(uint256)",
+		node_expression="balances[owner] = totalSupply",
+		node_info_vulnerabilities=None,
+		node_irs="REF_14(uint256) -> balances[owner]
+REF_14 (->balances) := totalSupply(uint256)",
+		node_source_code_lines="[71]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	44 -> 45	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[69, 70, 71, 72, 73, 74, 75]",
+		node_type=END_IF,
+		source_file="buggy_2.sol"];
+	45 -> 48	[key=0,
+		edge_type=next,
+		label=Next];
+	47	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[owner] = _initialAmount
+
+IRs:
+REF_15(uint256) -> balances[owner]
+REF_15 (->balances) := _\
+initialAmount(uint256)",
+		node_expression="balances[owner] = _initialAmount",
+		node_info_vulnerabilities=None,
+		node_irs="REF_15(uint256) -> balances[owner]
+REF_15 (->balances) := _initialAmount(uint256)",
+		node_source_code_lines="[74]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	46 -> 47	[key=0,
+		edge_type=next,
+		label=Next];
+	47 -> 48	[key=0,
+		edge_type=next,
+		label=Next];
+	49	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: IF
+
+EXPRESSION:
+_decimalUnits <= 0
+
+IRs:
+TMP_33(bool) = _decimalUnits <= 0
+CONDITION TMP_33",
+		node_expression="_decimalUnits <= 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_33(bool) = _decimalUnits <= 0
+CONDITION TMP_33",
+		node_source_code_lines="[76]",
+		node_type=IF,
+		source_file="buggy_2.sol"];
+	48 -> 49	[key=0,
+		edge_type=next,
+		label=Next];
+	50	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+decimals = 2
+
+IRs:
+decimals(uint8) := 2(uint256)",
+		node_expression="decimals = 2",
+		node_info_vulnerabilities=None,
+		node_irs="decimals(uint8) := 2(uint256)",
+		node_source_code_lines="[77]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	49 -> 50	[key=0,
+		edge_type=if_true,
+		label=True];
+	51	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+decimals = _decimalUnits
+
+IRs:
+decimals(uint8) := _decimalUnits(uint8)",
+		node_expression="decimals = _decimalUnits",
+		node_info_vulnerabilities=None,
+		node_irs="decimals(uint8) := _decimalUnits(uint8)",
+		node_source_code_lines="[79]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	49 -> 51	[key=0,
+		edge_type=if_false,
+		label=False];
+	52	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[76, 77, 78, 79, 80]",
+		node_type=END_IF,
+		source_file="buggy_2.sol"];
+	50 -> 52	[key=0,
+		edge_type=next,
+		label=Next];
+	51 -> 52	[key=0,
+		edge_type=next,
+		label=Next];
+	53	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+name = CareerOn Chain Token
+
+IRs:
+name(string) := CareerOn Chain Token(string)",
+		node_expression="name = CareerOn Chain Token",
+		node_info_vulnerabilities=None,
+		node_irs="name(string) := CareerOn Chain Token(string)",
+		node_source_code_lines="[81]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	52 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	54	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+symbol = COT
+
+IRs:
+symbol(string) := COT(string)",
+		node_expression="symbol = COT",
+		node_info_vulnerabilities=None,
+		node_irs="symbol(string) := COT(string)",
+		node_source_code_lines="[82]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	53 -> 54	[key=0,
+		edge_type=next,
+		label=Next];
+	55	[contract_name=CareerOnToken,
+		function_fullname="constructor(uint256,uint8)",
+		label="buggy_2.sol_CareerOnToken_constructor(uint256,uint8)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	55 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[84, 85, 86, 87]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	57	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_34(bool) = tx.origin == owner_txorigin23
+\
+TMP_35(None) = SOLIDITY_CALL require(bool)(TMP_34)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_34(bool) = tx.origin == owner_txorigin23
+TMP_35(None) = SOLIDITY_CALL require(bool)(TMP_34)",
+		node_source_code_lines="[85]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	56 -> 57	[key=0,
+		edge_type=next,
+		label=Next];
+	58	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_16(None) -> to.call
+REF_17(None) -> REF_16.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_16(None) -> to.call
+REF_17(None) -> REF_16.value",
+		node_source_code_lines="[86]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	57 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	59	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[84, 85, 86, 87]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	59 -> 56	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	61	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(_to != address(this) && ! isTransPaused && balances[msg.sender] >= _value && balances[_\
+to] + _value > balances[_to])
+
+IRs:
+TMP_37 = CONVERT this to address
+TMP_38(bool) = _to != TMP_37
+TMP_39 = ! isTransPaused 
+TMP_\
+40(bool) = TMP_38 && TMP_39
+REF_18(uint256) -> balances[msg.sender]
+TMP_41(bool) = REF_18 >= _value
+TMP_42(bool) = TMP_40 && TMP_\
+41
+REF_19(uint256) -> balances[_to]
+TMP_43(uint256) = REF_19 + _value
+REF_20(uint256) -> balances[_to]
+TMP_44(bool) = TMP_43 > REF_\
+20
+TMP_45(bool) = TMP_42 && TMP_44
+TMP_46(None) = SOLIDITY_CALL assert(bool)(TMP_45)",
+		node_expression="assert(bool)(_to != address(this) && ! isTransPaused && balances[msg.sender] >= _value && balances[_to] + _value > balances[_to])",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_37 = CONVERT this to address
+TMP_38(bool) = _to != TMP_37
+TMP_39 = ! isTransPaused 
+TMP_40(bool) = TMP_38 && TMP_39
+REF_18(uint256) \
+-> balances[msg.sender]
+TMP_41(bool) = REF_18 >= _value
+TMP_42(bool) = TMP_40 && TMP_41
+REF_19(uint256) -> balances[_to]
+TMP_43(\
+uint256) = REF_19 + _value
+REF_20(uint256) -> balances[_to]
+TMP_44(bool) = TMP_43 > REF_20
+TMP_45(bool) = TMP_42 && TMP_44
+TMP_46(\
+None) = SOLIDITY_CALL assert(bool)(TMP_45)",
+		node_source_code_lines="[94, 95, 96, 97, 98]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	60 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	62	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[msg.sender] -= _value
+
+IRs:
+REF_21(uint256) -> balances[msg.sender]
+REF_21(-> balances) = \
+REF_21 - _value",
+		node_expression="balances[msg.sender] -= _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_21(uint256) -> balances[msg.sender]
+REF_21(-> balances) = REF_21 - _value",
+		node_source_code_lines="[100]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	61 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_to] += _value
+
+IRs:
+REF_22(uint256) -> balances[_to]
+REF_22(-> balances) = REF_22 + _\
+value",
+		node_expression="balances[_to] += _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_22(uint256) -> balances[_to]
+REF_22(-> balances) = REF_22 + _value",
+		node_source_code_lines="[101]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	62 -> 63	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+msg.sender == owner
+
+IRs:
+TMP_47(bool) = msg.sender == owner
+CONDITION TMP_47",
+		node_expression="msg.sender == owner",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_47(bool) = msg.sender == owner
+CONDITION TMP_47",
+		node_source_code_lines="[102]",
+		node_type=IF,
+		source_file="buggy_2.sol"];
+	63 -> 64	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(address(this),_to,_value)
+
+IRs:
+TMP_48 = CONVERT this to address
+Emit Transfer(TMP_48._\
+to._value)",
+		node_expression="Transfer(address(this),_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_48 = CONVERT this to address
+Emit Transfer(TMP_48._to._value)",
+		node_source_code_lines="[103]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	64 -> 65	[key=0,
+		edge_type=if_true,
+		label=True];
+	66	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(msg.sender,_to,_value)
+
+IRs:
+Emit Transfer(msg.sender._to._value)",
+		node_expression="Transfer(msg.sender,_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Transfer(msg.sender._to._value)",
+		node_source_code_lines="[105]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	64 -> 66	[key=0,
+		edge_type=if_false,
+		label=False];
+	67	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[102, 103, 104, 105, 106]",
+		node_type=END_IF,
+		source_file="buggy_2.sol"];
+	65 -> 67	[key=0,
+		edge_type=next,
+		label=Next];
+	66 -> 67	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[107]",
+		node_type=RETURN,
+		source_file="buggy_2.sol"];
+	67 -> 68	[key=0,
+		edge_type=next,
+		label=Next];
+	69	[contract_name=CareerOnToken,
+		function_fullname="transfer(address,uint256)",
+		label="buggy_2.sol_CareerOnToken_transfer(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	69 -> 60	[key=0,
+		edge_type=next,
+		label=Next];
+	70	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[109, 110, 111, 112]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	71	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_51(bool) = tx.origin == owner_txorigin14
+\
+TMP_52(None) = SOLIDITY_CALL require(bool)(TMP_51)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_51(bool) = tx.origin == owner_txorigin14
+TMP_52(None) = SOLIDITY_CALL require(bool)(TMP_51)",
+		node_source_code_lines="[110]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	70 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	72	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_53 = CONVERT this to address
+REF_24 -> BALANCE \
+TMP_53
+Transfer dest:_recipient value:REF_24",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_53 = CONVERT this to address
+REF_24 -> BALANCE TMP_53
+Transfer dest:_recipient value:REF_24",
+		node_source_code_lines="[111]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	71 -> 72	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_2.sol_CareerOnToken_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[109, 110, 111, 112]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	73 -> 70	[key=0,
+		edge_type=next,
+		label=Next];
+	74	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	75	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(_to != address(this) && ! isTransPaused && balances[msg.sender] >= _value && balances[_\
+to] + _value > balances[_to] && allowed[_from][msg.sender] >= _value)
+
+IRs:
+TMP_55 = CONVERT this to address
+TMP_56(bool) = _to != \
+TMP_55
+TMP_57 = ! isTransPaused 
+TMP_58(bool) = TMP_56 && TMP_57
+REF_25(uint256) -> balances[msg.sender]
+TMP_59(bool) = REF_25 >= _\
+value
+TMP_60(bool) = TMP_58 && TMP_59
+REF_26(uint256) -> balances[_to]
+TMP_61(uint256) = REF_26 + _value
+REF_27(uint256) -> balances[_\
+to]
+TMP_62(bool) = TMP_61 > REF_27
+TMP_63(bool) = TMP_60 && TMP_62
+REF_28(mapping(address => uint256)) -> allowed[_from]
+REF_29(\
+uint256) -> REF_28[msg.sender]
+TMP_64(bool) = REF_29 >= _value
+TMP_65(bool) = TMP_63 && TMP_64
+TMP_66(None) = SOLIDITY_CALL assert(\
+bool)(TMP_65)",
+		node_expression="assert(bool)(_to != address(this) && ! isTransPaused && balances[msg.sender] >= _value && balances[_to] + _value > balances[_to] && \
+allowed[_from][msg.sender] >= _value)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_55 = CONVERT this to address
+TMP_56(bool) = _to != TMP_55
+TMP_57 = ! isTransPaused 
+TMP_58(bool) = TMP_56 && TMP_57
+REF_25(uint256) \
+-> balances[msg.sender]
+TMP_59(bool) = REF_25 >= _value
+TMP_60(bool) = TMP_58 && TMP_59
+REF_26(uint256) -> balances[_to]
+TMP_61(\
+uint256) = REF_26 + _value
+REF_27(uint256) -> balances[_to]
+TMP_62(bool) = TMP_61 > REF_27
+TMP_63(bool) = TMP_60 && TMP_62
+REF_28(\
+mapping(address => uint256)) -> allowed[_from]
+REF_29(uint256) -> REF_28[msg.sender]
+TMP_64(bool) = REF_29 >= _value
+TMP_65(bool) = \
+TMP_63 && TMP_64
+TMP_66(None) = SOLIDITY_CALL assert(bool)(TMP_65)",
+		node_source_code_lines="[120, 121, 122, 123, 124, 125]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	74 -> 75	[key=0,
+		edge_type=next,
+		label=Next];
+	76	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_to] += _value
+
+IRs:
+REF_30(uint256) -> balances[_to]
+REF_30(-> balances) = REF_30 + _\
+value",
+		node_expression="balances[_to] += _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_30(uint256) -> balances[_to]
+REF_30(-> balances) = REF_30 + _value",
+		node_source_code_lines="[127]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	75 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	77	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_from] -= _value
+
+IRs:
+REF_31(uint256) -> balances[_from]
+REF_31(-> balances) = REF_\
+31 - _value",
+		node_expression="balances[_from] -= _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_31(uint256) -> balances[_from]
+REF_31(-> balances) = REF_31 - _value",
+		node_source_code_lines="[128]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	76 -> 77	[key=0,
+		edge_type=next,
+		label=Next];
+	78	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+allowed[_from][msg.sender] -= _value
+
+IRs:
+REF_32(mapping(address => uint256)) -> allowed[_from]
+\
+REF_33(uint256) -> REF_32[msg.sender]
+REF_33(-> allowed) = REF_33 - _value",
+		node_expression="allowed[_from][msg.sender] -= _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_32(mapping(address => uint256)) -> allowed[_from]
+REF_33(uint256) -> REF_32[msg.sender]
+REF_33(-> allowed) = REF_33 - _value",
+		node_source_code_lines="[129]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	77 -> 78	[key=0,
+		edge_type=next,
+		label=Next];
+	79	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+_from == owner
+
+IRs:
+TMP_67(bool) = _from == owner
+CONDITION TMP_67",
+		node_expression="_from == owner",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_67(bool) = _from == owner
+CONDITION TMP_67",
+		node_source_code_lines="[130]",
+		node_type=IF,
+		source_file="buggy_2.sol"];
+	78 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	80	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(address(this),_to,_value)
+
+IRs:
+TMP_68 = CONVERT this to address
+Emit Transfer(TMP_68._\
+to._value)",
+		node_expression="Transfer(address(this),_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_68 = CONVERT this to address
+Emit Transfer(TMP_68._to._value)",
+		node_source_code_lines="[131]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	79 -> 80	[key=0,
+		edge_type=if_true,
+		label=True];
+	81	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(_from,_to,_value)
+
+IRs:
+Emit Transfer(_from._to._value)",
+		node_expression="Transfer(_from,_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Transfer(_from._to._value)",
+		node_source_code_lines="[133]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	79 -> 81	[key=0,
+		edge_type=if_false,
+		label=False];
+	82	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133, 134]",
+		node_type=END_IF,
+		source_file="buggy_2.sol"];
+	80 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	81 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	83	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[135]",
+		node_type=RETURN,
+		source_file="buggy_2.sol"];
+	82 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=CareerOnToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_2.sol_CareerOnToken_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	84 -> 74	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139, 140]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	86	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_71(bool) = tx.origin == owner_txorigin30
+\
+TMP_72(None) = SOLIDITY_CALL require(bool)(TMP_71)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_71(bool) = tx.origin == owner_txorigin30
+TMP_72(None) = SOLIDITY_CALL require(bool)(TMP_71)",
+		node_source_code_lines="[138]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	85 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	87	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_73 = CONVERT this to address
+REF_35 -> BALANCE \
+TMP_73
+Transfer dest:_recipient value:REF_35",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_73 = CONVERT this to address
+REF_35 -> BALANCE TMP_73
+Transfer dest:_recipient value:REF_35",
+		node_source_code_lines="[139]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	86 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=CareerOnToken,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_2.sol_CareerOnToken_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139, 140]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	88 -> 85	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=CareerOnToken,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[143, 144, 145, 146, 147, 148]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	90	[contract_name=CareerOnToken,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(msg.sender != _spender && _value > 0)
+
+IRs:
+TMP_75(bool) = msg.sender != _spender
+\
+TMP_76(bool) = _value > 0
+TMP_77(bool) = TMP_75 && TMP_76
+TMP_78(None) = SOLIDITY_CALL assert(bool)(TMP_77)",
+		node_expression="assert(bool)(msg.sender != _spender && _value > 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_75(bool) = msg.sender != _spender
+TMP_76(bool) = _value > 0
+TMP_77(bool) = TMP_75 && TMP_76
+TMP_78(None) = SOLIDITY_CALL assert(\
+bool)(TMP_77)",
+		node_source_code_lines="[144]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	89 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	91	[contract_name=CareerOnToken,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+allowed[msg.sender][_spender] = _value
+
+IRs:
+REF_36(mapping(address => uint256)) -> allowed[msg.sender]
+\
+REF_37(uint256) -> REF_36[_spender]
+REF_37 (->allowed) := _value(uint256)",
+		node_expression="allowed[msg.sender][_spender] = _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_36(mapping(address => uint256)) -> allowed[msg.sender]
+REF_37(uint256) -> REF_36[_spender]
+REF_37 (->allowed) := _value(uint256)",
+		node_source_code_lines="[145]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	90 -> 91	[key=0,
+		edge_type=next,
+		label=Next];
+	92	[contract_name=CareerOnToken,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Approval(msg.sender,_spender,_value)
+
+IRs:
+Emit Approval(msg.sender._spender._value)",
+		node_expression="Approval(msg.sender,_spender,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Approval(msg.sender._spender._value)",
+		node_source_code_lines="[146]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	91 -> 92	[key=0,
+		edge_type=next,
+		label=Next];
+	93	[contract_name=CareerOnToken,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[147]",
+		node_type=RETURN,
+		source_file="buggy_2.sol"];
+	92 -> 93	[key=0,
+		edge_type=next,
+		label=Next];
+	94	[contract_name=CareerOnToken,
+		function_fullname="approve(address,uint256)",
+		label="buggy_2.sol_CareerOnToken_approve(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[142, 143, 144, 145, 146, 147, 148]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	94 -> 89	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[149, 150, 151]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	96	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_80(bool) = tx.origin == owner_txorigin8
+\
+TMP_81(None) = SOLIDITY_CALL require(bool)(TMP_80)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_80(bool) = tx.origin == owner_txorigin8
+TMP_81(None) = SOLIDITY_CALL require(bool)(TMP_80)",
+		node_source_code_lines="[150]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	95 -> 96	[key=0,
+		edge_type=next,
+		label=Next];
+	97	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_2.sol_CareerOnToken_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[149, 150, 151]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	97 -> 95	[key=0,
+		edge_type=next,
+		label=Next];
+	98	[contract_name=CareerOnToken,
+		function_fullname="allowance(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157, 158]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	99	[contract_name=CareerOnToken,
+		function_fullname="allowance(address,address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+allowed[_owner][_spender]
+
+IRs:
+REF_38(mapping(address => uint256)) -> allowed[_owner]
+REF_39(uint256) \
+-> REF_38[_spender]
+RETURN REF_39",
+		node_expression="allowed[_owner][_spender]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_38(mapping(address => uint256)) -> allowed[_owner]
+REF_39(uint256) -> REF_38[_spender]
+RETURN REF_39",
+		node_source_code_lines="[157]",
+		node_type=RETURN,
+		source_file="buggy_2.sol"];
+	98 -> 99	[key=0,
+		edge_type=next,
+		label=Next];
+	100	[contract_name=CareerOnToken,
+		function_fullname="allowance(address,address)",
+		label="buggy_2.sol_CareerOnToken_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[153, 154, 155, 156, 157, 158]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	100 -> 98	[key=0,
+		edge_type=next,
+		label=Next];
+	101	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[159, 160, 161, 162]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	102	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_82(bool) = tx.origin == owner_txorigin39
+\
+TMP_83(None) = SOLIDITY_CALL require(bool)(TMP_82)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_82(bool) = tx.origin == owner_txorigin39
+TMP_83(None) = SOLIDITY_CALL require(bool)(TMP_82)",
+		node_source_code_lines="[160]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	101 -> 102	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_40(None) -> to.call
+REF_41(None) -> REF_40.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_40(None) -> to.call
+REF_41(None) -> REF_40.value",
+		node_source_code_lines="[161]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	102 -> 103	[key=0,
+		edge_type=next,
+		label=Next];
+	104	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[159, 160, 161, 162]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	104 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[166, 167, 168, 169, 170, 171, 172]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	106	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(msg.sender == owner && msg.sender != newOwner)
+
+IRs:
+TMP_85(bool) = msg.sender == \
+owner
+TMP_86(bool) = msg.sender != newOwner
+TMP_87(bool) = TMP_85 && TMP_86
+TMP_88(None) = SOLIDITY_CALL assert(bool)(TMP_87)",
+		node_expression="assert(bool)(msg.sender == owner && msg.sender != newOwner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_85(bool) = msg.sender == owner
+TMP_86(bool) = msg.sender != newOwner
+TMP_87(bool) = TMP_85 && TMP_86
+TMP_88(None) = SOLIDITY_\
+CALL assert(bool)(TMP_87)",
+		node_source_code_lines="[167]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	105 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	107	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[newOwner] = balances[owner]
+
+IRs:
+REF_42(uint256) -> balances[newOwner]
+REF_43(uint256) \
+-> balances[owner]
+REF_42 (->balances) := REF_43(uint256)",
+		node_expression="balances[newOwner] = balances[owner]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_42(uint256) -> balances[newOwner]
+REF_43(uint256) -> balances[owner]
+REF_42 (->balances) := REF_43(uint256)",
+		node_source_code_lines="[168]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	106 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	108	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[owner] = 0
+
+IRs:
+REF_44(uint256) -> balances[owner]
+REF_44 (->balances) := 0(uint256)",
+		node_expression="balances[owner] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_44(uint256) -> balances[owner]
+REF_44 (->balances) := 0(uint256)",
+		node_source_code_lines="[169]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	107 -> 108	[key=0,
+		edge_type=next,
+		label=Next];
+	109	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = newOwner
+
+IRs:
+owner(address) := newOwner(address)",
+		node_expression="owner = newOwner",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := newOwner(address)",
+		node_source_code_lines="[170]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	108 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	110	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+OwnerChang(msg.sender,newOwner,balances[owner])
+
+IRs:
+REF_45(uint256) -> balances[owner]
+Emit \
+OwnerChang(msg.sender.newOwner.REF_45)",
+		node_expression="OwnerChang(msg.sender,newOwner,balances[owner])",
+		node_info_vulnerabilities=None,
+		node_irs="REF_45(uint256) -> balances[owner]
+Emit OwnerChang(msg.sender.newOwner.REF_45)",
+		node_source_code_lines="[171]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	109 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	111	[contract_name=CareerOnToken,
+		function_fullname="changeOwner(address)",
+		label="buggy_2.sol_CareerOnToken_changeOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[166, 167, 168, 169, 170, 171, 172]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	111 -> 105	[key=0,
+		edge_type=next,
+		label=Next];
+	112	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[173, 174, 175]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	113	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_90(bool) = tx.origin == owner_txorigin36
+\
+TMP_91(None) = SOLIDITY_CALL require(bool)(TMP_90)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_90(bool) = tx.origin == owner_txorigin36
+TMP_91(None) = SOLIDITY_CALL require(bool)(TMP_90)",
+		node_source_code_lines="[174]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	114	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_2.sol_CareerOnToken_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[173, 174, 175]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	114 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	115	[contract_name=CareerOnToken,
+		function_fullname="setPauseStatus(bool)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[178, 179, 180, 181]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	116	[contract_name=CareerOnToken,
+		function_fullname="setPauseStatus(bool)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(msg.sender == owner)
+
+IRs:
+TMP_92(bool) = msg.sender == owner
+TMP_93(None) = SOLIDITY_\
+CALL assert(bool)(TMP_92)",
+		node_expression="assert(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_92(bool) = msg.sender == owner
+TMP_93(None) = SOLIDITY_CALL assert(bool)(TMP_92)",
+		node_source_code_lines="[179]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	115 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=CareerOnToken,
+		function_fullname="setPauseStatus(bool)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+isTransPaused = isPaused
+
+IRs:
+isTransPaused(bool) := isPaused(bool)",
+		node_expression="isTransPaused = isPaused",
+		node_info_vulnerabilities=None,
+		node_irs="isTransPaused(bool) := isPaused(bool)",
+		node_source_code_lines="[180]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	116 -> 117	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=CareerOnToken,
+		function_fullname="setPauseStatus(bool)",
+		label="buggy_2.sol_CareerOnToken_setPauseStatus(bool)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[178, 179, 180, 181]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	118 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[182, 183, 184, 185]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	120	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_94(bool) = tx.origin == owner_txorigin35
+\
+TMP_95(None) = SOLIDITY_CALL require(bool)(TMP_94)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_94(bool) = tx.origin == owner_txorigin35
+TMP_95(None) = SOLIDITY_CALL require(bool)(TMP_94)",
+		node_source_code_lines="[183]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	119 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	121	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_46(None) -> to.call
+REF_47(None) -> REF_46.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="REF_46(None) -> to.call
+REF_47(None) -> REF_46.value",
+		node_source_code_lines="[184]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	120 -> 121	[key=0,
+		edge_type=next,
+		label=Next];
+	122	[contract_name=CareerOnToken,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[182, 183, 184, 185]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	122 -> 119	[key=0,
+		edge_type=next,
+		label=Next];
+	123	[contract_name=CareerOnToken,
+		function_fullname="changeContractName(string,string)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[188, 189, 190, 191, 192]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	124	[contract_name=CareerOnToken,
+		function_fullname="changeContractName(string,string)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(msg.sender == owner)
+
+IRs:
+TMP_97(bool) = msg.sender == owner
+TMP_98(None) = SOLIDITY_\
+CALL assert(bool)(TMP_97)",
+		node_expression="assert(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_97(bool) = msg.sender == owner
+TMP_98(None) = SOLIDITY_CALL assert(bool)(TMP_97)",
+		node_source_code_lines="[189]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	123 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	125	[contract_name=CareerOnToken,
+		function_fullname="changeContractName(string,string)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+name = _newName
+
+IRs:
+name(string) := _newName(string)",
+		node_expression="name = _newName",
+		node_info_vulnerabilities=None,
+		node_irs="name(string) := _newName(string)",
+		node_source_code_lines="[190]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	124 -> 125	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=CareerOnToken,
+		function_fullname="changeContractName(string,string)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+symbol = _newSymbol
+
+IRs:
+symbol(string) := _newSymbol(string)",
+		node_expression="symbol = _newSymbol",
+		node_info_vulnerabilities=None,
+		node_irs="symbol(string) := _newSymbol(string)",
+		node_source_code_lines="[191]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	125 -> 126	[key=0,
+		edge_type=next,
+		label=Next];
+	127	[contract_name=CareerOnToken,
+		function_fullname="changeContractName(string,string)",
+		label="buggy_2.sol_CareerOnToken_changeContractName(string,string)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[188, 189, 190, 191, 192]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	127 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	128	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	129	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_99(bool) = tx.origin == owner_txorigin40
+\
+TMP_100(None) = SOLIDITY_CALL require(bool)(TMP_99)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_99(bool) = tx.origin == owner_txorigin40
+TMP_100(None) = SOLIDITY_CALL require(bool)(TMP_99)",
+		node_source_code_lines="[194]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	128 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	130	[contract_name=CareerOnToken,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_2.sol_CareerOnToken_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	130 -> 128	[key=0,
+		edge_type=next,
+		label=Next];
+	131	[contract_name=CareerOnToken,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[198, 199, 200]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	132	[contract_name=CareerOnToken,
+		function_fullname="fallback()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+revert()()
+
+IRs:
+TMP_101(None) = SOLIDITY_CALL revert()()",
+		node_expression="revert()()",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_101(None) = SOLIDITY_CALL revert()()",
+		node_source_code_lines="[199]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	131 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	133	[contract_name=CareerOnToken,
+		function_fullname="fallback()",
+		label="buggy_2.sol_CareerOnToken_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[198, 199, 200]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	133 -> 131	[key=0,
+		edge_type=next,
+		label=Next];
+	134	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[201, 202, 203, 204]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_2.sol"];
+	135	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin33)
+
+IRs:
+TMP_102(bool) = tx.origin == owner_txorigin33
+\
+TMP_103(None) = SOLIDITY_CALL require(bool)(TMP_102)",
+		node_expression="require(bool)(tx.origin == owner_txorigin33)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="TMP_102(bool) = tx.origin == owner_txorigin33
+TMP_103(None) = SOLIDITY_CALL require(bool)(TMP_102)",
+		node_source_code_lines="[202]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	134 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	136	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[203]",
+		node_type=EXPRESSION,
+		source_file="buggy_2.sol"];
+	135 -> 136	[key=0,
+		edge_type=next,
+		label=Next];
+	137	[contract_name=CareerOnToken,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="buggy_2.sol_CareerOnToken_sendto_txorigin33(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[201, 202, 203, 204]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	137 -> 134	[key=0,
+		edge_type=next,
+		label=Next];
+	138	[contract_name=CareerOnToken,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+isTransPaused = false
+
+IRs:
+isTransPaused(bool) := False(bool)",
+		node_expression="isTransPaused = false",
+		node_info_vulnerabilities=None,
+		node_irs="isTransPaused(bool) := False(bool)",
+		node_source_code_lines="[62]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_2.sol"];
+	139	[contract_name=CareerOnToken,
+		function_fullname="slitherConstructorVariables()",
+		label="buggy_2.sol_CareerOnToken_slitherConstructorVariables()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18, 19, 20, 21, 13, 14, 15, 16, 8, 9, 10, 11, 201, 202, 203, 204, 193, 194, 195, 182, 183, 184, 185, 173, 174, 175, \
+159, 160, 161, 162, 149, 150, 151, 137, 138, 139, 140, 109, 110, 111, 112, 84, 85, 86, 87, 58, 59, 60, 61, 52, 53, 54, 47, 48, 49, \
+50, 43, 44, 45, 39, 40, 41, 34, 35, 36, 37, 29, 30, 31, 32, 24, 25, 26, 27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, \
+40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, \
+72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, \
+104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, \
+130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, \
+156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, \
+182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_2.sol"];
+	139 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+}

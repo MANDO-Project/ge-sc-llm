@@ -1,0 +1,8 @@
+digraph  {
+19 [label="5_ Numa\n19-function_definition-6-6", type_label=function_definition];
+23 [label="6_ newBatch\n23-function_definition-7-9", type_label=function_definition];
+31 [label="7_ NewBatch(ipfsHash);\n31-expression_statement-8-8", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+23 -> 31  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

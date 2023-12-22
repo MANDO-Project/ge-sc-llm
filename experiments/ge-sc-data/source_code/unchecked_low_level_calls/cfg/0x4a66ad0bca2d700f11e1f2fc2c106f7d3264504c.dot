@@ -1,0 +1,26 @@
+digraph  {
+13 [label="2_ address public from = 0x9797055B68C5DadDE6b3c7d5D80C9CFE2eecE6c9;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [label="3_ address public caddress = 0x1f844685f7Bf86eFcc0e74D8642c54A257111923;\n19-new_variable-4-4", method="", type_label=new_variable];
+25 [label="4_ function transfer(address[] _tos,uint[] v)public returns (bool){\n        require(msg.sender == 0x9797055B68C5DadDE6b3c7d5D80C9CFE2eecE6c9);\n        require(_tos.length > 0);\n        bytes4 id=bytes4(keccak256(\"transferFrom(address,address,uint256)\"));\n        for(uint i=0;i<_tos.length;i++){\n            caddress.call(id,from,_tos[i],v[i]*1000000000000000000);\n        }\n        return true;\n    }\n25-function_definition-5-13", method="transfer(address[] _tos,uint[] v)", type_label=function_definition];
+43 [label="5_ require(msg.sender == 0x9797055B68C5DadDE6b3c7d5D80C9CFE2eecE6c9);\n43-expression_statement-6-6", method="transfer(address[] _tos,uint[] v)", type_label=expression_statement];
+52 [label="6_ require(_tos.length > 0);\n52-expression_statement-7-7", method="transfer(address[] _tos,uint[] v)", type_label=expression_statement];
+61 [label="7_ bytes4 id=bytes4(keccak256(\"transferFrom(address,address,uint256)\"));\n61-new_variable-8-8", method="transfer(address[] _tos,uint[] v)", type_label=new_variable];
+73 [label="8_ for(i<_tos.length;;i++)\n73-for-9-11", method="transfer(address[] _tos,uint[] v)", type_label=for];
+179 [label="8_ end_loop", method="transfer(address[] _tos,uint[] v)", type_label=end_loop];
+86 [label="8_ i++\n86-expression_statement-9-9", method="transfer(address[] _tos,uint[] v)", type_label=expression_statement];
+89 [label="9_ caddress.call(id,from,_tos[i],v[i]*1000000000000000000);\n89-expression_statement-10-10", method="transfer(address[] _tos,uint[] v)", type_label=expression_statement];
+108 [label="11_ return true;\n108-return-12-12", method="transfer(address[] _tos,uint[] v)", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 19  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+25 -> 43  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+43 -> 52  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+52 -> 61  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+61 -> 73  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+73 -> 89  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+73 -> 179  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+179 -> 108  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+86 -> 73  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+89 -> 86  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+108 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

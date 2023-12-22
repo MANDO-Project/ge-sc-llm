@@ -1,0 +1,16 @@
+digraph  {
+13 [label="2_ address private owner;\n13-new_variable-3-3", type_label=new_variable];
+18 [label="3_ modifier onlyowner {\n         require(msg.sender==owner);\n         _;\n     }\n18-expression_statement-4-7", type_label=expression_statement];
+21 [label="4_ require(msg.sender==owner);\n21-expression_statement-5-5", type_label=expression_statement];
+30 [label="5_ _;\n30-expression_statement-6-6", type_label=expression_statement];
+32 [label="7_ Unprotected\n32-function_definition-8-12", type_label=function_definition];
+36 [label="10_ owner = msg.sender;\n36-expression_statement-11-11", type_label=expression_statement];
+42 [label="12_ changeOwner\n42-function_definition-13-17", type_label=function_definition];
+50 [label="15_ owner = _newOwner;\n50-expression_statement-16-16", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+21 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+42 -> 50  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

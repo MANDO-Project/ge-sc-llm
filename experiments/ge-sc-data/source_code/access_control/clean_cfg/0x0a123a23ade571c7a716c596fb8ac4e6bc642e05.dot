@@ -1,0 +1,25 @@
+digraph  {
+12 [label="2_ address public owner;\n12-new_variable-3-3", type_label=new_variable];
+27 [label="4_ Ownable\n27-function_definition-5-7", type_label=function_definition];
+31 [label="5_ owner = msg.sender;\n31-expression_statement-6-6", type_label=expression_statement];
+37 [label="7_ modifier onlyOwner() {\n    require(msg.sender == owner);\n    _;\n  }\n37-expression_statement-8-11", type_label=expression_statement];
+40 [label="8_ require(msg.sender == owner);\n40-expression_statement-9-9", type_label=expression_statement];
+49 [label="9_ _;\n49-expression_statement-10-10", type_label=expression_statement];
+51 [label="11_ transferOwnership\n51-function_definition-12-16", type_label=function_definition];
+58 [label="11_ onlyOwner\n58-expression_statement-12-12", type_label=expression_statement];
+61 [label="12_ require(newOwner != address(0));\n61-expression_statement-13-13", type_label=expression_statement];
+76 [label="14_ owner = newOwner;\n76-expression_statement-15-15", type_label=expression_statement];
+86 [label="18_ address destinationAddress;\n86-new_variable-19-19", type_label=new_variable];
+110 [label="21_ Globalnetworktoken\n110-function_definition-22-24", type_label=function_definition];
+114 [label="22_ destinationAddress = msg.sender;\n114-expression_statement-23-23", type_label=expression_statement];
+134 [label="26_ destinationAddress.transfer(msg.value);\n134-expression_statement-27-27", type_label=expression_statement];
+143 [label="28_ flush\n143-function_definition-29-32", type_label=function_definition];
+157 [label="30_ destinationAddress.transfer(address(this).balance);\n157-expression_statement-31-31", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+27 -> 31  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+40 -> 49  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+51 -> 61  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+110 -> 114  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+143 -> 157  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

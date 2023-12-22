@@ -1,0 +1,23 @@
+digraph  {
+13 [label="2_ mapping (address => uint) userBalance;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [label="3_ function getBalance(address u) constant returns(uint){\n         return userBalance[u];\n     }\n19-function_definition-4-6", method="getBalance(address u)", type_label=function_definition];
+25 [label="3_ constant\n25-expression_statement-4-4", method="getBalance(address u)", type_label=expression_statement];
+32 [label="4_ return userBalance[u];\n32-return-5-5", method="getBalance(address u)", type_label=return];
+36 [label="6_ function addToBalance() payable{\n         userBalance[msg.sender] += msg.value;\n     }\n36-function_definition-7-9", method="addToBalance()", type_label=function_definition];
+40 [label="7_ userBalance[msg.sender] += msg.value;\n40-expression_statement-8-8", method="addToBalance()", type_label=expression_statement];
+50 [label="9_ function withdrawBalance(){\n         if( ! (msg.sender.call.value(userBalance[msg.sender])() ) ){\n             throw;\n         }\n         userBalance[msg.sender] = 0;\n     }\n50-function_definition-10-15", method="withdrawBalance()", type_label=function_definition];
+53 [label="10_ if\n53-if-11-13", method="withdrawBalance()", type_label=if];
+130 [label="10_ end_if", method="withdrawBalance()", type_label=end_if];
+72 [label="11_ throw;\n72-expression_statement-12-12", method="withdrawBalance()", type_label=expression_statement];
+74 [label="13_ userBalance[msg.sender] = 0;\n74-expression_statement-14-14", method="withdrawBalance()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+19 -> 32  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+36 -> 40  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+50 -> 53  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+53 -> 72  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+53 -> 130  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+130 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+72 -> 130  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

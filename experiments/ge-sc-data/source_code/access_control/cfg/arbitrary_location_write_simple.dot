@@ -1,0 +1,27 @@
+digraph  {
+13 [code="uint[] private bonusCodes;", label="2_ uint[] private bonusCodes;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [code="address private owner;", label="3_ address private owner;\n19-new_variable-4-4", method="", type_label=new_variable];
+26 [code="bonusCodes = new uint[](0);", label="5_ bonusCodes = new uint[](0);\n26-expression_statement-6-6", method="", type_label=expression_statement];
+36 [code="owner = msg.sender;", label="6_ owner = msg.sender;\n36-expression_statement-7-7", method="", type_label=expression_statement];
+46 [code="function PushBonusCode(uint c) public {\n         bonusCodes.push(c);\n     }", label="10_ function PushBonusCode(uint c) public {\n         bonusCodes.push(c);\n     }\n46-function_definition-11-13", method="PushBonusCode(uint c)", type_label=function_definition];
+54 [code="bonusCodes.push(c);", label="11_ bonusCodes.push(c);\n54-expression_statement-12-12", method="PushBonusCode(uint c)", type_label=expression_statement];
+61 [code="function PopBonusCode() public {\n         require(0 <= bonusCodes.length);  \n         bonusCodes.length--;  \n     }", label="13_ function PopBonusCode() public {\n         require(0 <= bonusCodes.length);  \n         bonusCodes.length--;  \n     }\n61-function_definition-14-17", method="PopBonusCode()", type_label=function_definition];
+65 [code="require(0 <= bonusCodes.length);", label="14_ require(0 <= bonusCodes.length);\n65-expression_statement-15-15", method="PopBonusCode()", type_label=expression_statement];
+74 [code="bonusCodes.length--;", label="15_ bonusCodes.length--;\n74-expression_statement-16-16", method="PopBonusCode()", type_label=expression_statement];
+75 [code="bonusCodes.length--", label="15_ bonusCodes.length--\n75-expression_statement-16-16", method="PopBonusCode()", type_label=expression_statement];
+79 [code="function UpdateBonusCodeAt(uint idx, uint c) public {\n         require(idx < bonusCodes.length);\n         bonusCodes[idx] = c;  \n     }", label="17_ function UpdateBonusCodeAt(uint idx, uint c) public {\n         require(idx < bonusCodes.length);\n         bonusCodes[idx] = c;  \n     }\n79-function_definition-18-21", method="UpdateBonusCodeAt(uint idx,uint c)", type_label=function_definition];
+91 [code="require(idx < bonusCodes.length);", label="18_ require(idx < bonusCodes.length);\n91-expression_statement-19-19", method="UpdateBonusCodeAt(uint idx,uint c)", type_label=expression_statement];
+100 [code="bonusCodes[idx] = c;", label="19_ bonusCodes[idx] = c;\n100-expression_statement-20-20", method="UpdateBonusCodeAt(uint idx,uint c)", type_label=expression_statement];
+106 [code="function Destroy() public {\n         require(msg.sender == owner);\n         selfdestruct(msg.sender);\n     }", label="21_ function Destroy() public {\n         require(msg.sender == owner);\n         selfdestruct(msg.sender);\n     }\n106-function_definition-22-25", method="Destroy()", type_label=function_definition];
+110 [code="require(msg.sender == owner);", label="22_ require(msg.sender == owner);\n110-expression_statement-23-23", method="Destroy()", type_label=expression_statement];
+119 [code="selfdestruct(msg.sender);", label="23_ selfdestruct(msg.sender);\n119-expression_statement-24-24", method="Destroy()", type_label=expression_statement];
+13 -> 19  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+61 -> 65  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+79 -> 91  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+91 -> 100  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+106 -> 110  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+110 -> 119  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

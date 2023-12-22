@@ -1,0 +1,23 @@
+digraph  {
+9 [label="1_ bool public classic;\n9-new_variable-2-2", type_label=new_variable];
+14 [label="2_ ClassicCheck\n14-function_definition-3-8", type_label=function_definition];
+17 [label="3_ if_address(0xbf4ed7b27f1d666546e30d74d50d173d20bca754).balance > 1000000 ether\n17-if-4-7", type_label=if];
+60 [label="3_ end_if", type_label=end_if];
+26 [label="4_ classic = false;\n26-expression_statement-5-5", type_label=expression_statement];
+31 [label="6_ classic = true;\n31-expression_statement-7-7", type_label=expression_statement];
+36 [label="8_ isClassic\n36-function_definition-9-11", type_label=function_definition];
+38 [label="8_ constant\n38-expression_statement-9-9", type_label=expression_statement];
+46 [label="9_ return classic;\n46-return-10-10", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+32;
+14 -> 17  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+17 -> 26  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+17 -> 31  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+60 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 31  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 60  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+36 -> 46  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+32 -> 60  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

@@ -1,0 +1,87 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Proxy,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15]",
+		node_type=ENTRY_POINT,
+		source_file="proxy.sol"];
+	1	[contract_name=Proxy,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[14]",
+		node_type=EXPRESSION,
+		source_file="proxy.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Proxy,
+		function_fullname="constructor()",
+		label="proxy.sol_Proxy_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15]",
+		node_type=FUNCTION_NAME,
+		source_file="proxy.sol"];
+	2 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Proxy,
+		function_fullname="forward(address,bytes)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [19], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20]",
+		node_type=ENTRY_POINT,
+		source_file="proxy.sol"];
+	4	[contract_name=Proxy,
+		function_fullname="forward(address,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(callee.delegatecall(_data))
+
+IRs:
+TMP_0(bool) = LOW_LEVEL_CALL, dest:callee, function:\
+delegatecall, arguments:['_data']  
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(callee.delegatecall(_data))",
+		node_info_vulnerabilities="[{'lines': [19], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = LOW_LEVEL_CALL, dest:callee, function:delegatecall, arguments:['_data']  
+TMP_1(None) = SOLIDITY_CALL require(bool)(\
+TMP_0)",
+		node_source_code_lines="[19]",
+		node_type=EXPRESSION,
+		source_file="proxy.sol"];
+	3 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Proxy,
+		function_fullname="forward(address,bytes)",
+		label="proxy.sol_Proxy_forward(address,bytes)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [19], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20]",
+		node_type=FUNCTION_NAME,
+		source_file="proxy.sol"];
+	5 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+}

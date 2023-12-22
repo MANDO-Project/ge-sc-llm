@@ -1,0 +1,12 @@
+digraph  {
+13 [label="2_ address public owner = msg.sender;\n13-new_variable-3-3", method="", type_label=new_variable];
+21 [label="3_ function go() public payable {\n        address target = 0xC8A60C51967F4022BF9424C337e9c6F0bD220E1C;\n        target.call.value(msg.value)();\n        owner.transfer(address(this).balance);\n    }\n21-function_definition-4-8", method="go()", type_label=function_definition];
+26 [label="4_ address target = 0xC8A60C51967F4022BF9424C337e9c6F0bD220E1C;\n26-new_variable-5-5", method="go()", type_label=new_variable];
+32 [label="5_ target.call.value(msg.value)();\n32-expression_statement-6-6", method="go()", type_label=expression_statement];
+44 [label="6_ owner.transfer(address(this).balance);\n44-expression_statement-7-7", method="go()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+21 -> 26  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 32  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

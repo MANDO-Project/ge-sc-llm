@@ -1,0 +1,13 @@
+digraph  {
+13 [label="2_ burnTokens\n13-function_definition-3-3", type_label=function_definition];
+24 [label="3_ balanceOf\n24-function_definition-4-4", type_label=function_definition];
+39 [label="6_ address public token = 0xbf2179859fc6D5BEE9Bf9158632Dc51678a4100e;\n39-new_variable-7-7", type_label=new_variable];
+45 [label="7_ burn\n45-function_definition-8-11", type_label=function_definition];
+53 [label="8_ uint256 balance = ELFToken(token).balanceOf(address(this));\n53-new_variable-9-9", type_label=new_variable];
+69 [label="9_ return ELFToken(token).burnTokens(balance);\n69-return-10-10", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+45 -> 53  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+53 -> 69  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+69 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

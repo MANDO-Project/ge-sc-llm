@@ -1,0 +1,139 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Unprotected,
+		function_fullname="Unprotected()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[19, 20, 21]",
+		node_type=ENTRY_POINT,
+		source_file="unprotected0.sol"];
+	1	[contract_name=Unprotected,
+		function_fullname="Unprotected()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[20]",
+		node_type=EXPRESSION,
+		source_file="unprotected0.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Unprotected,
+		function_fullname="Unprotected()",
+		label="unprotected0.sol_Unprotected_Unprotected()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20, 21]",
+		node_type=FUNCTION_NAME,
+		source_file="unprotected0.sol"];
+	2 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Unprotected,
+		function_fullname="changeOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[27, 28, 29]",
+		node_type=ENTRY_POINT,
+		source_file="unprotected0.sol"];
+	4	[contract_name=Unprotected,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = _newOwner
+
+IRs:
+owner(address) := _newOwner(address)",
+		node_expression="owner = _newOwner",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := _newOwner(address)",
+		node_source_code_lines="[28]",
+		node_type=EXPRESSION,
+		source_file="unprotected0.sol"];
+	3 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Unprotected,
+		function_fullname="changeOwner(address)",
+		label="unprotected0.sol_Unprotected_changeOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [25], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28, 29]",
+		node_type=FUNCTION_NAME,
+		source_file="unprotected0.sol"];
+	5 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=Unprotected,
+		function_fullname="onlyowner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[12, 13, 14, 15]",
+		node_type=ENTRY_POINT,
+		source_file="unprotected0.sol"];
+	7	[contract_name=Unprotected,
+		function_fullname="onlyowner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == owner)
+
+IRs:
+TMP_0(bool) = msg.sender == owner
+TMP_1(None) = SOLIDITY_\
+CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_0(bool) = msg.sender == owner
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[13]",
+		node_type=EXPRESSION,
+		source_file="unprotected0.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=Unprotected,
+		function_fullname="onlyowner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[14]",
+		node_type=_,
+		source_file="unprotected0.sol"];
+	7 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=Unprotected,
+		function_fullname="onlyowner()",
+		label="unprotected0.sol_Unprotected_onlyowner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[12, 13, 14, 15]",
+		node_type=FUNCTION_NAME,
+		source_file="unprotected0.sol"];
+	9 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+}

@@ -1,0 +1,36 @@
+digraph  {
+12 [label="2_ uint256 public highScore;\n12-new_variable-3-3", method="", type_label=new_variable];
+17 [label="3_ address public currentWinner;\n17-new_variable-4-4", method="", type_label=new_variable];
+22 [label="4_ uint256 public lastTimestamp;\n22-new_variable-5-5", method="", type_label=new_variable];
+29 [label="6_ highScore = 0;\n29-expression_statement-7-7", method="", type_label=expression_statement];
+33 [label="7_ currentWinner = msg.sender;\n33-expression_statement-8-8", method="", type_label=expression_statement];
+39 [label="8_ lastTimestamp = now;\n39-expression_statement-9-9", method="", type_label=expression_statement];
+47 [label="11_ require(msg.sender == tx.origin);\n47-expression_statement-12-12", method="", type_label=expression_statement];
+58 [label="12_ require(msg.value >= 0.001 ether);\n58-expression_statement-13-13", method="", type_label=expression_statement];
+68 [label="13_ uint256 randomNumber = uint256(keccak256(blockhash(block.number - 1)));\n68-new_variable-14-14", method="", type_label=new_variable];
+86 [label="14_ if_randomNumber > highScore\n86-if-15-18", method="", type_label=if];
+218 [label="14_ end_if", method="", type_label=end_if];
+91 [label="15_ currentWinner = msg.sender;\n91-expression_statement-16-16", method="", type_label=expression_statement];
+97 [label="16_ lastTimestamp = now;\n97-expression_statement-17-17", method="", type_label=expression_statement];
+101 [label="19_ function claimWinnings() public {\n        require(now > lastTimestamp + 1 days);\n        require(msg.sender == currentWinner);\n        msg.sender.transfer(address(this).balance);\n    }\n101-function_definition-20-24", method="claimWinnings()", type_label=function_definition];
+105 [label="20_ require(now > lastTimestamp + 1 days);\n105-expression_statement-21-21", method="claimWinnings()", type_label=expression_statement];
+115 [label="21_ require(msg.sender == currentWinner);\n115-expression_statement-22-22", method="claimWinnings()", type_label=expression_statement];
+124 [label="22_ msg.sender.transfer(address(this).balance);\n124-expression_statement-23-23", method="claimWinnings()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+12 -> 17  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+17 -> 22  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 33  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+33 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+47 -> 58  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 68  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+68 -> 86  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+86 -> 91  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+86 -> 218  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+218 -> 101  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+91 -> 97  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+97 -> 218  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+101 -> 105  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+105 -> 115  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+115 -> 124  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

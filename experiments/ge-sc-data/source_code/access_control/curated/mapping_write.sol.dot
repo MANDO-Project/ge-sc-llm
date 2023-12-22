@@ -1,0 +1,214 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Map,
+		function_fullname="set(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [20], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[15, 16, 17, 18, 19, 20, 21]",
+		node_type=ENTRY_POINT,
+		source_file="mapping_write.sol"];
+	1	[contract_name=Map,
+		function_fullname="set(uint256,uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+map.length <= key
+
+IRs:
+REF_0 -> LENGTH map
+TMP_0(bool) = REF_0 <= key
+CONDITION TMP_0",
+		node_expression="map.length <= key",
+		node_info_vulnerabilities=None,
+		node_irs="REF_0 -> LENGTH map
+TMP_0(bool) = REF_0 <= key
+CONDITION TMP_0",
+		node_source_code_lines="[16]",
+		node_type=IF,
+		source_file="mapping_write.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Map,
+		function_fullname="set(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+map.length = key + 1
+
+IRs:
+REF_1 -> LENGTH map
+TMP_1(uint256) = key + 1
+REF_1 (->map) := TMP_\
+1(uint256)",
+		node_expression="map.length = key + 1",
+		node_info_vulnerabilities=None,
+		node_irs="REF_1 -> LENGTH map
+TMP_1(uint256) = key + 1
+REF_1 (->map) := TMP_1(uint256)",
+		node_source_code_lines="[17]",
+		node_type=EXPRESSION,
+		source_file="mapping_write.sol"];
+	1 -> 2	[key=0,
+		edge_type=if_true,
+		label=True];
+	3	[contract_name=Map,
+		function_fullname="set(uint256,uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[16, 17, 18]",
+		node_type=END_IF,
+		source_file="mapping_write.sol"];
+	1 -> 3	[key=0,
+		edge_type=if_false,
+		label=False];
+	2 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=Map,
+		function_fullname="set(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+map[key] = value
+
+IRs:
+REF_2(uint256) -> map[key]
+REF_2 (->map) := value(uint256)",
+		node_expression="map[key] = value",
+		node_info_vulnerabilities="[{'lines': [20], 'category': 'access_control'}]",
+		node_irs="REF_2(uint256) -> map[key]
+REF_2 (->map) := value(uint256)",
+		node_source_code_lines="[20]",
+		node_type=EXPRESSION,
+		source_file="mapping_write.sol"];
+	3 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Map,
+		function_fullname="set(uint256,uint256)",
+		label="mapping_write.sol_Map_set(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [20], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[15, 16, 17, 18, 19, 20, 21]",
+		node_type=FUNCTION_NAME,
+		source_file="mapping_write.sol"];
+	5 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=Map,
+		function_fullname="get(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25]",
+		node_type=ENTRY_POINT,
+		source_file="mapping_write.sol"];
+	7	[contract_name=Map,
+		function_fullname="get(uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+map[key]
+
+IRs:
+REF_3(uint256) -> map[key]
+RETURN REF_3",
+		node_expression="map[key]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_3(uint256) -> map[key]
+RETURN REF_3",
+		node_source_code_lines="[24]",
+		node_type=RETURN,
+		source_file="mapping_write.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=Map,
+		function_fullname="get(uint256)",
+		label="mapping_write.sol_Map_get(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25]",
+		node_type=FUNCTION_NAME,
+		source_file="mapping_write.sol"];
+	8 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=Map,
+		function_fullname="withdraw()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[26, 27, 28, 29]",
+		node_type=ENTRY_POINT,
+		source_file="mapping_write.sol"];
+	10	[contract_name=Map,
+		function_fullname="withdraw()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == owner)
+
+IRs:
+TMP_2(bool) = msg.sender == owner
+TMP_3(None) = SOLIDITY_\
+CALL require(bool)(TMP_2)",
+		node_expression="require(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_2(bool) = msg.sender == owner
+TMP_3(None) = SOLIDITY_CALL require(bool)(TMP_2)",
+		node_source_code_lines="[27]",
+		node_type=EXPRESSION,
+		source_file="mapping_write.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=Map,
+		function_fullname="withdraw()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+msg.sender.transfer(address(this).balance)
+
+IRs:
+TMP_4 = CONVERT this to address
+REF_5 -> BALANCE \
+TMP_4
+Transfer dest:msg.sender value:REF_5",
+		node_expression="msg.sender.transfer(address(this).balance)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_4 = CONVERT this to address
+REF_5 -> BALANCE TMP_4
+Transfer dest:msg.sender value:REF_5",
+		node_source_code_lines="[28]",
+		node_type=EXPRESSION,
+		source_file="mapping_write.sol"];
+	10 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=Map,
+		function_fullname="withdraw()",
+		label="mapping_write.sol_Map_withdraw()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[26, 27, 28, 29]",
+		node_type=FUNCTION_NAME,
+		source_file="mapping_write.sol"];
+	12 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+}

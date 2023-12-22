@@ -1,0 +1,14 @@
+digraph  {
+13 [code="address private owner;", label="2_ address private owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [code="modifier onlyowner {\n         require(msg.sender==owner);\n         _;\n     }", label="3_ modifier onlyowner {\n         require(msg.sender==owner);\n         _;\n     }\n18-expression_statement-4-7", method="", type_label=expression_statement];
+21 [code="require(msg.sender==owner);", label="4_ require(msg.sender==owner);\n21-expression_statement-5-5", method="", type_label=expression_statement];
+30 [code="_;", label="5_ _;\n30-expression_statement-6-6", method="", type_label=expression_statement];
+32 [code="function Unprotected()\n         public\n     {\n         owner = msg.sender;\n     }", label="7_ function Unprotected()\n         public\n     {\n         owner = msg.sender;\n     }\n32-function_definition-8-12", method="Unprotected()", type_label=function_definition];
+36 [code="owner = msg.sender;", label="10_ owner = msg.sender;\n36-expression_statement-11-11", method="Unprotected()", type_label=expression_statement];
+42 [code="function changeOwner(address _newOwner)\n         public\n     {\n        owner = _newOwner;\n     }", label="12_ function changeOwner(address _newOwner)\n         public\n     {\n        owner = _newOwner;\n     }\n42-function_definition-13-17", method="changeOwner(address _newOwner)", type_label=function_definition];
+50 [code="owner = _newOwner;", label="15_ owner = _newOwner;\n50-expression_statement-16-16", method="changeOwner(address _newOwner)", type_label=expression_statement];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+21 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+42 -> 50  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

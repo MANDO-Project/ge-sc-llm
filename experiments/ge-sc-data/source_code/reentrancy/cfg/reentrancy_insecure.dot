@@ -1,0 +1,14 @@
+digraph  {
+13 [label="2_ mapping (address => uint) private userBalances;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ function withdrawBalance() public {\n        uint amountToWithdraw = userBalances[msg.sender];\n        (bool success, ) = msg.sender.call.value(amountToWithdraw)(\"\");  \n        require(success);\n        userBalances[msg.sender] = 0;\n    }\n20-function_definition-4-9", method="withdrawBalance()", type_label=function_definition];
+24 [label="4_ uint amountToWithdraw = userBalances[msg.sender];\n24-new_variable-5-5", method="withdrawBalance()", type_label=new_variable];
+34 [label="5_ (bool success, ) = msg.sender.call.value(amountToWithdraw)(\"\");\n34-new_variable-6-6", method="withdrawBalance()", type_label=new_variable];
+54 [label="6_ require(success);\n54-expression_statement-7-7", method="withdrawBalance()", type_label=expression_statement];
+59 [label="7_ userBalances[msg.sender] = 0;\n59-expression_statement-8-8", method="withdrawBalance()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+20 -> 24  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+24 -> 34  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+54 -> 59  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

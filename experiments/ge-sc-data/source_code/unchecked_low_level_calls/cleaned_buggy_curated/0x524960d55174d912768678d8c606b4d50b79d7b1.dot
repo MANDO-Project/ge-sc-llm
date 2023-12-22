@@ -1,0 +1,32 @@
+digraph  {
+13 [label="2_ function transfer() returns (bool) {	\n		address contract_address;\n		contract_address = 0x96a65609a7b84e8842732deb08f56c3e21ac6f8a;\n		address c1;		\n		address c2;\n		uint256 k;\n		k = 1;\n		c2 = 0xaa27f8c1160886aacba64b2319d8d5469ef2af79;	\n		contract_address.call(\"register\", \"CentraToken\");\n		if(!contract_address.call(bytes4(keccak256(\"transfer(address,uint256)\")),c2,k)) return false;\n		return true;\n	}\n13-function_definition-3-14", method="transfer()", type_label=function_definition];
+20 [label="3_ address contract_address;\n20-new_variable-4-4", method="transfer()", type_label=new_variable];
+25 [label="4_ contract_address = 0x96a65609a7b84e8842732deb08f56c3e21ac6f8a;\n25-expression_statement-5-5", method="transfer()", type_label=expression_statement];
+29 [label="5_ address c1;\n29-new_variable-6-6", method="transfer()", type_label=new_variable];
+34 [label="6_ address c2;\n34-new_variable-7-7", method="transfer()", type_label=new_variable];
+39 [label="7_ uint256 k;\n39-new_variable-8-8", method="transfer()", type_label=new_variable];
+44 [label="8_ k = 1;\n44-expression_statement-9-9", method="transfer()", type_label=expression_statement];
+48 [label="9_ c2 = 0xaa27f8c1160886aacba64b2319d8d5469ef2af79;\n48-expression_statement-10-10", method="transfer()", type_label=expression_statement];
+52 [label="10_ contract_address.call(\"register\", \"CentraToken\");\n52-expression_statement-11-11", method="transfer()", type_label=expression_statement];
+63 [label="11_ if\n63-if-12-12", method="transfer()", type_label=if];
+145 [label="11_ end_if", method="transfer()", type_label=end_if];
+81 [label="11_ return false;\n81-return-12-12", method="transfer()", type_label=return];
+84 [label="12_ return true;\n84-return-13-13", method="transfer()", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+20 -> 25  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+25 -> 29  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 34  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+39 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+44 -> 48  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+48 -> 52  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+52 -> 63  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+63 -> 81  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+63 -> 145  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+145 -> 84  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+81 -> 145  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+81 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+84 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

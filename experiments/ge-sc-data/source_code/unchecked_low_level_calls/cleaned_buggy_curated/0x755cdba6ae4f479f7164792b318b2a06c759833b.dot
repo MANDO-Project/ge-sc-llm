@@ -1,0 +1,37 @@
+digraph  {
+9 [label="1_ balanceOf\n9-function_definition-2-2", type_label=function_definition];
+19 [label="2_ transferFrom\n19-function_definition-3-3", type_label=function_definition];
+37 [label="3_ uint public totalSupply;\n37-new_variable-4-4", type_label=new_variable];
+45 [label="6_ DAO constant public mainDAO = DAO(0x5c40ef6f527f4fba68368774e6130ce6515123f2);\n45-new_variable-7-7", type_label=new_variable];
+55 [label="7_ address constant public trustee = 0xda4a4626d3e16e094de3225a751aab7128e96526;\n55-new_variable-8-8", type_label=new_variable];
+61 [label="8_ withdraw\n61-function_definition-9-13", type_label=function_definition];
+64 [label="9_ uint balance = mainDAO.balanceOf(msg.sender);\n64-new_variable-10-10", type_label=new_variable];
+77 [label="10_ if\n77-if-11-12", type_label=if];
+199 [label="10_ end_if", type_label=end_if];
+101 [label="11_ throw;\n101-expression_statement-12-12", type_label=expression_statement];
+103 [label="13_ clawback\n103-function_definition-14-17", type_label=function_definition];
+107 [label="14_ if_msg.sender != trustee\n107-if-15-15", type_label=if];
+229 [label="14_ end_if", type_label=end_if];
+113 [label="14_ throw;\n113-expression_statement-15-15", type_label=expression_statement];
+115 [label="15_ if\n115-if-16-16", type_label=if];
+237 [label="15_ end_if", type_label=end_if];
+125 [label="15_ throw;\n125-expression_statement-16-16", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+45 -> 55  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+61 -> 64  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+64 -> 77  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+77 -> 101  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+77 -> 199  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+199 -> 103  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+101 -> 199  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+103 -> 107  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+107 -> 113  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+107 -> 229  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+229 -> 115  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+113 -> 229  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+115 -> 125  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+115 -> 237  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+237 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+125 -> 237  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

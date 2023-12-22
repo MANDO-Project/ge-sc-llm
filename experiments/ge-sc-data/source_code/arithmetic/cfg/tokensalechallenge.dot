@@ -1,0 +1,26 @@
+digraph  {
+13 [label="2_ mapping(address => uint256) public balanceOf;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ uint256 constant PRICE_PER_TOKEN = 1 ether;\n20-new_variable-4-4", method="", type_label=new_variable];
+26 [label="4_ function TokenSaleChallenge(address _player) public payable {\n        require(msg.value == 1 ether);\n    }\n26-function_definition-5-7", method="TokenSaleChallenge(address _player)", type_label=function_definition];
+35 [label="5_ require(msg.value == 1 ether);\n35-expression_statement-6-6", method="TokenSaleChallenge(address _player)", type_label=expression_statement];
+45 [label="7_ function isComplete() public view returns (bool) {\n        return address(this).balance < 1 ether;\n    }\n45-function_definition-8-10", method="isComplete()", type_label=function_definition];
+54 [label="8_ return address(this).balance < 1 ether;\n54-return-9-9", method="isComplete()", type_label=return];
+63 [label="10_ function buy(uint256 numTokens) public payable {\n        require(msg.value == numTokens * PRICE_PER_TOKEN);\n        balanceOf[msg.sender] += numTokens;\n    }\n63-function_definition-11-14", method="buy(uint256 numTokens)", type_label=function_definition];
+72 [label="11_ require(msg.value == numTokens * PRICE_PER_TOKEN);\n72-expression_statement-12-12", method="buy(uint256 numTokens)", type_label=expression_statement];
+83 [label="12_ balanceOf[msg.sender] += numTokens;\n83-expression_statement-13-13", method="buy(uint256 numTokens)", type_label=expression_statement];
+91 [label="14_ function sell(uint256 numTokens) public {\n        require(balanceOf[msg.sender] >= numTokens);\n        balanceOf[msg.sender] -= numTokens;\n        msg.sender.transfer(numTokens * PRICE_PER_TOKEN);\n    }\n91-function_definition-15-19", method="sell(uint256 numTokens)", type_label=function_definition];
+99 [label="15_ require(balanceOf[msg.sender] >= numTokens);\n99-expression_statement-16-16", method="sell(uint256 numTokens)", type_label=expression_statement];
+110 [label="16_ balanceOf[msg.sender] -= numTokens;\n110-expression_statement-17-17", method="sell(uint256 numTokens)", type_label=expression_statement];
+118 [label="17_ msg.sender.transfer(numTokens * PRICE_PER_TOKEN);\n118-expression_statement-18-18", method="sell(uint256 numTokens)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 35  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+45 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+54 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+63 -> 72  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+72 -> 83  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+91 -> 99  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+99 -> 110  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+110 -> 118  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

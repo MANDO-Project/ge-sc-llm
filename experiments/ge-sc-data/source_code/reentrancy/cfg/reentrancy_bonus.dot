@@ -1,0 +1,27 @@
+digraph  {
+13 [label="2_ mapping (address => uint) private userBalances;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ mapping (address => bool) private claimedBonus;\n20-new_variable-4-4", method="", type_label=new_variable];
+27 [label="4_ mapping (address => uint) private rewardsForA;\n27-new_variable-5-5", method="", type_label=new_variable];
+34 [label="5_ function withdrawReward(address recipient) public {\n        uint amountToWithdraw = rewardsForA[recipient];\n        rewardsForA[recipient] = 0;\n        (bool success, ) = recipient.call.value(amountToWithdraw)(\"\");\n        require(success);\n    }\n34-function_definition-6-11", method="withdrawReward(address recipient)", type_label=function_definition];
+42 [label="6_ uint amountToWithdraw = rewardsForA[recipient];\n42-new_variable-7-7", method="withdrawReward(address recipient)", type_label=new_variable];
+50 [label="7_ rewardsForA[recipient] = 0;\n50-expression_statement-8-8", method="withdrawReward(address recipient)", type_label=expression_statement];
+56 [label="8_ (bool success, ) = recipient.call.value(amountToWithdraw)(\"\");\n56-new_variable-9-9", method="withdrawReward(address recipient)", type_label=new_variable];
+74 [label="9_ require(success);\n74-expression_statement-10-10", method="withdrawReward(address recipient)", type_label=expression_statement];
+79 [label="11_ function getFirstWithdrawalBonus(address recipient) public {\n        require(!claimedBonus[recipient]);  \n        rewardsForA[recipient] += 100;\n        withdrawReward(recipient);  \n        claimedBonus[recipient] = true;\n    }\n79-function_definition-12-17", method="getFirstWithdrawalBonus(address recipient)", type_label=function_definition];
+87 [label="12_ require(!claimedBonus[recipient]);\n87-expression_statement-13-13", method="getFirstWithdrawalBonus(address recipient)", type_label=expression_statement];
+95 [label="13_ rewardsForA[recipient] += 100;\n95-expression_statement-14-14", method="getFirstWithdrawalBonus(address recipient)", type_label=expression_statement];
+101 [label="14_ withdrawReward(recipient);\n101-expression_statement-15-15", method="getFirstWithdrawalBonus(address recipient)", type_label=expression_statement];
+106 [label="15_ claimedBonus[recipient] = true;\n106-expression_statement-16-16", method="getFirstWithdrawalBonus(address recipient)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+20 -> 27  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 42  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+42 -> 50  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+50 -> 56  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+56 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+79 -> 87  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+87 -> 95  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+95 -> 101  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+101 -> 106  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

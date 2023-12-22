@@ -1,0 +1,3611 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	1	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin9)
+
+IRs:
+TMP_0(bool) = tx.origin == owner_txorigin9
+\
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(tx.origin == owner_txorigin9)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = tx.origin == owner_txorigin9
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[14]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[15]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_sendto_txorigin9(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	3 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[37, 38, 39, 40]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	5	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin25)
+
+IRs:
+TMP_3(bool) = tx.origin == owner_txorigin25
+\
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_expression="require(bool)(tx.origin == owner_txorigin25)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_3(bool) = tx.origin == owner_txorigin25
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_source_code_lines="[38]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	4 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[39]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	5 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_sendto_txorigin25(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[37, 38, 39, 40]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	7 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[51, 52, 53, 54]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	9	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_6(bool) = tx.origin == owner_txorigin19
+\
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_6(bool) = tx.origin == owner_txorigin19
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_source_code_lines="[52]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	8 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_source_code_lines="[53]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[51, 52, 53, 54]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	11 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	13	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_9(bool) = tx.origin == owner_txorigin36
+\
+TMP_10(None) = SOLIDITY_CALL require(bool)(TMP_9)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_9(bool) = tx.origin == owner_txorigin36
+TMP_10(None) = SOLIDITY_CALL require(bool)(TMP_9)",
+		node_source_code_lines="[59]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	12 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_25.sol_WhiteBetting_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	14 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[62, 63, 64, 65]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	16	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_11(bool) = tx.origin == owner_txorigin35
+\
+TMP_12(None) = SOLIDITY_CALL require(bool)(TMP_11)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_11(bool) = tx.origin == owner_txorigin35
+TMP_12(None) = SOLIDITY_CALL require(bool)(TMP_11)",
+		node_source_code_lines="[63]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	15 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	17	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_4(None) -> to.call
+REF_5(None) -> REF_4.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_4(None) -> to.call
+REF_5(None) -> REF_4.value",
+		node_source_code_lines="[64]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[62, 63, 64, 65]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	18 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[67, 68, 69]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	20	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_14(bool) = tx.origin == owner_txorigin40
+\
+TMP_15(None) = SOLIDITY_CALL require(bool)(TMP_14)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_14(bool) = tx.origin == owner_txorigin40
+TMP_15(None) = SOLIDITY_CALL require(bool)(TMP_14)",
+		node_source_code_lines="[68]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	19 -> 20	[key=0,
+		edge_type=next,
+		label=Next];
+	21	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_25.sol_WhiteBetting_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[67, 68, 69]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	21 -> 19	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[71, 72, 73, 74]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	23	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin33)
+
+IRs:
+TMP_16(bool) = tx.origin == owner_txorigin33
+\
+TMP_17(None) = SOLIDITY_CALL require(bool)(TMP_16)",
+		node_expression="require(bool)(tx.origin == owner_txorigin33)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_16(bool) = tx.origin == owner_txorigin33
+TMP_17(None) = SOLIDITY_CALL require(bool)(TMP_16)",
+		node_source_code_lines="[72]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	22 -> 23	[key=0,
+		edge_type=next,
+		label=Next];
+	24	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[73]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	23 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	25	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_sendto_txorigin33(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[71, 72, 73, 74]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	25 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	26	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[76, 77, 78, 79]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	27	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin27)
+
+IRs:
+TMP_19(bool) = tx.origin == owner_txorigin27
+\
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_expression="require(bool)(tx.origin == owner_txorigin27)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_19(bool) = tx.origin == owner_txorigin27
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_source_code_lines="[77]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	26 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_7(None) -> to.call
+REF_8(None) -> REF_7.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_7(None) -> to.call
+REF_8(None) -> REF_7.value",
+		node_source_code_lines="[78]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	27 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin27(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[76, 77, 78, 79]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	29 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	30	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[81, 82, 83, 84]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	31	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_22(bool) = tx.origin == owner_txorigin31
+\
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_22(bool) = tx.origin == owner_txorigin31
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_source_code_lines="[82]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_9(None) -> to.call
+REF_10(None) -> REF_9.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_9(None) -> to.call
+REF_10(None) -> REF_9.value",
+		node_source_code_lines="[83]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	31 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	33	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[81, 82, 83, 84]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	33 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[86, 87, 88, 89]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	35	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_25(bool) = tx.origin == owner_txorigin13
+\
+TMP_26(None) = SOLIDITY_CALL require(bool)(TMP_25)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_25(bool) = tx.origin == owner_txorigin13
+TMP_26(None) = SOLIDITY_CALL require(bool)(TMP_25)",
+		node_source_code_lines="[87]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	34 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	36	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[88]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	35 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=WhiteBetting,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[86, 87, 88, 89]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	37 -> 34	[key=0,
+		edge_type=next,
+		label=Next];
+	38	[contract_name=WhiteBetting,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93, 94, 95]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	39	[contract_name=WhiteBetting,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[94]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	38 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	40	[contract_name=WhiteBetting,
+		function_fullname="constructor()",
+		label="buggy_25.sol_WhiteBetting_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93, 94, 95]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	40 -> 38	[key=0,
+		edge_type=next,
+		label=Next];
+	41	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[96, 97, 98, 99]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	42	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin26)
+
+IRs:
+TMP_28(bool) = tx.origin == owner_txorigin26
+\
+TMP_29(None) = SOLIDITY_CALL require(bool)(TMP_28)",
+		node_expression="require(bool)(tx.origin == owner_txorigin26)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_28(bool) = tx.origin == owner_txorigin26
+TMP_29(None) = SOLIDITY_CALL require(bool)(TMP_28)",
+		node_source_code_lines="[97]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	41 -> 42	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_30 = CONVERT this to address
+REF_13 -> BALANCE \
+TMP_30
+Transfer dest:_recipient value:REF_13",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_30 = CONVERT this to address
+REF_13 -> BALANCE TMP_30
+Transfer dest:_recipient value:REF_13",
+		node_source_code_lines="[98]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	42 -> 43	[key=0,
+		edge_type=next,
+		label=Next];
+	44	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="buggy_25.sol_WhiteBetting_withdrawAll_txorigin26(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[96, 97, 98, 99]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	44 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	45	[contract_name=WhiteBetting,
+		function_fullname="setOpenStatus(uint64,uint8)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[102, 103, 104]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	47	[contract_name=WhiteBetting,
+		function_fullname="setOpenStatus(uint64,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_source_code_lines="[102]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	45 -> 47	[key=0,
+		edge_type=next,
+		label=Next];
+	46	[contract_name=WhiteBetting,
+		function_fullname="setOpenStatus(uint64,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].open_status = _open_status
+
+IRs:
+REF_14(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_15(uint8) -> REF_14.open_status
+REF_15 (->gameList) := _open_status(uint8)",
+		node_expression="gameList[_fixtureId].open_status = _open_status",
+		node_info_vulnerabilities=None,
+		node_irs="REF_14(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_15(uint8) -> REF_14.open_status
+REF_15 (->gameList) := _open_status(uint8)",
+		node_source_code_lines="[103]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	47 -> 46	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=WhiteBetting,
+		function_fullname="setOpenStatus(uint64,uint8)",
+		label="buggy_25.sol_WhiteBetting_setOpenStatus(uint64,uint8)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[102, 103, 104]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	48 -> 45	[key=0,
+		edge_type=next,
+		label=Next];
+	49	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[105, 106, 107]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	50	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin20)
+
+IRs:
+TMP_33(bool) = tx.origin == owner_txorigin20
+\
+TMP_34(None) = SOLIDITY_CALL require(bool)(TMP_33)",
+		node_expression="require(bool)(tx.origin == owner_txorigin20)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_33(bool) = tx.origin == owner_txorigin20
+TMP_34(None) = SOLIDITY_CALL require(bool)(TMP_33)",
+		node_source_code_lines="[106]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	49 -> 50	[key=0,
+		edge_type=next,
+		label=Next];
+	51	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin20(address)",
+		label="buggy_25.sol_WhiteBetting_bug_txorigin20(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[105, 106, 107]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	51 -> 49	[key=0,
+		edge_type=next,
+		label=Next];
+	52	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	62	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_source_code_lines="[110]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	52 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	53	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_homeTeam = _odd_homeTeam
+
+IRs:
+REF_16(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_17(uint32) -> REF_16.odd_homeTeam
+REF_17 (->gameList) := _odd_homeTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_homeTeam = _odd_homeTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_16(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_17(uint32) -> REF_16.odd_homeTeam
+REF_17 (->gameList) := _odd_homeTeam(\
+uint32)",
+		node_source_code_lines="[111]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	54	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_drawTeam = _odd_drawTeam
+
+IRs:
+REF_18(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_19(uint32) -> REF_18.odd_drawTeam
+REF_19 (->gameList) := _odd_drawTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_drawTeam = _odd_drawTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_18(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_19(uint32) -> REF_18.odd_drawTeam
+REF_19 (->gameList) := _odd_drawTeam(\
+uint32)",
+		node_source_code_lines="[112]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	53 -> 54	[key=0,
+		edge_type=next,
+		label=Next];
+	55	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_awayTeam = _odd_awayTeam
+
+IRs:
+REF_20(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_21(uint32) -> REF_20.odd_awayTeam
+REF_21 (->gameList) := _odd_awayTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_awayTeam = _odd_awayTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_20(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_21(uint32) -> REF_20.odd_awayTeam
+REF_21 (->gameList) := _odd_awayTeam(\
+uint32)",
+		node_source_code_lines="[113]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	54 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_over = _odd_over
+
+IRs:
+REF_22(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+\
+REF_23(uint32) -> REF_22.odd_over
+REF_23 (->gameList) := _odd_over(uint32)",
+		node_expression="gameList[_fixtureId].odd_over = _odd_over",
+		node_info_vulnerabilities=None,
+		node_irs="REF_22(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_23(uint32) -> REF_22.odd_over
+REF_23 (->gameList) := _odd_over(uint32)",
+		node_source_code_lines="[114]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	55 -> 56	[key=0,
+		edge_type=next,
+		label=Next];
+	57	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_under = _odd_under
+
+IRs:
+REF_24(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_25(uint32) -> REF_24.odd_under
+REF_25 (->gameList) := _odd_under(uint32)",
+		node_expression="gameList[_fixtureId].odd_under = _odd_under",
+		node_info_vulnerabilities=None,
+		node_irs="REF_24(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_25(uint32) -> REF_24.odd_under
+REF_25 (->gameList) := _odd_under(uint32)",
+		node_source_code_lines="[115]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	56 -> 57	[key=0,
+		edge_type=next,
+		label=Next];
+	58	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_homeTeamAndDraw = _odd_homeTeamAndDraw
+
+IRs:
+REF_26(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_27(uint32) -> REF_26.odd_homeTeamAndDraw
+REF_27 (->gameList) := _odd_homeTeamAndDraw(uint32)",
+		node_expression="gameList[_fixtureId].odd_homeTeamAndDraw = _odd_homeTeamAndDraw",
+		node_info_vulnerabilities=None,
+		node_irs="REF_26(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_27(uint32) -> REF_26.odd_homeTeamAndDraw
+REF_27 (->gameList) := _odd_homeTeamAndDraw(\
+uint32)",
+		node_source_code_lines="[116]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	57 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	59	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_homeAndAwayTeam = _odd_homeAndAwayTeam
+
+IRs:
+REF_28(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_29(uint32) -> REF_28.odd_homeAndAwayTeam
+REF_29 (->gameList) := _odd_homeAndAwayTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_homeAndAwayTeam = _odd_homeAndAwayTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_28(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_29(uint32) -> REF_28.odd_homeAndAwayTeam
+REF_29 (->gameList) := _odd_homeAndAwayTeam(\
+uint32)",
+		node_source_code_lines="[117]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	58 -> 59	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_awayTeamAndDraw = _odd_awayTeamAndDraw
+
+IRs:
+REF_30(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_31(uint32) -> REF_30.odd_awayTeamAndDraw
+REF_31 (->gameList) := _odd_awayTeamAndDraw(uint32)",
+		node_expression="gameList[_fixtureId].odd_awayTeamAndDraw = _odd_awayTeamAndDraw",
+		node_info_vulnerabilities=None,
+		node_irs="REF_30(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_31(uint32) -> REF_30.odd_awayTeamAndDraw
+REF_31 (->gameList) := _odd_awayTeamAndDraw(\
+uint32)",
+		node_source_code_lines="[118]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	59 -> 60	[key=0,
+		edge_type=next,
+		label=Next];
+	61	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+ChangeOdd(_fixtureId,_odd_homeTeam,_odd_drawTeam,_odd_awayTeam,_odd_over,_odd_under,_odd_homeTeamAndDraw,_\
+odd_homeAndAwayTeam,_odd_awayTeamAndDraw)
+
+IRs:
+Emit ChangeOdd(_fixtureId._odd_homeTeam._odd_drawTeam._odd_awayTeam._odd_over._odd_\
+under._odd_homeTeamAndDraw._odd_homeAndAwayTeam._odd_awayTeamAndDraw)",
+		node_expression="ChangeOdd(_fixtureId,_odd_homeTeam,_odd_drawTeam,_odd_awayTeam,_odd_over,_odd_under,_odd_homeTeamAndDraw,_odd_homeAndAwayTeam,_odd_\
+awayTeamAndDraw)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit ChangeOdd(_fixtureId._odd_homeTeam._odd_drawTeam._odd_awayTeam._odd_over._odd_under._odd_homeTeamAndDraw._odd_homeAndAwayTeam._\
+odd_awayTeamAndDraw)",
+		node_source_code_lines="[119]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	60 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	62 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=WhiteBetting,
+		function_fullname="changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		label="buggy_25.sol_WhiteBetting_changeOdd(uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	63 -> 52	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[121, 122, 123]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	65	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin32)
+
+IRs:
+TMP_37(bool) = tx.origin == owner_txorigin32
+\
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_expression="require(bool)(tx.origin == owner_txorigin32)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_37(bool) = tx.origin == owner_txorigin32
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_source_code_lines="[122]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	64 -> 65	[key=0,
+		edge_type=next,
+		label=Next];
+	66	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin32(address)",
+		label="buggy_25.sol_WhiteBetting_bug_txorigin32(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[121, 122, 123]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	66 -> 64	[key=0,
+		edge_type=next,
+		label=Next];
+	67	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	80	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_source_code_lines="[126]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	67 -> 80	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].timestamp = _timestamp
+
+IRs:
+REF_32(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_33(uint256) -> REF_32.timestamp
+REF_33 (->gameList) := _timestamp(uint256)",
+		node_expression="gameList[_fixtureId].timestamp = _timestamp",
+		node_info_vulnerabilities=None,
+		node_irs="REF_32(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_33(uint256) -> REF_32.timestamp
+REF_33 (->gameList) := _timestamp(uint256)",
+		node_source_code_lines="[127]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	69	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_homeTeam = _odd_homeTeam
+
+IRs:
+REF_34(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_35(uint32) -> REF_34.odd_homeTeam
+REF_35 (->gameList) := _odd_homeTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_homeTeam = _odd_homeTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_34(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_35(uint32) -> REF_34.odd_homeTeam
+REF_35 (->gameList) := _odd_homeTeam(\
+uint32)",
+		node_source_code_lines="[128]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	68 -> 69	[key=0,
+		edge_type=next,
+		label=Next];
+	70	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_drawTeam = _odd_drawTeam
+
+IRs:
+REF_36(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_37(uint32) -> REF_36.odd_drawTeam
+REF_37 (->gameList) := _odd_drawTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_drawTeam = _odd_drawTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_36(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_37(uint32) -> REF_36.odd_drawTeam
+REF_37 (->gameList) := _odd_drawTeam(\
+uint32)",
+		node_source_code_lines="[129]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	69 -> 70	[key=0,
+		edge_type=next,
+		label=Next];
+	71	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_awayTeam = _odd_awayTeam
+
+IRs:
+REF_38(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_39(uint32) -> REF_38.odd_awayTeam
+REF_39 (->gameList) := _odd_awayTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_awayTeam = _odd_awayTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_38(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_39(uint32) -> REF_38.odd_awayTeam
+REF_39 (->gameList) := _odd_awayTeam(\
+uint32)",
+		node_source_code_lines="[130]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	70 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	72	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_over = _odd_over
+
+IRs:
+REF_40(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+\
+REF_41(uint32) -> REF_40.odd_over
+REF_41 (->gameList) := _odd_over(uint32)",
+		node_expression="gameList[_fixtureId].odd_over = _odd_over",
+		node_info_vulnerabilities=None,
+		node_irs="REF_40(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_41(uint32) -> REF_40.odd_over
+REF_41 (->gameList) := _odd_over(uint32)",
+		node_source_code_lines="[131]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	71 -> 72	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_under = _odd_under
+
+IRs:
+REF_42(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_43(uint32) -> REF_42.odd_under
+REF_43 (->gameList) := _odd_under(uint32)",
+		node_expression="gameList[_fixtureId].odd_under = _odd_under",
+		node_info_vulnerabilities=None,
+		node_irs="REF_42(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_43(uint32) -> REF_42.odd_under
+REF_43 (->gameList) := _odd_under(uint32)",
+		node_source_code_lines="[132]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	72 -> 73	[key=0,
+		edge_type=next,
+		label=Next];
+	74	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_homeTeamAndDraw = _odd_homeTeamAndDraw
+
+IRs:
+REF_44(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_45(uint32) -> REF_44.odd_homeTeamAndDraw
+REF_45 (->gameList) := _odd_homeTeamAndDraw(uint32)",
+		node_expression="gameList[_fixtureId].odd_homeTeamAndDraw = _odd_homeTeamAndDraw",
+		node_info_vulnerabilities=None,
+		node_irs="REF_44(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_45(uint32) -> REF_44.odd_homeTeamAndDraw
+REF_45 (->gameList) := _odd_homeTeamAndDraw(\
+uint32)",
+		node_source_code_lines="[133]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	73 -> 74	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_homeAndAwayTeam = _odd_homeAndAwayTeam
+
+IRs:
+REF_46(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_47(uint32) -> REF_46.odd_homeAndAwayTeam
+REF_47 (->gameList) := _odd_homeAndAwayTeam(uint32)",
+		node_expression="gameList[_fixtureId].odd_homeAndAwayTeam = _odd_homeAndAwayTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_46(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_47(uint32) -> REF_46.odd_homeAndAwayTeam
+REF_47 (->gameList) := _odd_homeAndAwayTeam(\
+uint32)",
+		node_source_code_lines="[134]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	74 -> 75	[key=0,
+		edge_type=next,
+		label=Next];
+	76	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].odd_awayTeamAndDraw = _odd_awayTeamAndDraw
+
+IRs:
+REF_48(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_49(uint32) -> REF_48.odd_awayTeamAndDraw
+REF_49 (->gameList) := _odd_awayTeamAndDraw(uint32)",
+		node_expression="gameList[_fixtureId].odd_awayTeamAndDraw = _odd_awayTeamAndDraw",
+		node_info_vulnerabilities=None,
+		node_irs="REF_48(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_49(uint32) -> REF_48.odd_awayTeamAndDraw
+REF_49 (->gameList) := _odd_awayTeamAndDraw(\
+uint32)",
+		node_source_code_lines="[135]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	75 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	77	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].open_status = _open_status
+
+IRs:
+REF_50(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_51(uint8) -> REF_50.open_status
+REF_51 (->gameList) := _open_status(uint8)",
+		node_expression="gameList[_fixtureId].open_status = _open_status",
+		node_info_vulnerabilities=None,
+		node_irs="REF_50(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_51(uint8) -> REF_50.open_status
+REF_51 (->gameList) := _open_status(uint8)",
+		node_source_code_lines="[136]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	76 -> 77	[key=0,
+		edge_type=next,
+		label=Next];
+	78	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].isDone = false
+
+IRs:
+REF_52(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+\
+REF_53(bool) -> REF_52.isDone
+REF_53 (->gameList) := False(bool)",
+		node_expression="gameList[_fixtureId].isDone = false",
+		node_info_vulnerabilities=None,
+		node_irs="REF_52(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_53(bool) -> REF_52.isDone
+REF_53 (->gameList) := False(bool)",
+		node_source_code_lines="[137]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	77 -> 78	[key=0,
+		edge_type=next,
+		label=Next];
+	79	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+SetGame(_fixtureId,_timestamp,_odd_homeTeam,_odd_drawTeam,_odd_awayTeam,_odd_over,_odd_under,_\
+odd_homeTeamAndDraw,_odd_homeAndAwayTeam,_odd_awayTeamAndDraw,_open_status)
+
+IRs:
+Emit SetGame(_fixtureId._timestamp._odd_homeTeam._\
+odd_drawTeam._odd_awayTeam._odd_over._odd_under._odd_homeTeamAndDraw._odd_homeAndAwayTeam._odd_awayTeamAndDraw._open_status)",
+		node_expression="SetGame(_fixtureId,_timestamp,_odd_homeTeam,_odd_drawTeam,_odd_awayTeam,_odd_over,_odd_under,_odd_homeTeamAndDraw,_odd_homeAndAwayTeam,_\
+odd_awayTeamAndDraw,_open_status)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit SetGame(_fixtureId._timestamp._odd_homeTeam._odd_drawTeam._odd_awayTeam._odd_over._odd_under._odd_homeTeamAndDraw._odd_homeAndAwayTeam._\
+odd_awayTeamAndDraw._open_status)",
+		node_source_code_lines="[138]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	78 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	80 -> 68	[key=0,
+		edge_type=next,
+		label=Next];
+	81	[contract_name=WhiteBetting,
+		function_fullname="setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		label="buggy_25.sol_WhiteBetting_setGameInfo(uint64,uint256,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint8)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	81 -> 67	[key=0,
+		edge_type=next,
+		label=Next];
+	82	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142, 143]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	83	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin38)
+
+IRs:
+TMP_41(bool) = tx.origin == owner_txorigin38
+\
+TMP_42(None) = SOLIDITY_CALL require(bool)(TMP_41)",
+		node_expression="require(bool)(tx.origin == owner_txorigin38)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_41(bool) = tx.origin == owner_txorigin38
+TMP_42(None) = SOLIDITY_CALL require(bool)(TMP_41)",
+		node_source_code_lines="[141]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	82 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_43 = CONVERT this to address
+REF_55 -> BALANCE \
+TMP_43
+Transfer dest:_recipient value:REF_55",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_43 = CONVERT this to address
+REF_55 -> BALANCE TMP_43
+Transfer dest:_recipient value:REF_55",
+		node_source_code_lines="[142]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="buggy_25.sol_WhiteBetting_withdrawAll_txorigin38(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142, 143]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	85 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, \
+172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	87	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+stake = msg.value
+
+IRs:
+stake(uint256) := msg.value(uint256)",
+		node_expression="stake = msg.value",
+		node_info_vulnerabilities=None,
+		node_irs="stake(uint256) := msg.value(uint256)",
+		node_source_code_lines="[147]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_25.sol"];
+	86 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(stake >= 1000000000000000)
+
+IRs:
+TMP_45(bool) = stake >= 1000000000000000
+TMP_46(\
+None) = SOLIDITY_CALL require(bool)(TMP_45)",
+		node_expression="require(bool)(stake >= 1000000000000000)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_45(bool) = stake >= 1000000000000000
+TMP_46(None) = SOLIDITY_CALL require(bool)(TMP_45)",
+		node_source_code_lines="[149]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	87 -> 88	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(_odd != 0)
+
+IRs:
+TMP_47(bool) = _odd != 0
+TMP_48(None) = SOLIDITY_CALL require(\
+bool)(TMP_47)",
+		node_expression="require(bool)(_odd != 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_47(bool) = _odd != 0
+TMP_48(None) = SOLIDITY_CALL require(bool)(TMP_47)",
+		node_source_code_lines="[151]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	88 -> 89	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 1
+
+IRs:
+TMP_49(bool) = _selectedTeam == 1
+CONDITION TMP_49",
+		node_expression="_selectedTeam == 1",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_49(bool) = _selectedTeam == 1
+CONDITION TMP_49",
+		node_source_code_lines="[154]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	89 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	91	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_homeTeam == _odd)
+
+IRs:
+REF_56(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_57(uint32) -> REF_56.odd_homeTeam
+TMP_50(bool) = REF_57 == _odd
+TMP_51(None) = SOLIDITY_CALL require(\
+bool)(TMP_50)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_homeTeam == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_56(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_57(uint32) -> REF_56.odd_homeTeam
+TMP_50(bool) = REF_57 == _odd
+TMP_51(\
+None) = SOLIDITY_CALL require(bool)(TMP_50)",
+		node_source_code_lines="[155]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	90 -> 91	[key=0,
+		edge_type=if_true,
+		label=True];
+	92	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 2
+
+IRs:
+TMP_52(bool) = _selectedTeam == 2
+CONDITION TMP_52",
+		node_expression="_selectedTeam == 2",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_52(bool) = _selectedTeam == 2
+CONDITION TMP_52",
+		node_source_code_lines="[156]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	90 -> 92	[key=0,
+		edge_type=if_false,
+		label=False];
+	114	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	91 -> 114	[key=0,
+		edge_type=next,
+		label=Next];
+	93	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_drawTeam == _odd)
+
+IRs:
+REF_58(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_59(uint32) -> REF_58.odd_drawTeam
+TMP_53(bool) = REF_59 == _odd
+TMP_54(None) = SOLIDITY_CALL require(\
+bool)(TMP_53)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_drawTeam == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_58(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_59(uint32) -> REF_58.odd_drawTeam
+TMP_53(bool) = REF_59 == _odd
+TMP_54(\
+None) = SOLIDITY_CALL require(bool)(TMP_53)",
+		node_source_code_lines="[157]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	92 -> 93	[key=0,
+		edge_type=if_true,
+		label=True];
+	94	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 3
+
+IRs:
+TMP_55(bool) = _selectedTeam == 3
+CONDITION TMP_55",
+		node_expression="_selectedTeam == 3",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_55(bool) = _selectedTeam == 3
+CONDITION TMP_55",
+		node_source_code_lines="[158]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	92 -> 94	[key=0,
+		edge_type=if_false,
+		label=False];
+	113	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	93 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_awayTeam == _odd)
+
+IRs:
+REF_60(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_61(uint32) -> REF_60.odd_awayTeam
+TMP_56(bool) = REF_61 == _odd
+TMP_57(None) = SOLIDITY_CALL require(\
+bool)(TMP_56)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_awayTeam == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_60(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_61(uint32) -> REF_60.odd_awayTeam
+TMP_56(bool) = REF_61 == _odd
+TMP_57(\
+None) = SOLIDITY_CALL require(bool)(TMP_56)",
+		node_source_code_lines="[159]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	94 -> 95	[key=0,
+		edge_type=if_true,
+		label=True];
+	96	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 4
+
+IRs:
+TMP_58(bool) = _selectedTeam == 4
+CONDITION TMP_58",
+		node_expression="_selectedTeam == 4",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_58(bool) = _selectedTeam == 4
+CONDITION TMP_58",
+		node_source_code_lines="[160]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	94 -> 96	[key=0,
+		edge_type=if_false,
+		label=False];
+	112	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	95 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	97	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_over == _odd)
+
+IRs:
+REF_62(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_63(uint32) -> REF_62.odd_over
+TMP_59(bool) = REF_63 == _odd
+TMP_60(None) = SOLIDITY_CALL require(bool)(TMP_59)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_over == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_62(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_63(uint32) -> REF_62.odd_over
+TMP_59(bool) = REF_63 == _odd
+TMP_60(None) = \
+SOLIDITY_CALL require(bool)(TMP_59)",
+		node_source_code_lines="[161]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	96 -> 97	[key=0,
+		edge_type=if_true,
+		label=True];
+	98	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 5
+
+IRs:
+TMP_61(bool) = _selectedTeam == 5
+CONDITION TMP_61",
+		node_expression="_selectedTeam == 5",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_61(bool) = _selectedTeam == 5
+CONDITION TMP_61",
+		node_source_code_lines="[162]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	96 -> 98	[key=0,
+		edge_type=if_false,
+		label=False];
+	111	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	97 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	99	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_under == _odd)
+
+IRs:
+REF_64(WhiteBetting.GameInfo) -> \
+gameList[_fixtureId]
+REF_65(uint32) -> REF_64.odd_under
+TMP_62(bool) = REF_65 == _odd
+TMP_63(None) = SOLIDITY_CALL require(bool)(\
+TMP_62)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_under == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_64(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_65(uint32) -> REF_64.odd_under
+TMP_62(bool) = REF_65 == _odd
+TMP_63(None) = \
+SOLIDITY_CALL require(bool)(TMP_62)",
+		node_source_code_lines="[163]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	98 -> 99	[key=0,
+		edge_type=if_true,
+		label=True];
+	100	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 6
+
+IRs:
+TMP_64(bool) = _selectedTeam == 6
+CONDITION TMP_64",
+		node_expression="_selectedTeam == 6",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_64(bool) = _selectedTeam == 6
+CONDITION TMP_64",
+		node_source_code_lines="[164]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	98 -> 100	[key=0,
+		edge_type=if_false,
+		label=False];
+	110	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	99 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	101	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_homeTeamAndDraw == _odd)
+
+IRs:
+REF_66(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_67(uint32) -> REF_66.odd_homeTeamAndDraw
+TMP_65(bool) = REF_67 == _odd
+TMP_66(None) = SOLIDITY_CALL \
+require(bool)(TMP_65)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_homeTeamAndDraw == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_66(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_67(uint32) -> REF_66.odd_homeTeamAndDraw
+TMP_65(bool) = REF_67 == _odd
+\
+TMP_66(None) = SOLIDITY_CALL require(bool)(TMP_65)",
+		node_source_code_lines="[165]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	100 -> 101	[key=0,
+		edge_type=if_true,
+		label=True];
+	102	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 7
+
+IRs:
+TMP_67(bool) = _selectedTeam == 7
+CONDITION TMP_67",
+		node_expression="_selectedTeam == 7",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_67(bool) = _selectedTeam == 7
+CONDITION TMP_67",
+		node_source_code_lines="[166]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	100 -> 102	[key=0,
+		edge_type=if_false,
+		label=False];
+	109	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[164, 165, 166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	101 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_homeAndAwayTeam == _odd)
+
+IRs:
+REF_68(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_69(uint32) -> REF_68.odd_homeAndAwayTeam
+TMP_68(bool) = REF_69 == _odd
+TMP_69(None) = SOLIDITY_CALL \
+require(bool)(TMP_68)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_homeAndAwayTeam == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_68(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_69(uint32) -> REF_68.odd_homeAndAwayTeam
+TMP_68(bool) = REF_69 == _odd
+\
+TMP_69(None) = SOLIDITY_CALL require(bool)(TMP_68)",
+		node_source_code_lines="[167]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	102 -> 103	[key=0,
+		edge_type=if_true,
+		label=True];
+	104	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: IF
+
+EXPRESSION:
+_selectedTeam == 8
+
+IRs:
+TMP_70(bool) = _selectedTeam == 8
+CONDITION TMP_70",
+		node_expression="_selectedTeam == 8",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_70(bool) = _selectedTeam == 8
+CONDITION TMP_70",
+		node_source_code_lines="[168]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	102 -> 104	[key=0,
+		edge_type=if_false,
+		label=False];
+	108	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[166, 167, 168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	103 -> 108	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].odd_awayTeamAndDraw == _odd)
+
+IRs:
+REF_70(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_71(uint32) -> REF_70.odd_awayTeamAndDraw
+TMP_71(bool) = REF_71 == _odd
+TMP_72(None) = SOLIDITY_CALL \
+require(bool)(TMP_71)",
+		node_expression="require(bool)(gameList[_fixtureId].odd_awayTeamAndDraw == _odd)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_70(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_71(uint32) -> REF_70.odd_awayTeamAndDraw
+TMP_71(bool) = REF_71 == _odd
+\
+TMP_72(None) = SOLIDITY_CALL require(bool)(TMP_71)",
+		node_source_code_lines="[169]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	104 -> 105	[key=0,
+		edge_type=if_true,
+		label=True];
+	106	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+revert()()
+
+IRs:
+TMP_73(None) = SOLIDITY_CALL revert()()",
+		node_expression="revert()()",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_73(None) = SOLIDITY_CALL revert()()",
+		node_source_code_lines="[171]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	104 -> 106	[key=0,
+		edge_type=if_false,
+		label=False];
+	107	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[168, 169, 170, 171, 172]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	105 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	106 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	107 -> 108	[key=0,
+		edge_type=next,
+		label=Next];
+	108 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	109 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	110 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	111 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	113 -> 114	[key=0,
+		edge_type=next,
+		label=Next];
+	115	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].open_status == 3)
+
+IRs:
+REF_72(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_73(uint8) -> REF_72.open_status
+TMP_74(bool) = REF_73 == 3
+TMP_75(None) = SOLIDITY_CALL require(bool)(TMP_74)",
+		node_expression="require(bool)(gameList[_fixtureId].open_status == 3)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_72(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_73(uint8) -> REF_72.open_status
+TMP_74(bool) = REF_73 == 3
+TMP_75(None) = \
+SOLIDITY_CALL require(bool)(TMP_74)",
+		node_source_code_lines="[175]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	114 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	116	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(now < (gameList[_fixtureId].timestamp - 600))
+
+IRs:
+REF_74(WhiteBetting.GameInfo) \
+-> gameList[_fixtureId]
+REF_75(uint256) -> REF_74.timestamp
+TMP_76(uint256) = REF_75 - 600
+TMP_77(bool) = now < TMP_76
+TMP_78(None) = \
+SOLIDITY_CALL require(bool)(TMP_77)",
+		node_expression="require(bool)(now < (gameList[_fixtureId].timestamp - 600))",
+		node_info_vulnerabilities=None,
+		node_irs="REF_74(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_75(uint256) -> REF_74.timestamp
+TMP_76(uint256) = REF_75 - 600
+TMP_77(\
+bool) = now < TMP_76
+TMP_78(None) = SOLIDITY_CALL require(bool)(TMP_77)",
+		node_source_code_lines="[177]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	115 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+betList[_fixtureId].push(BetFixture(msg.sender,stake,_odd,_selectedTeam))
+
+IRs:
+REF_76(WhiteBetting.BetFixture[]) \
+-> betList[_fixtureId]
+TMP_79 = new BetFixture(msg.sender,stake,_odd,_selectedTeam)
+REF_78 -> LENGTH REF_76
+TMP_81(uint256) := REF_\
+78(uint256)
+TMP_82(uint256) = TMP_81 + 1
+REF_78 (->betList) := TMP_82(uint256)
+REF_79(WhiteBetting.BetFixture) -> REF_76[TMP_81]
+\
+REF_79 (->betList) := TMP_79(WhiteBetting.BetFixture)",
+		node_expression="betList[_fixtureId].push(BetFixture(msg.sender,stake,_odd,_selectedTeam))",
+		node_info_vulnerabilities=None,
+		node_irs="REF_76(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+TMP_79 = new BetFixture(msg.sender,stake,_odd,_selectedTeam)
+REF_78 -> \
+LENGTH REF_76
+TMP_81(uint256) := REF_78(uint256)
+TMP_82(uint256) = TMP_81 + 1
+REF_78 (->betList) := TMP_82(uint256)
+REF_79(WhiteBetting.BetFixture) \
+-> REF_76[TMP_81]
+REF_79 (->betList) := TMP_79(WhiteBetting.BetFixture)",
+		node_source_code_lines="[180]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	116 -> 117	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+NewStake(msg.sender,_fixtureId,_selectedTeam,stake,_odd)
+
+IRs:
+Emit NewStake(msg.sender._fixtureId._\
+selectedTeam.stake._odd)",
+		node_expression="NewStake(msg.sender,_fixtureId,_selectedTeam,stake,_odd)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit NewStake(msg.sender._fixtureId._selectedTeam.stake._odd)",
+		node_source_code_lines="[181]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	117 -> 118	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=WhiteBetting,
+		function_fullname="placeBet(uint64,uint16,uint32)",
+		label="buggy_25.sol_WhiteBetting_placeBet(uint64,uint16,uint32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, \
+172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	119 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	120	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[184, 185, 186]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	121	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_84(bool) = tx.origin == owner_txorigin4
+\
+TMP_85(None) = SOLIDITY_CALL require(bool)(TMP_84)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_84(bool) = tx.origin == owner_txorigin4
+TMP_85(None) = SOLIDITY_CALL require(bool)(TMP_84)",
+		node_source_code_lines="[185]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	120 -> 121	[key=0,
+		edge_type=next,
+		label=Next];
+	122	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_25.sol_WhiteBetting_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[184, 185, 186]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	122 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	123	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, \
+215, 216, 217, 218, 219, 220]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	140	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_source_code_lines="[189]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	123 -> 140	[key=0,
+		edge_type=next,
+		label=Next];
+	124	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].open_status == 3)
+
+IRs:
+REF_80(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_81(uint8) -> REF_80.open_status
+TMP_86(bool) = REF_81 == 3
+TMP_87(None) = SOLIDITY_CALL require(bool)(TMP_86)",
+		node_expression="require(bool)(gameList[_fixtureId].open_status == 3)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_80(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_81(uint8) -> REF_80.open_status
+TMP_86(bool) = REF_81 == 3
+TMP_87(None) = \
+SOLIDITY_CALL require(bool)(TMP_86)",
+		node_source_code_lines="[191]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	125	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(gameList[_fixtureId].isDone == false)
+
+IRs:
+REF_82(WhiteBetting.GameInfo) -> gameList[_\
+fixtureId]
+REF_83(bool) -> REF_82.isDone
+TMP_88(bool) = REF_83 == False
+TMP_89(None) = SOLIDITY_CALL require(bool)(TMP_88)",
+		node_expression="require(bool)(gameList[_fixtureId].isDone == false)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_82(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_83(bool) -> REF_82.isDone
+TMP_88(bool) = REF_83 == False
+TMP_89(None) = \
+SOLIDITY_CALL require(bool)(TMP_88)",
+		node_source_code_lines="[193]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	124 -> 125	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(betList[_fixtureId][0].player != address(0))
+
+IRs:
+REF_84(WhiteBetting.BetFixture[]) \
+-> betList[_fixtureId]
+REF_85(WhiteBetting.BetFixture) -> REF_84[0]
+REF_86(address) -> REF_85.player
+TMP_90 = CONVERT 0 to address
+\
+TMP_91(bool) = REF_86 != TMP_90
+TMP_92(None) = SOLIDITY_CALL require(bool)(TMP_91)",
+		node_expression="require(bool)(betList[_fixtureId][0].player != address(0))",
+		node_info_vulnerabilities=None,
+		node_irs="REF_84(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_85(WhiteBetting.BetFixture) -> REF_84[0]
+REF_86(address) -> REF_85.player
+\
+TMP_90 = CONVERT 0 to address
+TMP_91(bool) = REF_86 != TMP_90
+TMP_92(None) = SOLIDITY_CALL require(bool)(TMP_91)",
+		node_source_code_lines="[195]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	125 -> 126	[key=0,
+		edge_type=next,
+		label=Next];
+	129	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+i = 0
+
+IRs:
+i(uint256) := 0(uint256)",
+		node_expression="i = 0",
+		node_info_vulnerabilities=None,
+		node_irs="i(uint256) := 0(uint256)",
+		node_source_code_lines="[198]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_25.sol"];
+	126 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	127	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212]",
+		node_type=BEGIN_LOOP,
+		source_file="buggy_25.sol"];
+	130	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+i < betList[_fixtureId].length
+
+IRs:
+REF_87(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_\
+88 -> LENGTH REF_87
+TMP_93(bool) = i < REF_88
+CONDITION TMP_93",
+		node_expression="i < betList[_fixtureId].length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_87(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_88 -> LENGTH REF_87
+TMP_93(bool) = i < REF_88
+CONDITION TMP_93",
+		node_source_code_lines="[198]",
+		node_type=IF_LOOP,
+		source_file="buggy_25.sol"];
+	127 -> 130	[key=0,
+		edge_type=next,
+		label=Next];
+	128	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212]",
+		node_type=END_LOOP,
+		source_file="buggy_25.sol"];
+	137	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].open_status = 5
+
+IRs:
+REF_102(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+\
+REF_103(uint8) -> REF_102.open_status
+REF_103 (->gameList) := 5(uint256)",
+		node_expression="gameList[_fixtureId].open_status = 5",
+		node_info_vulnerabilities=None,
+		node_irs="REF_102(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_103(uint8) -> REF_102.open_status
+REF_103 (->gameList) := 5(uint256)",
+		node_source_code_lines="[215]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	128 -> 137	[key=0,
+		edge_type=next,
+		label=Next];
+	129 -> 127	[key=0,
+		edge_type=next,
+		label=Next];
+	130 -> 128	[key=0,
+		edge_type=if_false,
+		label=False];
+	131	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+selectedTeam = betList[_fixtureId][i].selectedTeam
+
+IRs:
+REF_89(WhiteBetting.BetFixture[]) \
+-> betList[_fixtureId]
+REF_90(WhiteBetting.BetFixture) -> REF_89[i]
+REF_91(uint16) -> REF_90.selectedTeam
+selectedTeam(uint16) := \
+REF_91(uint16)",
+		node_expression="selectedTeam = betList[_fixtureId][i].selectedTeam",
+		node_info_vulnerabilities=None,
+		node_irs="REF_89(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_90(WhiteBetting.BetFixture) -> REF_89[i]
+REF_91(uint16) -> REF_90.selectedTeam
+\
+selectedTeam(uint16) := REF_91(uint16)",
+		node_source_code_lines="[199]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_25.sol"];
+	130 -> 131	[key=0,
+		edge_type=if_true,
+		label=True];
+	132	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+returnEth = (betList[_fixtureId][i].stake * betList[_fixtureId][i].odd) / 1000
+
+IRs:
+REF_92(\
+WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_93(WhiteBetting.BetFixture) -> REF_92[i]
+REF_94(uint256) -> REF_93.stake
+REF_\
+95(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_96(WhiteBetting.BetFixture) -> REF_95[i]
+REF_97(uint32) -> REF_96.odd
+TMP_\
+94(uint256) = REF_94 * REF_97
+TMP_95(uint256) = TMP_94 / 1000
+returnEth(uint256) := TMP_95(uint256)",
+		node_expression="returnEth = (betList[_fixtureId][i].stake * betList[_fixtureId][i].odd) / 1000",
+		node_info_vulnerabilities=None,
+		node_irs="REF_92(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_93(WhiteBetting.BetFixture) -> REF_92[i]
+REF_94(uint256) -> REF_93.stake
+\
+REF_95(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_96(WhiteBetting.BetFixture) -> REF_95[i]
+REF_97(uint32) -> REF_96.odd
+\
+TMP_94(uint256) = REF_94 * REF_97
+TMP_95(uint256) = TMP_94 / 1000
+returnEth(uint256) := TMP_95(uint256)",
+		node_source_code_lines="[200]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_25.sol"];
+	131 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	133	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: IF
+
+EXPRESSION:
+(selectedTeam == 1 && _homeDrawAway == 1) || (selectedTeam == 2 && _homeDrawAway == 2) || (selectedTeam == \
+3 && _homeDrawAway == 3) || (selectedTeam == 4 && _overUnder == 1) || (selectedTeam == 5 && _overUnder == 2) || (selectedTeam == \
+6 && (_homeDrawAway == 1 || _homeDrawAway == 2)) || (selectedTeam == 7 && (_homeDrawAway == 1 || _homeDrawAway == 3)) || (selectedTeam == \
+8 && (_homeDrawAway == 3 || _homeDrawAway == 2))
+
+IRs:
+TMP_96(bool) = selectedTeam == 1
+TMP_97(bool) = _homeDrawAway == 1
+TMP_98(\
+bool) = TMP_96 && TMP_97
+TMP_99(bool) = selectedTeam == 2
+TMP_100(bool) = _homeDrawAway == 2
+TMP_101(bool) = TMP_99 && TMP_100
+TMP_\
+102(bool) = TMP_98 || TMP_101
+TMP_103(bool) = selectedTeam == 3
+TMP_104(bool) = _homeDrawAway == 3
+TMP_105(bool) = TMP_103 && TMP_\
+104
+TMP_106(bool) = TMP_102 || TMP_105
+TMP_107(bool) = selectedTeam == 4
+TMP_108(bool) = _overUnder == 1
+TMP_109(bool) = TMP_107 && \
+TMP_108
+TMP_110(bool) = TMP_106 || TMP_109
+TMP_111(bool) = selectedTeam == 5
+TMP_112(bool) = _overUnder == 2
+TMP_113(bool) = TMP_\
+111 && TMP_112
+TMP_114(bool) = TMP_110 || TMP_113
+TMP_115(bool) = selectedTeam == 6
+TMP_116(bool) = _homeDrawAway == 1
+TMP_117(bool) = _\
+homeDrawAway == 2
+TMP_118(bool) = TMP_116 || TMP_117
+TMP_119(bool) = TMP_115 && TMP_118
+TMP_120(bool) = TMP_114 || TMP_119
+TMP_121(\
+bool) = selectedTeam == 7
+TMP_122(bool) = _homeDrawAway == 1
+TMP_123(bool) = _homeDrawAway == 3
+TMP_124(bool) = TMP_122 || TMP_123
+\
+TMP_125(bool) = TMP_121 && TMP_124
+TMP_126(bool) = TMP_120 || TMP_125
+TMP_127(bool) = selectedTeam == 8
+TMP_128(bool) = _homeDrawAway == \
+3
+TMP_129(bool) = _homeDrawAway == 2
+TMP_130(bool) = TMP_128 || TMP_129
+TMP_131(bool) = TMP_127 && TMP_130
+TMP_132(bool) = TMP_126 || \
+TMP_131
+CONDITION TMP_132",
+		node_expression="(selectedTeam == 1 && _homeDrawAway == 1) || (selectedTeam == 2 && _homeDrawAway == 2) || (selectedTeam == 3 && _homeDrawAway == \
+3) || (selectedTeam == 4 && _overUnder == 1) || (selectedTeam == 5 && _overUnder == 2) || (selectedTeam == 6 && (_homeDrawAway == \
+1 || _homeDrawAway == 2)) || (selectedTeam == 7 && (_homeDrawAway == 1 || _homeDrawAway == 3)) || (selectedTeam == 8 && (_homeDrawAway == \
+3 || _homeDrawAway == 2))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_96(bool) = selectedTeam == 1
+TMP_97(bool) = _homeDrawAway == 1
+TMP_98(bool) = TMP_96 && TMP_97
+TMP_99(bool) = selectedTeam == \
+2
+TMP_100(bool) = _homeDrawAway == 2
+TMP_101(bool) = TMP_99 && TMP_100
+TMP_102(bool) = TMP_98 || TMP_101
+TMP_103(bool) = selectedTeam == \
+3
+TMP_104(bool) = _homeDrawAway == 3
+TMP_105(bool) = TMP_103 && TMP_104
+TMP_106(bool) = TMP_102 || TMP_105
+TMP_107(bool) = selectedTeam == \
+4
+TMP_108(bool) = _overUnder == 1
+TMP_109(bool) = TMP_107 && TMP_108
+TMP_110(bool) = TMP_106 || TMP_109
+TMP_111(bool) = selectedTeam == \
+5
+TMP_112(bool) = _overUnder == 2
+TMP_113(bool) = TMP_111 && TMP_112
+TMP_114(bool) = TMP_110 || TMP_113
+TMP_115(bool) = selectedTeam == \
+6
+TMP_116(bool) = _homeDrawAway == 1
+TMP_117(bool) = _homeDrawAway == 2
+TMP_118(bool) = TMP_116 || TMP_117
+TMP_119(bool) = TMP_115 && \
+TMP_118
+TMP_120(bool) = TMP_114 || TMP_119
+TMP_121(bool) = selectedTeam == 7
+TMP_122(bool) = _homeDrawAway == 1
+TMP_123(bool) = _\
+homeDrawAway == 3
+TMP_124(bool) = TMP_122 || TMP_123
+TMP_125(bool) = TMP_121 && TMP_124
+TMP_126(bool) = TMP_120 || TMP_125
+TMP_127(\
+bool) = selectedTeam == 8
+TMP_128(bool) = _homeDrawAway == 3
+TMP_129(bool) = _homeDrawAway == 2
+TMP_130(bool) = TMP_128 || TMP_129
+\
+TMP_131(bool) = TMP_127 && TMP_130
+TMP_132(bool) = TMP_126 || TMP_131
+CONDITION TMP_132",
+		node_source_code_lines="[201, 202, 203, 204, 205, 206, 207, 208]",
+		node_type=IF,
+		source_file="buggy_25.sol"];
+	132 -> 133	[key=0,
+		edge_type=next,
+		label=Next];
+	134	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+betList[_fixtureId][i].player.transfer(returnEth)
+
+IRs:
+REF_98(WhiteBetting.BetFixture[]) -> \
+betList[_fixtureId]
+REF_99(WhiteBetting.BetFixture) -> REF_98[i]
+REF_100(address) -> REF_99.player
+Transfer dest:REF_100 value:returnEth",
+		node_expression="betList[_fixtureId][i].player.transfer(returnEth)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_98(WhiteBetting.BetFixture[]) -> betList[_fixtureId]
+REF_99(WhiteBetting.BetFixture) -> REF_98[i]
+REF_100(address) -> REF_99.player
+\
+Transfer dest:REF_100 value:returnEth",
+		node_source_code_lines="[210]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	133 -> 134	[key=0,
+		edge_type=if_true,
+		label=True];
+	135	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211]",
+		node_type=END_IF,
+		source_file="buggy_25.sol"];
+	133 -> 135	[key=0,
+		edge_type=if_false,
+		label=False];
+	134 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	136	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+i ++
+
+IRs:
+TMP_134(uint256) := i(uint256)
+i(uint256) = i + 1",
+		node_expression="i ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_134(uint256) := i(uint256)
+i(uint256) = i + 1",
+		node_source_code_lines="[198]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	135 -> 136	[key=0,
+		edge_type=next,
+		label=Next];
+	136 -> 130	[key=0,
+		edge_type=next,
+		label=Next];
+	138	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+gameList[_fixtureId].isDone = true
+
+IRs:
+REF_104(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+\
+REF_105(bool) -> REF_104.isDone
+REF_105 (->gameList) := True(bool)",
+		node_expression="gameList[_fixtureId].isDone = true",
+		node_info_vulnerabilities=None,
+		node_irs="REF_104(WhiteBetting.GameInfo) -> gameList[_fixtureId]
+REF_105(bool) -> REF_104.isDone
+REF_105 (->gameList) := True(bool)",
+		node_source_code_lines="[217]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	137 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	139	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+GivePrizeMoney(_fixtureId,_homeDrawAway,_overUnder)
+
+IRs:
+Emit GivePrizeMoney(_fixtureId._homeDrawAway._\
+overUnder)",
+		node_expression="GivePrizeMoney(_fixtureId,_homeDrawAway,_overUnder)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit GivePrizeMoney(_fixtureId._homeDrawAway._overUnder)",
+		node_source_code_lines="[219]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	138 -> 139	[key=0,
+		edge_type=next,
+		label=Next];
+	140 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	141	[contract_name=WhiteBetting,
+		function_fullname="givePrizeMoney(uint64,uint8,uint8)",
+		label="buggy_25.sol_WhiteBetting_givePrizeMoney(uint64,uint8,uint8)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, \
+215, 216, 217, 218, 219, 220]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	141 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	142	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[221, 222, 223, 224]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	143	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_137(bool) = tx.origin == owner_txorigin7
+\
+TMP_138(None) = SOLIDITY_CALL require(bool)(TMP_137)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_137(bool) = tx.origin == owner_txorigin7
+TMP_138(None) = SOLIDITY_CALL require(bool)(TMP_137)",
+		node_source_code_lines="[222]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	142 -> 143	[key=0,
+		edge_type=next,
+		label=Next];
+	144	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_106(None) -> to.call
+REF_107(None) -> REF_106.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_106(None) -> to.call
+REF_107(None) -> REF_106.value",
+		node_source_code_lines="[223]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	143 -> 144	[key=0,
+		edge_type=next,
+		label=Next];
+	145	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[221, 222, 223, 224]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	145 -> 142	[key=0,
+		edge_type=next,
+		label=Next];
+	146	[contract_name=WhiteBetting,
+		function_fullname="getBalance()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[233, 234, 235]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	147	[contract_name=WhiteBetting,
+		function_fullname="getBalance()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+address(this).balance
+
+IRs:
+TMP_140 = CONVERT this to address
+REF_108 -> BALANCE TMP_140
+RETURN REF_\
+108",
+		node_expression="address(this).balance",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_140 = CONVERT this to address
+REF_108 -> BALANCE TMP_140
+RETURN REF_108",
+		node_source_code_lines="[234]",
+		node_type=RETURN,
+		source_file="buggy_25.sol"];
+	146 -> 147	[key=0,
+		edge_type=next,
+		label=Next];
+	148	[contract_name=WhiteBetting,
+		function_fullname="getBalance()",
+		label="buggy_25.sol_WhiteBetting_getBalance()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[233, 234, 235]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	148 -> 146	[key=0,
+		edge_type=next,
+		label=Next];
+	149	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[236, 237, 238, 239]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	150	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_141(bool) = tx.origin == owner_txorigin23
+\
+TMP_142(None) = SOLIDITY_CALL require(bool)(TMP_141)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_141(bool) = tx.origin == owner_txorigin23
+TMP_142(None) = SOLIDITY_CALL require(bool)(TMP_141)",
+		node_source_code_lines="[237]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	149 -> 150	[key=0,
+		edge_type=next,
+		label=Next];
+	151	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_109(None) -> to.call
+REF_110(None) -> REF_109.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_109(None) -> to.call
+REF_110(None) -> REF_109.value",
+		node_source_code_lines="[238]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	150 -> 151	[key=0,
+		edge_type=next,
+		label=Next];
+	152	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[236, 237, 238, 239]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	152 -> 149	[key=0,
+		edge_type=next,
+		label=Next];
+	153	[contract_name=WhiteBetting,
+		function_fullname="deposit(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[242, 243, 244]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	154	[contract_name=WhiteBetting,
+		function_fullname="deposit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Deposit(msg.sender,_eth)
+
+IRs:
+Emit Deposit(msg.sender._eth)",
+		node_expression="Deposit(msg.sender,_eth)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Deposit(msg.sender._eth)",
+		node_source_code_lines="[243]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	153 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	155	[contract_name=WhiteBetting,
+		function_fullname="deposit(uint256)",
+		label="buggy_25.sol_WhiteBetting_deposit(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[242, 243, 244]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	155 -> 153	[key=0,
+		edge_type=next,
+		label=Next];
+	156	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[245, 246, 247, 248]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	157	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_145(bool) = tx.origin == owner_txorigin14
+\
+TMP_146(None) = SOLIDITY_CALL require(bool)(TMP_145)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_145(bool) = tx.origin == owner_txorigin14
+TMP_146(None) = SOLIDITY_CALL require(bool)(TMP_145)",
+		node_source_code_lines="[246]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	156 -> 157	[key=0,
+		edge_type=next,
+		label=Next];
+	158	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_147 = CONVERT this to address
+REF_112 -> \
+BALANCE TMP_147
+Transfer dest:_recipient value:REF_112",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_147 = CONVERT this to address
+REF_112 -> BALANCE TMP_147
+Transfer dest:_recipient value:REF_112",
+		node_source_code_lines="[247]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	157 -> 158	[key=0,
+		edge_type=next,
+		label=Next];
+	159	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_25.sol_WhiteBetting_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[245, 246, 247, 248]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	159 -> 156	[key=0,
+		edge_type=next,
+		label=Next];
+	160	[contract_name=WhiteBetting,
+		function_fullname="changeOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[251, 252, 253]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	162	[contract_name=WhiteBetting,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_source_code_lines="[251]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	160 -> 162	[key=0,
+		edge_type=next,
+		label=Next];
+	161	[contract_name=WhiteBetting,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = _newOwner
+
+IRs:
+owner(address) := _newOwner(address)",
+		node_expression="owner = _newOwner",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := _newOwner(address)",
+		node_source_code_lines="[252]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	162 -> 161	[key=0,
+		edge_type=next,
+		label=Next];
+	163	[contract_name=WhiteBetting,
+		function_fullname="changeOwner(address)",
+		label="buggy_25.sol_WhiteBetting_changeOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[251, 252, 253]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	163 -> 160	[key=0,
+		edge_type=next,
+		label=Next];
+	164	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[254, 255, 256, 257]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	165	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_150(bool) = tx.origin == owner_txorigin30
+\
+TMP_151(None) = SOLIDITY_CALL require(bool)(TMP_150)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_150(bool) = tx.origin == owner_txorigin30
+TMP_151(None) = SOLIDITY_CALL require(bool)(TMP_150)",
+		node_source_code_lines="[255]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	164 -> 165	[key=0,
+		edge_type=next,
+		label=Next];
+	166	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_152 = CONVERT this to address
+REF_114 -> \
+BALANCE TMP_152
+Transfer dest:_recipient value:REF_114",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_152 = CONVERT this to address
+REF_114 -> BALANCE TMP_152
+Transfer dest:_recipient value:REF_114",
+		node_source_code_lines="[256]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	165 -> 166	[key=0,
+		edge_type=next,
+		label=Next];
+	167	[contract_name=WhiteBetting,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_25.sol_WhiteBetting_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[254, 255, 256, 257]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	167 -> 164	[key=0,
+		edge_type=next,
+		label=Next];
+	168	[contract_name=WhiteBetting,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[260, 261, 262]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	169	[contract_name=WhiteBetting,
+		function_fullname="fallback()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner.transfer(msg.value)
+
+IRs:
+Transfer dest:owner value:msg.value",
+		node_expression="owner.transfer(msg.value)",
+		node_info_vulnerabilities=None,
+		node_irs="Transfer dest:owner value:msg.value",
+		node_source_code_lines="[261]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	168 -> 169	[key=0,
+		edge_type=next,
+		label=Next];
+	170	[contract_name=WhiteBetting,
+		function_fullname="fallback()",
+		label="buggy_25.sol_WhiteBetting_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[260, 261, 262]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	170 -> 168	[key=0,
+		edge_type=next,
+		label=Next];
+	171	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[263, 264, 265]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	172	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_155(bool) = tx.origin == owner_txorigin8
+\
+TMP_156(None) = SOLIDITY_CALL require(bool)(TMP_155)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_155(bool) = tx.origin == owner_txorigin8
+TMP_156(None) = SOLIDITY_CALL require(bool)(TMP_155)",
+		node_source_code_lines="[264]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	171 -> 172	[key=0,
+		edge_type=next,
+		label=Next];
+	173	[contract_name=WhiteBetting,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_25.sol_WhiteBetting_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[263, 264, 265]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	173 -> 171	[key=0,
+		edge_type=next,
+		label=Next];
+	174	[contract_name=WhiteBetting,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[268, 269, 270, 271, 272]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	178	[contract_name=WhiteBetting,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WhiteBetting.onlyOwner()()",
+		node_source_code_lines="[268]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	174 -> 178	[key=0,
+		edge_type=next,
+		label=Next];
+	175	[contract_name=WhiteBetting,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(_amount > 0 && _amount <= address(this).balance)
+
+IRs:
+TMP_157(bool) = _amount > \
+0
+TMP_158 = CONVERT this to address
+REF_116 -> BALANCE TMP_158
+TMP_159(bool) = _amount <= REF_116
+TMP_160(bool) = TMP_157 && TMP_\
+159
+TMP_161(None) = SOLIDITY_CALL require(bool)(TMP_160)",
+		node_expression="require(bool)(_amount > 0 && _amount <= address(this).balance)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_157(bool) = _amount > 0
+TMP_158 = CONVERT this to address
+REF_116 -> BALANCE TMP_158
+TMP_159(bool) = _amount <= REF_116
+TMP_\
+160(bool) = TMP_157 && TMP_159
+TMP_161(None) = SOLIDITY_CALL require(bool)(TMP_160)",
+		node_source_code_lines="[269]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	176	[contract_name=WhiteBetting,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner.transfer(_amount)
+
+IRs:
+Transfer dest:owner value:_amount",
+		node_expression="owner.transfer(_amount)",
+		node_info_vulnerabilities=None,
+		node_irs="Transfer dest:owner value:_amount",
+		node_source_code_lines="[270]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	175 -> 176	[key=0,
+		edge_type=next,
+		label=Next];
+	177	[contract_name=WhiteBetting,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Withdraw(owner,_amount)
+
+IRs:
+Emit Withdraw(owner._amount)",
+		node_expression="Withdraw(owner,_amount)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Withdraw(owner._amount)",
+		node_source_code_lines="[271]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	176 -> 177	[key=0,
+		edge_type=next,
+		label=Next];
+	178 -> 175	[key=0,
+		edge_type=next,
+		label=Next];
+	179	[contract_name=WhiteBetting,
+		function_fullname="withdraw(uint256)",
+		label="buggy_25.sol_WhiteBetting_withdraw(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[268, 269, 270, 271, 272]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	179 -> 174	[key=0,
+		edge_type=next,
+		label=Next];
+	180	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[273, 274, 275, 276]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	181	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_165(bool) = tx.origin == owner_txorigin39
+\
+TMP_166(None) = SOLIDITY_CALL require(bool)(TMP_165)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="TMP_165(bool) = tx.origin == owner_txorigin39
+TMP_166(None) = SOLIDITY_CALL require(bool)(TMP_165)",
+		node_source_code_lines="[274]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	180 -> 181	[key=0,
+		edge_type=next,
+		label=Next];
+	182	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_118(None) -> to.call
+REF_119(None) -> REF_118.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs="REF_118(None) -> to.call
+REF_119(None) -> REF_118.value",
+		node_source_code_lines="[275]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	181 -> 182	[key=0,
+		edge_type=next,
+		label=Next];
+	183	[contract_name=WhiteBetting,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_25.sol_WhiteBetting_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [86, 87, 88, 89, 81, 82, 83, 84, 76, 77, 78, 79, 71, 72, 73, 74, 67, 68, 69, 62, 63, 64, 65, 58, 59, 60, 273, 274, 275, \
+276, 263, 264, 265, 254, 255, 256, 257, 245, 246, 247, 248, 236, 237, 238, 239, 221, 222, 223, 224, 184, 185, 186, 140, 141, 142, \
+143, 121, 122, 123, 105, 106, 107, 96, 97, 98, 99, 51, 52, 53, 54, 37, 38, 39, 40, 13, 14, 15, 16], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[273, 274, 275, 276]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	183 -> 180	[key=0,
+		edge_type=next,
+		label=Next];
+	184	[contract_name=WhiteBetting,
+		function_fullname="onlyOwner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[227, 228, 229, 230]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_25.sol"];
+	185	[contract_name=WhiteBetting,
+		function_fullname="onlyOwner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(msg.sender == owner,OnlyOwner methods called by non-owner.)
+
+IRs:
+TMP_168(\
+bool) = msg.sender == owner
+TMP_169(None) = SOLIDITY_CALL require(bool,string)(TMP_168,OnlyOwner methods called by non-owner.)",
+		node_expression="require(bool,string)(msg.sender == owner,OnlyOwner methods called by non-owner.)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_168(bool) = msg.sender == owner
+TMP_169(None) = SOLIDITY_CALL require(bool,string)(TMP_168,OnlyOwner methods called by non-owner.)",
+		node_source_code_lines="[228]",
+		node_type=EXPRESSION,
+		source_file="buggy_25.sol"];
+	184 -> 185	[key=0,
+		edge_type=next,
+		label=Next];
+	186	[contract_name=WhiteBetting,
+		function_fullname="onlyOwner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[229]",
+		node_type=_,
+		source_file="buggy_25.sol"];
+	185 -> 186	[key=0,
+		edge_type=next,
+		label=Next];
+	187	[contract_name=WhiteBetting,
+		function_fullname="onlyOwner()",
+		label="buggy_25.sol_WhiteBetting_onlyOwner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[227, 228, 229, 230]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_25.sol"];
+	187 -> 184	[key=0,
+		edge_type=next,
+		label=Next];
+}

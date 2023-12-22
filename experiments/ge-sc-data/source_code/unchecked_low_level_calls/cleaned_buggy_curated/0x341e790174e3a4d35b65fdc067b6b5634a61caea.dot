@@ -1,0 +1,26 @@
+digraph  {
+9 [label="1_ forked\n9-function_definition-2-2", type_label=function_definition];
+11 [label="1_ constant\n11-expression_statement-2-2", type_label=expression_statement];
+20 [label="4_ AmIOnTheFork amIOnTheFork = AmIOnTheFork(0x2bd2326c993dfaef84f696526064ff22eba5b362);\n20-new_variable-5-5", type_label=new_variable];
+29 [label="5_ split\n29-function_definition-6-13", type_label=function_definition];
+44 [label="6_ if\n44-if-7-11", type_label=if];
+127 [label="6_ end_if", type_label=end_if];
+59 [label="7_ return true;\n59-return-8-8", type_label=return];
+62 [label="8_ if\n62-if-9-11", type_label=if];
+78 [label="9_ return true;\n78-return-10-10", type_label=return];
+81 [label="11_ return false;\n81-return-12-12", type_label=return];
+86 [label="14_ throw;\n86-expression_statement-15-15", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+29 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+44 -> 59  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+44 -> 62  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+127 -> 81  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+59 -> 127  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+59 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+62 -> 78  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+62 -> 127  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+78 -> 127  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+78 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+81 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

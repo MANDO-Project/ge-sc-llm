@@ -1,0 +1,28 @@
+digraph  {
+13 [label="2_ address creator;\n13-new_variable-3-3", method="", type_label=new_variable];
+17 [label="3_ mapping(address => uint256) balances;\n17-new_variable-4-4", method="", type_label=new_variable];
+25 [label="5_ creator = msg.sender;\n25-expression_statement-6-6", method="", type_label=expression_statement];
+31 [label="7_ function deposit() public payable {\n         assert(balances[msg.sender] + msg.value > balances[msg.sender]);\n         balances[msg.sender] += msg.value;\n     }\n31-function_definition-8-11", method="deposit()", type_label=function_definition];
+36 [label="8_ assert(balances[msg.sender] + msg.value > balances[msg.sender]);\n36-expression_statement-9-9", method="deposit()", type_label=expression_statement];
+55 [label="9_ balances[msg.sender] += msg.value;\n55-expression_statement-10-10", method="deposit()", type_label=expression_statement];
+65 [label="11_ function withdraw(uint256 amount) public {\n         require(amount <= balances[msg.sender]);\n         msg.sender.transfer(amount);\n         balances[msg.sender] -= amount;\n     }\n65-function_definition-12-16", method="withdraw(uint256 amount)", type_label=function_definition];
+73 [label="12_ require(amount <= balances[msg.sender]);\n73-expression_statement-13-13", method="withdraw(uint256 amount)", type_label=expression_statement];
+84 [label="13_ msg.sender.transfer(amount);\n84-expression_statement-14-14", method="withdraw(uint256 amount)", type_label=expression_statement];
+93 [label="14_ balances[msg.sender] -= amount;\n93-expression_statement-15-15", method="withdraw(uint256 amount)", type_label=expression_statement];
+101 [label="16_ function refund() public {\n         msg.sender.transfer(balances[msg.sender]);\n     }\n101-function_definition-17-19", method="refund()", type_label=function_definition];
+105 [label="17_ msg.sender.transfer(balances[msg.sender]);\n105-expression_statement-18-18", method="refund()", type_label=expression_statement];
+118 [label="19_ function migrateTo(address to) public {\n         require(creator == msg.sender);\n         to.transfer(this.balance);\n     }\n118-function_definition-20-23", method="migrateTo(address to)", type_label=function_definition];
+126 [label="20_ require(creator == msg.sender);\n126-expression_statement-21-21", method="migrateTo(address to)", type_label=expression_statement];
+135 [label="21_ to.transfer(this.balance);\n135-expression_statement-22-22", method="migrateTo(address to)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 17  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+31 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+36 -> 55  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 73  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+73 -> 84  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+84 -> 93  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+101 -> 105  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+118 -> 126  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+126 -> 135  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

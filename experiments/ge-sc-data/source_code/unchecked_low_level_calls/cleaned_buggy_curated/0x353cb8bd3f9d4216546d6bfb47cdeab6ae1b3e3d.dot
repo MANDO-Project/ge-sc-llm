@@ -1,0 +1,9 @@
+digraph  {
+13 [label="2_ string constant _ipHash = \"IP1.txt.zip 1bdf34b347d70f6aadc952a76532e077\";\n13-new_variable-3-3", type_label=new_variable];
+19 [label="3_ getIPHash\n19-function_definition-4-6", type_label=function_definition];
+27 [label="4_ return _ipHash;\n27-return-5-5", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+19 -> 27  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

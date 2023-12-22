@@ -1,0 +1,23 @@
+digraph  {
+13 [label="3_ address owner = msg.sender;\n13-new_variable-4-4", method="", type_label=new_variable];
+24 [label="5_ function Jump()\n    public\n    payable\n    {\n        if(msg.value > 1 ether)\n        {\n            msg.sender.call.value(this.balance);\n        }\n    }\n24-function_definition-6-14", method="Jump()", type_label=function_definition];
+29 [label="9_ if_msg.value > 1 ether\n29-if-10-13", method="Jump()", type_label=if];
+91 [label="9_ end_if", method="Jump()", type_label=end_if];
+37 [label="11_ msg.sender.call.value(this.balance);\n37-expression_statement-12-12", method="Jump()", type_label=expression_statement];
+50 [label="14_ function Kill()\n    public\n    payable\n    {\n        if(msg.sender==owner)\n        {\n            selfdestruct(owner);\n        }\n    }\n50-function_definition-15-23", method="Kill()", type_label=function_definition];
+55 [label="18_ if_msg.sender==owner\n55-if-19-22", method="Kill()", type_label=if];
+117 [label="18_ end_if", method="Kill()", type_label=end_if];
+62 [label="20_ selfdestruct(owner);\n62-expression_statement-21-21", method="Kill()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+24 -> 29  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 37  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+29 -> 91  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+91 -> 50  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+37 -> 91  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+50 -> 55  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+55 -> 62  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+55 -> 117  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+117 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+62 -> 117  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

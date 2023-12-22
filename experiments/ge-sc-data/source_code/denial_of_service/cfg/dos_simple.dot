@@ -1,0 +1,29 @@
+digraph  {
+13 [label="2_ address[] listAddresses;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ function ifillArray() public returns (bool){\n        if(listAddresses.length<1500) {\n            for(uint i=0;i<350;i++) {\n                listAddresses.push(msg.sender);\n            }\n            return true;\n        } else {\n            listAddresses = new address[](0);\n            return false;\n        }\n    }\n18-function_definition-4-14", method="ifillArray()", type_label=function_definition];
+26 [label="4_ if_listAddresses.length<1500\n26-if-5-13", method="ifillArray()", type_label=if];
+94 [label="4_ end_if", method="ifillArray()", type_label=end_if];
+33 [label="5_ for(i<350;;i++)\n33-for-6-8", method="ifillArray()", type_label=for];
+101 [label="5_ end_loop", method="ifillArray()", type_label=end_loop];
+44 [label="5_ i++\n44-expression_statement-6-6", method="ifillArray()", type_label=expression_statement];
+47 [label="6_ listAddresses.push(msg.sender);\n47-expression_statement-7-7", method="ifillArray()", type_label=expression_statement];
+56 [label="8_ return true;\n56-return-9-9", method="ifillArray()", type_label=return];
+60 [label="10_ listAddresses = new address[](0);\n60-expression_statement-11-11", method="ifillArray()", type_label=expression_statement];
+70 [label="11_ return false;\n70-return-12-12", method="ifillArray()", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+18 -> 26  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 33  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+26 -> 60  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+94 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+33 -> 47  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+33 -> 101  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+101 -> 56  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+44 -> 33  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+47 -> 44  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+56 -> 94  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+56 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+60 -> 70  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+70 -> 94  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+70 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

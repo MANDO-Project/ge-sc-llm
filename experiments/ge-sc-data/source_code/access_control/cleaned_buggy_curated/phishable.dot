@@ -1,0 +1,11 @@
+digraph  {
+13 [label="2_ address public owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+24 [label="4_ owner = _owner;\n24-expression_statement-5-5", method="", type_label=expression_statement];
+32 [label="7_ function withdrawAll(address _recipient) public {\n        require(tx.origin == owner);\n        _recipient.transfer(this.balance);\n    }\n32-function_definition-8-11", method="withdrawAll(address _recipient)", type_label=function_definition];
+40 [label="8_ require(tx.origin == owner);\n40-expression_statement-9-9", method="withdrawAll(address _recipient)", type_label=expression_statement];
+49 [label="9_ _recipient.transfer(this.balance);\n49-expression_statement-10-10", method="withdrawAll(address _recipient)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+32 -> 40  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+40 -> 49  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}
