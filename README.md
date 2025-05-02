@@ -29,7 +29,7 @@ The source code is the next version of our two previous frameworks [MANDO](https
       - [Usage](#usage-1)
       - [Examples](#examples-1)
   - [Testing](#testing)
-  - [Visuallization](#visuallization)
+  - [Visualization](#visualization)
   - [Results](#results)
     - [Combine HCFGs and HCGs in Form-A Fusion.](#combine-hcfgs-and-hcgs-in-form-a-fusion)
       - [Coarse-Grained Contract-Level Detection](#coarse-grained-contract-level-detection)
@@ -43,6 +43,7 @@ The source code is the next version of our two previous frameworks [MANDO](https
 
 ## Dataset
 - We prepared dataset for [experiments](experiments/ge-sc-data/source_code).
+- We updated a new real-world large scale dataset, [DAppSCAN](https://github.com/InPlusLab/DAppSCAN/). The generated graphs and metadata can be found in the [Google Drive](https://drive.google.com/drive/folders/1KS7upiQie5rZpZlly0_uxberNyUg-dzw?usp=sharing).
 
 ## System Description
 
@@ -174,6 +175,12 @@ python graph_classifier.py -ld ./logs/graph_classification/cg/line/access_contro
 python graph_classifier.py -ld ./logs/graph_classification/cfg_cg/node2vec/access_control --output_models ./models/graph_classification/cfg_cg/node2vec/access_control --dataset ./experiments/ge-sc-data/source_code/access_control/clean_57_buggy_curated_0/ --compressed_graph ./experiments/ge-sc-data/source_code/access_control/clean_57_buggy_curated_0/cfg_cg_compressed_graphs.gpickle --label ./experiments/ge-sc-data/source_code/access_control/clean_57_buggy_curated_0/graph_labels.json --node_feature node2vec --feature_extractor ./experiments/ge-sc-data/source_code/gesc_matrices_node_embedding/matrix_node2vec_dim128_of_core_graph_of_access_control_cfg_cg_clean_57_0.pkl --seed 1
 ```
 
+- We use LLMs (particularly three LLMs: `solidity-T5`, `starcoder`, and `codet5p-770m`) as node features for HCGs. The datasets can be found via [Google Drive](https://drive.google.com/drive/folders/1KS7upiQie5rZpZlly0_uxberNyUg-dzw?usp=sharing)
+```bash
+python graph_classifier.py --log_dir ./logs/graph_classification/hgt/tree_sitter/cfg_cg/access_control/token/starcoder --output_models ./models/graph_classification/hgt/tree_sitter/cfg_cg/access_control/token/starcoder/cfg_cg.pth --compressed_graph experiments/benign_mixed/merged_graphs/access_control/benign_solidifi_dappscan_access_control_token_starcoder.gpickle --label experiments/benign_mixed/labels/graph_labels_access_control.json --node_feature inside_token --k_folds 5
+```
+
+
 ### Node Classification
 - We used node classification tasks to detect vulnerabilities at the line and function levels for Heterogeneous Control-Flow Graphs (HCFGs) and Call Graphs (HCGs) in correspondence.
 
@@ -268,6 +275,12 @@ We prepared some scripts for the custom MANDO structures bellow:
 ```bash
 python node_classifier.py -ld ./logs/node_classification/call_graph/node2vec_han/access_control --output_models ./models/node_classification/call_graph/node2vec_han/access_control --dataset ./ge-sc-data/node_classification/cg/access_control/buggy_curated --compressed_graph ./ge-sc-data/node_classification/cg/access_control/buggy_curated/compressed_graphs.gpickle --testset ./ge-sc-data/node_classification/cg/curated/access_control --seed 1  --node_feature han --feature_compressed_graph ./data/smartbugs_wild/binary_class_cfg/access_control/buggy_curated/compressed_graphs.gpickle --cfg_feature_extractor ./data/smartbugs_wild/embeddings_buggy_currated_mixed/cfg_mixed/gesc_matrices_node_embedding/matrix_node2vec_dim128_of_core_graph_of_access_control_compressed_graphs.pkl --feature_extractor ./models/node_classification/cfg/node2vec/access_control/han_fold_0.pth
 ```
+
+- We use LLMs (particularly three LLMs: `solidity-T5`, `starcoder`, and `codet5p-770m`) as node features for HCGs. The datasets can be found via [Google Drive](https://drive.google.com/drive/folders/1KS7upiQie5rZpZlly0_uxberNyUg-dzw?usp=sharing)
+```bash
+python node_classifier.py --log_dir ./logs/node_classification/hgt/dappscan_solidifi/cfg/token/access_control/solidity-t5 --output_model ./models/node_classification/source_code/hgt/tree_sitter/dappscan_solidifi/cfg/token/access_control/solidity-t5/hgt_1.pth --compressed_graph experiments/dappscan_solidifi/graphs/access_control/dappscan_solidifi_access_control_token_solidity-t5.gpickle --node_feature inside_token --bugtype access_control --dataset experiments/dappscan_solidifi/dappscan_solidifi_train_metadata.json --valset experiments/dappscan_solidifi/dappscan_solidifi_val_metadata.json --testset experiments/dappscan_solidifi/dappscan_solidifi_test_metadata.json
+```
+
 
 ## Testing
 - We automatically run testing after the training phase for now.
