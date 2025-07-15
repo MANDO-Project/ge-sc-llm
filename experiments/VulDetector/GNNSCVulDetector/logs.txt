@@ -1,0 +1,95 @@
+1.15.5
+Run 2025-07-15-12-10-38_709363 starting with following parameters:
+{"num_epochs": 250, "patience": 200, "learning_rate": 0.002, "clamp_gradient_norm": 0.9, "out_layer_dropout_keep_prob": 0.9, "hidden_size": 256, "use_graph": true, "tie_fwd_bkwd": false, "task_ids": [0], "train_file": "train_data/reentrancy/train.json", "valid_file": "tools/reentrancy/results/mixed_reentrancy_AutoExtract_corenodes.json", "num_nodes": 100000, "use_edge_bias": false, "propagation_rounds": 2, "propagation_substeps": 20, "graph_rnn_cell": "gru", "graph_rnn_activation": "relu", "graph_state_dropout_keep_prob": 0.9, "task_sample_ratios": {}}
+Run with current seed 9903 
+Loading baseline from train_data/reentrancy/train.json
+Loading baseline from tools/reentrancy/results/mixed_reentrancy_AutoExtract_corenodes.json
+== Epoch 1
+random seed: 9903
+sum: 4948.0
+TP： 1559.0
+FN： 42.0
+FP： 3179.0
+TN： 168.0
+Recall: 1.0
+Precision: 0.32376137375831604
+F1: 0.4891536831855774
+FPR: 0.9991036653518677
+Running epoch 1 (training), batch 0 (has 4948 graphs). Loss so far: 0.6897
+
+[K Train: loss: 0.68966 | acc: 0:0.35469 | error_ratio: 0:5.33257 | instances/sec: 632.16
+7.827864170074463
+
+Traceback (most recent call last):
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1365, in _do_call
+    return fn(*args)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1350, in _run_fn
+    target_list, run_metadata)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1443, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: TensorArray graph_model/prop_round0/new_node_states_38: Could not write to TensorArray index 19 because it has already been read.
+	 [[{{node graph_model/prop_round0/while/TensorArrayScatter/TensorArrayScatterV3}}]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "GNNSCModel.py", line 510, in <module>
+    main()
+  File "GNNSCModel.py", line 506, in main
+    model.train()
+  File "/home/ehoang/minhnn/GNNSCVulDetector_origin/BasicModel.py", line 368, in train
+    self.valid_data, epoch, False)
+  File "/home/ehoang/minhnn/GNNSCVulDetector_origin/BasicModel.py", line 282, in run_epoch
+    self.ops['sigm_sum']], feed_dict=batch_data)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 956, in run
+    run_metadata_ptr)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1180, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1359, in _do_run
+    run_metadata)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1384, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: TensorArray graph_model/prop_round0/new_node_states_38: Could not write to TensorArray index 19 because it has already been read.
+	 [[node graph_model/prop_round0/while/TensorArrayScatter/TensorArrayScatterV3 (defined at /home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py:1748) ]]
+
+Original stack trace for 'graph_model/prop_round0/while/TensorArrayScatter/TensorArrayScatterV3':
+  File "GNNSCModel.py", line 510, in <module>
+    main()
+  File "GNNSCModel.py", line 505, in main
+    model = GNNSCModel(args)
+  File "GNNSCModel.py", line 45, in __init__
+    super().__init__(args)
+  File "/home/ehoang/minhnn/GNNSCVulDetector_origin/BasicModel.py", line 99, in __init__
+    self.make_model()
+  File "/home/ehoang/minhnn/GNNSCVulDetector_origin/BasicModel.py", line 152, in make_model
+    self.ops['final_node_representations'] = self.compute_final_node_representations()
+  File "GNNSCModel.py", line 230, in compute_final_node_representations
+    loop_vars=[tf.constant(0), new_node_states_ta])
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/control_flow_ops.py", line 2753, in while_loop
+    return_same_structure)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/control_flow_ops.py", line 2245, in BuildLoop
+    pred, body, original_loop_vars, loop_vars, shape_invariants)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/control_flow_ops.py", line 2170, in _BuildLoop
+    body_result = body(*packed_vars_for_body)
+  File "GNNSCModel.py", line 221, in do_substep
+    new_node_states_ta = new_node_states_ta.scatter(substep_receiving_nodes, substep_new_node_states)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/util/tf_should_use.py", line 198, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs))
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/tensor_array_ops.py", line 1168, in scatter
+    return self._implementation.scatter(indices, value, name=name)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/util/tf_should_use.py", line 198, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs))
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/tensor_array_ops.py", line 339, in scatter
+    name=name)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/ops/gen_data_flow_ops.py", line 7842, in tensor_array_scatter_v3
+    flow_in=flow_in, name=name)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/framework/op_def_library.py", line 794, in _apply_op_helper
+    op_def=op_def)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 3357, in create_op
+    attrs, op_def, compute_device)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 3426, in _create_op_internal
+    op_def=op_def)
+  File "/home/ehoang/miniconda3/envs/gnn_tf1/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1748, in __init__
+    self._traceback = tf_stack.extract_stack()
