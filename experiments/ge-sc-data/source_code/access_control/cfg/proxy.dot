@@ -1,0 +1,7 @@
+digraph  {
+13 [code="address owner;", label="2_ address owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [code="owner = msg.sender;", label="4_ owner = msg.sender;\n19-expression_statement-5-5", method="", type_label=expression_statement];
+25 [code="function forward(address callee, bytes _data) public {\n    require(callee.delegatecall(_data));  \n  }", label="6_ function forward(address callee, bytes _data) public {\n    require(callee.delegatecall(_data));  \n  }\n25-function_definition-7-9", method="forward(address callee,bytes _data)", type_label=function_definition];
+37 [code="require(callee.delegatecall(_data));", label="7_ require(callee.delegatecall(_data));\n37-expression_statement-8-8", method="forward(address callee,bytes _data)", type_label=expression_statement];
+25 -> 37  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

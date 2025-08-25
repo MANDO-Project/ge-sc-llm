@@ -1,0 +1,33 @@
+digraph  {
+12 [label="2_ open\n12-function_definition-3-3", type_label=function_definition];
+20 [label="3_ give\n20-function_definition-4-4", type_label=function_definition];
+34 [label="6_ address public deployer;\n34-new_variable-7-7", type_label=new_variable];
+39 [label="7_ address public cdpAddr;\n39-new_variable-8-8", type_label=new_variable];
+50 [label="9_ deployer = msg.sender;\n50-expression_statement-10-10", type_label=expression_statement];
+56 [label="10_ cdpAddr = saiTub;\n56-expression_statement-11-11", type_label=expression_statement];
+60 [label="12_ registerCDP\n60-function_definition-13-18", type_label=function_definition];
+68 [label="13_ MakerCDP loanMaster = MakerCDP(cdpAddr);\n68-new_variable-14-14", type_label=new_variable];
+69 [label="13_ MakerCDP loanMaster\n69-new_variable-14-14", type_label=new_variable];
+78 [label="14_ for(i < maxCup;;i++)\n78-for-15-17", type_label=for];
+80 [label="14_ uint i\n80-new_variable-15-15", type_label=new_variable];
+89 [label="14_ i++\n89-expression_statement-15-15", type_label=expression_statement];
+92 [label="15_ loanMaster.open();\n92-expression_statement-16-16", type_label=expression_statement];
+97 [label="18_ transferCDP\n97-function_definition-19-23", type_label=function_definition];
+109 [label="19_ require(msg.sender == deployer, \"Invalid Address.\");\n109-expression_statement-20-20", type_label=expression_statement];
+121 [label="20_ MakerCDP loanMaster = MakerCDP(cdpAddr);\n121-new_variable-21-21", type_label=new_variable];
+122 [label="20_ MakerCDP loanMaster\n122-new_variable-21-21", type_label=new_variable];
+131 [label="21_ loanMaster.give(bytes32(cdpNum), nextOwner);\n131-expression_statement-22-22", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+34 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+50 -> 56  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+60 -> 68  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+68 -> 78  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+78 -> 92  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+78 -> 97  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+89 -> 78  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+92 -> 89  [color=red, controlflow_type=loop_control, edge_type=CFG_edge, key=0, label=loop_control];
+97 -> 109  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+109 -> 121  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+121 -> 131  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

@@ -1,0 +1,25 @@
+digraph  {
+13 [label="2_ mapping(address => uint) balances;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [label="3_ uint public totalSupply;\n19-new_variable-4-4", method="", type_label=new_variable];
+24 [label="4_ function Token(uint _initialSupply) {\n     balances[msg.sender] = totalSupply = _initialSupply;\n   }\n24-function_definition-5-7", method="Token(uint _initialSupply)", type_label=function_definition];
+31 [label="5_ balances[msg.sender] = totalSupply = _initialSupply;\n31-expression_statement-6-6", method="Token(uint _initialSupply)", type_label=expression_statement];
+41 [label="7_ function transfer(address _to, uint _value) public returns (bool) {\n     require(balances[msg.sender] - _value >= 0);\n     balances[msg.sender] -= _value;\n     balances[_to] += _value;\n     return true;\n   }\n41-function_definition-8-13", method="transfer(address _to,uint _value)", type_label=function_definition];
+57 [label="8_ require(balances[msg.sender] - _value >= 0);\n57-expression_statement-9-9", method="transfer(address _to,uint _value)", type_label=expression_statement];
+70 [label="9_ balances[msg.sender] -= _value;\n70-expression_statement-10-10", method="transfer(address _to,uint _value)", type_label=expression_statement];
+78 [label="10_ balances[_to] += _value;\n78-expression_statement-11-11", method="transfer(address _to,uint _value)", type_label=expression_statement];
+84 [label="11_ return true;\n84-return-12-12", method="transfer(address _to,uint _value)", type_label=return];
+87 [label="13_ function balanceOf(address _owner) public constant returns (uint balance) {\n     return balances[_owner];\n   }\n87-function_definition-14-16", method="balanceOf(address _owner)", type_label=function_definition];
+94 [label="13_ constant\n94-expression_statement-14-14", method="balanceOf(address _owner)", type_label=expression_statement];
+102 [label="14_ return balances[_owner];\n102-return-15-15", method="balanceOf(address _owner)", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 19  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+24 -> 31  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+41 -> 57  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+57 -> 70  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+70 -> 78  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+78 -> 84  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+84 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+87 -> 102  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+102 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

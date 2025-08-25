@@ -1,0 +1,8 @@
+digraph  {
+13 [label="2_ function isSaleFinished() view public returns (bool) {\n    return block.timestamp >= 1546300800;\n  }\n13-function_definition-3-5", method="isSaleFinished()", type_label=function_definition];
+22 [label="3_ return block.timestamp >= 1546300800;\n22-return-4-4", method="isSaleFinished()", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 22  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+22 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

@@ -1,0 +1,21 @@
+digraph  {
+13 [label="2_ bool public payedOut = false;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ address public winner;\n20-new_variable-4-4", method="", type_label=new_variable];
+25 [label="4_ uint public winAmount;\n25-new_variable-5-5", method="", type_label=new_variable];
+30 [label="5_ function sendToWinner() public {\n         require(!payedOut);\n         winner.send(winAmount);\n         payedOut = true;\n     }\n30-function_definition-6-10", method="sendToWinner()", type_label=function_definition];
+34 [label="6_ require(!payedOut);\n34-expression_statement-7-7", method="sendToWinner()", type_label=expression_statement];
+40 [label="7_ winner.send(winAmount);\n40-expression_statement-8-8", method="sendToWinner()", type_label=expression_statement];
+47 [label="8_ payedOut = true;\n47-expression_statement-9-9", method="sendToWinner()", type_label=expression_statement];
+52 [label="10_ function withdrawLeftOver() public {\n         require(payedOut);\n         msg.sender.send(this.balance);\n     }\n52-function_definition-11-14", method="withdrawLeftOver()", type_label=function_definition];
+56 [label="11_ require(payedOut);\n56-expression_statement-12-12", method="withdrawLeftOver()", type_label=expression_statement];
+61 [label="12_ msg.sender.send(this.balance);\n61-expression_statement-13-13", method="withdrawLeftOver()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+20 -> 25  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+30 -> 34  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 40  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+40 -> 47  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+52 -> 56  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+56 -> 61  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

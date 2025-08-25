@@ -1,0 +1,27 @@
+digraph  {
+9 [label="1_ mapping (address => uint256) public balanceOf;\n9-new_variable-2-2", type_label=new_variable];
+16 [label="2_ HackerSpaceBarneysToken\n16-function_definition-3-5", type_label=function_definition];
+19 [label="3_ balanceOf[msg.sender] = 1000000;\n19-expression_statement-4-4", type_label=expression_statement];
+27 [label="5_ transfer\n27-function_definition-6-11", type_label=function_definition];
+38 [label="6_ if_balanceOf[msg.sender] < _value\n38-if-7-7", type_label=if];
+107 [label="6_ end_if", type_label=end_if];
+46 [label="6_ throw;\n46-expression_statement-7-7", type_label=expression_statement];
+48 [label="7_ if\n48-if-8-8", type_label=if];
+117 [label="7_ end_if", type_label=end_if];
+58 [label="7_ throw;\n58-expression_statement-8-8", type_label=expression_statement];
+60 [label="8_ balanceOf[msg.sender] -= _value;\n60-expression_statement-9-9", type_label=expression_statement];
+68 [label="9_ balanceOf[_to] += _value;\n68-expression_statement-10-10", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+16 -> 19  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+38 -> 46  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+38 -> 107  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+107 -> 48  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 107  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+48 -> 58  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+48 -> 117  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+117 -> 60  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 117  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+60 -> 68  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

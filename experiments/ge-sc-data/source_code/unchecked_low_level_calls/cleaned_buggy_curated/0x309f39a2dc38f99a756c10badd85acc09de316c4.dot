@@ -1,0 +1,12 @@
+digraph  {
+15 [label="2_ multiply\n15-function_definition-3-7", type_label=function_definition];
+31 [label="3_ uint res = a * b;\n31-new_variable-4-4", type_label=new_variable];
+39 [label="4_ ret (res);\n39-expression_statement-5-5", type_label=expression_statement];
+44 [label="5_ return res;\n44-return-6-6", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+15 -> 31  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+31 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+39 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+44 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

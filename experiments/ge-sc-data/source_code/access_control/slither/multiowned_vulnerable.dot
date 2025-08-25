@@ -1,0 +1,716 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=MultiOwnable,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[20, 21, 22, 23]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	1	[contract_name=MultiOwnable,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+root = msg.sender
+
+IRs:
+root(address) := msg.sender(address)",
+		node_expression="root = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="root(address) := msg.sender(address)",
+		node_source_code_lines="[21]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=MultiOwnable,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owners[root] = root
+
+IRs:
+REF_0(address) -> owners[root]
+REF_0 (->owners) := root(address)",
+		node_expression="owners[root] = root",
+		node_info_vulnerabilities=None,
+		node_irs="REF_0(address) -> owners[root]
+REF_0 (->owners) := root(address)",
+		node_source_code_lines="[22]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=MultiOwnable,
+		function_fullname="constructor()",
+		label="multiowned_vulnerable.sol_MultiOwnable_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[20, 21, 22, 23]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	3 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=MultiOwnable,
+		function_fullname="newOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [38], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[38, 39, 40, 41, 42]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	5	[contract_name=MultiOwnable,
+		function_fullname="newOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(_owner != 0)
+
+IRs:
+TMP_0(bool) = _owner != 0
+TMP_1(None) = SOLIDITY_CALL require(\
+bool)(TMP_0)",
+		node_expression="require(bool)(_owner != 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_0(bool) = _owner != 0
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[39]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	4 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=MultiOwnable,
+		function_fullname="newOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owners[_owner] = msg.sender
+
+IRs:
+REF_1(address) -> owners[_owner]
+REF_1 (->owners) := msg.sender(\
+address)",
+		node_expression="owners[_owner] = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="REF_1(address) -> owners[_owner]
+REF_1 (->owners) := msg.sender(address)",
+		node_source_code_lines="[40]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	5 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=MultiOwnable,
+		function_fullname="newOwner(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[41]",
+		node_type=RETURN,
+		source_file="multiowned_vulnerable.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=MultiOwnable,
+		function_fullname="newOwner(address)",
+		label="multiowned_vulnerable.sol_MultiOwnable_newOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [38], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[38, 39, 40, 41, 42]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	8 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=MultiOwnable,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[47, 48, 49, 50, 51]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	13	[contract_name=MultiOwnable,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, MultiOwnable.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, MultiOwnable.onlyOwner()()",
+		node_source_code_lines="[47]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	9 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=MultiOwnable,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(owners[_owner] == msg.sender || (owners[_owner] != 0 && msg.sender == root))
+
+IRs:
+\
+REF_2(address) -> owners[_owner]
+TMP_2(bool) = REF_2 == msg.sender
+REF_3(address) -> owners[_owner]
+TMP_3(bool) = REF_3 != 0
+TMP_\
+4(bool) = msg.sender == root
+TMP_5(bool) = TMP_3 && TMP_4
+TMP_6(bool) = TMP_2 || TMP_5
+TMP_7(None) = SOLIDITY_CALL require(bool)(\
+TMP_6)",
+		node_expression="require(bool)(owners[_owner] == msg.sender || (owners[_owner] != 0 && msg.sender == root))",
+		node_info_vulnerabilities=None,
+		node_irs="REF_2(address) -> owners[_owner]
+TMP_2(bool) = REF_2 == msg.sender
+REF_3(address) -> owners[_owner]
+TMP_3(bool) = REF_3 != 0
+TMP_\
+4(bool) = msg.sender == root
+TMP_5(bool) = TMP_3 && TMP_4
+TMP_6(bool) = TMP_2 || TMP_5
+TMP_7(None) = SOLIDITY_CALL require(bool)(\
+TMP_6)",
+		node_source_code_lines="[48]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	11	[contract_name=MultiOwnable,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owners[_owner] = 0
+
+IRs:
+REF_4(address) -> owners[_owner]
+REF_4 (->owners) := 0(uint256)",
+		node_expression="owners[_owner] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_4(address) -> owners[_owner]
+REF_4 (->owners) := 0(uint256)",
+		node_source_code_lines="[49]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	10 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=MultiOwnable,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[50]",
+		node_type=RETURN,
+		source_file="multiowned_vulnerable.sol"];
+	11 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	13 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=MultiOwnable,
+		function_fullname="deleteOwner(address)",
+		label="multiowned_vulnerable.sol_MultiOwnable_deleteOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[47, 48, 49, 50, 51]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	14 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=MultiOwnable,
+		function_fullname="onlyOwner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	16	[contract_name=MultiOwnable,
+		function_fullname="onlyOwner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(owners[msg.sender] != 0)
+
+IRs:
+REF_5(address) -> owners[msg.sender]
+TMP_9(bool) = \
+REF_5 != 0
+TMP_10(None) = SOLIDITY_CALL require(bool)(TMP_9)",
+		node_expression="require(bool)(owners[msg.sender] != 0)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_5(address) -> owners[msg.sender]
+TMP_9(bool) = REF_5 != 0
+TMP_10(None) = SOLIDITY_CALL require(bool)(TMP_9)",
+		node_source_code_lines="[29]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	15 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	17	[contract_name=MultiOwnable,
+		function_fullname="onlyOwner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[30]",
+		node_type=_,
+		source_file="multiowned_vulnerable.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=MultiOwnable,
+		function_fullname="onlyOwner()",
+		label="multiowned_vulnerable.sol_MultiOwnable_onlyOwner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	18 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=TestContract,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[20, 21, 22, 23]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	20	[contract_name=TestContract,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+root = msg.sender
+
+IRs:
+root(address) := msg.sender(address)",
+		node_expression="root = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="root(address) := msg.sender(address)",
+		node_source_code_lines="[21]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	19 -> 20	[key=0,
+		edge_type=next,
+		label=Next];
+	21	[contract_name=TestContract,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owners[root] = root
+
+IRs:
+REF_6(address) -> owners[root]
+REF_6 (->owners) := root(address)",
+		node_expression="owners[root] = root",
+		node_info_vulnerabilities=None,
+		node_irs="REF_6(address) -> owners[root]
+REF_6 (->owners) := root(address)",
+		node_source_code_lines="[22]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	20 -> 21	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=TestContract,
+		function_fullname="constructor()",
+		label="multiowned_vulnerable.sol_TestContract_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[20, 21, 22, 23]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	22 -> 19	[key=0,
+		edge_type=next,
+		label=Next];
+	23	[contract_name=TestContract,
+		function_fullname="newOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [38], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[38, 39, 40, 41, 42]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	24	[contract_name=TestContract,
+		function_fullname="newOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(_owner != 0)
+
+IRs:
+TMP_11(bool) = _owner != 0
+TMP_12(None) = SOLIDITY_CALL require(\
+bool)(TMP_11)",
+		node_expression="require(bool)(_owner != 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_11(bool) = _owner != 0
+TMP_12(None) = SOLIDITY_CALL require(bool)(TMP_11)",
+		node_source_code_lines="[39]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	23 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	25	[contract_name=TestContract,
+		function_fullname="newOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owners[_owner] = msg.sender
+
+IRs:
+REF_7(address) -> owners[_owner]
+REF_7 (->owners) := msg.sender(\
+address)",
+		node_expression="owners[_owner] = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="REF_7(address) -> owners[_owner]
+REF_7 (->owners) := msg.sender(address)",
+		node_source_code_lines="[40]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	24 -> 25	[key=0,
+		edge_type=next,
+		label=Next];
+	26	[contract_name=TestContract,
+		function_fullname="newOwner(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[41]",
+		node_type=RETURN,
+		source_file="multiowned_vulnerable.sol"];
+	25 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	27	[contract_name=TestContract,
+		function_fullname="newOwner(address)",
+		label="multiowned_vulnerable.sol_TestContract_newOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [38], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[38, 39, 40, 41, 42]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	27 -> 23	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=TestContract,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[47, 48, 49, 50, 51]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	32	[contract_name=TestContract,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, MultiOwnable.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, MultiOwnable.onlyOwner()()",
+		node_source_code_lines="[47]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	28 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=TestContract,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(owners[_owner] == msg.sender || (owners[_owner] != 0 && msg.sender == root))
+
+IRs:
+\
+REF_8(address) -> owners[_owner]
+TMP_13(bool) = REF_8 == msg.sender
+REF_9(address) -> owners[_owner]
+TMP_14(bool) = REF_9 != 0
+TMP_\
+15(bool) = msg.sender == root
+TMP_16(bool) = TMP_14 && TMP_15
+TMP_17(bool) = TMP_13 || TMP_16
+TMP_18(None) = SOLIDITY_CALL require(\
+bool)(TMP_17)",
+		node_expression="require(bool)(owners[_owner] == msg.sender || (owners[_owner] != 0 && msg.sender == root))",
+		node_info_vulnerabilities=None,
+		node_irs="REF_8(address) -> owners[_owner]
+TMP_13(bool) = REF_8 == msg.sender
+REF_9(address) -> owners[_owner]
+TMP_14(bool) = REF_9 != 0
+TMP_\
+15(bool) = msg.sender == root
+TMP_16(bool) = TMP_14 && TMP_15
+TMP_17(bool) = TMP_13 || TMP_16
+TMP_18(None) = SOLIDITY_CALL require(\
+bool)(TMP_17)",
+		node_source_code_lines="[48]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	30	[contract_name=TestContract,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owners[_owner] = 0
+
+IRs:
+REF_10(address) -> owners[_owner]
+REF_10 (->owners) := 0(uint256)",
+		node_expression="owners[_owner] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_10(address) -> owners[_owner]
+REF_10 (->owners) := 0(uint256)",
+		node_source_code_lines="[49]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	29 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	31	[contract_name=TestContract,
+		function_fullname="deleteOwner(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[50]",
+		node_type=RETURN,
+		source_file="multiowned_vulnerable.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32 -> 29	[key=0,
+		edge_type=next,
+		label=Next];
+	33	[contract_name=TestContract,
+		function_fullname="deleteOwner(address)",
+		label="multiowned_vulnerable.sol_TestContract_deleteOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[47, 48, 49, 50, 51]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	33 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=TestContract,
+		function_fullname="withdrawAll()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[56, 57, 58]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	36	[contract_name=TestContract,
+		function_fullname="withdrawAll()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyOwner()
+
+IRs:
+MODIFIER_CALL, MultiOwnable.onlyOwner()()",
+		node_expression="onlyOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, MultiOwnable.onlyOwner()()",
+		node_source_code_lines="[56]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	34 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	35	[contract_name=TestContract,
+		function_fullname="withdrawAll()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+msg.sender.transfer(this.balance)
+
+IRs:
+REF_12 -> BALANCE this
+Transfer dest:msg.sender value:\
+REF_12",
+		node_expression="msg.sender.transfer(this.balance)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_12 -> BALANCE this
+Transfer dest:msg.sender value:REF_12",
+		node_source_code_lines="[57]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	36 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=TestContract,
+		function_fullname="withdrawAll()",
+		label="multiowned_vulnerable.sol_TestContract_withdrawAll()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[56, 57, 58]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	37 -> 34	[key=0,
+		edge_type=next,
+		label=Next];
+	38	[contract_name=TestContract,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[60, 61]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	39	[contract_name=TestContract,
+		function_fullname="fallback()",
+		label="multiowned_vulnerable.sol_TestContract_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[60, 61]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	39 -> 38	[key=0,
+		edge_type=next,
+		label=Next];
+	40	[contract_name=TestContract,
+		function_fullname="onlyOwner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31]",
+		node_type=ENTRY_POINT,
+		source_file="multiowned_vulnerable.sol"];
+	41	[contract_name=TestContract,
+		function_fullname="onlyOwner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(owners[msg.sender] != 0)
+
+IRs:
+REF_13(address) -> owners[msg.sender]
+TMP_22(bool) = \
+REF_13 != 0
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_expression="require(bool)(owners[msg.sender] != 0)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_13(address) -> owners[msg.sender]
+TMP_22(bool) = REF_13 != 0
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_source_code_lines="[29]",
+		node_type=EXPRESSION,
+		source_file="multiowned_vulnerable.sol"];
+	40 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	42	[contract_name=TestContract,
+		function_fullname="onlyOwner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[30]",
+		node_type=_,
+		source_file="multiowned_vulnerable.sol"];
+	41 -> 42	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=TestContract,
+		function_fullname="onlyOwner()",
+		label="multiowned_vulnerable.sol_TestContract_onlyOwner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31]",
+		node_type=FUNCTION_NAME,
+		source_file="multiowned_vulnerable.sol"];
+	43 -> 40	[key=0,
+		edge_type=next,
+		label=Next];
+}

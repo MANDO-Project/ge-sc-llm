@@ -1,0 +1,5 @@
+digraph  {
+13 [code="function sudicideAnyone() {\n    selfdestruct(msg.sender);\n  }", label="2_ function sudicideAnyone() {\n    selfdestruct(msg.sender);\n  }\n13-function_definition-3-5", method="sudicideAnyone()", type_label=function_definition];
+16 [code="selfdestruct(msg.sender);", label="3_ selfdestruct(msg.sender);\n16-expression_statement-4-4", method="sudicideAnyone()", type_label=expression_statement];
+13 -> 16  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

@@ -1,0 +1,181 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Missing,
+		function_fullname="missing()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[20, 21, 22]",
+		node_type=ENTRY_POINT,
+		source_file="incorrect_constructor_name2.sol"];
+	1	[contract_name=Missing,
+		function_fullname="missing()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[21]",
+		node_type=EXPRESSION,
+		source_file="incorrect_constructor_name2.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Missing,
+		function_fullname="missing()",
+		label="incorrect_constructor_name2.sol_Missing_missing()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [18], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21, 22]",
+		node_type=FUNCTION_NAME,
+		source_file="incorrect_constructor_name2.sol"];
+	2 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Missing,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[24]",
+		node_type=ENTRY_POINT,
+		source_file="incorrect_constructor_name2.sol"];
+	4	[contract_name=Missing,
+		function_fullname="fallback()",
+		label="incorrect_constructor_name2.sol_Missing_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[24]",
+		node_type=FUNCTION_NAME,
+		source_file="incorrect_constructor_name2.sol"];
+	4 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Missing,
+		function_fullname="withdraw()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[29, 30, 31]",
+		node_type=ENTRY_POINT,
+		source_file="incorrect_constructor_name2.sol"];
+	7	[contract_name=Missing,
+		function_fullname="withdraw()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Missing.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Missing.onlyowner()()",
+		node_source_code_lines="[28]",
+		node_type=EXPRESSION,
+		source_file="incorrect_constructor_name2.sol"];
+	5 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=Missing,
+		function_fullname="withdraw()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner.transfer(this.balance)
+
+IRs:
+REF_1 -> BALANCE this
+Transfer dest:owner value:REF_1",
+		node_expression="owner.transfer(this.balance)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_1 -> BALANCE this
+Transfer dest:owner value:REF_1",
+		node_source_code_lines="[30]",
+		node_type=EXPRESSION,
+		source_file="incorrect_constructor_name2.sol"];
+	7 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=Missing,
+		function_fullname="withdraw()",
+		label="incorrect_constructor_name2.sol_Missing_withdraw()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[26, 27, 28, 29, 30, 31]",
+		node_type=FUNCTION_NAME,
+		source_file="incorrect_constructor_name2.sol"];
+	8 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=Missing,
+		function_fullname="onlyowner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=ENTRY_POINT,
+		source_file="incorrect_constructor_name2.sol"];
+	10	[contract_name=Missing,
+		function_fullname="onlyowner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == owner)
+
+IRs:
+TMP_2(bool) = msg.sender == owner
+TMP_3(None) = SOLIDITY_\
+CALL require(bool)(TMP_2)",
+		node_expression="require(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_2(bool) = msg.sender == owner
+TMP_3(None) = SOLIDITY_CALL require(bool)(TMP_2)",
+		node_source_code_lines="[14]",
+		node_type=EXPRESSION,
+		source_file="incorrect_constructor_name2.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=Missing,
+		function_fullname="onlyowner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[15]",
+		node_type=_,
+		source_file="incorrect_constructor_name2.sol"];
+	10 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=Missing,
+		function_fullname="onlyowner()",
+		label="incorrect_constructor_name2.sol_Missing_onlyowner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=FUNCTION_NAME,
+		source_file="incorrect_constructor_name2.sol"];
+	12 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+}

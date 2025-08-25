@@ -1,0 +1,7 @@
+digraph  {
+13 [label="2_ sudicideAnyone\n13-function_definition-3-5", type_label=function_definition];
+16 [label="3_ selfdestruct(msg.sender);\n16-expression_statement-4-4", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+13 -> 16  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

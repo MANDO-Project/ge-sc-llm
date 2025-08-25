@@ -1,0 +1,37 @@
+digraph  {
+12 [label="2_ address private _owner;\n12-new_variable-3-3", method="", type_label=new_variable];
+29 [label="5_ _owner = msg.sender;\n29-expression_statement-6-6", method="", type_label=expression_statement];
+43 [label="8_ function owner() public view returns (address) {\n        return _owner;\n    }\n43-function_definition-9-11", method="owner()", type_label=function_definition];
+52 [label="9_ return _owner;\n52-return-10-10", method="owner()", type_label=return];
+54 [label="11_ modifier onlyOwner() {\n        require(isOwner());\n        _;\n    }\n54-expression_statement-12-15", method="", type_label=expression_statement];
+57 [label="12_ require(isOwner());\n57-expression_statement-13-13", method="", type_label=expression_statement];
+63 [label="13_ _;\n63-expression_statement-14-14", method="", type_label=expression_statement];
+65 [label="15_ function isOwner() public view returns (bool) {\n        return msg.sender == _owner;\n    }\n65-function_definition-16-18", method="isOwner()", type_label=function_definition];
+74 [label="16_ return msg.sender == _owner;\n74-return-17-17", method="isOwner()", type_label=return];
+80 [label="18_ function transferOwnership(address newOwner) public onlyOwner {\n        _transferOwnership(newOwner);\n    }\n80-function_definition-19-21", method="transferOwnership(address newOwner)", type_label=function_definition];
+87 [label="18_ onlyOwner\n87-expression_statement-19-19", method="transferOwnership(address newOwner)", type_label=expression_statement];
+90 [label="19_ _transferOwnership(newOwner);\n90-expression_statement-20-20", method="transferOwnership(address newOwner)", type_label=expression_statement];
+95 [label="21_ function _transferOwnership(address newOwner) internal {\n        require(newOwner != address(0));\n        emit OwnershipTransferred(_owner, newOwner);\n        _owner = newOwner;\n    }\n95-function_definition-22-26", method="_transferOwnership(address newOwner)", type_label=function_definition];
+103 [label="22_ require(newOwner != address(0));\n103-expression_statement-23-23", method="_transferOwnership(address newOwner)", type_label=expression_statement];
+118 [label="24_ _owner = newOwner;\n118-expression_statement-25-25", method="_transferOwnership(address newOwner)", type_label=expression_statement];
+128 [label="28_ mapping(bytes32 => uint256) private _hashes;\n128-new_variable-29-29", method="", type_label=new_variable];
+141 [label="30_ function addHash(bytes32 rootHash) external onlyOwner {\n        require(_hashes[rootHash] == 0, \"addHash: this hash was already deployed\");\n        _hashes[rootHash] = block.timestamp;\n        emit HashAdded(rootHash);\n    }\n141-function_definition-31-35", method="addHash(bytes32 rootHash)", type_label=function_definition];
+148 [label="30_ onlyOwner\n148-expression_statement-31-31", method="addHash(bytes32 rootHash)", type_label=expression_statement];
+151 [label="31_ require(_hashes[rootHash] == 0, \"addHash: this hash was already deployed\");\n151-expression_statement-32-32", method="addHash(bytes32 rootHash)", type_label=expression_statement];
+163 [label="32_ _hashes[rootHash] = block.timestamp;\n163-expression_statement-33-33", method="addHash(bytes32 rootHash)", type_label=expression_statement];
+175 [label="35_ function getHashTimestamp(bytes32 rootHash) external view returns (uint256) {\n        return _hashes[rootHash];\n    }\n175-function_definition-36-38", method="getHashTimestamp(bytes32 rootHash)", type_label=function_definition];
+188 [label="36_ return _hashes[rootHash];\n188-return-37-37", method="getHashTimestamp(bytes32 rootHash)", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+43 -> 52  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+52 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+57 -> 63  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+74 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+80 -> 90  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+95 -> 103  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+141 -> 151  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+151 -> 163  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+175 -> 188  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+188 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

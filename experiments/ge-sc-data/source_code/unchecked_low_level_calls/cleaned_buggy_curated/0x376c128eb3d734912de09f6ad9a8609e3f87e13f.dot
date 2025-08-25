@@ -1,0 +1,19 @@
+digraph  {
+12 [label="2_ shouldRevert\n12-function_definition-3-5", type_label=function_definition];
+20 [label="3_ require(!yes, \"Shit it reverted!\");\n20-expression_statement-4-4", type_label=expression_statement];
+29 [label="5_ shouldRevertWithReturn\n29-function_definition-6-9", type_label=function_definition];
+41 [label="6_ require(!yes, \"Shit it reverted!\");\n41-expression_statement-7-7", type_label=expression_statement];
+50 [label="7_ return 42;\n50-return-8-8", type_label=return];
+52 [label="9_ shouldRevertPure\n52-function_definition-10-13", type_label=function_definition];
+65 [label="10_ require(!yes, \"Shit it reverted!\");\n65-expression_statement-11-11", type_label=expression_statement];
+74 [label="11_ return 42;\n74-return-12-12", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+12 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 41  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+41 -> 50  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+50 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+52 -> 65  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+74 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

@@ -1,0 +1,12 @@
+digraph  {
+13 [label="3_ uint storedData;\n13-new_variable-4-4", type_label=new_variable];
+17 [label="4_ set\n17-function_definition-5-8", type_label=function_definition];
+25 [label="6_ storedData = x;\n25-expression_statement-7-7", type_label=expression_statement];
+29 [label="8_ get\n29-function_definition-9-12", type_label=function_definition];
+38 [label="10_ return storedData;\n38-return-11-11", type_label=return];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+17 -> 25  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+38 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

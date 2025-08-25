@@ -1,0 +1,30 @@
+digraph  {
+13 [label="2_ address public owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ bool public claimed;\n18-new_variable-4-4", method="", type_label=new_variable];
+23 [label="4_ uint public reward;\n23-new_variable-5-5", method="", type_label=new_variable];
+28 [label="5_ function EthTxOrderDependenceMinimal() public {\n        owner = msg.sender;\n    }\n28-function_definition-6-8", method="EthTxOrderDependenceMinimal()", type_label=function_definition];
+32 [label="6_ owner = msg.sender;\n32-expression_statement-7-7", method="EthTxOrderDependenceMinimal()", type_label=expression_statement];
+38 [label="8_ function setReward() public payable {\n        require (!claimed);\n        require(msg.sender == owner);\n        owner.transfer(reward);\n        reward = msg.value;\n    }\n38-function_definition-9-14", method="setReward()", type_label=function_definition];
+43 [label="9_ require (!claimed);\n43-expression_statement-10-10", method="setReward()", type_label=expression_statement];
+49 [label="10_ require(msg.sender == owner);\n49-expression_statement-11-11", method="setReward()", type_label=expression_statement];
+58 [label="11_ owner.transfer(reward);\n58-expression_statement-12-12", method="setReward()", type_label=expression_statement];
+65 [label="12_ reward = msg.value;\n65-expression_statement-13-13", method="setReward()", type_label=expression_statement];
+71 [label="14_ function claimReward(uint256 submission) {\n        require (!claimed);\n        require(submission < 10);\n        msg.sender.transfer(reward);\n        claimed = true;\n    }\n71-function_definition-15-20", method="claimReward(uint256 submission)", type_label=function_definition];
+78 [label="15_ require (!claimed);\n78-expression_statement-16-16", method="claimReward(uint256 submission)", type_label=expression_statement];
+84 [label="16_ require(submission < 10);\n84-expression_statement-17-17", method="claimReward(uint256 submission)", type_label=expression_statement];
+91 [label="17_ msg.sender.transfer(reward);\n91-expression_statement-18-18", method="claimReward(uint256 submission)", type_label=expression_statement];
+100 [label="18_ claimed = true;\n100-expression_statement-19-19", method="claimReward(uint256 submission)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+18 -> 23  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+28 -> 32  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+38 -> 43  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+43 -> 49  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+49 -> 58  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 65  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+71 -> 78  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+78 -> 84  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+84 -> 91  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+91 -> 100  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

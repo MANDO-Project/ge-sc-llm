@@ -1,0 +1,15 @@
+digraph  {
+12 [label="2_ uint256 private number;\n12-new_variable-3-3", method="", type_label=new_variable];
+17 [label="3_ function getNumber() public view returns (uint256) {\n        return number;\n    }\n17-function_definition-4-6", method="getNumber()", type_label=function_definition];
+26 [label="4_ return number;\n26-return-5-5", method="getNumber()", type_label=return];
+31 [label="8_ function newA() public returns(address) {\n        A newInstance = new A();\n        return address(newInstance);\n    }\n31-function_definition-9-12", method="newA()", type_label=function_definition];
+39 [label="9_ A newInstance = new A();\n39-new_variable-10-10", method="newA()", type_label=new_variable];
+50 [label="10_ return address(newInstance);\n50-return-11-11", method="newA()", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+17 -> 26  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+31 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+39 -> 50  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+50 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

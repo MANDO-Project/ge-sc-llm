@@ -1,0 +1,9 @@
+digraph  {
+13 [label="2_ address owner;\n13-new_variable-3-3", type_label=new_variable];
+19 [label="4_ owner = msg.sender;\n19-expression_statement-5-5", type_label=expression_statement];
+25 [label="6_ forward\n25-function_definition-7-9", type_label=function_definition];
+37 [label="7_ require(callee.delegatecall(_data));\n37-expression_statement-8-8", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+25 -> 37  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

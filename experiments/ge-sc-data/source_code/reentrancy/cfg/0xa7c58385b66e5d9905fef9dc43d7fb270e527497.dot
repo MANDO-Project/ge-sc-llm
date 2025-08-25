@@ -1,0 +1,37 @@
+digraph  {
+13 [label="2_ address public owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+36 [label="9_ owner = msg.sender;\n36-expression_statement-10-10", method="", type_label=expression_statement];
+42 [label="11_ modifier onlyOwner() {\n    require(msg.sender == owner);\n    _;\n  }\n42-expression_statement-12-15", method="", type_label=expression_statement];
+45 [label="12_ require(msg.sender == owner);\n45-expression_statement-13-13", method="", type_label=expression_statement];
+54 [label="13_ _;\n54-expression_statement-14-14", method="", type_label=expression_statement];
+56 [label="15_ function renounceOwnership() public onlyOwner {\n    emit OwnershipRenounced(owner);\n    owner = address(0);\n  }\n56-function_definition-16-19", method="renounceOwnership()", type_label=function_definition];
+59 [label="15_ onlyOwner\n59-expression_statement-16-16", method="renounceOwnership()", type_label=expression_statement];
+66 [label="17_ owner = address(0);\n66-expression_statement-18-18", method="renounceOwnership()", type_label=expression_statement];
+72 [label="19_ function transferOwnership(address _newOwner) public onlyOwner {\n    _transferOwnership(_newOwner);\n  }\n72-function_definition-20-22", method="transferOwnership(address _newOwner)", type_label=function_definition];
+79 [label="19_ onlyOwner\n79-expression_statement-20-20", method="transferOwnership(address _newOwner)", type_label=expression_statement];
+82 [label="20_ _transferOwnership(_newOwner);\n82-expression_statement-21-21", method="transferOwnership(address _newOwner)", type_label=expression_statement];
+87 [label="22_ function _transferOwnership(address _newOwner) internal {\n    require(_newOwner != address(0));\n    emit OwnershipTransferred(owner, _newOwner);\n    owner = _newOwner;\n  }\n87-function_definition-23-27", method="_transferOwnership(address _newOwner)", type_label=function_definition];
+95 [label="23_ require(_newOwner != address(0));\n95-expression_statement-24-24", method="_transferOwnership(address _newOwner)", type_label=expression_statement];
+110 [label="25_ owner = _newOwner;\n110-expression_statement-26-26", method="_transferOwnership(address _newOwner)", type_label=expression_statement];
+120 [label="29_ mapping(address => bool) private whitelist;\n120-new_variable-30-30", method="", type_label=new_variable];
+139 [label="32_ function enableWallet(address _wallet) public onlyOwner {\n        require(_wallet != address(0), \"Invalid wallet\");\n        whitelist[_wallet] = true;\n        emit Whitelisted(_wallet);\n    }\n139-function_definition-33-37", method="enableWallet(address _wallet)", type_label=function_definition];
+146 [label="32_ onlyOwner\n146-expression_statement-33-33", method="enableWallet(address _wallet)", type_label=expression_statement];
+149 [label="33_ require(_wallet != address(0), \"Invalid wallet\");\n149-expression_statement-34-34", method="enableWallet(address _wallet)", type_label=expression_statement];
+161 [label="34_ whitelist[_wallet] = true;\n161-expression_statement-35-35", method="enableWallet(address _wallet)", type_label=expression_statement];
+172 [label="37_ function disableWallet(address _wallet) public onlyOwner {\n        whitelist[_wallet] = false;\n        emit Dewhitelisted (_wallet);\n    }\n172-function_definition-38-41", method="disableWallet(address _wallet)", type_label=function_definition];
+179 [label="37_ onlyOwner\n179-expression_statement-38-38", method="disableWallet(address _wallet)", type_label=expression_statement];
+182 [label="38_ whitelist[_wallet] = false;\n182-expression_statement-39-39", method="disableWallet(address _wallet)", type_label=expression_statement];
+193 [label="41_ function checkWhitelisted(address _wallet) public view returns (bool){\n        return whitelist[_wallet];\n    }\n193-function_definition-42-44", method="checkWhitelisted(address _wallet)", type_label=function_definition];
+206 [label="42_ return whitelist[_wallet];\n206-return-43-43", method="checkWhitelisted(address _wallet)", type_label=return];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+45 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+56 -> 66  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+72 -> 82  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+87 -> 95  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+139 -> 149  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+149 -> 161  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+172 -> 182  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+193 -> 206  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+206 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

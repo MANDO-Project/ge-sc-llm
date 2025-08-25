@@ -1,0 +1,4218 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[24, 25, 26, 27, 28, 29]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	1	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(b <= a,SafeMath: subtraction overflow)
+
+IRs:
+TMP_0(bool) = b <= a
+TMP_1(\
+None) = SOLIDITY_CALL require(bool,string)(TMP_0,SafeMath: subtraction overflow)",
+		node_expression="require(bool,string)(b <= a,SafeMath: subtraction overflow)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_0(bool) = b <= a
+TMP_1(None) = SOLIDITY_CALL require(bool,string)(TMP_0,SafeMath: subtraction overflow)",
+		node_source_code_lines="[25]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+c = a - b
+
+IRs:
+TMP_2(uint256) = a - b
+c(uint256) := TMP_2(uint256)",
+		node_expression="c = a - b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_2(uint256) = a - b
+c(uint256) := TMP_2(uint256)",
+		node_source_code_lines="[26]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_32.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+c
+
+IRs:
+RETURN c",
+		node_expression=c,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN c",
+		node_source_code_lines="[28]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	2 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="buggy_32.sol_SafeMath_sub(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[24, 25, 26, 27, 28, 29]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	4 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[34, 35, 36, 37, 38, 39]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	6	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+c = a + b
+
+IRs:
+TMP_3(uint256) = a + b
+c(uint256) := TMP_3(uint256)",
+		node_expression="c = a + b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_3(uint256) = a + b
+c(uint256) := TMP_3(uint256)",
+		node_source_code_lines="[35]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_32.sol"];
+	5 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(c >= a,SafeMath: addition overflow)
+
+IRs:
+TMP_4(bool) = c >= a
+TMP_5(None) = \
+SOLIDITY_CALL require(bool,string)(TMP_4,SafeMath: addition overflow)",
+		node_expression="require(bool,string)(c >= a,SafeMath: addition overflow)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_4(bool) = c >= a
+TMP_5(None) = SOLIDITY_CALL require(bool,string)(TMP_4,SafeMath: addition overflow)",
+		node_source_code_lines="[36]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+c
+
+IRs:
+RETURN c",
+		node_expression=c,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN c",
+		node_source_code_lines="[38]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	7 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="buggy_32.sol_SafeMath_add(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[34, 35, 36, 37, 38, 39]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	9 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=ERC20TokenInterface,
+		function_fullname="balanceOf(address)",
+		label="buggy_32.sol_ERC20TokenInterface_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[48]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	11	[contract_name=ERC20TokenInterface,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[49, 50, 51]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	12	[contract_name=ERC20TokenInterface,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_6(bool) = tx.origin == owner_txorigin4
+\
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_6(bool) = tx.origin == owner_txorigin4
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_source_code_lines="[50]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	11 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	13	[contract_name=ERC20TokenInterface,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_32.sol_ERC20TokenInterface_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[49, 50, 51]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	13 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=ERC20TokenInterface,
+		function_fullname="transfer(address,uint256)",
+		label="buggy_32.sol_ERC20TokenInterface_transfer(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[52]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	15	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[53, 54, 55, 56]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	16	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_8(bool) = tx.origin == owner_txorigin7
+\
+TMP_9(None) = SOLIDITY_CALL require(bool)(TMP_8)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_8(bool) = tx.origin == owner_txorigin7
+TMP_9(None) = SOLIDITY_CALL require(bool)(TMP_8)",
+		node_source_code_lines="[54]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	15 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	17	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_source_code_lines="[55]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_32.sol_ERC20TokenInterface_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[53, 54, 55, 56]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	18 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=ERC20TokenInterface,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_32.sol_ERC20TokenInterface_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[57]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	20	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	21	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_11(bool) = tx.origin == owner_txorigin23
+\
+TMP_12(None) = SOLIDITY_CALL require(bool)(TMP_11)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_11(bool) = tx.origin == owner_txorigin23
+TMP_12(None) = SOLIDITY_CALL require(bool)(TMP_11)",
+		node_source_code_lines="[59]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	20 -> 21	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_source_code_lines="[60]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	21 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	23	[contract_name=ERC20TokenInterface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_32.sol_ERC20TokenInterface_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	23 -> 20	[key=0,
+		edge_type=next,
+		label=Next];
+	24	[contract_name=ERC20TokenInterface,
+		function_fullname="approve(address,uint256)",
+		label="buggy_32.sol_ERC20TokenInterface_approve(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[62]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	25	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[63, 64, 65, 66]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	26	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_14(bool) = tx.origin == owner_txorigin14
+\
+TMP_15(None) = SOLIDITY_CALL require(bool)(TMP_14)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_14(bool) = tx.origin == owner_txorigin14
+TMP_15(None) = SOLIDITY_CALL require(bool)(TMP_14)",
+		node_source_code_lines="[64]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	25 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	27	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_16 = CONVERT this to address
+REF_5 -> BALANCE \
+TMP_16
+Transfer dest:_recipient value:REF_5",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_16 = CONVERT this to address
+REF_5 -> BALANCE TMP_16
+Transfer dest:_recipient value:REF_5",
+		node_source_code_lines="[65]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	26 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_32.sol_ERC20TokenInterface_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[63, 64, 65, 66]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	28 -> 25	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=ERC20TokenInterface,
+		function_fullname="allowance(address,address)",
+		label="buggy_32.sol_ERC20TokenInterface_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[67]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	30	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	31	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_18(bool) = tx.origin == owner_txorigin30
+\
+TMP_19(None) = SOLIDITY_CALL require(bool)(TMP_18)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_18(bool) = tx.origin == owner_txorigin30
+TMP_19(None) = SOLIDITY_CALL require(bool)(TMP_18)",
+		node_source_code_lines="[69]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_20 = CONVERT this to address
+REF_7 -> BALANCE \
+TMP_20
+Transfer dest:_recipient value:REF_7",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_20 = CONVERT this to address
+REF_7 -> BALANCE TMP_20
+Transfer dest:_recipient value:REF_7",
+		node_source_code_lines="[70]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	31 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	33	[contract_name=ERC20TokenInterface,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_32.sol_ERC20TokenInterface_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	33 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=ERC20Token,
+		function_fullname="balanceOf(address)",
+		label="buggy_32.sol_ERC20Token_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[48]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	35	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[49, 50, 51]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	36	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_22(bool) = tx.origin == owner_txorigin4
+\
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_22(bool) = tx.origin == owner_txorigin4
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_source_code_lines="[50]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	35 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_32.sol_ERC20Token_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[49, 50, 51]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	37 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	38	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="buggy_32.sol_ERC20Token_transfer(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[52]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	39	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[53, 54, 55, 56]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	40	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_24(bool) = tx.origin == owner_txorigin7
+\
+TMP_25(None) = SOLIDITY_CALL require(bool)(TMP_24)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_24(bool) = tx.origin == owner_txorigin7
+TMP_25(None) = SOLIDITY_CALL require(bool)(TMP_24)",
+		node_source_code_lines="[54]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	39 -> 40	[key=0,
+		edge_type=next,
+		label=Next];
+	41	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_8(None) -> to.call
+REF_9(None) -> REF_8.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_8(None) -> to.call
+REF_9(None) -> REF_8.value",
+		node_source_code_lines="[55]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	40 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	42	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[53, 54, 55, 56]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	42 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_32.sol_ERC20Token_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[57]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	44	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	45	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_27(bool) = tx.origin == owner_txorigin23
+\
+TMP_28(None) = SOLIDITY_CALL require(bool)(TMP_27)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_27(bool) = tx.origin == owner_txorigin23
+TMP_28(None) = SOLIDITY_CALL require(bool)(TMP_27)",
+		node_source_code_lines="[59]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	44 -> 45	[key=0,
+		edge_type=next,
+		label=Next];
+	46	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_10(None) -> to.call
+REF_11(None) -> REF_10.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_10(None) -> to.call
+REF_11(None) -> REF_10.value",
+		node_source_code_lines="[60]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	45 -> 46	[key=0,
+		edge_type=next,
+		label=Next];
+	47	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	47 -> 44	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=ERC20Token,
+		function_fullname="approve(address,uint256)",
+		label="buggy_32.sol_ERC20Token_approve(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[62]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	49	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[63, 64, 65, 66]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	50	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_30(bool) = tx.origin == owner_txorigin14
+\
+TMP_31(None) = SOLIDITY_CALL require(bool)(TMP_30)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_30(bool) = tx.origin == owner_txorigin14
+TMP_31(None) = SOLIDITY_CALL require(bool)(TMP_30)",
+		node_source_code_lines="[64]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	49 -> 50	[key=0,
+		edge_type=next,
+		label=Next];
+	51	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_32 = CONVERT this to address
+REF_13 -> BALANCE \
+TMP_32
+Transfer dest:_recipient value:REF_13",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_32 = CONVERT this to address
+REF_13 -> BALANCE TMP_32
+Transfer dest:_recipient value:REF_13",
+		node_source_code_lines="[65]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	50 -> 51	[key=0,
+		edge_type=next,
+		label=Next];
+	52	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_32.sol_ERC20Token_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[63, 64, 65, 66]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	52 -> 49	[key=0,
+		edge_type=next,
+		label=Next];
+	53	[contract_name=ERC20Token,
+		function_fullname="allowance(address,address)",
+		label="buggy_32.sol_ERC20Token_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[67]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	54	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	55	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_34(bool) = tx.origin == owner_txorigin30
+\
+TMP_35(None) = SOLIDITY_CALL require(bool)(TMP_34)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_34(bool) = tx.origin == owner_txorigin30
+TMP_35(None) = SOLIDITY_CALL require(bool)(TMP_34)",
+		node_source_code_lines="[69]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	54 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_36 = CONVERT this to address
+REF_15 -> BALANCE \
+TMP_36
+Transfer dest:_recipient value:REF_15",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_36 = CONVERT this to address
+REF_15 -> BALANCE TMP_36
+Transfer dest:_recipient value:REF_15",
+		node_source_code_lines="[70]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	55 -> 56	[key=0,
+		edge_type=next,
+		label=Next];
+	57	[contract_name=ERC20Token,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_32.sol_ERC20Token_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	57 -> 54	[key=0,
+		edge_type=next,
+		label=Next];
+	58	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[81, 82, 83, 84]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	59	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin9)
+
+IRs:
+TMP_38(bool) = tx.origin == owner_txorigin9
+\
+TMP_39(None) = SOLIDITY_CALL require(bool)(TMP_38)",
+		node_expression="require(bool)(tx.origin == owner_txorigin9)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_38(bool) = tx.origin == owner_txorigin9
+TMP_39(None) = SOLIDITY_CALL require(bool)(TMP_38)",
+		node_source_code_lines="[82]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	58 -> 59	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[83]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	59 -> 60	[key=0,
+		edge_type=next,
+		label=Next];
+	61	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_sendto_txorigin9(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[81, 82, 83, 84]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	61 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	62	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[86, 87, 88, 89]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	63	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin25)
+
+IRs:
+TMP_41(bool) = tx.origin == owner_txorigin25
+\
+TMP_42(None) = SOLIDITY_CALL require(bool)(TMP_41)",
+		node_expression="require(bool)(tx.origin == owner_txorigin25)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_41(bool) = tx.origin == owner_txorigin25
+TMP_42(None) = SOLIDITY_CALL require(bool)(TMP_41)",
+		node_source_code_lines="[87]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	62 -> 63	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[88]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	63 -> 64	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_sendto_txorigin25(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[86, 87, 88, 89]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	65 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	66	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93, 94]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	67	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_44(bool) = tx.origin == owner_txorigin19
+\
+TMP_45(None) = SOLIDITY_CALL require(bool)(TMP_44)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_44(bool) = tx.origin == owner_txorigin19
+TMP_45(None) = SOLIDITY_CALL require(bool)(TMP_44)",
+		node_source_code_lines="[92]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	66 -> 67	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_18(None) -> to.call
+REF_19(None) -> REF_18.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_18(None) -> to.call
+REF_19(None) -> REF_18.value",
+		node_source_code_lines="[93]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	67 -> 68	[key=0,
+		edge_type=next,
+		label=Next];
+	69	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93, 94]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	69 -> 66	[key=0,
+		edge_type=next,
+		label=Next];
+	70	[contract_name=ERC20Token,
+		function_fullname="balanceOf(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[101, 102, 103]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	71	[contract_name=ERC20Token,
+		function_fullname="balanceOf(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+balances[_owner]
+
+IRs:
+REF_20(uint256) -> balances[_owner]
+RETURN REF_20",
+		node_expression="balances[_owner]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_20(uint256) -> balances[_owner]
+RETURN REF_20",
+		node_source_code_lines="[102]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	70 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	72	[contract_name=ERC20Token,
+		function_fullname="balanceOf(address)",
+		label="buggy_32.sol_ERC20Token_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[101, 102, 103]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	72 -> 70	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[104, 105, 106]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	74	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_47(bool) = tx.origin == owner_txorigin8
+\
+TMP_48(None) = SOLIDITY_CALL require(bool)(TMP_47)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_47(bool) = tx.origin == owner_txorigin8
+TMP_48(None) = SOLIDITY_CALL require(bool)(TMP_47)",
+		node_source_code_lines="[105]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	73 -> 74	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_32.sol_ERC20Token_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[104, 105, 106]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	75 -> 73	[key=0,
+		edge_type=next,
+		label=Next];
+	76	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115, 116, 117, 118]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	77	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[msg.sender] = balances[msg.sender].sub(_value)
+
+IRs:
+REF_21(uint256) -> balances[msg.sender]
+\
+REF_22(uint256) -> balances[msg.sender]
+TMP_49(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['\
+REF_22', '_value'] 
+REF_21 (->balances) := TMP_49(uint256)",
+		node_expression="balances[msg.sender] = balances[msg.sender].sub(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_21(uint256) -> balances[msg.sender]
+REF_22(uint256) -> balances[msg.sender]
+TMP_49(uint256) = LIBRARY_CALL, dest:SafeMath, function:\
+SafeMath.sub(uint256,uint256), arguments:['REF_22', '_value'] 
+REF_21 (->balances) := TMP_49(uint256)",
+		node_source_code_lines="[114]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	76 -> 77	[key=0,
+		edge_type=next,
+		label=Next];
+	78	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_to] = balances[_to].add(_value)
+
+IRs:
+REF_24(uint256) -> balances[_to]
+REF_25(uint256) \
+-> balances[_to]
+TMP_50(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(uint256,uint256), arguments:['REF_25', '_value'] 
+\
+REF_24 (->balances) := TMP_50(uint256)",
+		node_expression="balances[_to] = balances[_to].add(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_24(uint256) -> balances[_to]
+REF_25(uint256) -> balances[_to]
+TMP_50(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(\
+uint256,uint256), arguments:['REF_25', '_value'] 
+REF_24 (->balances) := TMP_50(uint256)",
+		node_source_code_lines="[115]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	77 -> 78	[key=0,
+		edge_type=next,
+		label=Next];
+	79	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(msg.sender,_to,_value)
+
+IRs:
+Emit Transfer(msg.sender._to._value)",
+		node_expression="Transfer(msg.sender,_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Transfer(msg.sender._to._value)",
+		node_source_code_lines="[116]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	78 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	80	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[117]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	79 -> 80	[key=0,
+		edge_type=next,
+		label=Next];
+	81	[contract_name=ERC20Token,
+		function_fullname="transfer(address,uint256)",
+		label="buggy_32.sol_ERC20Token_transfer(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115, 116, 117, 118]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	81 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	82	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[119, 120, 121, 122]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	83	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_52(bool) = tx.origin == owner_txorigin39
+\
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_52(bool) = tx.origin == owner_txorigin39
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_source_code_lines="[120]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	82 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_27(None) -> to.call
+REF_28(None) -> REF_27.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_27(None) -> to.call
+REF_28(None) -> REF_27.value",
+		node_source_code_lines="[121]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[119, 120, 121, 122]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	85 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133, 134, 135, 136]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	87	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value)
+
+IRs:
+REF_29(mapping(address => \
+uint256)) -> allowed[_from]
+REF_30(uint256) -> REF_29[msg.sender]
+REF_31(mapping(address => uint256)) -> allowed[_from]
+REF_32(uint256) \
+-> REF_31[msg.sender]
+TMP_55(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['REF_32', '_\
+value'] 
+REF_30 (->allowed) := TMP_55(uint256)",
+		node_expression="allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_29(mapping(address => uint256)) -> allowed[_from]
+REF_30(uint256) -> REF_29[msg.sender]
+REF_31(mapping(address => uint256)) \
+-> allowed[_from]
+REF_32(uint256) -> REF_31[msg.sender]
+TMP_55(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,\
+uint256), arguments:['REF_32', '_value'] 
+REF_30 (->allowed) := TMP_55(uint256)",
+		node_source_code_lines="[131]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	86 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_from] = balances[_from].sub(_value)
+
+IRs:
+REF_34(uint256) -> balances[_from]
+REF_35(\
+uint256) -> balances[_from]
+TMP_56(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['REF_\
+35', '_value'] 
+REF_34 (->balances) := TMP_56(uint256)",
+		node_expression="balances[_from] = balances[_from].sub(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_34(uint256) -> balances[_from]
+REF_35(uint256) -> balances[_from]
+TMP_56(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(\
+uint256,uint256), arguments:['REF_35', '_value'] 
+REF_34 (->balances) := TMP_56(uint256)",
+		node_source_code_lines="[132]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	87 -> 88	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_to] = balances[_to].add(_value)
+
+IRs:
+REF_37(uint256) -> balances[_to]
+REF_38(uint256) \
+-> balances[_to]
+TMP_57(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(uint256,uint256), arguments:['REF_38', '_value'] 
+\
+REF_37 (->balances) := TMP_57(uint256)",
+		node_expression="balances[_to] = balances[_to].add(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_37(uint256) -> balances[_to]
+REF_38(uint256) -> balances[_to]
+TMP_57(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(\
+uint256,uint256), arguments:['REF_38', '_value'] 
+REF_37 (->balances) := TMP_57(uint256)",
+		node_source_code_lines="[133]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	88 -> 89	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(_from,_to,_value)
+
+IRs:
+Emit Transfer(_from._to._value)",
+		node_expression="Transfer(_from,_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Transfer(_from._to._value)",
+		node_source_code_lines="[134]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	89 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	91	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[135]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	90 -> 91	[key=0,
+		edge_type=next,
+		label=Next];
+	92	[contract_name=ERC20Token,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_32.sol_ERC20Token_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133, 134, 135, 136]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	92 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	93	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	94	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_59(bool) = tx.origin == owner_txorigin36
+\
+TMP_60(None) = SOLIDITY_CALL require(bool)(TMP_59)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_59(bool) = tx.origin == owner_txorigin36
+TMP_60(None) = SOLIDITY_CALL require(bool)(TMP_59)",
+		node_source_code_lines="[138]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	93 -> 94	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_32.sol_ERC20Token_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	95 -> 93	[key=0,
+		edge_type=next,
+		label=Next];
+	96	[contract_name=ERC20Token,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148, 149, 150]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	97	[contract_name=ERC20Token,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+allowed[msg.sender][_spender] = _value
+
+IRs:
+REF_40(mapping(address => uint256)) -> allowed[msg.sender]
+\
+REF_41(uint256) -> REF_40[_spender]
+REF_41 (->allowed) := _value(uint256)",
+		node_expression="allowed[msg.sender][_spender] = _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_40(mapping(address => uint256)) -> allowed[msg.sender]
+REF_41(uint256) -> REF_40[_spender]
+REF_41 (->allowed) := _value(uint256)",
+		node_source_code_lines="[147]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	96 -> 97	[key=0,
+		edge_type=next,
+		label=Next];
+	98	[contract_name=ERC20Token,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Approval(msg.sender,_spender,_value)
+
+IRs:
+Emit Approval(msg.sender._spender._value)",
+		node_expression="Approval(msg.sender,_spender,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Approval(msg.sender._spender._value)",
+		node_source_code_lines="[148]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	97 -> 98	[key=0,
+		edge_type=next,
+		label=Next];
+	99	[contract_name=ERC20Token,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[149]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	98 -> 99	[key=0,
+		edge_type=next,
+		label=Next];
+	100	[contract_name=ERC20Token,
+		function_fullname="approve(address,uint256)",
+		label="buggy_32.sol_ERC20Token_approve(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148, 149, 150]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	100 -> 96	[key=0,
+		edge_type=next,
+		label=Next];
+	101	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[151, 152, 153, 154]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	102	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_62(bool) = tx.origin == owner_txorigin35
+\
+TMP_63(None) = SOLIDITY_CALL require(bool)(TMP_62)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_62(bool) = tx.origin == owner_txorigin35
+TMP_63(None) = SOLIDITY_CALL require(bool)(TMP_62)",
+		node_source_code_lines="[152]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	101 -> 102	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_42(None) -> to.call
+REF_43(None) -> REF_42.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_42(None) -> to.call
+REF_43(None) -> REF_42.value",
+		node_source_code_lines="[153]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	102 -> 103	[key=0,
+		edge_type=next,
+		label=Next];
+	104	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[151, 152, 153, 154]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	104 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=ERC20Token,
+		function_fullname="allowance(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[161, 162, 163]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	106	[contract_name=ERC20Token,
+		function_fullname="allowance(address,address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+allowed[_owner][_spender]
+
+IRs:
+REF_44(mapping(address => uint256)) -> allowed[_owner]
+REF_45(uint256) \
+-> REF_44[_spender]
+RETURN REF_45",
+		node_expression="allowed[_owner][_spender]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_44(mapping(address => uint256)) -> allowed[_owner]
+REF_45(uint256) -> REF_44[_spender]
+RETURN REF_45",
+		node_source_code_lines="[162]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	105 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	107	[contract_name=ERC20Token,
+		function_fullname="allowance(address,address)",
+		label="buggy_32.sol_ERC20Token_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[161, 162, 163]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	107 -> 105	[key=0,
+		edge_type=next,
+		label=Next];
+	108	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[164, 165, 166]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	109	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_65(bool) = tx.origin == owner_txorigin40
+\
+TMP_66(None) = SOLIDITY_CALL require(bool)(TMP_65)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_65(bool) = tx.origin == owner_txorigin40
+TMP_66(None) = SOLIDITY_CALL require(bool)(TMP_65)",
+		node_source_code_lines="[165]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	108 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	110	[contract_name=ERC20Token,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_32.sol_ERC20Token_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[164, 165, 166]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	110 -> 108	[key=0,
+		edge_type=next,
+		label=Next];
+	111	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173, 174]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	112	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_67(bool) = tx.origin == owner_txorigin31
+\
+TMP_68(None) = SOLIDITY_CALL require(bool)(TMP_67)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_67(bool) = tx.origin == owner_txorigin31
+TMP_68(None) = SOLIDITY_CALL require(bool)(TMP_67)",
+		node_source_code_lines="[172]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	111 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	113	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_46(None) -> to.call
+REF_47(None) -> REF_46.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_46(None) -> to.call
+REF_47(None) -> REF_46.value",
+		node_source_code_lines="[173]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	114	[contract_name=ERC20Token,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173, 174]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	114 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	115	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[176, 177, 178, 179]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	116	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_70(bool) = tx.origin == owner_txorigin13
+\
+TMP_71(None) = SOLIDITY_CALL require(bool)(TMP_70)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_70(bool) = tx.origin == owner_txorigin13
+TMP_71(None) = SOLIDITY_CALL require(bool)(TMP_70)",
+		node_source_code_lines="[177]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	115 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[178]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	116 -> 117	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=ERC20Token,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_32.sol_ERC20Token_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[176, 177, 178, 179]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	118 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[81, 82, 83, 84]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	120	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin9)
+
+IRs:
+TMP_73(bool) = tx.origin == owner_txorigin9
+\
+TMP_74(None) = SOLIDITY_CALL require(bool)(TMP_73)",
+		node_expression="require(bool)(tx.origin == owner_txorigin9)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_73(bool) = tx.origin == owner_txorigin9
+TMP_74(None) = SOLIDITY_CALL require(bool)(TMP_73)",
+		node_source_code_lines="[82]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	119 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	121	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[83]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	120 -> 121	[key=0,
+		edge_type=next,
+		label=Next];
+	122	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_sendto_txorigin9(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[81, 82, 83, 84]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	122 -> 119	[key=0,
+		edge_type=next,
+		label=Next];
+	123	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[86, 87, 88, 89]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	124	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin25)
+
+IRs:
+TMP_76(bool) = tx.origin == owner_txorigin25
+\
+TMP_77(None) = SOLIDITY_CALL require(bool)(TMP_76)",
+		node_expression="require(bool)(tx.origin == owner_txorigin25)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_76(bool) = tx.origin == owner_txorigin25
+TMP_77(None) = SOLIDITY_CALL require(bool)(TMP_76)",
+		node_source_code_lines="[87]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	123 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	125	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[88]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	124 -> 125	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_sendto_txorigin25(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[86, 87, 88, 89]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	126 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	127	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93, 94]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	128	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_79(bool) = tx.origin == owner_txorigin19
+\
+TMP_80(None) = SOLIDITY_CALL require(bool)(TMP_79)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_79(bool) = tx.origin == owner_txorigin19
+TMP_80(None) = SOLIDITY_CALL require(bool)(TMP_79)",
+		node_source_code_lines="[92]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	127 -> 128	[key=0,
+		edge_type=next,
+		label=Next];
+	129	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_51(None) -> to.call
+REF_52(None) -> REF_51.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_51(None) -> to.call
+REF_52(None) -> REF_51.value",
+		node_source_code_lines="[93]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	128 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	130	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93, 94]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	130 -> 127	[key=0,
+		edge_type=next,
+		label=Next];
+	131	[contract_name=AsseteGram,
+		function_fullname="balanceOf(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[101, 102, 103]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	132	[contract_name=AsseteGram,
+		function_fullname="balanceOf(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+balances[_owner]
+
+IRs:
+REF_53(uint256) -> balances[_owner]
+RETURN REF_53",
+		node_expression="balances[_owner]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_53(uint256) -> balances[_owner]
+RETURN REF_53",
+		node_source_code_lines="[102]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	131 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	133	[contract_name=AsseteGram,
+		function_fullname="balanceOf(address)",
+		label="buggy_32.sol_AsseteGram_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[101, 102, 103]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	133 -> 131	[key=0,
+		edge_type=next,
+		label=Next];
+	134	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[104, 105, 106]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	135	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_82(bool) = tx.origin == owner_txorigin8
+\
+TMP_83(None) = SOLIDITY_CALL require(bool)(TMP_82)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_82(bool) = tx.origin == owner_txorigin8
+TMP_83(None) = SOLIDITY_CALL require(bool)(TMP_82)",
+		node_source_code_lines="[105]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	134 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	136	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_32.sol_AsseteGram_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[104, 105, 106]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	136 -> 134	[key=0,
+		edge_type=next,
+		label=Next];
+	137	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115, 116, 117, 118]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	138	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[msg.sender] = balances[msg.sender].sub(_value)
+
+IRs:
+REF_54(uint256) -> balances[msg.sender]
+\
+REF_55(uint256) -> balances[msg.sender]
+TMP_84(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['\
+REF_55', '_value'] 
+REF_54 (->balances) := TMP_84(uint256)",
+		node_expression="balances[msg.sender] = balances[msg.sender].sub(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_54(uint256) -> balances[msg.sender]
+REF_55(uint256) -> balances[msg.sender]
+TMP_84(uint256) = LIBRARY_CALL, dest:SafeMath, function:\
+SafeMath.sub(uint256,uint256), arguments:['REF_55', '_value'] 
+REF_54 (->balances) := TMP_84(uint256)",
+		node_source_code_lines="[114]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	137 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	139	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_to] = balances[_to].add(_value)
+
+IRs:
+REF_57(uint256) -> balances[_to]
+REF_58(uint256) \
+-> balances[_to]
+TMP_85(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(uint256,uint256), arguments:['REF_58', '_value'] 
+\
+REF_57 (->balances) := TMP_85(uint256)",
+		node_expression="balances[_to] = balances[_to].add(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_57(uint256) -> balances[_to]
+REF_58(uint256) -> balances[_to]
+TMP_85(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(\
+uint256,uint256), arguments:['REF_58', '_value'] 
+REF_57 (->balances) := TMP_85(uint256)",
+		node_source_code_lines="[115]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	138 -> 139	[key=0,
+		edge_type=next,
+		label=Next];
+	140	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(msg.sender,_to,_value)
+
+IRs:
+Emit Transfer(msg.sender._to._value)",
+		node_expression="Transfer(msg.sender,_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Transfer(msg.sender._to._value)",
+		node_source_code_lines="[116]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	139 -> 140	[key=0,
+		edge_type=next,
+		label=Next];
+	141	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[117]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	140 -> 141	[key=0,
+		edge_type=next,
+		label=Next];
+	142	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="buggy_32.sol_AsseteGram_transfer(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115, 116, 117, 118]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	142 -> 137	[key=0,
+		edge_type=next,
+		label=Next];
+	143	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[119, 120, 121, 122]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	144	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_87(bool) = tx.origin == owner_txorigin39
+\
+TMP_88(None) = SOLIDITY_CALL require(bool)(TMP_87)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_87(bool) = tx.origin == owner_txorigin39
+TMP_88(None) = SOLIDITY_CALL require(bool)(TMP_87)",
+		node_source_code_lines="[120]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	143 -> 144	[key=0,
+		edge_type=next,
+		label=Next];
+	145	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_60(None) -> to.call
+REF_61(None) -> REF_60.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_60(None) -> to.call
+REF_61(None) -> REF_60.value",
+		node_source_code_lines="[121]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	144 -> 145	[key=0,
+		edge_type=next,
+		label=Next];
+	146	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[119, 120, 121, 122]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	146 -> 143	[key=0,
+		edge_type=next,
+		label=Next];
+	147	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133, 134, 135, 136]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	148	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value)
+
+IRs:
+REF_62(mapping(address => \
+uint256)) -> allowed[_from]
+REF_63(uint256) -> REF_62[msg.sender]
+REF_64(mapping(address => uint256)) -> allowed[_from]
+REF_65(uint256) \
+-> REF_64[msg.sender]
+TMP_90(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['REF_65', '_\
+value'] 
+REF_63 (->allowed) := TMP_90(uint256)",
+		node_expression="allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_62(mapping(address => uint256)) -> allowed[_from]
+REF_63(uint256) -> REF_62[msg.sender]
+REF_64(mapping(address => uint256)) \
+-> allowed[_from]
+REF_65(uint256) -> REF_64[msg.sender]
+TMP_90(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,\
+uint256), arguments:['REF_65', '_value'] 
+REF_63 (->allowed) := TMP_90(uint256)",
+		node_source_code_lines="[131]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	147 -> 148	[key=0,
+		edge_type=next,
+		label=Next];
+	149	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_from] = balances[_from].sub(_value)
+
+IRs:
+REF_67(uint256) -> balances[_from]
+REF_68(\
+uint256) -> balances[_from]
+TMP_91(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['REF_\
+68', '_value'] 
+REF_67 (->balances) := TMP_91(uint256)",
+		node_expression="balances[_from] = balances[_from].sub(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_67(uint256) -> balances[_from]
+REF_68(uint256) -> balances[_from]
+TMP_91(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(\
+uint256,uint256), arguments:['REF_68', '_value'] 
+REF_67 (->balances) := TMP_91(uint256)",
+		node_source_code_lines="[132]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	148 -> 149	[key=0,
+		edge_type=next,
+		label=Next];
+	150	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[_to] = balances[_to].add(_value)
+
+IRs:
+REF_70(uint256) -> balances[_to]
+REF_71(uint256) \
+-> balances[_to]
+TMP_92(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(uint256,uint256), arguments:['REF_71', '_value'] 
+\
+REF_70 (->balances) := TMP_92(uint256)",
+		node_expression="balances[_to] = balances[_to].add(_value)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_70(uint256) -> balances[_to]
+REF_71(uint256) -> balances[_to]
+TMP_92(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(\
+uint256,uint256), arguments:['REF_71', '_value'] 
+REF_70 (->balances) := TMP_92(uint256)",
+		node_source_code_lines="[133]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	149 -> 150	[key=0,
+		edge_type=next,
+		label=Next];
+	151	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(_from,_to,_value)
+
+IRs:
+Emit Transfer(_from._to._value)",
+		node_expression="Transfer(_from,_to,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Transfer(_from._to._value)",
+		node_source_code_lines="[134]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	150 -> 151	[key=0,
+		edge_type=next,
+		label=Next];
+	152	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[135]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	151 -> 152	[key=0,
+		edge_type=next,
+		label=Next];
+	153	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_32.sol_AsseteGram_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133, 134, 135, 136]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	153 -> 147	[key=0,
+		edge_type=next,
+		label=Next];
+	154	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	155	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_94(bool) = tx.origin == owner_txorigin36
+\
+TMP_95(None) = SOLIDITY_CALL require(bool)(TMP_94)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_94(bool) = tx.origin == owner_txorigin36
+TMP_95(None) = SOLIDITY_CALL require(bool)(TMP_94)",
+		node_source_code_lines="[138]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	154 -> 155	[key=0,
+		edge_type=next,
+		label=Next];
+	156	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_32.sol_AsseteGram_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	156 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	157	[contract_name=AsseteGram,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148, 149, 150]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	158	[contract_name=AsseteGram,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+allowed[msg.sender][_spender] = _value
+
+IRs:
+REF_73(mapping(address => uint256)) -> allowed[msg.sender]
+\
+REF_74(uint256) -> REF_73[_spender]
+REF_74 (->allowed) := _value(uint256)",
+		node_expression="allowed[msg.sender][_spender] = _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_73(mapping(address => uint256)) -> allowed[msg.sender]
+REF_74(uint256) -> REF_73[_spender]
+REF_74 (->allowed) := _value(uint256)",
+		node_source_code_lines="[147]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	157 -> 158	[key=0,
+		edge_type=next,
+		label=Next];
+	159	[contract_name=AsseteGram,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Approval(msg.sender,_spender,_value)
+
+IRs:
+Emit Approval(msg.sender._spender._value)",
+		node_expression="Approval(msg.sender,_spender,_value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Approval(msg.sender._spender._value)",
+		node_source_code_lines="[148]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	158 -> 159	[key=0,
+		edge_type=next,
+		label=Next];
+	160	[contract_name=AsseteGram,
+		function_fullname="approve(address,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[149]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	159 -> 160	[key=0,
+		edge_type=next,
+		label=Next];
+	161	[contract_name=AsseteGram,
+		function_fullname="approve(address,uint256)",
+		label="buggy_32.sol_AsseteGram_approve(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148, 149, 150]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	161 -> 157	[key=0,
+		edge_type=next,
+		label=Next];
+	162	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[151, 152, 153, 154]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	163	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_97(bool) = tx.origin == owner_txorigin35
+\
+TMP_98(None) = SOLIDITY_CALL require(bool)(TMP_97)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_97(bool) = tx.origin == owner_txorigin35
+TMP_98(None) = SOLIDITY_CALL require(bool)(TMP_97)",
+		node_source_code_lines="[152]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	162 -> 163	[key=0,
+		edge_type=next,
+		label=Next];
+	164	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_75(None) -> to.call
+REF_76(None) -> REF_75.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_75(None) -> to.call
+REF_76(None) -> REF_75.value",
+		node_source_code_lines="[153]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	163 -> 164	[key=0,
+		edge_type=next,
+		label=Next];
+	165	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[151, 152, 153, 154]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	165 -> 162	[key=0,
+		edge_type=next,
+		label=Next];
+	166	[contract_name=AsseteGram,
+		function_fullname="allowance(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[161, 162, 163]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	167	[contract_name=AsseteGram,
+		function_fullname="allowance(address,address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+allowed[_owner][_spender]
+
+IRs:
+REF_77(mapping(address => uint256)) -> allowed[_owner]
+REF_78(uint256) \
+-> REF_77[_spender]
+RETURN REF_78",
+		node_expression="allowed[_owner][_spender]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_77(mapping(address => uint256)) -> allowed[_owner]
+REF_78(uint256) -> REF_77[_spender]
+RETURN REF_78",
+		node_source_code_lines="[162]",
+		node_type=RETURN,
+		source_file="buggy_32.sol"];
+	166 -> 167	[key=0,
+		edge_type=next,
+		label=Next];
+	168	[contract_name=AsseteGram,
+		function_fullname="allowance(address,address)",
+		label="buggy_32.sol_AsseteGram_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[161, 162, 163]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	168 -> 166	[key=0,
+		edge_type=next,
+		label=Next];
+	169	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[164, 165, 166]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	170	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_100(bool) = tx.origin == owner_txorigin40
+\
+TMP_101(None) = SOLIDITY_CALL require(bool)(TMP_100)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_100(bool) = tx.origin == owner_txorigin40
+TMP_101(None) = SOLIDITY_CALL require(bool)(TMP_100)",
+		node_source_code_lines="[165]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	169 -> 170	[key=0,
+		edge_type=next,
+		label=Next];
+	171	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_32.sol_AsseteGram_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[164, 165, 166]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	171 -> 169	[key=0,
+		edge_type=next,
+		label=Next];
+	172	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173, 174]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	173	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_102(bool) = tx.origin == owner_txorigin31
+\
+TMP_103(None) = SOLIDITY_CALL require(bool)(TMP_102)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_102(bool) = tx.origin == owner_txorigin31
+TMP_103(None) = SOLIDITY_CALL require(bool)(TMP_102)",
+		node_source_code_lines="[172]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	172 -> 173	[key=0,
+		edge_type=next,
+		label=Next];
+	174	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_79(None) -> to.call
+REF_80(None) -> REF_79.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_79(None) -> to.call
+REF_80(None) -> REF_79.value",
+		node_source_code_lines="[173]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	173 -> 174	[key=0,
+		edge_type=next,
+		label=Next];
+	175	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173, 174]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	175 -> 172	[key=0,
+		edge_type=next,
+		label=Next];
+	176	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[176, 177, 178, 179]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	177	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_105(bool) = tx.origin == owner_txorigin13
+\
+TMP_106(None) = SOLIDITY_CALL require(bool)(TMP_105)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_105(bool) = tx.origin == owner_txorigin13
+TMP_106(None) = SOLIDITY_CALL require(bool)(TMP_105)",
+		node_source_code_lines="[177]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	176 -> 177	[key=0,
+		edge_type=next,
+		label=Next];
+	178	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[178]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	177 -> 178	[key=0,
+		edge_type=next,
+		label=Next];
+	179	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[176, 177, 178, 179]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	179 -> 176	[key=0,
+		edge_type=next,
+		label=Next];
+	180	[contract_name=AsseteGram,
+		function_fullname="balanceOf(address)",
+		label="buggy_32.sol_AsseteGram_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[48]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	181	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[49, 50, 51]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	182	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_108(bool) = tx.origin == owner_txorigin4
+\
+TMP_109(None) = SOLIDITY_CALL require(bool)(TMP_108)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_108(bool) = tx.origin == owner_txorigin4
+TMP_109(None) = SOLIDITY_CALL require(bool)(TMP_108)",
+		node_source_code_lines="[50]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	181 -> 182	[key=0,
+		edge_type=next,
+		label=Next];
+	183	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_32.sol_AsseteGram_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[49, 50, 51]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	183 -> 181	[key=0,
+		edge_type=next,
+		label=Next];
+	184	[contract_name=AsseteGram,
+		function_fullname="transfer(address,uint256)",
+		label="buggy_32.sol_AsseteGram_transfer(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[52]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	185	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[53, 54, 55, 56]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	186	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_110(bool) = tx.origin == owner_txorigin7
+\
+TMP_111(None) = SOLIDITY_CALL require(bool)(TMP_110)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_110(bool) = tx.origin == owner_txorigin7
+TMP_111(None) = SOLIDITY_CALL require(bool)(TMP_110)",
+		node_source_code_lines="[54]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	185 -> 186	[key=0,
+		edge_type=next,
+		label=Next];
+	187	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_82(None) -> to.call
+REF_83(None) -> REF_82.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_82(None) -> to.call
+REF_83(None) -> REF_82.value",
+		node_source_code_lines="[55]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	186 -> 187	[key=0,
+		edge_type=next,
+		label=Next];
+	188	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[53, 54, 55, 56]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	188 -> 185	[key=0,
+		edge_type=next,
+		label=Next];
+	189	[contract_name=AsseteGram,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_32.sol_AsseteGram_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[57]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	190	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	191	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_113(bool) = tx.origin == owner_txorigin23
+\
+TMP_114(None) = SOLIDITY_CALL require(bool)(TMP_113)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_113(bool) = tx.origin == owner_txorigin23
+TMP_114(None) = SOLIDITY_CALL require(bool)(TMP_113)",
+		node_source_code_lines="[59]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	190 -> 191	[key=0,
+		edge_type=next,
+		label=Next];
+	192	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_84(None) -> to.call
+REF_85(None) -> REF_84.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_84(None) -> to.call
+REF_85(None) -> REF_84.value",
+		node_source_code_lines="[60]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	191 -> 192	[key=0,
+		edge_type=next,
+		label=Next];
+	193	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	193 -> 190	[key=0,
+		edge_type=next,
+		label=Next];
+	194	[contract_name=AsseteGram,
+		function_fullname="approve(address,uint256)",
+		label="buggy_32.sol_AsseteGram_approve(address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[62]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	195	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[63, 64, 65, 66]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	196	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_116(bool) = tx.origin == owner_txorigin14
+\
+TMP_117(None) = SOLIDITY_CALL require(bool)(TMP_116)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_116(bool) = tx.origin == owner_txorigin14
+TMP_117(None) = SOLIDITY_CALL require(bool)(TMP_116)",
+		node_source_code_lines="[64]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	195 -> 196	[key=0,
+		edge_type=next,
+		label=Next];
+	197	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_118 = CONVERT this to address
+REF_87 -> \
+BALANCE TMP_118
+Transfer dest:_recipient value:REF_87",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_118 = CONVERT this to address
+REF_87 -> BALANCE TMP_118
+Transfer dest:_recipient value:REF_87",
+		node_source_code_lines="[65]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	196 -> 197	[key=0,
+		edge_type=next,
+		label=Next];
+	198	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_32.sol_AsseteGram_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[63, 64, 65, 66]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	198 -> 195	[key=0,
+		edge_type=next,
+		label=Next];
+	199	[contract_name=AsseteGram,
+		function_fullname="allowance(address,address)",
+		label="buggy_32.sol_AsseteGram_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[67]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	200	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	201	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_120(bool) = tx.origin == owner_txorigin30
+\
+TMP_121(None) = SOLIDITY_CALL require(bool)(TMP_120)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_120(bool) = tx.origin == owner_txorigin30
+TMP_121(None) = SOLIDITY_CALL require(bool)(TMP_120)",
+		node_source_code_lines="[69]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	200 -> 201	[key=0,
+		edge_type=next,
+		label=Next];
+	202	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_122 = CONVERT this to address
+REF_89 -> \
+BALANCE TMP_122
+Transfer dest:_recipient value:REF_89",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_122 = CONVERT this to address
+REF_89 -> BALANCE TMP_122
+Transfer dest:_recipient value:REF_89",
+		node_source_code_lines="[70]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	201 -> 202	[key=0,
+		edge_type=next,
+		label=Next];
+	203	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_32.sol_AsseteGram_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	203 -> 200	[key=0,
+		edge_type=next,
+		label=Next];
+	204	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[188, 189, 190, 191]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	205	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin26)
+
+IRs:
+TMP_124(bool) = tx.origin == owner_txorigin26
+\
+TMP_125(None) = SOLIDITY_CALL require(bool)(TMP_124)",
+		node_expression="require(bool)(tx.origin == owner_txorigin26)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_124(bool) = tx.origin == owner_txorigin26
+TMP_125(None) = SOLIDITY_CALL require(bool)(TMP_124)",
+		node_source_code_lines="[189]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	204 -> 205	[key=0,
+		edge_type=next,
+		label=Next];
+	206	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_126 = CONVERT this to address
+REF_91 -> \
+BALANCE TMP_126
+Transfer dest:_recipient value:REF_91",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_126 = CONVERT this to address
+REF_91 -> BALANCE TMP_126
+Transfer dest:_recipient value:REF_91",
+		node_source_code_lines="[190]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	205 -> 206	[key=0,
+		edge_type=next,
+		label=Next];
+	207	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="buggy_32.sol_AsseteGram_withdrawAll_txorigin26(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[188, 189, 190, 191]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	207 -> 204	[key=0,
+		edge_type=next,
+		label=Next];
+	208	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	209	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin20)
+
+IRs:
+TMP_128(bool) = tx.origin == owner_txorigin20
+\
+TMP_129(None) = SOLIDITY_CALL require(bool)(TMP_128)",
+		node_expression="require(bool)(tx.origin == owner_txorigin20)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_128(bool) = tx.origin == owner_txorigin20
+TMP_129(None) = SOLIDITY_CALL require(bool)(TMP_128)",
+		node_source_code_lines="[194]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	208 -> 209	[key=0,
+		edge_type=next,
+		label=Next];
+	210	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin20(address)",
+		label="buggy_32.sol_AsseteGram_bug_txorigin20(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	210 -> 208	[key=0,
+		edge_type=next,
+		label=Next];
+	211	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[197, 198, 199]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	212	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin32)
+
+IRs:
+TMP_130(bool) = tx.origin == owner_txorigin32
+\
+TMP_131(None) = SOLIDITY_CALL require(bool)(TMP_130)",
+		node_expression="require(bool)(tx.origin == owner_txorigin32)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_130(bool) = tx.origin == owner_txorigin32
+TMP_131(None) = SOLIDITY_CALL require(bool)(TMP_130)",
+		node_source_code_lines="[198]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	211 -> 212	[key=0,
+		edge_type=next,
+		label=Next];
+	213	[contract_name=AsseteGram,
+		function_fullname="bug_txorigin32(address)",
+		label="buggy_32.sol_AsseteGram_bug_txorigin32(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[197, 198, 199]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	213 -> 211	[key=0,
+		edge_type=next,
+		label=Next];
+	214	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[201, 202, 203, 204]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	215	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin38)
+
+IRs:
+TMP_132(bool) = tx.origin == owner_txorigin38
+\
+TMP_133(None) = SOLIDITY_CALL require(bool)(TMP_132)",
+		node_expression="require(bool)(tx.origin == owner_txorigin38)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_132(bool) = tx.origin == owner_txorigin38
+TMP_133(None) = SOLIDITY_CALL require(bool)(TMP_132)",
+		node_source_code_lines="[202]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	214 -> 215	[key=0,
+		edge_type=next,
+		label=Next];
+	216	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_134 = CONVERT this to address
+REF_93 -> \
+BALANCE TMP_134
+Transfer dest:_recipient value:REF_93",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_134 = CONVERT this to address
+REF_93 -> BALANCE TMP_134
+Transfer dest:_recipient value:REF_93",
+		node_source_code_lines="[203]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	215 -> 216	[key=0,
+		edge_type=next,
+		label=Next];
+	217	[contract_name=AsseteGram,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="buggy_32.sol_AsseteGram_withdrawAll_txorigin38(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[201, 202, 203, 204]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	217 -> 214	[key=0,
+		edge_type=next,
+		label=Next];
+	218	[contract_name=AsseteGram,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[207, 208, 209, 210, 211, 212]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	219	[contract_name=AsseteGram,
+		function_fullname="constructor()",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+initialOwner = 0xac775cD446889ac167da466692449ece5439fc12
+
+IRs:
+initialOwner(address) := 984608287824248302395549250658913853810641861650(\
+address)",
+		node_expression="initialOwner = 0xac775cD446889ac167da466692449ece5439fc12",
+		node_info_vulnerabilities=None,
+		node_irs="initialOwner(address) := 984608287824248302395549250658913853810641861650(address)",
+		node_source_code_lines="[208]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_32.sol"];
+	218 -> 219	[key=0,
+		edge_type=next,
+		label=Next];
+	220	[contract_name=AsseteGram,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+totalSupply = 180000000 * (10 ** uint256(decimals))
+
+IRs:
+TMP_136 = CONVERT decimals to uint256
+\
+TMP_137(uint256) = 10 ** TMP_136
+TMP_138(uint256) = 180000000 * TMP_137
+totalSupply(uint256) := TMP_138(uint256)",
+		node_expression="totalSupply = 180000000 * (10 ** uint256(decimals))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_136 = CONVERT decimals to uint256
+TMP_137(uint256) = 10 ** TMP_136
+TMP_138(uint256) = 180000000 * TMP_137
+totalSupply(uint256) := \
+TMP_138(uint256)",
+		node_source_code_lines="[209]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	219 -> 220	[key=0,
+		edge_type=next,
+		label=Next];
+	221	[contract_name=AsseteGram,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[initialOwner] = totalSupply
+
+IRs:
+REF_94(uint256) -> balances[initialOwner]
+REF_94 (\
+->balances) := totalSupply(uint256)",
+		node_expression="balances[initialOwner] = totalSupply",
+		node_info_vulnerabilities=None,
+		node_irs="REF_94(uint256) -> balances[initialOwner]
+REF_94 (->balances) := totalSupply(uint256)",
+		node_source_code_lines="[210]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	220 -> 221	[key=0,
+		edge_type=next,
+		label=Next];
+	222	[contract_name=AsseteGram,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Transfer(address(0),initialOwner,balances[initialOwner])
+
+IRs:
+TMP_139 = CONVERT 0 to address
+\
+REF_95(uint256) -> balances[initialOwner]
+Emit Transfer(TMP_139.initialOwner.REF_95)",
+		node_expression="Transfer(address(0),initialOwner,balances[initialOwner])",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_139 = CONVERT 0 to address
+REF_95(uint256) -> balances[initialOwner]
+Emit Transfer(TMP_139.initialOwner.REF_95)",
+		node_source_code_lines="[211]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	221 -> 222	[key=0,
+		edge_type=next,
+		label=Next];
+	223	[contract_name=AsseteGram,
+		function_fullname="constructor()",
+		label="buggy_32.sol_AsseteGram_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[207, 208, 209, 210, 211, 212]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	223 -> 218	[key=0,
+		edge_type=next,
+		label=Next];
+	224	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[213, 214, 215, 216]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	225	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin33)
+
+IRs:
+TMP_141(bool) = tx.origin == owner_txorigin33
+\
+TMP_142(None) = SOLIDITY_CALL require(bool)(TMP_141)",
+		node_expression="require(bool)(tx.origin == owner_txorigin33)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_141(bool) = tx.origin == owner_txorigin33
+TMP_142(None) = SOLIDITY_CALL require(bool)(TMP_141)",
+		node_source_code_lines="[214]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	224 -> 225	[key=0,
+		edge_type=next,
+		label=Next];
+	226	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[215]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	225 -> 226	[key=0,
+		edge_type=next,
+		label=Next];
+	227	[contract_name=AsseteGram,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_sendto_txorigin33(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[213, 214, 215, 216]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	227 -> 224	[key=0,
+		edge_type=next,
+		label=Next];
+	228	[contract_name=AsseteGram,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221, 222, 223]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	229	[contract_name=AsseteGram,
+		function_fullname="fallback()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+revert()()
+
+IRs:
+TMP_144(None) = SOLIDITY_CALL revert()()",
+		node_expression="revert()()",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_144(None) = SOLIDITY_CALL revert()()",
+		node_source_code_lines="[222]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	228 -> 229	[key=0,
+		edge_type=next,
+		label=Next];
+	230	[contract_name=AsseteGram,
+		function_fullname="fallback()",
+		label="buggy_32.sol_AsseteGram_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221, 222, 223]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	230 -> 228	[key=0,
+		edge_type=next,
+		label=Next];
+	231	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[224, 225, 226, 227]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_32.sol"];
+	232	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin27)
+
+IRs:
+TMP_145(bool) = tx.origin == owner_txorigin27
+\
+TMP_146(None) = SOLIDITY_CALL require(bool)(TMP_145)",
+		node_expression="require(bool)(tx.origin == owner_txorigin27)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="TMP_145(bool) = tx.origin == owner_txorigin27
+TMP_146(None) = SOLIDITY_CALL require(bool)(TMP_145)",
+		node_source_code_lines="[225]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	231 -> 232	[key=0,
+		edge_type=next,
+		label=Next];
+	233	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_97(None) -> to.call
+REF_98(None) -> REF_97.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs="REF_97(None) -> to.call
+REF_98(None) -> REF_97.value",
+		node_source_code_lines="[226]",
+		node_type=EXPRESSION,
+		source_file="buggy_32.sol"];
+	232 -> 233	[key=0,
+		edge_type=next,
+		label=Next];
+	234	[contract_name=AsseteGram,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="buggy_32.sol_AsseteGram_transferTo_txorigin27(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[224, 225, 226, 227]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	234 -> 231	[key=0,
+		edge_type=next,
+		label=Next];
+	235	[contract_name=AsseteGram,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+name = Electronic Gram
+
+IRs:
+name(string) := Electronic Gram(string)",
+		node_expression="name = Electronic Gram",
+		node_info_vulnerabilities=None,
+		node_irs="name(string) := Electronic Gram(string)",
+		node_source_code_lines="[192]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_32.sol"];
+	236	[contract_name=AsseteGram,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+decimals = 3
+
+IRs:
+decimals(uint8) := 3(uint256)",
+		node_expression="decimals = 3",
+		node_info_vulnerabilities=None,
+		node_irs="decimals(uint8) := 3(uint256)",
+		node_source_code_lines="[196]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_32.sol"];
+	235 -> 236	[key=0,
+		edge_type=next,
+		label=Next];
+	237	[contract_name=AsseteGram,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+symbol = eGram
+
+IRs:
+symbol(string) := eGram(string)",
+		node_expression="symbol = eGram",
+		node_info_vulnerabilities=None,
+		node_irs="symbol(string) := eGram(string)",
+		node_source_code_lines="[200]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_32.sol"];
+	236 -> 237	[key=0,
+		edge_type=next,
+		label=Next];
+	238	[contract_name=AsseteGram,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+version = 2
+
+IRs:
+version(string) := 2(string)",
+		node_expression="version = 2",
+		node_info_vulnerabilities=None,
+		node_irs="version(string) := 2(string)",
+		node_source_code_lines="[205]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_32.sol"];
+	237 -> 238	[key=0,
+		edge_type=next,
+		label=Next];
+	239	[contract_name=AsseteGram,
+		function_fullname="slitherConstructorVariables()",
+		label="buggy_32.sol_AsseteGram_slitherConstructorVariables()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [176, 177, 178, 179, 171, 172, 173, 174, 224, 225, 226, 227, 213, 214, 215, 216, 164, 165, 166, 151, 152, 153, 154, 137, \
+138, 139, 119, 120, 121, 122, 104, 105, 106, 68, 69, 70, 71, 63, 64, 65, 66, 58, 59, 60, 61, 53, 54, 55, 56, 49, 50, 51, 201, 202, \
+203, 204, 197, 198, 199, 193, 194, 195, 188, 189, 190, 191, 91, 92, 93, 94, 86, 87, 88, 89, 81, 82, 83, 84], 'category': 'access_\
+control'}]",
+		node_irs=None,
+		node_source_code_lines="[187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, \
+213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_32.sol"];
+	239 -> 235	[key=0,
+		edge_type=next,
+		label=Next];
+}

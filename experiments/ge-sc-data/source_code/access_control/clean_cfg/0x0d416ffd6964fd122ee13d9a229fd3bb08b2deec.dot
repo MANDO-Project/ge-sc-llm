@@ -1,0 +1,37 @@
+digraph  {
+13 [label="2_ address public owner;\n13-new_variable-3-3", type_label=new_variable];
+36 [label="9_ owner = msg.sender;\n36-expression_statement-10-10", type_label=expression_statement];
+42 [label="11_ modifier onlyOwner() {\n    require(msg.sender == owner);\n    _;\n  }\n42-expression_statement-12-15", type_label=expression_statement];
+45 [label="12_ require(msg.sender == owner);\n45-expression_statement-13-13", type_label=expression_statement];
+54 [label="13_ _;\n54-expression_statement-14-14", type_label=expression_statement];
+56 [label="15_ renounceOwnership\n56-function_definition-16-19", type_label=function_definition];
+59 [label="15_ onlyOwner\n59-expression_statement-16-16", type_label=expression_statement];
+66 [label="17_ owner = address(0);\n66-expression_statement-18-18", type_label=expression_statement];
+72 [label="19_ transferOwnership\n72-function_definition-20-22", type_label=function_definition];
+79 [label="19_ onlyOwner\n79-expression_statement-20-20", type_label=expression_statement];
+82 [label="20_ _transferOwnership(_newOwner);\n82-expression_statement-21-21", type_label=expression_statement];
+87 [label="22_ _transferOwnership\n87-function_definition-23-27", type_label=function_definition];
+95 [label="23_ require(_newOwner != address(0));\n95-expression_statement-24-24", type_label=expression_statement];
+110 [label="25_ owner = _newOwner;\n110-expression_statement-26-26", type_label=expression_statement];
+120 [label="29_ mapping(address =>\n    mapping(address =>\n    mapping(bytes32 =>\n    mapping(bytes32 => bytes32)))) registry;\n120-new_variable-30-33", type_label=new_variable];
+180 [label="48_ setClaim\n180-function_definition-49-59", type_label=function_definition];
+204 [label="55_ require(msg.sender == issuer || msg.sender == owner);\n204-expression_statement-56-56", type_label=expression_statement];
+219 [label="56_ registry[subject][issuer][id][key] = data;\n219-expression_statement-57-57", type_label=expression_statement];
+245 [label="59_ getClaim\n245-function_definition-60-68", type_label=function_definition];
+270 [label="66_ return registry[subject][issuer][id][key];\n270-return-67-67", type_label=return];
+280 [label="68_ removeClaim\n280-function_definition-69-80", type_label=function_definition];
+300 [label="74_ require(\n            msg.sender == subject || msg.sender == issuer || msg.sender == owner\n        );\n300-expression_statement-75-77", type_label=expression_statement];
+321 [label="77_ delete registry[subject][issuer][id][key];\n321-expression_statement-78-78", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+45 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+56 -> 66  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+72 -> 82  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+87 -> 95  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+180 -> 204  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+204 -> 219  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+245 -> 270  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+270 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+280 -> 300  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+300 -> 321  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

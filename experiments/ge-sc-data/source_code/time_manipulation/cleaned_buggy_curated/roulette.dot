@@ -1,0 +1,18 @@
+digraph  {
+13 [label="2_ uint public pastBlockTime;\n13-new_variable-3-3", method="", type_label=new_variable];
+24 [label="5_ require(msg.value == 10 ether);\n24-expression_statement-6-6", method="", type_label=expression_statement];
+34 [label="6_ require(now != pastBlockTime);\n34-expression_statement-7-7", method="", type_label=expression_statement];
+41 [label="7_ pastBlockTime = now;\n41-expression_statement-8-8", method="", type_label=expression_statement];
+45 [label="8_ if_now % 15 == 0\n45-if-9-11", method="", type_label=if];
+103 [label="8_ end_if", method="", type_label=end_if];
+52 [label="9_ msg.sender.transfer(this.balance);\n52-expression_statement-10-10", method="", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+24 -> 34  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 41  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+41 -> 45  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+45 -> 52  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+45 -> 103  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+103 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+52 -> 103  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

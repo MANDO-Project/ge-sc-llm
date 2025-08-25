@@ -1,0 +1,262 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Wallet,
+		function_fullname="initWallet()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [19, 20], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[19, 20, 21]",
+		node_type=ENTRY_POINT,
+		source_file="wallet_03_wrong_constructor.sol"];
+	1	[contract_name=Wallet,
+		function_fullname="initWallet()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+creator = msg.sender
+
+IRs:
+creator(address) := msg.sender(address)",
+		node_expression="creator = msg.sender",
+		node_info_vulnerabilities="[{'lines': [19, 20], 'category': 'access_control'}]",
+		node_irs="creator(address) := msg.sender(address)",
+		node_source_code_lines="[20]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Wallet,
+		function_fullname="initWallet()",
+		label="wallet_03_wrong_constructor.sol_Wallet_initWallet()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [19, 20], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[19, 20, 21]",
+		node_type=FUNCTION_NAME,
+		source_file="wallet_03_wrong_constructor.sol"];
+	2 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Wallet,
+		function_fullname="deposit()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25, 26]",
+		node_type=ENTRY_POINT,
+		source_file="wallet_03_wrong_constructor.sol"];
+	4	[contract_name=Wallet,
+		function_fullname="deposit()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+assert(bool)(balances[msg.sender] + msg.value > balances[msg.sender])
+
+IRs:
+REF_0(uint256) -> \
+balances[msg.sender]
+TMP_0(uint256) = REF_0 + msg.value
+REF_1(uint256) -> balances[msg.sender]
+TMP_1(bool) = TMP_0 > REF_1
+TMP_2(\
+None) = SOLIDITY_CALL assert(bool)(TMP_1)",
+		node_expression="assert(bool)(balances[msg.sender] + msg.value > balances[msg.sender])",
+		node_info_vulnerabilities=None,
+		node_irs="REF_0(uint256) -> balances[msg.sender]
+TMP_0(uint256) = REF_0 + msg.value
+REF_1(uint256) -> balances[msg.sender]
+TMP_1(bool) = TMP_\
+0 > REF_1
+TMP_2(None) = SOLIDITY_CALL assert(bool)(TMP_1)",
+		node_source_code_lines="[24]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	3 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Wallet,
+		function_fullname="deposit()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[msg.sender] += msg.value
+
+IRs:
+REF_2(uint256) -> balances[msg.sender]
+REF_2(-> balances) = \
+REF_2 + msg.value",
+		node_expression="balances[msg.sender] += msg.value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_2(uint256) -> balances[msg.sender]
+REF_2(-> balances) = REF_2 + msg.value",
+		node_source_code_lines="[25]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	4 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=Wallet,
+		function_fullname="deposit()",
+		label="wallet_03_wrong_constructor.sol_Wallet_deposit()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25, 26]",
+		node_type=FUNCTION_NAME,
+		source_file="wallet_03_wrong_constructor.sol"];
+	6 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=Wallet,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31, 32]",
+		node_type=ENTRY_POINT,
+		source_file="wallet_03_wrong_constructor.sol"];
+	8	[contract_name=Wallet,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(amount <= balances[msg.sender])
+
+IRs:
+REF_3(uint256) -> balances[msg.sender]
+TMP_\
+3(bool) = amount <= REF_3
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_expression="require(bool)(amount <= balances[msg.sender])",
+		node_info_vulnerabilities=None,
+		node_irs="REF_3(uint256) -> balances[msg.sender]
+TMP_3(bool) = amount <= REF_3
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_source_code_lines="[29]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	7 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=Wallet,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+msg.sender.transfer(amount)
+
+IRs:
+Transfer dest:msg.sender value:amount",
+		node_expression="msg.sender.transfer(amount)",
+		node_info_vulnerabilities=None,
+		node_irs="Transfer dest:msg.sender value:amount",
+		node_source_code_lines="[30]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	8 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=Wallet,
+		function_fullname="withdraw(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balances[msg.sender] -= amount
+
+IRs:
+REF_5(uint256) -> balances[msg.sender]
+REF_5(-> balances) = \
+REF_5 - amount",
+		node_expression="balances[msg.sender] -= amount",
+		node_info_vulnerabilities=None,
+		node_irs="REF_5(uint256) -> balances[msg.sender]
+REF_5(-> balances) = REF_5 - amount",
+		node_source_code_lines="[31]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=Wallet,
+		function_fullname="withdraw(uint256)",
+		label="wallet_03_wrong_constructor.sol_Wallet_withdraw(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31, 32]",
+		node_type=FUNCTION_NAME,
+		source_file="wallet_03_wrong_constructor.sol"];
+	11 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=Wallet,
+		function_fullname="migrateTo(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[36, 37, 38, 39]",
+		node_type=ENTRY_POINT,
+		source_file="wallet_03_wrong_constructor.sol"];
+	13	[contract_name=Wallet,
+		function_fullname="migrateTo(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(creator == msg.sender)
+
+IRs:
+TMP_6(bool) = creator == msg.sender
+TMP_7(None) = \
+SOLIDITY_CALL require(bool)(TMP_6)",
+		node_expression="require(bool)(creator == msg.sender)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_6(bool) = creator == msg.sender
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_source_code_lines="[37]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	12 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=Wallet,
+		function_fullname="migrateTo(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.transfer(this.balance)
+
+IRs:
+REF_7 -> BALANCE this
+Transfer dest:to value:REF_7",
+		node_expression="to.transfer(this.balance)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_7 -> BALANCE this
+Transfer dest:to value:REF_7",
+		node_source_code_lines="[38]",
+		node_type=EXPRESSION,
+		source_file="wallet_03_wrong_constructor.sol"];
+	13 -> 14	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=Wallet,
+		function_fullname="migrateTo(address)",
+		label="wallet_03_wrong_constructor.sol_Wallet_migrateTo(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[36, 37, 38, 39]",
+		node_type=FUNCTION_NAME,
+		source_file="wallet_03_wrong_constructor.sol"];
+	15 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+}

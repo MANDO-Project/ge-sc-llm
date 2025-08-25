@@ -1,0 +1,13 @@
+digraph  {
+13 [label="2_ address owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+17 [label="3_ function Charity_For_My_Friend() {\n        owner = msg.sender;\n    }\n17-function_definition-4-6", method="Charity_For_My_Friend()", type_label=function_definition];
+20 [label="4_ owner = msg.sender;\n20-expression_statement-5-5", method="Charity_For_My_Friend()", type_label=expression_statement];
+26 [label="6_ function kill() {\n        require(msg.sender == owner);\n        selfdestruct(owner);\n    }\n26-function_definition-7-10", method="kill()", type_label=function_definition];
+29 [label="7_ require(msg.sender == owner);\n29-expression_statement-8-8", method="kill()", type_label=expression_statement];
+38 [label="8_ selfdestruct(owner);\n38-expression_statement-9-9", method="kill()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+17 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 29  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

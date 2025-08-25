@@ -1,0 +1,8 @@
+digraph  {
+12 [label="2_ uint public balance = 1;\n12-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ function add(uint256 deposit) public {\n        balance += deposit;\n    }\n18-function_definition-4-6", method="add(uint256 deposit)", type_label=function_definition];
+26 [label="4_ balance += deposit;\n26-expression_statement-5-5", method="add(uint256 deposit)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+18 -> 26  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

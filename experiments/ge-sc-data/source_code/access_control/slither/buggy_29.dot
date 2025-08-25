@@ -1,0 +1,3381 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=ERC20Interface,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_29.sol_ERC20Interface_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[16]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	1	[contract_name=ERC20Interface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	2	[contract_name=ERC20Interface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_0(bool) = tx.origin == owner_txorigin7
+\
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = tx.origin == owner_txorigin7
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[18]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=ERC20Interface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_source_code_lines="[19]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	2 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=ERC20Interface,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_29.sol_ERC20Interface_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	4 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=IERC20Interface,
+		function_fullname="allowance(address,address)",
+		label="buggy_29.sol_IERC20Interface_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[24]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	6	[contract_name=IERC20Interface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	7	[contract_name=IERC20Interface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_3(bool) = tx.origin == owner_txorigin23
+\
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_3(bool) = tx.origin == owner_txorigin23
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_source_code_lines="[26]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=IERC20Interface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_source_code_lines="[27]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	7 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=IERC20Interface,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_29.sol_IERC20Interface_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	9 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=IERC20Interface,
+		function_fullname="balanceOf(address)",
+		label="buggy_29.sol_IERC20Interface_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[29]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	11	[contract_name=IERC20Interface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[30, 31, 32, 33]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	12	[contract_name=IERC20Interface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_6(bool) = tx.origin == owner_txorigin14
+\
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_6(bool) = tx.origin == owner_txorigin14
+TMP_7(None) = SOLIDITY_CALL require(bool)(TMP_6)",
+		node_source_code_lines="[31]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	11 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	13	[contract_name=IERC20Interface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_8 = CONVERT this to address
+REF_5 -> BALANCE \
+TMP_8
+Transfer dest:_recipient value:REF_5",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_8 = CONVERT this to address
+REF_5 -> BALANCE TMP_8
+Transfer dest:_recipient value:REF_5",
+		node_source_code_lines="[32]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	12 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=IERC20Interface,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_29.sol_IERC20Interface_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[30, 31, 32, 33]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	14 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=RaffleToken,
+		function_fullname="allowance(address,address)",
+		label="buggy_29.sol_RaffleToken_allowance(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[24]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	16	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	17	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_10(bool) = tx.origin == owner_txorigin23
+\
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_10(bool) = tx.origin == owner_txorigin23
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_source_code_lines="[26]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_6(None) -> to.call
+REF_7(None) -> REF_6.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_6(None) -> to.call
+REF_7(None) -> REF_6.value",
+		node_source_code_lines="[27]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	17 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_29.sol_RaffleToken_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	19 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=RaffleToken,
+		function_fullname="balanceOf(address)",
+		label="buggy_29.sol_RaffleToken_balanceOf(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[29]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	21	[contract_name=RaffleToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[30, 31, 32, 33]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	22	[contract_name=RaffleToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_13(bool) = tx.origin == owner_txorigin14
+\
+TMP_14(None) = SOLIDITY_CALL require(bool)(TMP_13)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_13(bool) = tx.origin == owner_txorigin14
+TMP_14(None) = SOLIDITY_CALL require(bool)(TMP_13)",
+		node_source_code_lines="[31]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	21 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	23	[contract_name=RaffleToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_15 = CONVERT this to address
+REF_9 -> BALANCE \
+TMP_15
+Transfer dest:_recipient value:REF_9",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_15 = CONVERT this to address
+REF_9 -> BALANCE TMP_15
+Transfer dest:_recipient value:REF_9",
+		node_source_code_lines="[32]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	22 -> 23	[key=0,
+		edge_type=next,
+		label=Next];
+	24	[contract_name=RaffleToken,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_29.sol_RaffleToken_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[30, 31, 32, 33]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	24 -> 21	[key=0,
+		edge_type=next,
+		label=Next];
+	25	[contract_name=RaffleToken,
+		function_fullname="transferFrom(address,address,uint256)",
+		label="buggy_29.sol_RaffleToken_transferFrom(address,address,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[16]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	26	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	27	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_17(bool) = tx.origin == owner_txorigin7
+\
+TMP_18(None) = SOLIDITY_CALL require(bool)(TMP_17)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_17(bool) = tx.origin == owner_txorigin7
+TMP_18(None) = SOLIDITY_CALL require(bool)(TMP_17)",
+		node_source_code_lines="[18]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	26 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_10(None) -> to.call
+REF_11(None) -> REF_10.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_10(None) -> to.call
+REF_11(None) -> REF_10.value",
+		node_source_code_lines="[19]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	27 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=RaffleToken,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_29.sol_RaffleToken_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[17, 18, 19, 20]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	29 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	30	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[61, 62, 63, 64, 65, 66]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	31	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+c = a + b
+
+IRs:
+TMP_20(uint256) = a + b
+c(uint256) := TMP_20(uint256)",
+		node_expression="c = a + b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_20(uint256) = a + b
+c(uint256) := TMP_20(uint256)",
+		node_source_code_lines="[62]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(c >= a,SafeMath: addition overflow)
+
+IRs:
+TMP_21(bool) = c >= a
+TMP_22(None) = \
+SOLIDITY_CALL require(bool,string)(TMP_21,SafeMath: addition overflow)",
+		node_expression="require(bool,string)(c >= a,SafeMath: addition overflow)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_21(bool) = c >= a
+TMP_22(None) = SOLIDITY_CALL require(bool,string)(TMP_21,SafeMath: addition overflow)",
+		node_source_code_lines="[63]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	31 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	33	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+c
+
+IRs:
+RETURN c",
+		node_expression=c,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN c",
+		node_source_code_lines="[65]",
+		node_type=RETURN,
+		source_file="buggy_29.sol"];
+	32 -> 33	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=SafeMath,
+		function_fullname="add(uint256,uint256)",
+		label="buggy_29.sol_SafeMath_add(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[61, 62, 63, 64, 65, 66]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	34 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	35	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[77, 78, 79, 80, 81, 82]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	36	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(b <= a,SafeMath: subtraction overflow)
+
+IRs:
+TMP_23(bool) = b <= a
+TMP_24(\
+None) = SOLIDITY_CALL require(bool,string)(TMP_23,SafeMath: subtraction overflow)",
+		node_expression="require(bool,string)(b <= a,SafeMath: subtraction overflow)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_23(bool) = b <= a
+TMP_24(None) = SOLIDITY_CALL require(bool,string)(TMP_23,SafeMath: subtraction overflow)",
+		node_source_code_lines="[78]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	35 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+c = a - b
+
+IRs:
+TMP_25(uint256) = a - b
+c(uint256) := TMP_25(uint256)",
+		node_expression="c = a - b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_25(uint256) = a - b
+c(uint256) := TMP_25(uint256)",
+		node_source_code_lines="[79]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	36 -> 37	[key=0,
+		edge_type=next,
+		label=Next];
+	38	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+c
+
+IRs:
+RETURN c",
+		node_expression=c,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN c",
+		node_source_code_lines="[81]",
+		node_type=RETURN,
+		source_file="buggy_29.sol"];
+	37 -> 38	[key=0,
+		edge_type=next,
+		label=Next];
+	39	[contract_name=SafeMath,
+		function_fullname="sub(uint256,uint256)",
+		label="buggy_29.sol_SafeMath_sub(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[77, 78, 79, 80, 81, 82]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	39 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	40	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	41	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+a == 0
+
+IRs:
+TMP_26(bool) = a == 0
+CONDITION TMP_26",
+		node_expression="a == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_26(bool) = a == 0
+CONDITION TMP_26",
+		node_source_code_lines="[97]",
+		node_type=IF,
+		source_file="buggy_29.sol"];
+	40 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	42	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+0
+
+IRs:
+RETURN 0",
+		node_expression=0,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN 0",
+		node_source_code_lines="[98]",
+		node_type=RETURN,
+		source_file="buggy_29.sol"];
+	41 -> 42	[key=0,
+		edge_type=if_true,
+		label=True];
+	43	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[97, 98, 99]",
+		node_type=END_IF,
+		source_file="buggy_29.sol"];
+	41 -> 43	[key=0,
+		edge_type=if_false,
+		label=False];
+	44	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+c = a * b
+
+IRs:
+TMP_27(uint256) = a * b
+c(uint256) := TMP_27(uint256)",
+		node_expression="c = a * b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_27(uint256) = a * b
+c(uint256) := TMP_27(uint256)",
+		node_source_code_lines="[101]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	43 -> 44	[key=0,
+		edge_type=next,
+		label=Next];
+	45	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(c / a == b,SafeMath: multiplication overflow)
+
+IRs:
+TMP_28(uint256) = c / \
+a
+TMP_29(bool) = TMP_28 == b
+TMP_30(None) = SOLIDITY_CALL require(bool,string)(TMP_29,SafeMath: multiplication overflow)",
+		node_expression="require(bool,string)(c / a == b,SafeMath: multiplication overflow)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_28(uint256) = c / a
+TMP_29(bool) = TMP_28 == b
+TMP_30(None) = SOLIDITY_CALL require(bool,string)(TMP_29,SafeMath: multiplication \
+overflow)",
+		node_source_code_lines="[102]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	44 -> 45	[key=0,
+		edge_type=next,
+		label=Next];
+	46	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+c
+
+IRs:
+RETURN c",
+		node_expression=c,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN c",
+		node_source_code_lines="[104]",
+		node_type=RETURN,
+		source_file="buggy_29.sol"];
+	45 -> 46	[key=0,
+		edge_type=next,
+		label=Next];
+	47	[contract_name=SafeMath,
+		function_fullname="mul(uint256,uint256)",
+		label="buggy_29.sol_SafeMath_mul(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	47 -> 40	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=SafeMath,
+		function_fullname="div(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[118, 119, 120, 121, 122, 123, 124, 125]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	49	[contract_name=SafeMath,
+		function_fullname="div(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(b > 0,SafeMath: division by zero)
+
+IRs:
+TMP_31(bool) = b > 0
+TMP_32(None) = \
+SOLIDITY_CALL require(bool,string)(TMP_31,SafeMath: division by zero)",
+		node_expression="require(bool,string)(b > 0,SafeMath: division by zero)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_31(bool) = b > 0
+TMP_32(None) = SOLIDITY_CALL require(bool,string)(TMP_31,SafeMath: division by zero)",
+		node_source_code_lines="[120]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	48 -> 49	[key=0,
+		edge_type=next,
+		label=Next];
+	50	[contract_name=SafeMath,
+		function_fullname="div(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+c = a / b
+
+IRs:
+TMP_33(uint256) = a / b
+c(uint256) := TMP_33(uint256)",
+		node_expression="c = a / b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_33(uint256) = a / b
+c(uint256) := TMP_33(uint256)",
+		node_source_code_lines="[121]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	49 -> 50	[key=0,
+		edge_type=next,
+		label=Next];
+	51	[contract_name=SafeMath,
+		function_fullname="div(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+c
+
+IRs:
+RETURN c",
+		node_expression=c,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN c",
+		node_source_code_lines="[124]",
+		node_type=RETURN,
+		source_file="buggy_29.sol"];
+	50 -> 51	[key=0,
+		edge_type=next,
+		label=Next];
+	52	[contract_name=SafeMath,
+		function_fullname="div(uint256,uint256)",
+		label="buggy_29.sol_SafeMath_div(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[118, 119, 120, 121, 122, 123, 124, 125]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	52 -> 48	[key=0,
+		edge_type=next,
+		label=Next];
+	53	[contract_name=SafeMath,
+		function_fullname="mod(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[138, 139, 140, 141]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	54	[contract_name=SafeMath,
+		function_fullname="mod(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(b != 0,SafeMath: modulo by zero)
+
+IRs:
+TMP_34(bool) = b != 0
+TMP_35(None) = \
+SOLIDITY_CALL require(bool,string)(TMP_34,SafeMath: modulo by zero)",
+		node_expression="require(bool,string)(b != 0,SafeMath: modulo by zero)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_34(bool) = b != 0
+TMP_35(None) = SOLIDITY_CALL require(bool,string)(TMP_34,SafeMath: modulo by zero)",
+		node_source_code_lines="[139]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	53 -> 54	[key=0,
+		edge_type=next,
+		label=Next];
+	55	[contract_name=SafeMath,
+		function_fullname="mod(uint256,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+a % b
+
+IRs:
+TMP_36(uint256) = a % b
+RETURN TMP_36",
+		node_expression="a % b",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_36(uint256) = a % b
+RETURN TMP_36",
+		node_source_code_lines="[140]",
+		node_type=RETURN,
+		source_file="buggy_29.sol"];
+	54 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=SafeMath,
+		function_fullname="mod(uint256,uint256)",
+		label="buggy_29.sol_SafeMath_mod(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[138, 139, 140, 141]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	56 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	57	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[155, 156, 157, 158]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	58	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_37(bool) = tx.origin == owner_txorigin19
+\
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_37(bool) = tx.origin == owner_txorigin19
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_source_code_lines="[156]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	57 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	59	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_12(None) -> to.call
+REF_13(None) -> REF_12.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_12(None) -> to.call
+REF_13(None) -> REF_12.value",
+		node_source_code_lines="[157]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	58 -> 59	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[155, 156, 157, 158]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	60 -> 57	[key=0,
+		edge_type=next,
+		label=Next];
+	61	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[163, 164, 165, 166]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	62	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin26)
+
+IRs:
+TMP_40(bool) = tx.origin == owner_txorigin26
+\
+TMP_41(None) = SOLIDITY_CALL require(bool)(TMP_40)",
+		node_expression="require(bool)(tx.origin == owner_txorigin26)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_40(bool) = tx.origin == owner_txorigin26
+TMP_41(None) = SOLIDITY_CALL require(bool)(TMP_40)",
+		node_source_code_lines="[164]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	61 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_42 = CONVERT this to address
+REF_15 -> BALANCE \
+TMP_42
+Transfer dest:_recipient value:REF_15",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_42 = CONVERT this to address
+REF_15 -> BALANCE TMP_42
+Transfer dest:_recipient value:REF_15",
+		node_source_code_lines="[165]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	62 -> 63	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="buggy_29.sol_RaffleTokenExchange_withdrawAll_txorigin26(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[163, 164, 165, 166]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	64 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	66	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin20)
+
+IRs:
+TMP_44(bool) = tx.origin == owner_txorigin20
+\
+TMP_45(None) = SOLIDITY_CALL require(bool)(TMP_44)",
+		node_expression="require(bool)(tx.origin == owner_txorigin20)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_44(bool) = tx.origin == owner_txorigin20
+TMP_45(None) = SOLIDITY_CALL require(bool)(TMP_44)",
+		node_source_code_lines="[172]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	65 -> 66	[key=0,
+		edge_type=next,
+		label=Next];
+	67	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin20(address)",
+		label="buggy_29.sol_RaffleTokenExchange_bug_txorigin20(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	67 -> 65	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[178, 179, 180]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	69	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin32)
+
+IRs:
+TMP_46(bool) = tx.origin == owner_txorigin32
+\
+TMP_47(None) = SOLIDITY_CALL require(bool)(TMP_46)",
+		node_expression="require(bool)(tx.origin == owner_txorigin32)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_46(bool) = tx.origin == owner_txorigin32
+TMP_47(None) = SOLIDITY_CALL require(bool)(TMP_46)",
+		node_source_code_lines="[179]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	68 -> 69	[key=0,
+		edge_type=next,
+		label=Next];
+	70	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin32(address)",
+		label="buggy_29.sol_RaffleTokenExchange_bug_txorigin32(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[178, 179, 180]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	70 -> 68	[key=0,
+		edge_type=next,
+		label=Next];
+	71	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[185, 186, 187, 188]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	72	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin38)
+
+IRs:
+TMP_48(bool) = tx.origin == owner_txorigin38
+\
+TMP_49(None) = SOLIDITY_CALL require(bool)(TMP_48)",
+		node_expression="require(bool)(tx.origin == owner_txorigin38)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_48(bool) = tx.origin == owner_txorigin38
+TMP_49(None) = SOLIDITY_CALL require(bool)(TMP_48)",
+		node_source_code_lines="[186]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	71 -> 72	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_50 = CONVERT this to address
+REF_17 -> BALANCE \
+TMP_50
+Transfer dest:_recipient value:REF_17",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_50 = CONVERT this to address
+REF_17 -> BALANCE TMP_50
+Transfer dest:_recipient value:REF_17",
+		node_source_code_lines="[187]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	72 -> 73	[key=0,
+		edge_type=next,
+		label=Next];
+	74	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="buggy_29.sol_RaffleTokenExchange_withdrawAll_txorigin38(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[185, 186, 187, 188]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	74 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	76	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_52(bool) = tx.origin == owner_txorigin4
+\
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_52(bool) = tx.origin == owner_txorigin4
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_source_code_lines="[194]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	75 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	77	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_29.sol_RaffleTokenExchange_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	77 -> 75	[key=0,
+		edge_type=next,
+		label=Next];
+	78	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[247, 248, 249, 250]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	79	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin27)
+
+IRs:
+TMP_54(bool) = tx.origin == owner_txorigin27
+\
+TMP_55(None) = SOLIDITY_CALL require(bool)(TMP_54)",
+		node_expression="require(bool)(tx.origin == owner_txorigin27)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_54(bool) = tx.origin == owner_txorigin27
+TMP_55(None) = SOLIDITY_CALL require(bool)(TMP_54)",
+		node_source_code_lines="[248]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	78 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	80	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_18(None) -> to.call
+REF_19(None) -> REF_18.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_18(None) -> to.call
+REF_19(None) -> REF_18.value",
+		node_source_code_lines="[249]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	79 -> 80	[key=0,
+		edge_type=next,
+		label=Next];
+	81	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_transferTo_txorigin27(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[247, 248, 249, 250]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	81 -> 78	[key=0,
+		edge_type=next,
+		label=Next];
+	82	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[252, 253, 254, 255]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	83	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_57(bool) = tx.origin == owner_txorigin31
+\
+TMP_58(None) = SOLIDITY_CALL require(bool)(TMP_57)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_57(bool) = tx.origin == owner_txorigin31
+TMP_58(None) = SOLIDITY_CALL require(bool)(TMP_57)",
+		node_source_code_lines="[253]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	82 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_20(None) -> to.call
+REF_21(None) -> REF_20.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_20(None) -> to.call
+REF_21(None) -> REF_20.value",
+		node_source_code_lines="[254]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[252, 253, 254, 255]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	85 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[257, 258, 259, 260]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	87	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_60(bool) = tx.origin == owner_txorigin13
+\
+TMP_61(None) = SOLIDITY_CALL require(bool)(TMP_60)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_60(bool) = tx.origin == owner_txorigin13
+TMP_61(None) = SOLIDITY_CALL require(bool)(TMP_60)",
+		node_source_code_lines="[258]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	86 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[259]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	87 -> 88	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[257, 258, 259, 260]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	89 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=RaffleTokenExchange,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[281, 282, 283, 284, 285]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	91	[contract_name=RaffleTokenExchange,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[282]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	90 -> 91	[key=0,
+		edge_type=next,
+		label=Next];
+	92	[contract_name=RaffleTokenExchange,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+nextListingId = 916
+
+IRs:
+nextListingId(uint256) := 916(uint256)",
+		node_expression="nextListingId = 916",
+		node_info_vulnerabilities=None,
+		node_irs="nextListingId(uint256) := 916(uint256)",
+		node_source_code_lines="[283]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	91 -> 92	[key=0,
+		edge_type=next,
+		label=Next];
+	93	[contract_name=RaffleTokenExchange,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+nextPurchaseId = 344
+
+IRs:
+nextPurchaseId(uint256) := 344(uint256)",
+		node_expression="nextPurchaseId = 344",
+		node_info_vulnerabilities=None,
+		node_irs="nextPurchaseId(uint256) := 344(uint256)",
+		node_source_code_lines="[284]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	92 -> 93	[key=0,
+		edge_type=next,
+		label=Next];
+	94	[contract_name=RaffleTokenExchange,
+		function_fullname="constructor()",
+		label="buggy_29.sol_RaffleTokenExchange_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[281, 282, 283, 284, 285]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	94 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[286, 287, 288, 289]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	96	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_63(bool) = tx.origin == owner_txorigin30
+\
+TMP_64(None) = SOLIDITY_CALL require(bool)(TMP_63)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_63(bool) = tx.origin == owner_txorigin30
+TMP_64(None) = SOLIDITY_CALL require(bool)(TMP_63)",
+		node_source_code_lines="[287]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	95 -> 96	[key=0,
+		edge_type=next,
+		label=Next];
+	97	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_65 = CONVERT this to address
+REF_24 -> BALANCE \
+TMP_65
+Transfer dest:_recipient value:REF_24",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_65 = CONVERT this to address
+REF_24 -> BALANCE TMP_65
+Transfer dest:_recipient value:REF_24",
+		node_source_code_lines="[288]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	96 -> 97	[key=0,
+		edge_type=next,
+		label=Next];
+	98	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_29.sol_RaffleTokenExchange_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[286, 287, 288, 289]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	98 -> 95	[key=0,
+		edge_type=next,
+		label=Next];
+	99	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	129	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyUnpaused()
+
+IRs:
+MODIFIER_CALL, RaffleTokenExchange.onlyUnpaused()()",
+		node_expression="onlyUnpaused()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, RaffleTokenExchange.onlyUnpaused()()",
+		node_source_code_lines="[295]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	99 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	100	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(amounts.length == listingIds.length,You have to provide amounts for every \
+single listing!)
+
+IRs:
+REF_25 -> LENGTH amounts
+REF_26 -> LENGTH listingIds
+TMP_67(bool) = REF_25 == REF_26
+TMP_68(None) = SOLIDITY_\
+CALL require(bool,string)(TMP_67,You have to provide amounts for every single listing!)",
+		node_expression="require(bool,string)(amounts.length == listingIds.length,You have to provide amounts for every single listing!)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_25 -> LENGTH amounts
+REF_26 -> LENGTH listingIds
+TMP_67(bool) = REF_25 == REF_26
+TMP_68(None) = SOLIDITY_CALL require(bool,string)(\
+TMP_67,You have to provide amounts for every single listing!)",
+		node_source_code_lines="[296]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	101	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[297]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	100 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	102	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[298]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	101 -> 102	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+i = 0
+
+IRs:
+i(uint256) := 0(uint256)",
+		node_expression="i = 0",
+		node_info_vulnerabilities=None,
+		node_irs="i(uint256) := 0(uint256)",
+		node_source_code_lines="[299]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	102 -> 105	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312]",
+		node_type=BEGIN_LOOP,
+		source_file="buggy_29.sol"];
+	106	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+i < listingIds.length
+
+IRs:
+REF_27 -> LENGTH listingIds
+TMP_69(bool) = i < REF_27
+CONDITION TMP_\
+69",
+		node_expression="i < listingIds.length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_27 -> LENGTH listingIds
+TMP_69(bool) = i < REF_27
+CONDITION TMP_69",
+		node_source_code_lines="[299]",
+		node_type=IF_LOOP,
+		source_file="buggy_29.sol"];
+	103 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	104	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312]",
+		node_type=END_LOOP,
+		source_file="buggy_29.sol"];
+	122	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(totalAmountPayed <= msg.value,Overpayed!)
+
+IRs:
+TMP_82(bool) = totalAmountPayed <= \
+msg.value
+TMP_83(None) = SOLIDITY_CALL require(bool,string)(TMP_82,Overpayed!)",
+		node_expression="require(bool,string)(totalAmountPayed <= msg.value,Overpayed!)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_82(bool) = totalAmountPayed <= msg.value
+TMP_83(None) = SOLIDITY_CALL require(bool,string)(TMP_82,Overpayed!)",
+		node_source_code_lines="[313]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	104 -> 122	[key=0,
+		edge_type=next,
+		label=Next];
+	105 -> 103	[key=0,
+		edge_type=next,
+		label=Next];
+	106 -> 104	[key=0,
+		edge_type=if_false,
+		label=False];
+	107	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+id = listingIds[i]
+
+IRs:
+REF_28(uint256) -> listingIds[i]
+id(uint256) := REF_28(uint256)",
+		node_expression="id = listingIds[i]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_28(uint256) -> listingIds[i]
+id(uint256) := REF_28(uint256)",
+		node_source_code_lines="[300]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	106 -> 107	[key=0,
+		edge_type=if_true,
+		label=True];
+	108	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+amount = amounts[i]
+
+IRs:
+REF_29(uint256) -> amounts[i]
+amount(uint256) := REF_29(uint256)",
+		node_expression="amount = amounts[i]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_29(uint256) -> amounts[i]
+amount(uint256) := REF_29(uint256)",
+		node_source_code_lines="[301]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	107 -> 108	[key=0,
+		edge_type=next,
+		label=Next];
+	109	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+listing = listingsById[id]
+
+IRs:
+REF_30(RaffleTokenExchange.Listing) -> listingsById[id]
+listing(\
+RaffleTokenExchange.Listing) := REF_30(RaffleTokenExchange.Listing)",
+		node_expression="listing = listingsById[id]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_30(RaffleTokenExchange.Listing) -> listingsById[id]
+listing(RaffleTokenExchange.Listing) := REF_30(RaffleTokenExchange.Listing)",
+		node_source_code_lines="[302]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	108 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	110	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(listing.active,Listing is not active anymore!)
+
+IRs:
+REF_31(bool) -> listing.active
+\
+TMP_70(None) = SOLIDITY_CALL require(bool,string)(REF_31,Listing is not active anymore!)",
+		node_expression="require(bool,string)(listing.active,Listing is not active anymore!)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_31(bool) -> listing.active
+TMP_70(None) = SOLIDITY_CALL require(bool,string)(REF_31,Listing is not active anymore!)",
+		node_source_code_lines="[303]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	109 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	111	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.amountLeft = listing.amountLeft.sub(amount)
+
+IRs:
+REF_32(uint256) -> listing.amountLeft
+\
+REF_33(uint256) -> listing.amountLeft
+TMP_71(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.sub(uint256,uint256), arguments:['\
+REF_33', 'amount'] 
+REF_32 (->listing) := TMP_71(uint256)",
+		node_expression="listing.amountLeft = listing.amountLeft.sub(amount)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_32(uint256) -> listing.amountLeft
+REF_33(uint256) -> listing.amountLeft
+TMP_71(uint256) = LIBRARY_CALL, dest:SafeMath, function:\
+SafeMath.sub(uint256,uint256), arguments:['REF_33', 'amount'] 
+REF_32 (->listing) := TMP_71(uint256)",
+		node_source_code_lines="[304]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	110 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	112	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(listing.amountLeft >= 0,Amount left needs to be higher than 0.)
+
+IRs:
+REF_\
+35(uint256) -> listing.amountLeft
+TMP_72(bool) = REF_35 >= 0
+TMP_73(None) = SOLIDITY_CALL require(bool,string)(TMP_72,Amount left \
+needs to be higher than 0.)",
+		node_expression="require(bool,string)(listing.amountLeft >= 0,Amount left needs to be higher than 0.)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_35(uint256) -> listing.amountLeft
+TMP_72(bool) = REF_35 >= 0
+TMP_73(None) = SOLIDITY_CALL require(bool,string)(TMP_72,Amount \
+left needs to be higher than 0.)",
+		node_source_code_lines="[305]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	111 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	113	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: IF
+
+EXPRESSION:
+listing.amountLeft == 0
+
+IRs:
+REF_36(uint256) -> listing.amountLeft
+TMP_74(bool) = REF_36 == 0
+CONDITION \
+TMP_74",
+		node_expression="listing.amountLeft == 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_36(uint256) -> listing.amountLeft
+TMP_74(bool) = REF_36 == 0
+CONDITION TMP_74",
+		node_source_code_lines="[306]",
+		node_type=IF,
+		source_file="buggy_29.sol"];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	114	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.active = false
+
+IRs:
+REF_37(bool) -> listing.active
+REF_37 (->listing) := False(bool)",
+		node_expression="listing.active = false",
+		node_info_vulnerabilities=None,
+		node_irs="REF_37(bool) -> listing.active
+REF_37 (->listing) := False(bool)",
+		node_source_code_lines="[306]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	113 -> 114	[key=0,
+		edge_type=if_true,
+		label=True];
+	115	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[306]",
+		node_type=END_IF,
+		source_file="buggy_29.sol"];
+	113 -> 115	[key=0,
+		edge_type=if_false,
+		label=False];
+	114 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	116	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+amountToPay = listing.pricePerToken * amount
+
+IRs:
+REF_38(uint256) -> listing.pricePerToken
+\
+TMP_75(uint256) = REF_38 * amount
+amountToPay(uint256) := TMP_75(uint256)",
+		node_expression="amountToPay = listing.pricePerToken * amount",
+		node_info_vulnerabilities=None,
+		node_irs="REF_38(uint256) -> listing.pricePerToken
+TMP_75(uint256) = REF_38 * amount
+amountToPay(uint256) := TMP_75(uint256)",
+		node_source_code_lines="[307]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	115 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.seller.transfer(amountToPay)
+
+IRs:
+REF_39(address) -> listing.seller
+Transfer dest:REF_\
+39 value:amountToPay",
+		node_expression="listing.seller.transfer(amountToPay)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_39(address) -> listing.seller
+Transfer dest:REF_39 value:amountToPay",
+		node_source_code_lines="[308]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	116 -> 117	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+totalAmountPayed = totalAmountPayed.add(amountToPay)
+
+IRs:
+TMP_77(uint256) = LIBRARY_CALL, dest:\
+SafeMath, function:SafeMath.add(uint256,uint256), arguments:['totalAmountPayed', 'amountToPay'] 
+totalAmountPayed(uint256) := TMP_\
+77(uint256)",
+		node_expression="totalAmountPayed = totalAmountPayed.add(amountToPay)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_77(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(uint256,uint256), arguments:['totalAmountPayed', 'amountToPay'] 
+\
+totalAmountPayed(uint256) := TMP_77(uint256)",
+		node_source_code_lines="[309]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	117 -> 118	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+totalAmount = totalAmount.add(amount)
+
+IRs:
+TMP_78(uint256) = LIBRARY_CALL, dest:SafeMath, function:\
+SafeMath.add(uint256,uint256), arguments:['totalAmount', 'amount'] 
+totalAmount(uint256) := TMP_78(uint256)",
+		node_expression="totalAmount = totalAmount.add(amount)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_78(uint256) = LIBRARY_CALL, dest:SafeMath, function:SafeMath.add(uint256,uint256), arguments:['totalAmount', 'amount'] 
+totalAmount(\
+uint256) := TMP_78(uint256)",
+		node_source_code_lines="[310]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	118 -> 119	[key=0,
+		edge_type=next,
+		label=Next];
+	120	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(raffleContract.transferFrom(listing.seller,msg.sender,amount),Token transfer \
+failed!)
+
+IRs:
+REF_44(address) -> listing.seller
+TMP_79(bool) = HIGH_LEVEL_CALL, dest:raffleContract(RaffleToken), function:transferFrom, \
+arguments:['REF_44', 'msg.sender', 'amount']  
+TMP_80(None) = SOLIDITY_CALL require(bool,string)(TMP_79,Token transfer failed!)",
+		node_expression="require(bool,string)(raffleContract.transferFrom(listing.seller,msg.sender,amount),Token transfer failed!)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_44(address) -> listing.seller
+TMP_79(bool) = HIGH_LEVEL_CALL, dest:raffleContract(RaffleToken), function:transferFrom, arguments:['\
+REF_44', 'msg.sender', 'amount']  
+TMP_80(None) = SOLIDITY_CALL require(bool,string)(TMP_79,Token transfer failed!)",
+		node_source_code_lines="[311]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	119 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	121	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+i ++
+
+IRs:
+TMP_81(uint256) := i(uint256)
+i(uint256) = i + 1",
+		node_expression="i ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_81(uint256) := i(uint256)
+i(uint256) = i + 1",
+		node_source_code_lines="[299]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	120 -> 121	[key=0,
+		edge_type=next,
+		label=Next];
+	121 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	123	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+id_scope_0 = nextPurchaseId ++
+
+IRs:
+TMP_84(uint256) := nextPurchaseId(uint256)
+nextPurchaseId(\
+uint256) = nextPurchaseId + 1
+id_scope_0(uint256) := TMP_84(uint256)",
+		node_expression="id_scope_0 = nextPurchaseId ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_84(uint256) := nextPurchaseId(uint256)
+nextPurchaseId(uint256) = nextPurchaseId + 1
+id_scope_0(uint256) := TMP_84(uint256)",
+		node_source_code_lines="[314]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	122 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	124	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+purchase = purchasesById[id_scope_0]
+
+IRs:
+REF_45(RaffleTokenExchange.Purchase) -> purchasesById[\
+id_scope_0]
+purchase(RaffleTokenExchange.Purchase) := REF_45(RaffleTokenExchange.Purchase)",
+		node_expression="purchase = purchasesById[id_scope_0]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_45(RaffleTokenExchange.Purchase) -> purchasesById[id_scope_0]
+purchase(RaffleTokenExchange.Purchase) := REF_45(RaffleTokenExchange.Purchase)",
+		node_source_code_lines="[315]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	123 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	125	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+purchase.totalAmount = totalAmount
+
+IRs:
+REF_46(uint256) -> purchase.totalAmount
+REF_46 (->purchase) := \
+totalAmount(uint256)",
+		node_expression="purchase.totalAmount = totalAmount",
+		node_info_vulnerabilities=None,
+		node_irs="REF_46(uint256) -> purchase.totalAmount
+REF_46 (->purchase) := totalAmount(uint256)",
+		node_source_code_lines="[316]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	124 -> 125	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+purchase.totalAmountPayed = totalAmountPayed
+
+IRs:
+REF_47(uint256) -> purchase.totalAmountPayed
+\
+REF_47 (->purchase) := totalAmountPayed(uint256)",
+		node_expression="purchase.totalAmountPayed = totalAmountPayed",
+		node_info_vulnerabilities=None,
+		node_irs="REF_47(uint256) -> purchase.totalAmountPayed
+REF_47 (->purchase) := totalAmountPayed(uint256)",
+		node_source_code_lines="[317]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	125 -> 126	[key=0,
+		edge_type=next,
+		label=Next];
+	127	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+purchase.timestamp = now
+
+IRs:
+REF_48(uint256) -> purchase.timestamp
+REF_48 (->purchase) := now(\
+uint256)",
+		node_expression="purchase.timestamp = now",
+		node_info_vulnerabilities=None,
+		node_irs="REF_48(uint256) -> purchase.timestamp
+REF_48 (->purchase) := now(uint256)",
+		node_source_code_lines="[318]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	126 -> 127	[key=0,
+		edge_type=next,
+		label=Next];
+	128	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Purchased(id_scope_0,totalAmount,totalAmountPayed,now)
+
+IRs:
+Emit Purchased(id_scope_0.totalAmount.totalAmountPayed.now)",
+		node_expression="Purchased(id_scope_0,totalAmount,totalAmountPayed,now)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Purchased(id_scope_0.totalAmount.totalAmountPayed.now)",
+		node_source_code_lines="[319]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	127 -> 128	[key=0,
+		edge_type=next,
+		label=Next];
+	129 -> 100	[key=0,
+		edge_type=next,
+		label=Next];
+	130	[contract_name=RaffleTokenExchange,
+		function_fullname="buyRaffle(uint256[],uint256[])",
+		label="buggy_29.sol_RaffleTokenExchange_buyRaffle(uint256[],uint256[])",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	130 -> 99	[key=0,
+		edge_type=next,
+		label=Next];
+	131	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[321, 322, 323]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	132	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_87(bool) = tx.origin == owner_txorigin8
+\
+TMP_88(None) = SOLIDITY_CALL require(bool)(TMP_87)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_87(bool) = tx.origin == owner_txorigin8
+TMP_88(None) = SOLIDITY_CALL require(bool)(TMP_87)",
+		node_source_code_lines="[322]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	131 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	133	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_29.sol_RaffleTokenExchange_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[321, 322, 323]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	133 -> 131	[key=0,
+		edge_type=next,
+		label=Next];
+	134	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	145	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyUnpaused()
+
+IRs:
+MODIFIER_CALL, RaffleTokenExchange.onlyUnpaused()()",
+		node_expression="onlyUnpaused()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, RaffleTokenExchange.onlyUnpaused()()",
+		node_source_code_lines="[327]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	134 -> 145	[key=0,
+		edge_type=next,
+		label=Next];
+	135	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(raffleContract.balanceOf(msg.sender) >= initialAmount,Amount to sell is \
+higher than balance!)
+
+IRs:
+TMP_89(uint256) = HIGH_LEVEL_CALL, dest:raffleContract(RaffleToken), function:balanceOf, arguments:['\
+msg.sender']  
+TMP_90(bool) = TMP_89 >= initialAmount
+TMP_91(None) = SOLIDITY_CALL require(bool,string)(TMP_90,Amount to sell is \
+higher than balance!)",
+		node_expression="require(bool,string)(raffleContract.balanceOf(msg.sender) >= initialAmount,Amount to sell is higher than balance!)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_89(uint256) = HIGH_LEVEL_CALL, dest:raffleContract(RaffleToken), function:balanceOf, arguments:['msg.sender']  
+TMP_90(bool) = \
+TMP_89 >= initialAmount
+TMP_91(None) = SOLIDITY_CALL require(bool,string)(TMP_90,Amount to sell is higher than balance!)",
+		node_source_code_lines="[328]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	136	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(raffleContract.allowance(msg.sender,address(this)) >= initialAmount,Allowance \
+is to small (increase allowance)!)
+
+IRs:
+TMP_92 = CONVERT this to address
+TMP_93(uint256) = HIGH_LEVEL_CALL, dest:raffleContract(\
+RaffleToken), function:allowance, arguments:['msg.sender', 'TMP_92']  
+TMP_94(bool) = TMP_93 >= initialAmount
+TMP_95(None) = SOLIDITY_\
+CALL require(bool,string)(TMP_94,Allowance is to small (increase allowance)!)",
+		node_expression="require(bool,string)(raffleContract.allowance(msg.sender,address(this)) >= initialAmount,Allowance is to small (increase allowance)!)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_92 = CONVERT this to address
+TMP_93(uint256) = HIGH_LEVEL_CALL, dest:raffleContract(RaffleToken), function:allowance, arguments:['\
+msg.sender', 'TMP_92']  
+TMP_94(bool) = TMP_93 >= initialAmount
+TMP_95(None) = SOLIDITY_CALL require(bool,string)(TMP_94,Allowance \
+is to small (increase allowance)!)",
+		node_source_code_lines="[329]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	135 -> 136	[key=0,
+		edge_type=next,
+		label=Next];
+	137	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+id = nextListingId ++
+
+IRs:
+TMP_96(uint256) := nextListingId(uint256)
+nextListingId(uint256) = \
+nextListingId + 1
+id(uint256) := TMP_96(uint256)",
+		node_expression="id = nextListingId ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_96(uint256) := nextListingId(uint256)
+nextListingId(uint256) = nextListingId + 1
+id(uint256) := TMP_96(uint256)",
+		node_source_code_lines="[330]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	136 -> 137	[key=0,
+		edge_type=next,
+		label=Next];
+	138	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+listing = listingsById[id]
+
+IRs:
+REF_51(RaffleTokenExchange.Listing) -> listingsById[id]
+listing(\
+RaffleTokenExchange.Listing) := REF_51(RaffleTokenExchange.Listing)",
+		node_expression="listing = listingsById[id]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_51(RaffleTokenExchange.Listing) -> listingsById[id]
+listing(RaffleTokenExchange.Listing) := REF_51(RaffleTokenExchange.Listing)",
+		node_source_code_lines="[331]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	137 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	139	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.initialAmount = initialAmount
+
+IRs:
+REF_52(uint256) -> listing.initialAmount
+REF_52 (\
+->listing) := initialAmount(uint256)",
+		node_expression="listing.initialAmount = initialAmount",
+		node_info_vulnerabilities=None,
+		node_irs="REF_52(uint256) -> listing.initialAmount
+REF_52 (->listing) := initialAmount(uint256)",
+		node_source_code_lines="[332]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	138 -> 139	[key=0,
+		edge_type=next,
+		label=Next];
+	140	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.amountLeft = initialAmount
+
+IRs:
+REF_53(uint256) -> listing.amountLeft
+REF_53 (->listing) := \
+initialAmount(uint256)",
+		node_expression="listing.amountLeft = initialAmount",
+		node_info_vulnerabilities=None,
+		node_irs="REF_53(uint256) -> listing.amountLeft
+REF_53 (->listing) := initialAmount(uint256)",
+		node_source_code_lines="[333]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	139 -> 140	[key=0,
+		edge_type=next,
+		label=Next];
+	141	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.pricePerToken = pricePerToken
+
+IRs:
+REF_54(uint256) -> listing.pricePerToken
+REF_54 (\
+->listing) := pricePerToken(uint256)",
+		node_expression="listing.pricePerToken = pricePerToken",
+		node_info_vulnerabilities=None,
+		node_irs="REF_54(uint256) -> listing.pricePerToken
+REF_54 (->listing) := pricePerToken(uint256)",
+		node_source_code_lines="[334]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	140 -> 141	[key=0,
+		edge_type=next,
+		label=Next];
+	142	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.seller = msg.sender
+
+IRs:
+REF_55(address) -> listing.seller
+REF_55 (->listing) := msg.sender(\
+address)",
+		node_expression="listing.seller = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="REF_55(address) -> listing.seller
+REF_55 (->listing) := msg.sender(address)",
+		node_source_code_lines="[335]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	141 -> 142	[key=0,
+		edge_type=next,
+		label=Next];
+	143	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.active = true
+
+IRs:
+REF_56(bool) -> listing.active
+REF_56 (->listing) := True(bool)",
+		node_expression="listing.active = true",
+		node_info_vulnerabilities=None,
+		node_irs="REF_56(bool) -> listing.active
+REF_56 (->listing) := True(bool)",
+		node_source_code_lines="[336]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	142 -> 143	[key=0,
+		edge_type=next,
+		label=Next];
+	144	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Listed(id,listing.pricePerToken,listing.initialAmount,listing.seller)
+
+IRs:
+REF_57(uint256) -> \
+listing.pricePerToken
+REF_58(uint256) -> listing.initialAmount
+REF_59(address) -> listing.seller
+Emit Listed(id.REF_57.REF_58.REF_\
+59)",
+		node_expression="Listed(id,listing.pricePerToken,listing.initialAmount,listing.seller)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_57(uint256) -> listing.pricePerToken
+REF_58(uint256) -> listing.initialAmount
+REF_59(address) -> listing.seller
+Emit Listed(\
+id.REF_57.REF_58.REF_59)",
+		node_source_code_lines="[337]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	143 -> 144	[key=0,
+		edge_type=next,
+		label=Next];
+	145 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	146	[contract_name=RaffleTokenExchange,
+		function_fullname="addListing(uint256,uint256)",
+		label="buggy_29.sol_RaffleTokenExchange_addListing(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	146 -> 134	[key=0,
+		edge_type=next,
+		label=Next];
+	147	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[339, 340, 341, 342]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	148	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_99(bool) = tx.origin == owner_txorigin39
+\
+TMP_100(None) = SOLIDITY_CALL require(bool)(TMP_99)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_99(bool) = tx.origin == owner_txorigin39
+TMP_100(None) = SOLIDITY_CALL require(bool)(TMP_99)",
+		node_source_code_lines="[340]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	147 -> 148	[key=0,
+		edge_type=next,
+		label=Next];
+	149	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_60(None) -> to.call
+REF_61(None) -> REF_60.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_60(None) -> to.call
+REF_61(None) -> REF_60.value",
+		node_source_code_lines="[341]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	148 -> 149	[key=0,
+		edge_type=next,
+		label=Next];
+	150	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[339, 340, 341, 342]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	150 -> 147	[key=0,
+		edge_type=next,
+		label=Next];
+	151	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[346, 347, 348, 349, 350, 351, 352]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	152	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+listing = listingsById[id]
+
+IRs:
+REF_62(RaffleTokenExchange.Listing) -> listingsById[id]
+listing(\
+RaffleTokenExchange.Listing) := REF_62(RaffleTokenExchange.Listing)",
+		node_expression="listing = listingsById[id]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_62(RaffleTokenExchange.Listing) -> listingsById[id]
+listing(RaffleTokenExchange.Listing) := REF_62(RaffleTokenExchange.Listing)",
+		node_source_code_lines="[347]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_29.sol"];
+	151 -> 152	[key=0,
+		edge_type=next,
+		label=Next];
+	153	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(listing.active,This listing was turned inactive already!)
+
+IRs:
+REF_63(bool) \
+-> listing.active
+TMP_102(None) = SOLIDITY_CALL require(bool,string)(REF_63,This listing was turned inactive already!)",
+		node_expression="require(bool,string)(listing.active,This listing was turned inactive already!)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_63(bool) -> listing.active
+TMP_102(None) = SOLIDITY_CALL require(bool,string)(REF_63,This listing was turned inactive already!)",
+		node_source_code_lines="[348]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	152 -> 153	[key=0,
+		edge_type=next,
+		label=Next];
+	154	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(listing.seller == msg.sender || owner == msg.sender,Only the listing owner \
+or the contract owner can cancel the listing!)
+
+IRs:
+REF_64(address) -> listing.seller
+TMP_103(bool) = REF_64 == msg.sender
+TMP_\
+104(bool) = owner == msg.sender
+TMP_105(bool) = TMP_103 || TMP_104
+TMP_106(None) = SOLIDITY_CALL require(bool,string)(TMP_105,Only \
+the listing owner or the contract owner can cancel the listing!)",
+		node_expression="require(bool,string)(listing.seller == msg.sender || owner == msg.sender,Only the listing owner or the contract owner can cancel \
+the listing!)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_64(address) -> listing.seller
+TMP_103(bool) = REF_64 == msg.sender
+TMP_104(bool) = owner == msg.sender
+TMP_105(bool) = TMP_103 || \
+TMP_104
+TMP_106(None) = SOLIDITY_CALL require(bool,string)(TMP_105,Only the listing owner or the contract owner can cancel the listing!)",
+		node_source_code_lines="[349]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	153 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	155	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+listing.active = false
+
+IRs:
+REF_65(bool) -> listing.active
+REF_65 (->listing) := False(bool)",
+		node_expression="listing.active = false",
+		node_info_vulnerabilities=None,
+		node_irs="REF_65(bool) -> listing.active
+REF_65 (->listing) := False(bool)",
+		node_source_code_lines="[350]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	154 -> 155	[key=0,
+		edge_type=next,
+		label=Next];
+	156	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Canceled(id)
+
+IRs:
+Emit Canceled(id)",
+		node_expression="Canceled(id)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Canceled(id)",
+		node_source_code_lines="[351]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	155 -> 156	[key=0,
+		edge_type=next,
+		label=Next];
+	157	[contract_name=RaffleTokenExchange,
+		function_fullname="cancelListing(uint256)",
+		label="buggy_29.sol_RaffleTokenExchange_cancelListing(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[346, 347, 348, 349, 350, 351, 352]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	157 -> 151	[key=0,
+		edge_type=next,
+		label=Next];
+	158	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[353, 354, 355]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	159	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_108(bool) = tx.origin == owner_txorigin36
+\
+TMP_109(None) = SOLIDITY_CALL require(bool)(TMP_108)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_108(bool) = tx.origin == owner_txorigin36
+TMP_109(None) = SOLIDITY_CALL require(bool)(TMP_108)",
+		node_source_code_lines="[354]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	158 -> 159	[key=0,
+		edge_type=next,
+		label=Next];
+	160	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_29.sol_RaffleTokenExchange_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[353, 354, 355]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	160 -> 158	[key=0,
+		edge_type=next,
+		label=Next];
+	161	[contract_name=RaffleTokenExchange,
+		function_fullname="setPaused(bool)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[359, 360, 361]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	163	[contract_name=RaffleTokenExchange,
+		function_fullname="setPaused(bool)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyContractOwner()
+
+IRs:
+MODIFIER_CALL, RaffleTokenExchange.onlyContractOwner()()",
+		node_expression="onlyContractOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, RaffleTokenExchange.onlyContractOwner()()",
+		node_source_code_lines="[359]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	161 -> 163	[key=0,
+		edge_type=next,
+		label=Next];
+	162	[contract_name=RaffleTokenExchange,
+		function_fullname="setPaused(bool)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+paused = value
+
+IRs:
+paused(bool) := value(bool)",
+		node_expression="paused = value",
+		node_info_vulnerabilities=None,
+		node_irs="paused(bool) := value(bool)",
+		node_source_code_lines="[360]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	163 -> 162	[key=0,
+		edge_type=next,
+		label=Next];
+	164	[contract_name=RaffleTokenExchange,
+		function_fullname="setPaused(bool)",
+		label="buggy_29.sol_RaffleTokenExchange_setPaused(bool)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[359, 360, 361]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	164 -> 161	[key=0,
+		edge_type=next,
+		label=Next];
+	165	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[362, 363, 364, 365]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	166	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_111(bool) = tx.origin == owner_txorigin35
+\
+TMP_112(None) = SOLIDITY_CALL require(bool)(TMP_111)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_111(bool) = tx.origin == owner_txorigin35
+TMP_112(None) = SOLIDITY_CALL require(bool)(TMP_111)",
+		node_source_code_lines="[363]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	165 -> 166	[key=0,
+		edge_type=next,
+		label=Next];
+	167	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_66(None) -> to.call
+REF_67(None) -> REF_66.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="REF_66(None) -> to.call
+REF_67(None) -> REF_66.value",
+		node_source_code_lines="[364]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	166 -> 167	[key=0,
+		edge_type=next,
+		label=Next];
+	168	[contract_name=RaffleTokenExchange,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[362, 363, 364, 365]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	168 -> 165	[key=0,
+		edge_type=next,
+		label=Next];
+	169	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawFunds(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[369, 370, 371]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	171	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawFunds(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyContractOwner()
+
+IRs:
+MODIFIER_CALL, RaffleTokenExchange.onlyContractOwner()()",
+		node_expression="onlyContractOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, RaffleTokenExchange.onlyContractOwner()()",
+		node_source_code_lines="[369]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	169 -> 171	[key=0,
+		edge_type=next,
+		label=Next];
+	170	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawFunds(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner.transfer(withdrawAmount)
+
+IRs:
+Transfer dest:owner value:withdrawAmount",
+		node_expression="owner.transfer(withdrawAmount)",
+		node_info_vulnerabilities=None,
+		node_irs="Transfer dest:owner value:withdrawAmount",
+		node_source_code_lines="[370]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	171 -> 170	[key=0,
+		edge_type=next,
+		label=Next];
+	172	[contract_name=RaffleTokenExchange,
+		function_fullname="withdrawFunds(uint256)",
+		label="buggy_29.sol_RaffleTokenExchange_withdrawFunds(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[369, 370, 371]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	172 -> 169	[key=0,
+		edge_type=next,
+		label=Next];
+	173	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[372, 373, 374]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	174	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_116(bool) = tx.origin == owner_txorigin40
+\
+TMP_117(None) = SOLIDITY_CALL require(bool)(TMP_116)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_116(bool) = tx.origin == owner_txorigin40
+TMP_117(None) = SOLIDITY_CALL require(bool)(TMP_116)",
+		node_source_code_lines="[373]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	173 -> 174	[key=0,
+		edge_type=next,
+		label=Next];
+	175	[contract_name=RaffleTokenExchange,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_29.sol_RaffleTokenExchange_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[372, 373, 374]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	175 -> 173	[key=0,
+		edge_type=next,
+		label=Next];
+	176	[contract_name=RaffleTokenExchange,
+		function_fullname="kill()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[379, 380, 381]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	178	[contract_name=RaffleTokenExchange,
+		function_fullname="kill()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyContractOwner()
+
+IRs:
+MODIFIER_CALL, RaffleTokenExchange.onlyContractOwner()()",
+		node_expression="onlyContractOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, RaffleTokenExchange.onlyContractOwner()()",
+		node_source_code_lines="[379]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	176 -> 178	[key=0,
+		edge_type=next,
+		label=Next];
+	177	[contract_name=RaffleTokenExchange,
+		function_fullname="kill()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+selfdestruct(address)(owner)
+
+IRs:
+TMP_118(None) = SOLIDITY_CALL selfdestruct(address)(owner)",
+		node_expression="selfdestruct(address)(owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_118(None) = SOLIDITY_CALL selfdestruct(address)(owner)",
+		node_source_code_lines="[380]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	178 -> 177	[key=0,
+		edge_type=next,
+		label=Next];
+	179	[contract_name=RaffleTokenExchange,
+		function_fullname="kill()",
+		label="buggy_29.sol_RaffleTokenExchange_kill()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[379, 380, 381]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	179 -> 176	[key=0,
+		edge_type=next,
+		label=Next];
+	180	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[382, 383, 384, 385]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	181	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin33)
+
+IRs:
+TMP_120(bool) = tx.origin == owner_txorigin33
+\
+TMP_121(None) = SOLIDITY_CALL require(bool)(TMP_120)",
+		node_expression="require(bool)(tx.origin == owner_txorigin33)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="TMP_120(bool) = tx.origin == owner_txorigin33
+TMP_121(None) = SOLIDITY_CALL require(bool)(TMP_120)",
+		node_source_code_lines="[383]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	180 -> 181	[key=0,
+		edge_type=next,
+		label=Next];
+	182	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[384]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	181 -> 182	[key=0,
+		edge_type=next,
+		label=Next];
+	183	[contract_name=RaffleTokenExchange,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="buggy_29.sol_RaffleTokenExchange_sendto_txorigin33(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[382, 383, 384, 385]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	183 -> 180	[key=0,
+		edge_type=next,
+		label=Next];
+	184	[contract_name=RaffleTokenExchange,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+raffleContract = RaffleToken(0x0C8cDC16973E88FAb31DD0FCB844DdF0e1056dE2)
+
+IRs:
+TMP_123 = \
+CONVERT 71649165967835549084453224379459786565531037154 to RaffleToken
+raffleContract(RaffleToken) := TMP_123(RaffleToken)",
+		node_expression="raffleContract = RaffleToken(0x0C8cDC16973E88FAb31DD0FCB844DdF0e1056dE2)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_123 = CONVERT 71649165967835549084453224379459786565531037154 to RaffleToken
+raffleContract(RaffleToken) := TMP_123(RaffleToken)",
+		node_source_code_lines="[151]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_29.sol"];
+	185	[contract_name=RaffleTokenExchange,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="buggy_29.sol_RaffleTokenExchange_slitherConstructorConstantVariables()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [257, 258, 259, 260, 252, 253, 254, 255, 247, 248, 249, 250, 382, 383, 384, 385, 372, 373, 374, 362, 363, 364, 365, 353, \
+354, 355, 339, 340, 341, 342, 321, 322, 323, 286, 287, 288, 289, 30, 31, 32, 33, 25, 26, 27, 28, 17, 18, 19, 20, 193, 194, 195, \
+185, 186, 187, 188, 178, 179, 180, 171, 172, 173, 163, 164, 165, 166, 155, 156, 157, 158], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, \
+170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, \
+196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, \
+222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, \
+248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, \
+274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, \
+300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, \
+326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, \
+352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, \
+378, 379, 380, 381, 382, 383, 384, 385, 386]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	185 -> 184	[key=0,
+		edge_type=next,
+		label=Next];
+	186	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyContractOwner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[267, 268, 269, 270]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	187	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyContractOwner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(msg.sender == owner,Function called by non-owner.)
+
+IRs:
+TMP_124(bool) = \
+msg.sender == owner
+TMP_125(None) = SOLIDITY_CALL require(bool,string)(TMP_124,Function called by non-owner.)",
+		node_expression="require(bool,string)(msg.sender == owner,Function called by non-owner.)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_124(bool) = msg.sender == owner
+TMP_125(None) = SOLIDITY_CALL require(bool,string)(TMP_124,Function called by non-owner.)",
+		node_source_code_lines="[268]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	186 -> 187	[key=0,
+		edge_type=next,
+		label=Next];
+	188	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyContractOwner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[269]",
+		node_type=_,
+		source_file="buggy_29.sol"];
+	187 -> 188	[key=0,
+		edge_type=next,
+		label=Next];
+	189	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyContractOwner()",
+		label="buggy_29.sol_RaffleTokenExchange_onlyContractOwner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[267, 268, 269, 270]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	189 -> 186	[key=0,
+		edge_type=next,
+		label=Next];
+	190	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyUnpaused()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[274, 275, 276, 277]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_29.sol"];
+	191	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyUnpaused()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool,string)(paused == false,Exchange is paused.)
+
+IRs:
+TMP_126(bool) = paused == False
+\
+TMP_127(None) = SOLIDITY_CALL require(bool,string)(TMP_126,Exchange is paused.)",
+		node_expression="require(bool,string)(paused == false,Exchange is paused.)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_126(bool) = paused == False
+TMP_127(None) = SOLIDITY_CALL require(bool,string)(TMP_126,Exchange is paused.)",
+		node_source_code_lines="[275]",
+		node_type=EXPRESSION,
+		source_file="buggy_29.sol"];
+	190 -> 191	[key=0,
+		edge_type=next,
+		label=Next];
+	192	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyUnpaused()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[276]",
+		node_type=_,
+		source_file="buggy_29.sol"];
+	191 -> 192	[key=0,
+		edge_type=next,
+		label=Next];
+	193	[contract_name=RaffleTokenExchange,
+		function_fullname="onlyUnpaused()",
+		label="buggy_29.sol_RaffleTokenExchange_onlyUnpaused()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[274, 275, 276, 277]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_29.sol"];
+	193 -> 190	[key=0,
+		edge_type=next,
+		label=Next];
+}

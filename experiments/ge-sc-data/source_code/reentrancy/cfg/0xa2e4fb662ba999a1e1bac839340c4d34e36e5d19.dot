@@ -1,0 +1,25 @@
+digraph  {
+13 [label="2_ address public addr;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ address owner;\n18-new_variable-4-4", method="", type_label=new_variable];
+22 [label="4_ function FlightDelayAddressResolver() public {\n        owner = msg.sender;\n    }\n22-function_definition-5-7", method="FlightDelayAddressResolver()", type_label=function_definition];
+26 [label="5_ owner = msg.sender;\n26-expression_statement-6-6", method="FlightDelayAddressResolver()", type_label=expression_statement];
+32 [label="7_ function changeOwner(address _owner) public {\n        require(msg.sender == owner);\n        owner = _owner;\n    }\n32-function_definition-8-11", method="changeOwner(address _owner)", type_label=function_definition];
+40 [label="8_ require(msg.sender == owner);\n40-expression_statement-9-9", method="changeOwner(address _owner)", type_label=expression_statement];
+49 [label="9_ owner = _owner;\n49-expression_statement-10-10", method="changeOwner(address _owner)", type_label=expression_statement];
+53 [label="11_ function getAddress() public constant returns (address _addr) {\n        return addr;\n    }\n53-function_definition-12-14", method="getAddress()", type_label=function_definition];
+56 [label="11_ constant\n56-expression_statement-12-12", method="getAddress()", type_label=expression_statement];
+64 [label="12_ return addr;\n64-return-13-13", method="getAddress()", type_label=return];
+66 [label="14_ function setAddress(address _addr) public {\n        require(msg.sender == owner);\n        addr = _addr;\n    }\n66-function_definition-15-18", method="setAddress(address _addr)", type_label=function_definition];
+74 [label="15_ require(msg.sender == owner);\n74-expression_statement-16-16", method="setAddress(address _addr)", type_label=expression_statement];
+83 [label="16_ addr = _addr;\n83-expression_statement-17-17", method="setAddress(address _addr)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+22 -> 26  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 40  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+40 -> 49  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+53 -> 64  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+64 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+66 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+74 -> 83  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

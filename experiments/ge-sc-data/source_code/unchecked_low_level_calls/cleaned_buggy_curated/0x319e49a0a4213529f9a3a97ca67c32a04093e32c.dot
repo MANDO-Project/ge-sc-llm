@@ -1,0 +1,31 @@
+digraph  {
+25 [label="4_ bool public Frozen;\n25-new_variable-5-5", type_label=new_variable];
+30 [label="5_ mapping(address => bool) public AccountIsFrozen;\n30-new_variable-6-6", type_label=new_variable];
+37 [label="6_ mapping(address => bool) public AccountIsNotFrozen;\n37-new_variable-7-7", type_label=new_variable];
+44 [label="7_ mapping(address => uint) public AccountIsFrozenByDate;\n44-new_variable-8-8", type_label=new_variable];
+51 [label="8_ mapping(address => uint256) public balanceOf;\n51-new_variable-9-9", type_label=new_variable];
+58 [label="9_ mapping (address => bool) public isHolder;\n58-new_variable-10-10", type_label=new_variable];
+65 [label="10_ address [] public Arrholders;\n65-new_variable-11-11", type_label=new_variable];
+71 [label="11_ mapping(address => bool) public AccountIsNotFrozenForReturn;\n71-new_variable-12-12", type_label=new_variable];
+78 [label="12_ address public AddressForReturn;\n78-new_variable-13-13", type_label=new_variable];
+83 [label="13_ transfer\n83-function_definition-14-14", type_label=function_definition];
+97 [label="16_ CREDITCoins public company_token;\n97-new_variable-17-17", type_label=new_variable];
+103 [label="17_ address public PartnerAccount;\n103-new_variable-18-18", type_label=new_variable];
+125 [label="20_ PartnerAccount = 0x4f89aaCC3915132EcE2E0Fef02036c0F33879eA8;\n125-expression_statement-21-21", type_label=expression_statement];
+129 [label="21_ company_token = _company_token;\n129-expression_statement-22-22", type_label=expression_statement];
+133 [label="23_ sendCurrentPayment\n133-function_definition-24-27", type_label=function_definition];
+137 [label="24_ company_token.transfer(PartnerAccount, 1);\n137-expression_statement-25-25", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+25 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+30 -> 37  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+37 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+44 -> 51  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+51 -> 58  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 65  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 71  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+71 -> 78  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+97 -> 103  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+125 -> 129  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+133 -> 137  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

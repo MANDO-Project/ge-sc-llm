@@ -1,0 +1,21 @@
+digraph  {
+13 [label="2_ uint256 private initialized = 0;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [label="3_ uint256 public count = 1;\n19-new_variable-4-4", method="", type_label=new_variable];
+25 [label="4_ function init() public {\n        initialized = 1;\n    }\n25-function_definition-5-7", method="init()", type_label=function_definition];
+29 [label="5_ initialized = 1;\n29-expression_statement-6-6", method="init()", type_label=expression_statement];
+33 [label="7_ function run(uint256 input) {\n        if (initialized == 0) {\n            return;\n        }\n        count -= input;\n    }\n33-function_definition-8-13", method="run(uint256 input)", type_label=function_definition];
+40 [label="8_ if_initialized == 0\n40-if-9-11", method="run(uint256 input)", type_label=if];
+85 [label="8_ end_if", method="run(uint256 input)", type_label=end_if];
+45 [label="9_ return;\n45-return-10-10", method="run(uint256 input)", type_label=return];
+46 [label="11_ count -= input;\n46-expression_statement-12-12", method="run(uint256 input)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 19  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+25 -> 29  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+33 -> 40  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+40 -> 45  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+40 -> 85  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+85 -> 46  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+45 -> 85  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+45 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

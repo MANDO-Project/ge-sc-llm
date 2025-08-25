@@ -1,0 +1,10 @@
+digraph  {
+12 [label="2_ function callchecked(address callee) public {\n    require(callee.call());\n  }\n12-function_definition-3-5", method="callchecked(address callee)", type_label=function_definition];
+20 [label="3_ require(callee.call());\n20-expression_statement-4-4", method="callchecked(address callee)", type_label=expression_statement];
+28 [label="5_ function callnotchecked(address callee) public {\n    callee.call();\n  }\n28-function_definition-6-8", method="callnotchecked(address callee)", type_label=function_definition];
+36 [label="6_ callee.call();\n36-expression_statement-7-7", method="callnotchecked(address callee)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+12 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+28 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

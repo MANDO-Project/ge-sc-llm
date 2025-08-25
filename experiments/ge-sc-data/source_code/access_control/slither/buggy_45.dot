@@ -1,0 +1,3585 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[9, 10, 11, 12]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	1	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_0(bool) = tx.origin == owner_txorigin39
+\
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = tx.origin == owner_txorigin39
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[10]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_0(None) -> to.call
+REF_1(None) -> REF_0.value",
+		node_source_code_lines="[11]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[9, 10, 11, 12]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	3 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=StockBet,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[14, 15, 16]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	5	[contract_name=StockBet,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_3(bool) = tx.origin == owner_txorigin36
+\
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_3(bool) = tx.origin == owner_txorigin36
+TMP_4(None) = SOLIDITY_CALL require(bool)(TMP_3)",
+		node_source_code_lines="[15]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	4 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=StockBet,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[14, 15, 16]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	6 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	8	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_5(bool) = tx.origin == owner_txorigin35
+\
+TMP_6(None) = SOLIDITY_CALL require(bool)(TMP_5)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_5(bool) = tx.origin == owner_txorigin35
+TMP_6(None) = SOLIDITY_CALL require(bool)(TMP_5)",
+		node_source_code_lines="[19]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	7 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_2(None) -> to.call
+REF_3(None) -> REF_2.value",
+		node_source_code_lines="[20]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	8 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	10 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=StockBet,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	12	[contract_name=StockBet,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_8(bool) = tx.origin == owner_txorigin40
+\
+TMP_9(None) = SOLIDITY_CALL require(bool)(TMP_8)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_8(bool) = tx.origin == owner_txorigin40
+TMP_9(None) = SOLIDITY_CALL require(bool)(TMP_8)",
+		node_source_code_lines="[24]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	11 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	13	[contract_name=StockBet,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	13 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=StockBet,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[27, 28, 29, 30]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	15	[contract_name=StockBet,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin33)
+
+IRs:
+TMP_10(bool) = tx.origin == owner_txorigin33
+\
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_expression="require(bool)(tx.origin == owner_txorigin33)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_10(bool) = tx.origin == owner_txorigin33
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_source_code_lines="[28]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	14 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	16	[contract_name=StockBet,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[29]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	15 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	17	[contract_name=StockBet,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin33(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[27, 28, 29, 30]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	17 -> 14	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[32, 33, 34, 35]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	19	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin27)
+
+IRs:
+TMP_13(bool) = tx.origin == owner_txorigin27
+\
+TMP_14(None) = SOLIDITY_CALL require(bool)(TMP_13)",
+		node_expression="require(bool)(tx.origin == owner_txorigin27)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_13(bool) = tx.origin == owner_txorigin27
+TMP_14(None) = SOLIDITY_CALL require(bool)(TMP_13)",
+		node_source_code_lines="[33]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	18 -> 19	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_5(None) -> to.call
+REF_6(None) -> REF_5.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_5(None) -> to.call
+REF_6(None) -> REF_5.value",
+		node_source_code_lines="[34]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	19 -> 20	[key=0,
+		edge_type=next,
+		label=Next];
+	21	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin27(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[32, 33, 34, 35]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	21 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[38, 39, 40, 41]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	23	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_16(bool) = tx.origin == owner_txorigin31
+\
+TMP_17(None) = SOLIDITY_CALL require(bool)(TMP_16)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_16(bool) = tx.origin == owner_txorigin31
+TMP_17(None) = SOLIDITY_CALL require(bool)(TMP_16)",
+		node_source_code_lines="[39]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	22 -> 23	[key=0,
+		edge_type=next,
+		label=Next];
+	24	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_7(None) -> to.call
+REF_8(None) -> REF_7.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_7(None) -> to.call
+REF_8(None) -> REF_7.value",
+		node_source_code_lines="[40]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	23 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	25	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[38, 39, 40, 41]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	25 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	26	[contract_name=StockBet,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[43, 44, 45, 46]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	27	[contract_name=StockBet,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_19(bool) = tx.origin == owner_txorigin13
+\
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_19(bool) = tx.origin == owner_txorigin13
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_source_code_lines="[44]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	26 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=StockBet,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[45]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	27 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=StockBet,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[43, 44, 45, 46]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	29 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	30	[contract_name=StockBet,
+		function_fullname="bug_txorigin12(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[64, 65, 66]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	31	[contract_name=StockBet,
+		function_fullname="bug_txorigin12(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin12)
+
+IRs:
+TMP_22(bool) = tx.origin == owner_txorigin12
+\
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_expression="require(bool)(tx.origin == owner_txorigin12)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_22(bool) = tx.origin == owner_txorigin12
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_source_code_lines="[65]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=StockBet,
+		function_fullname="bug_txorigin12(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin12(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[64, 65, 66]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	32 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	33	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin11(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	34	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin11(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin11)
+
+IRs:
+TMP_24(bool) = tx.origin == owner_txorigin11
+\
+TMP_25(None) = SOLIDITY_CALL require(bool)(TMP_24)",
+		node_expression="require(bool)(tx.origin == owner_txorigin11)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_24(bool) = tx.origin == owner_txorigin11
+TMP_25(None) = SOLIDITY_CALL require(bool)(TMP_24)",
+		node_source_code_lines="[69]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	33 -> 34	[key=0,
+		edge_type=next,
+		label=Next];
+	35	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin11(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_10(None) -> to.call
+REF_11(None) -> REF_10.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_10(None) -> to.call
+REF_11(None) -> REF_10.value",
+		node_source_code_lines="[70]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	34 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	36	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin11(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin11(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[68, 69, 70, 71]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	36 -> 33	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=StockBet,
+		function_fullname="sendto_txorigin1(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[73, 74, 75, 76]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	38	[contract_name=StockBet,
+		function_fullname="sendto_txorigin1(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin1)
+
+IRs:
+TMP_27(bool) = tx.origin == owner_txorigin1
+\
+TMP_28(None) = SOLIDITY_CALL require(bool)(TMP_27)",
+		node_expression="require(bool)(tx.origin == owner_txorigin1)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_27(bool) = tx.origin == owner_txorigin1
+TMP_28(None) = SOLIDITY_CALL require(bool)(TMP_27)",
+		node_source_code_lines="[74]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	37 -> 38	[key=0,
+		edge_type=next,
+		label=Next];
+	39	[contract_name=StockBet,
+		function_fullname="sendto_txorigin1(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[75]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	38 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	40	[contract_name=StockBet,
+		function_fullname="sendto_txorigin1(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin1(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[73, 74, 75, 76]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	40 -> 37	[key=0,
+		edge_type=next,
+		label=Next];
+	41	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[79, 80, 81, 82]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	42	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin2)
+
+IRs:
+TMP_30(bool) = tx.origin == owner_txorigin2
+\
+TMP_31(None) = SOLIDITY_CALL require(bool)(TMP_30)",
+		node_expression="require(bool)(tx.origin == owner_txorigin2)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_30(bool) = tx.origin == owner_txorigin2
+TMP_31(None) = SOLIDITY_CALL require(bool)(TMP_30)",
+		node_source_code_lines="[80]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	41 -> 42	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_32 = CONVERT this to address
+REF_14 -> BALANCE \
+TMP_32
+Transfer dest:_recipient value:REF_14",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_32 = CONVERT this to address
+REF_14 -> BALANCE TMP_32
+Transfer dest:_recipient value:REF_14",
+		node_source_code_lines="[81]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	42 -> 43	[key=0,
+		edge_type=next,
+		label=Next];
+	44	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="buggy_45.sol_StockBet_withdrawAll_txorigin2(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[79, 80, 81, 82]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	44 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	45	[contract_name=StockBet,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[85, 86, 87, 88]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	46	[contract_name=StockBet,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin17)
+
+IRs:
+TMP_34(bool) = tx.origin == owner_txorigin17
+\
+TMP_35(None) = SOLIDITY_CALL require(bool)(TMP_34)",
+		node_expression="require(bool)(tx.origin == owner_txorigin17)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_34(bool) = tx.origin == owner_txorigin17
+TMP_35(None) = SOLIDITY_CALL require(bool)(TMP_34)",
+		node_source_code_lines="[86]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	45 -> 46	[key=0,
+		edge_type=next,
+		label=Next];
+	47	[contract_name=StockBet,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[87]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	46 -> 47	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=StockBet,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin17(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[85, 86, 87, 88]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	48 -> 45	[key=0,
+		edge_type=next,
+		label=Next];
+	49	[contract_name=StockBet,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93, 94]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	50	[contract_name=StockBet,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin37)
+
+IRs:
+TMP_37(bool) = tx.origin == owner_txorigin37
+\
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_expression="require(bool)(tx.origin == owner_txorigin37)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_37(bool) = tx.origin == owner_txorigin37
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_source_code_lines="[92]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	49 -> 50	[key=0,
+		edge_type=next,
+		label=Next];
+	51	[contract_name=StockBet,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[93]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	50 -> 51	[key=0,
+		edge_type=next,
+		label=Next];
+	52	[contract_name=StockBet,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin37(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93, 94]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	52 -> 49	[key=0,
+		edge_type=next,
+		label=Next];
+	53	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[96, 97, 98, 99]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	54	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin3)
+
+IRs:
+TMP_40(bool) = tx.origin == owner_txorigin3
+\
+TMP_41(None) = SOLIDITY_CALL require(bool)(TMP_40)",
+		node_expression="require(bool)(tx.origin == owner_txorigin3)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_40(bool) = tx.origin == owner_txorigin3
+TMP_41(None) = SOLIDITY_CALL require(bool)(TMP_40)",
+		node_source_code_lines="[97]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	53 -> 54	[key=0,
+		edge_type=next,
+		label=Next];
+	55	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_17(None) -> to.call
+REF_18(None) -> REF_17.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_17(None) -> to.call
+REF_18(None) -> REF_17.value",
+		node_source_code_lines="[98]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	54 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin3(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[96, 97, 98, 99]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	56 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	57	[contract_name=StockBet,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[101, 102, 103, 104]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	58	[contract_name=StockBet,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin9)
+
+IRs:
+TMP_43(bool) = tx.origin == owner_txorigin9
+\
+TMP_44(None) = SOLIDITY_CALL require(bool)(TMP_43)",
+		node_expression="require(bool)(tx.origin == owner_txorigin9)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_43(bool) = tx.origin == owner_txorigin9
+TMP_44(None) = SOLIDITY_CALL require(bool)(TMP_43)",
+		node_source_code_lines="[102]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	57 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	59	[contract_name=StockBet,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[103]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	58 -> 59	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=StockBet,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin9(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[101, 102, 103, 104]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	60 -> 57	[key=0,
+		edge_type=next,
+		label=Next];
+	61	[contract_name=StockBet,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[107, 108, 109, 110]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	62	[contract_name=StockBet,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin25)
+
+IRs:
+TMP_46(bool) = tx.origin == owner_txorigin25
+\
+TMP_47(None) = SOLIDITY_CALL require(bool)(TMP_46)",
+		node_expression="require(bool)(tx.origin == owner_txorigin25)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_46(bool) = tx.origin == owner_txorigin25
+TMP_47(None) = SOLIDITY_CALL require(bool)(TMP_46)",
+		node_source_code_lines="[108]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	61 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=StockBet,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[109]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	62 -> 63	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=StockBet,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="buggy_45.sol_StockBet_sendto_txorigin25(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[107, 108, 109, 110]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	64 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[112, 113, 114, 115]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	66	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_49(bool) = tx.origin == owner_txorigin19
+\
+TMP_50(None) = SOLIDITY_CALL require(bool)(TMP_49)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_49(bool) = tx.origin == owner_txorigin19
+TMP_50(None) = SOLIDITY_CALL require(bool)(TMP_49)",
+		node_source_code_lines="[113]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	65 -> 66	[key=0,
+		edge_type=next,
+		label=Next];
+	67	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_21(None) -> to.call
+REF_22(None) -> REF_21.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_21(None) -> to.call
+REF_22(None) -> REF_21.value",
+		node_source_code_lines="[114]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	66 -> 67	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[112, 113, 114, 115]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	68 -> 65	[key=0,
+		edge_type=next,
+		label=Next];
+	69	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[142, 143, 144, 145, 146, 147, 148, 149, 150]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	70	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(_bet > 0)
+
+IRs:
+TMP_52(bool) = _bet > 0
+TMP_53(None) = SOLIDITY_CALL require(bool)(\
+TMP_52)",
+		node_expression="require(bool)(_bet > 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_52(bool) = _bet > 0
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_source_code_lines="[143]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	69 -> 70	[key=0,
+		edge_type=next,
+		label=Next];
+	71	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[145]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	70 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	72	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+state = State.SETUP
+
+IRs:
+REF_23(StockBet.State) -> State.SETUP
+state(StockBet.State) := REF_\
+23(StockBet.State)",
+		node_expression="state = State.SETUP",
+		node_info_vulnerabilities=None,
+		node_irs="REF_23(StockBet.State) -> State.SETUP
+state(StockBet.State) := REF_23(StockBet.State)",
+		node_source_code_lines="[146]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	71 -> 72	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+bet = _bet
+
+IRs:
+bet(uint256) := _bet(uint256)",
+		node_expression="bet = _bet",
+		node_info_vulnerabilities=None,
+		node_irs="bet(uint256) := _bet(uint256)",
+		node_source_code_lines="[147]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	72 -> 73	[key=0,
+		edge_type=next,
+		label=Next];
+	74	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+GameCreated(bet)
+
+IRs:
+Emit GameCreated(bet)",
+		node_expression="GameCreated(bet)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit GameCreated(bet)",
+		node_source_code_lines="[149]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	73 -> 74	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=StockBet,
+		function_fullname="constructor(uint256)",
+		label="buggy_45.sol_StockBet_constructor(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[142, 143, 144, 145, 146, 147, 148, 149, 150]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	75 -> 69	[key=0,
+		edge_type=next,
+		label=Next];
+	76	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[151, 152, 153, 154]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	77	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin26)
+
+IRs:
+TMP_55(bool) = tx.origin == owner_txorigin26
+\
+TMP_56(None) = SOLIDITY_CALL require(bool)(TMP_55)",
+		node_expression="require(bool)(tx.origin == owner_txorigin26)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_55(bool) = tx.origin == owner_txorigin26
+TMP_56(None) = SOLIDITY_CALL require(bool)(TMP_55)",
+		node_source_code_lines="[152]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	76 -> 77	[key=0,
+		edge_type=next,
+		label=Next];
+	78	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_57 = CONVERT this to address
+REF_25 -> BALANCE \
+TMP_57
+Transfer dest:_recipient value:REF_25",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_57 = CONVERT this to address
+REF_25 -> BALANCE TMP_57
+Transfer dest:_recipient value:REF_25",
+		node_source_code_lines="[153]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	77 -> 78	[key=0,
+		edge_type=next,
+		label=Next];
+	79	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="buggy_45.sol_StockBet_withdrawAll_txorigin26(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[151, 152, 153, 154]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	79 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	80	[contract_name=StockBet,
+		function_fullname="setOracle(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157, 158, 159, 160]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	83	[contract_name=StockBet,
+		function_fullname="setOracle(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byOwner()
+
+IRs:
+MODIFIER_CALL, StockBet.byOwner()()",
+		node_expression="byOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byOwner()()",
+		node_source_code_lines="[156]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	80 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	81	[contract_name=StockBet,
+		function_fullname="setOracle(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+oracle = _oracle
+
+IRs:
+oracle(address) := _oracle(address)",
+		node_expression="oracle = _oracle",
+		node_info_vulnerabilities=None,
+		node_irs="oracle(address) := _oracle(address)",
+		node_source_code_lines="[157]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	82	[contract_name=StockBet,
+		function_fullname="setOracle(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+OracleSet(oracle)
+
+IRs:
+Emit OracleSet(oracle)",
+		node_expression="OracleSet(oracle)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit OracleSet(oracle)",
+		node_source_code_lines="[159]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	81 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=StockBet,
+		function_fullname="setOracle(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.SETUP)
+
+IRs:
+REF_26(StockBet.State) -> State.SETUP
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_26)",
+		node_expression="inState(State.SETUP)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_26(StockBet.State) -> State.SETUP
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_26)",
+		node_source_code_lines="[156]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	84 -> 81	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=StockBet,
+		function_fullname="setOracle(address)",
+		label="buggy_45.sol_StockBet_setOracle(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157, 158, 159, 160]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	85 -> 80	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=StockBet,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[161, 162, 163]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	87	[contract_name=StockBet,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin20)
+
+IRs:
+TMP_62(bool) = tx.origin == owner_txorigin20
+\
+TMP_63(None) = SOLIDITY_CALL require(bool)(TMP_62)",
+		node_expression="require(bool)(tx.origin == owner_txorigin20)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_62(bool) = tx.origin == owner_txorigin20
+TMP_63(None) = SOLIDITY_CALL require(bool)(TMP_62)",
+		node_source_code_lines="[162]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	86 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=StockBet,
+		function_fullname="bug_txorigin20(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin20(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[161, 162, 163]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	88 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[165, 166, 167, 168, 169, 170]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	93	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byOracle()
+
+IRs:
+MODIFIER_CALL, StockBet.byOracle()()",
+		node_expression="byOracle()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byOracle()()",
+		node_source_code_lines="[165]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	89 -> 93	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+initialPrice = _value
+
+IRs:
+initialPrice(uint256) := _value(uint256)",
+		node_expression="initialPrice = _value",
+		node_info_vulnerabilities=None,
+		node_irs="initialPrice(uint256) := _value(uint256)",
+		node_source_code_lines="[166]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	91	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+state = State.OPEN
+
+IRs:
+REF_27(StockBet.State) -> State.OPEN
+state(StockBet.State) := REF_27(\
+StockBet.State)",
+		node_expression="state = State.OPEN",
+		node_info_vulnerabilities=None,
+		node_irs="REF_27(StockBet.State) -> State.OPEN
+state(StockBet.State) := REF_27(StockBet.State)",
+		node_source_code_lines="[167]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	90 -> 91	[key=0,
+		edge_type=next,
+		label=Next];
+	92	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+GameOpened(initialPrice)
+
+IRs:
+Emit GameOpened(initialPrice)",
+		node_expression="GameOpened(initialPrice)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit GameOpened(initialPrice)",
+		node_source_code_lines="[169]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	91 -> 92	[key=0,
+		edge_type=next,
+		label=Next];
+	94	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.SETUP)
+
+IRs:
+REF_28(StockBet.State) -> State.SETUP
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_28)",
+		node_expression="inState(State.SETUP)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_28(StockBet.State) -> State.SETUP
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_28)",
+		node_source_code_lines="[165]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	93 -> 94	[key=0,
+		edge_type=next,
+		label=Next];
+	94 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=StockBet,
+		function_fullname="setInitialPrice(uint256)",
+		label="buggy_45.sol_StockBet_setInitialPrice(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[165, 166, 167, 168, 169, 170]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	95 -> 89	[key=0,
+		edge_type=next,
+		label=Next];
+	96	[contract_name=StockBet,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	97	[contract_name=StockBet,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin32)
+
+IRs:
+TMP_67(bool) = tx.origin == owner_txorigin32
+\
+TMP_68(None) = SOLIDITY_CALL require(bool)(TMP_67)",
+		node_expression="require(bool)(tx.origin == owner_txorigin32)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_67(bool) = tx.origin == owner_txorigin32
+TMP_68(None) = SOLIDITY_CALL require(bool)(TMP_67)",
+		node_source_code_lines="[172]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	96 -> 97	[key=0,
+		edge_type=next,
+		label=Next];
+	98	[contract_name=StockBet,
+		function_fullname="bug_txorigin32(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin32(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[171, 172, 173]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	98 -> 96	[key=0,
+		edge_type=next,
+		label=Next];
+	99	[contract_name=StockBet,
+		function_fullname="closeGame()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[175, 176, 177, 178, 179]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	102	[contract_name=StockBet,
+		function_fullname="closeGame()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byOwner()
+
+IRs:
+MODIFIER_CALL, StockBet.byOwner()()",
+		node_expression="byOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byOwner()()",
+		node_source_code_lines="[175]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	99 -> 102	[key=0,
+		edge_type=next,
+		label=Next];
+	100	[contract_name=StockBet,
+		function_fullname="closeGame()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+state = State.CLOSED
+
+IRs:
+REF_29(StockBet.State) -> State.CLOSED
+state(StockBet.State) := REF_\
+29(StockBet.State)",
+		node_expression="state = State.CLOSED",
+		node_info_vulnerabilities=None,
+		node_irs="REF_29(StockBet.State) -> State.CLOSED
+state(StockBet.State) := REF_29(StockBet.State)",
+		node_source_code_lines="[176]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	101	[contract_name=StockBet,
+		function_fullname="closeGame()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+GameClosed()
+
+IRs:
+Emit GameClosed()",
+		node_expression="GameClosed()",
+		node_info_vulnerabilities=None,
+		node_irs="Emit GameClosed()",
+		node_source_code_lines="[178]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	100 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=StockBet,
+		function_fullname="closeGame()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.OPEN)
+
+IRs:
+REF_30(StockBet.State) -> State.OPEN
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_30)",
+		node_expression="inState(State.OPEN)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_30(StockBet.State) -> State.OPEN
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_30)",
+		node_source_code_lines="[175]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	102 -> 103	[key=0,
+		edge_type=next,
+		label=Next];
+	103 -> 100	[key=0,
+		edge_type=next,
+		label=Next];
+	104	[contract_name=StockBet,
+		function_fullname="closeGame()",
+		label="buggy_45.sol_StockBet_closeGame()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[175, 176, 177, 178, 179]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	104 -> 99	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[180, 181, 182, 183]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	106	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin38)
+
+IRs:
+TMP_72(bool) = tx.origin == owner_txorigin38
+\
+TMP_73(None) = SOLIDITY_CALL require(bool)(TMP_72)",
+		node_expression="require(bool)(tx.origin == owner_txorigin38)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_72(bool) = tx.origin == owner_txorigin38
+TMP_73(None) = SOLIDITY_CALL require(bool)(TMP_72)",
+		node_source_code_lines="[181]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	105 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	107	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_74 = CONVERT this to address
+REF_32 -> BALANCE \
+TMP_74
+Transfer dest:_recipient value:REF_32",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_74 = CONVERT this to address
+REF_32 -> BALANCE TMP_74
+Transfer dest:_recipient value:REF_32",
+		node_source_code_lines="[182]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	106 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	108	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="buggy_45.sol_StockBet_withdrawAll_txorigin38(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[180, 181, 182, 183]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	108 -> 105	[key=0,
+		edge_type=next,
+		label=Next];
+	109	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[185, 186, 187, 188, 189, 190, 191, 192]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	114	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byPlayer()
+
+IRs:
+MODIFIER_CALL, StockBet.byPlayer()()",
+		node_expression="byPlayer()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byPlayer()()",
+		node_source_code_lines="[185]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	109 -> 114	[key=0,
+		edge_type=next,
+		label=Next];
+	110	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.value == (bet * 1000000000000000))
+
+IRs:
+TMP_76(uint256) = bet * 1000000000000000
+\
+TMP_77(bool) = msg.value == TMP_76
+TMP_78(None) = SOLIDITY_CALL require(bool)(TMP_77)",
+		node_expression="require(bool)(msg.value == (bet * 1000000000000000))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_76(uint256) = bet * 1000000000000000
+TMP_77(bool) = msg.value == TMP_76
+TMP_78(None) = SOLIDITY_CALL require(bool)(TMP_77)",
+		node_source_code_lines="[186]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	111	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+guesses[UP].guesses_number ++
+
+IRs:
+REF_33(StockBet.Guess) -> guesses[UP]
+REF_34(uint256) -> \
+REF_33.guesses_number
+TMP_79(uint256) := REF_34(uint256)
+REF_34(-> guesses) = REF_34 + 1",
+		node_expression="guesses[UP].guesses_number ++",
+		node_info_vulnerabilities=None,
+		node_irs="REF_33(StockBet.Guess) -> guesses[UP]
+REF_34(uint256) -> REF_33.guesses_number
+TMP_79(uint256) := REF_34(uint256)
+REF_34(-> guesses) = \
+REF_34 + 1",
+		node_source_code_lines="[188]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	110 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	112	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+guesses[UP].players[msg.sender] = PaidStatus.NOT_PAID
+
+IRs:
+REF_35(StockBet.Guess) -> guesses[\
+UP]
+REF_36(mapping(address => StockBet.PaidStatus)) -> REF_35.players
+REF_37(StockBet.PaidStatus) -> REF_36[msg.sender]
+REF_38(StockBet.PaidStatus) \
+-> PaidStatus.NOT_PAID
+REF_37 (->guesses) := REF_38(StockBet.PaidStatus)",
+		node_expression="guesses[UP].players[msg.sender] = PaidStatus.NOT_PAID",
+		node_info_vulnerabilities=None,
+		node_irs="REF_35(StockBet.Guess) -> guesses[UP]
+REF_36(mapping(address => StockBet.PaidStatus)) -> REF_35.players
+REF_37(StockBet.PaidStatus) \
+-> REF_36[msg.sender]
+REF_38(StockBet.PaidStatus) -> PaidStatus.NOT_PAID
+REF_37 (->guesses) := REF_38(StockBet.PaidStatus)",
+		node_source_code_lines="[189]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	111 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	113	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+PlayerBet(msg.sender,UP)
+
+IRs:
+Emit PlayerBet(msg.sender.UP)",
+		node_expression="PlayerBet(msg.sender,UP)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit PlayerBet(msg.sender.UP)",
+		node_source_code_lines="[191]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	115	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.OPEN)
+
+IRs:
+REF_39(StockBet.State) -> State.OPEN
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_39)",
+		node_expression="inState(State.OPEN)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_39(StockBet.State) -> State.OPEN
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_39)",
+		node_source_code_lines="[185]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	114 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	115 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	116	[contract_name=StockBet,
+		function_fullname="betUp()",
+		label="buggy_45.sol_StockBet_betUp()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[185, 186, 187, 188, 189, 190, 191, 192]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	116 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=StockBet,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	118	[contract_name=StockBet,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_83(bool) = tx.origin == owner_txorigin4
+\
+TMP_84(None) = SOLIDITY_CALL require(bool)(TMP_83)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_83(bool) = tx.origin == owner_txorigin4
+TMP_84(None) = SOLIDITY_CALL require(bool)(TMP_83)",
+		node_source_code_lines="[194]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	117 -> 118	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=StockBet,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[193, 194, 195]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	119 -> 117	[key=0,
+		edge_type=next,
+		label=Next];
+	120	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[197, 198, 199, 200, 201, 202, 203, 204]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	125	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byPlayer()
+
+IRs:
+MODIFIER_CALL, StockBet.byPlayer()()",
+		node_expression="byPlayer()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byPlayer()()",
+		node_source_code_lines="[197]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	120 -> 125	[key=0,
+		edge_type=next,
+		label=Next];
+	121	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.value == (bet * 1000000000000000))
+
+IRs:
+TMP_85(uint256) = bet * 1000000000000000
+\
+TMP_86(bool) = msg.value == TMP_85
+TMP_87(None) = SOLIDITY_CALL require(bool)(TMP_86)",
+		node_expression="require(bool)(msg.value == (bet * 1000000000000000))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_85(uint256) = bet * 1000000000000000
+TMP_86(bool) = msg.value == TMP_85
+TMP_87(None) = SOLIDITY_CALL require(bool)(TMP_86)",
+		node_source_code_lines="[198]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	122	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+guesses[DOWN].guesses_number ++
+
+IRs:
+REF_40(StockBet.Guess) -> guesses[DOWN]
+REF_41(uint256) \
+-> REF_40.guesses_number
+TMP_88(uint256) := REF_41(uint256)
+REF_41(-> guesses) = REF_41 + 1",
+		node_expression="guesses[DOWN].guesses_number ++",
+		node_info_vulnerabilities=None,
+		node_irs="REF_40(StockBet.Guess) -> guesses[DOWN]
+REF_41(uint256) -> REF_40.guesses_number
+TMP_88(uint256) := REF_41(uint256)
+REF_41(-> guesses) = \
+REF_41 + 1",
+		node_source_code_lines="[200]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	121 -> 122	[key=0,
+		edge_type=next,
+		label=Next];
+	123	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+guesses[DOWN].players[msg.sender] = PaidStatus.NOT_PAID
+
+IRs:
+REF_42(StockBet.Guess) -> guesses[\
+DOWN]
+REF_43(mapping(address => StockBet.PaidStatus)) -> REF_42.players
+REF_44(StockBet.PaidStatus) -> REF_43[msg.sender]
+REF_45(\
+StockBet.PaidStatus) -> PaidStatus.NOT_PAID
+REF_44 (->guesses) := REF_45(StockBet.PaidStatus)",
+		node_expression="guesses[DOWN].players[msg.sender] = PaidStatus.NOT_PAID",
+		node_info_vulnerabilities=None,
+		node_irs="REF_42(StockBet.Guess) -> guesses[DOWN]
+REF_43(mapping(address => StockBet.PaidStatus)) -> REF_42.players
+REF_44(StockBet.PaidStatus) \
+-> REF_43[msg.sender]
+REF_45(StockBet.PaidStatus) -> PaidStatus.NOT_PAID
+REF_44 (->guesses) := REF_45(StockBet.PaidStatus)",
+		node_source_code_lines="[201]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	122 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	124	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+PlayerBet(msg.sender,DOWN)
+
+IRs:
+Emit PlayerBet(msg.sender.DOWN)",
+		node_expression="PlayerBet(msg.sender,DOWN)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit PlayerBet(msg.sender.DOWN)",
+		node_source_code_lines="[203]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	123 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.OPEN)
+
+IRs:
+REF_46(StockBet.State) -> State.OPEN
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_46)",
+		node_expression="inState(State.OPEN)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_46(StockBet.State) -> State.OPEN
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_46)",
+		node_source_code_lines="[197]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	125 -> 126	[key=0,
+		edge_type=next,
+		label=Next];
+	126 -> 121	[key=0,
+		edge_type=next,
+		label=Next];
+	127	[contract_name=StockBet,
+		function_fullname="betDown()",
+		label="buggy_45.sol_StockBet_betDown()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[197, 198, 199, 200, 201, 202, 203, 204]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	127 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	128	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[205, 206, 207, 208]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	129	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_92(bool) = tx.origin == owner_txorigin7
+\
+TMP_93(None) = SOLIDITY_CALL require(bool)(TMP_92)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_92(bool) = tx.origin == owner_txorigin7
+TMP_93(None) = SOLIDITY_CALL require(bool)(TMP_92)",
+		node_source_code_lines="[206]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	128 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	130	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_47(None) -> to.call
+REF_48(None) -> REF_47.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_47(None) -> to.call
+REF_48(None) -> REF_47.value",
+		node_source_code_lines="[207]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	129 -> 130	[key=0,
+		edge_type=next,
+		label=Next];
+	131	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[205, 206, 207, 208]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	131 -> 128	[key=0,
+		edge_type=next,
+		label=Next];
+	132	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	146	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byOracle()
+
+IRs:
+MODIFIER_CALL, StockBet.byOracle()()",
+		node_expression="byOracle()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byOracle()()",
+		node_source_code_lines="[211]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	132 -> 146	[key=0,
+		edge_type=next,
+		label=Next];
+	133	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+finalPrice = _value
+
+IRs:
+finalPrice(uint256) := _value(uint256)",
+		node_expression="finalPrice = _value",
+		node_info_vulnerabilities=None,
+		node_irs="finalPrice(uint256) := _value(uint256)",
+		node_source_code_lines="[214]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	134	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+FinalPriceSet(finalPrice)
+
+IRs:
+Emit FinalPriceSet(finalPrice)",
+		node_expression="FinalPriceSet(finalPrice)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit FinalPriceSet(finalPrice)",
+		node_source_code_lines="[216]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	133 -> 134	[key=0,
+		edge_type=next,
+		label=Next];
+	135	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+finalPrice > initialPrice
+
+IRs:
+TMP_96(bool) = finalPrice > initialPrice
+CONDITION TMP_96",
+		node_expression="finalPrice > initialPrice",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_96(bool) = finalPrice > initialPrice
+CONDITION TMP_96",
+		node_source_code_lines="[218]",
+		node_type=IF,
+		source_file="buggy_45.sol"];
+	134 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	136	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+result = UP
+
+IRs:
+result(uint256) := UP(uint256)",
+		node_expression="result = UP",
+		node_info_vulnerabilities=None,
+		node_irs="result(uint256) := UP(uint256)",
+		node_source_code_lines="[219]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	135 -> 136	[key=0,
+		edge_type=if_true,
+		label=True];
+	137	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+result = DOWN
+
+IRs:
+result(uint256) := DOWN(uint256)",
+		node_expression="result = DOWN",
+		node_info_vulnerabilities=None,
+		node_irs="result(uint256) := DOWN(uint256)",
+		node_source_code_lines="[221]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	135 -> 137	[key=0,
+		edge_type=if_false,
+		label=False];
+	138	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[218, 219, 220, 221, 222]",
+		node_type=END_IF,
+		source_file="buggy_45.sol"];
+	136 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	137 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	139	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+guesses[result].guesses_number > 0
+
+IRs:
+REF_49(StockBet.Guess) -> guesses[result]
+REF_50(uint256) -> \
+REF_49.guesses_number
+TMP_97(bool) = REF_50 > 0
+CONDITION TMP_97",
+		node_expression="guesses[result].guesses_number > 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_49(StockBet.Guess) -> guesses[result]
+REF_50(uint256) -> REF_49.guesses_number
+TMP_97(bool) = REF_50 > 0
+CONDITION TMP_97",
+		node_source_code_lines="[225]",
+		node_type=IF,
+		source_file="buggy_45.sol"];
+	138 -> 139	[key=0,
+		edge_type=next,
+		label=Next];
+	140	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+state = State.PLAYERS_WIN
+
+IRs:
+REF_51(StockBet.State) -> State.PLAYERS_WIN
+state(StockBet.State) := \
+REF_51(StockBet.State)",
+		node_expression="state = State.PLAYERS_WIN",
+		node_info_vulnerabilities=None,
+		node_irs="REF_51(StockBet.State) -> State.PLAYERS_WIN
+state(StockBet.State) := REF_51(StockBet.State)",
+		node_source_code_lines="[226]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	139 -> 140	[key=0,
+		edge_type=if_true,
+		label=True];
+	143	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+state = State.OWNER_WIN
+
+IRs:
+REF_54(StockBet.State) -> State.OWNER_WIN
+state(StockBet.State) := \
+REF_54(StockBet.State)",
+		node_expression="state = State.OWNER_WIN",
+		node_info_vulnerabilities=None,
+		node_irs="REF_54(StockBet.State) -> State.OWNER_WIN
+state(StockBet.State) := REF_54(StockBet.State)",
+		node_source_code_lines="[230]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	139 -> 143	[key=0,
+		edge_type=if_false,
+		label=False];
+	141	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+splitJackpot = getBalance() / guesses[result].guesses_number
+
+IRs:
+TMP_98(uint256) = INTERNAL_\
+CALL, StockBet.getBalance()()
+REF_52(StockBet.Guess) -> guesses[result]
+REF_53(uint256) -> REF_52.guesses_number
+TMP_99(uint256) = \
+TMP_98 / REF_53
+splitJackpot(uint256) := TMP_99(uint256)",
+		node_expression="splitJackpot = getBalance() / guesses[result].guesses_number",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_98(uint256) = INTERNAL_CALL, StockBet.getBalance()()
+REF_52(StockBet.Guess) -> guesses[result]
+REF_53(uint256) -> REF_52.guesses_\
+number
+TMP_99(uint256) = TMP_98 / REF_53
+splitJackpot(uint256) := TMP_99(uint256)",
+		node_source_code_lines="[227]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	140 -> 141	[key=0,
+		edge_type=next,
+		label=Next];
+	142	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+PlayersWin(result,splitJackpot)
+
+IRs:
+Emit PlayersWin(result.splitJackpot)",
+		node_expression="PlayersWin(result,splitJackpot)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit PlayersWin(result.splitJackpot)",
+		node_source_code_lines="[228]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	141 -> 142	[key=0,
+		edge_type=next,
+		label=Next];
+	145	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[225, 226, 227, 228, 229, 230, 231, 232]",
+		node_type=END_IF,
+		source_file="buggy_45.sol"];
+	142 -> 145	[key=0,
+		edge_type=next,
+		label=Next];
+	144	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+OwnerWins(owner)
+
+IRs:
+Emit OwnerWins(owner)",
+		node_expression="OwnerWins(owner)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit OwnerWins(owner)",
+		node_source_code_lines="[231]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	143 -> 144	[key=0,
+		edge_type=next,
+		label=Next];
+	144 -> 145	[key=0,
+		edge_type=next,
+		label=Next];
+	147	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.CLOSED)
+
+IRs:
+REF_55(StockBet.State) -> State.CLOSED
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_55)",
+		node_expression="inState(State.CLOSED)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_55(StockBet.State) -> State.CLOSED
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_55)",
+		node_source_code_lines="[211]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	146 -> 147	[key=0,
+		edge_type=next,
+		label=Next];
+	147 -> 133	[key=0,
+		edge_type=next,
+		label=Next];
+	148	[contract_name=StockBet,
+		function_fullname="setFinalPrice(uint256)",
+		label="buggy_45.sol_StockBet_setFinalPrice(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	148 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	149	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[234, 235, 236, 237]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	150	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_104(bool) = tx.origin == owner_txorigin23
+\
+TMP_105(None) = SOLIDITY_CALL require(bool)(TMP_104)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_104(bool) = tx.origin == owner_txorigin23
+TMP_105(None) = SOLIDITY_CALL require(bool)(TMP_104)",
+		node_source_code_lines="[235]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	149 -> 150	[key=0,
+		edge_type=next,
+		label=Next];
+	151	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_56(None) -> to.call
+REF_57(None) -> REF_56.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="REF_56(None) -> to.call
+REF_57(None) -> REF_56.value",
+		node_source_code_lines="[236]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	150 -> 151	[key=0,
+		edge_type=next,
+		label=Next];
+	152	[contract_name=StockBet,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_45.sol_StockBet_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[234, 235, 236, 237]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	152 -> 149	[key=0,
+		edge_type=next,
+		label=Next];
+	153	[contract_name=StockBet,
+		function_fullname="collectOwnerWinnings()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[239, 240, 241]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	155	[contract_name=StockBet,
+		function_fullname="collectOwnerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byOwner()
+
+IRs:
+MODIFIER_CALL, StockBet.byOwner()()",
+		node_expression="byOwner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byOwner()()",
+		node_source_code_lines="[239]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	153 -> 155	[key=0,
+		edge_type=next,
+		label=Next];
+	154	[contract_name=StockBet,
+		function_fullname="collectOwnerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+selfdestruct(address)(owner)
+
+IRs:
+TMP_107(None) = SOLIDITY_CALL selfdestruct(address)(owner)",
+		node_expression="selfdestruct(address)(owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_107(None) = SOLIDITY_CALL selfdestruct(address)(owner)",
+		node_source_code_lines="[240]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	156	[contract_name=StockBet,
+		function_fullname="collectOwnerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.OWNER_WIN)
+
+IRs:
+REF_58(StockBet.State) -> State.OWNER_WIN
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_58)",
+		node_expression="inState(State.OWNER_WIN)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_58(StockBet.State) -> State.OWNER_WIN
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_58)",
+		node_source_code_lines="[239]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	155 -> 156	[key=0,
+		edge_type=next,
+		label=Next];
+	156 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	157	[contract_name=StockBet,
+		function_fullname="collectOwnerWinnings()",
+		label="buggy_45.sol_StockBet_collectOwnerWinnings()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[239, 240, 241]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	157 -> 153	[key=0,
+		edge_type=next,
+		label=Next];
+	158	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[242, 243, 244, 245]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	159	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_110(bool) = tx.origin == owner_txorigin14
+\
+TMP_111(None) = SOLIDITY_CALL require(bool)(TMP_110)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_110(bool) = tx.origin == owner_txorigin14
+TMP_111(None) = SOLIDITY_CALL require(bool)(TMP_110)",
+		node_source_code_lines="[243]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	158 -> 159	[key=0,
+		edge_type=next,
+		label=Next];
+	160	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_112 = CONVERT this to address
+REF_60 -> \
+BALANCE TMP_112
+Transfer dest:_recipient value:REF_60",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_112 = CONVERT this to address
+REF_60 -> BALANCE TMP_112
+Transfer dest:_recipient value:REF_60",
+		node_source_code_lines="[244]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	159 -> 160	[key=0,
+		edge_type=next,
+		label=Next];
+	161	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_45.sol_StockBet_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[242, 243, 244, 245]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	161 -> 158	[key=0,
+		edge_type=next,
+		label=Next];
+	162	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[247, 248, 249, 250, 251, 252]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	168	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+byPlayer()
+
+IRs:
+MODIFIER_CALL, StockBet.byPlayer()()",
+		node_expression="byPlayer()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, StockBet.byPlayer()()",
+		node_source_code_lines="[247]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	162 -> 168	[key=0,
+		edge_type=next,
+		label=Next];
+	163	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: IF
+
+EXPRESSION:
+guesses[result].players[msg.sender] == PaidStatus.NOT_PAID
+
+IRs:
+REF_61(StockBet.Guess) -> guesses[result]
+\
+REF_62(mapping(address => StockBet.PaidStatus)) -> REF_61.players
+REF_63(StockBet.PaidStatus) -> REF_62[msg.sender]
+REF_64(StockBet.PaidStatus) \
+-> PaidStatus.NOT_PAID
+TMP_114(bool) = REF_63 == REF_64
+CONDITION TMP_114",
+		node_expression="guesses[result].players[msg.sender] == PaidStatus.NOT_PAID",
+		node_info_vulnerabilities=None,
+		node_irs="REF_61(StockBet.Guess) -> guesses[result]
+REF_62(mapping(address => StockBet.PaidStatus)) -> REF_61.players
+REF_63(StockBet.PaidStatus) \
+-> REF_62[msg.sender]
+REF_64(StockBet.PaidStatus) -> PaidStatus.NOT_PAID
+TMP_114(bool) = REF_63 == REF_64
+CONDITION TMP_114",
+		node_source_code_lines="[248]",
+		node_type=IF,
+		source_file="buggy_45.sol"];
+	164	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+guesses[result].players[msg.sender] = PaidStatus.PAID
+
+IRs:
+REF_65(StockBet.Guess) -> guesses[\
+result]
+REF_66(mapping(address => StockBet.PaidStatus)) -> REF_65.players
+REF_67(StockBet.PaidStatus) -> REF_66[msg.sender]
+REF_\
+68(StockBet.PaidStatus) -> PaidStatus.PAID
+REF_67 (->guesses) := REF_68(StockBet.PaidStatus)",
+		node_expression="guesses[result].players[msg.sender] = PaidStatus.PAID",
+		node_info_vulnerabilities=None,
+		node_irs="REF_65(StockBet.Guess) -> guesses[result]
+REF_66(mapping(address => StockBet.PaidStatus)) -> REF_65.players
+REF_67(StockBet.PaidStatus) \
+-> REF_66[msg.sender]
+REF_68(StockBet.PaidStatus) -> PaidStatus.PAID
+REF_67 (->guesses) := REF_68(StockBet.PaidStatus)",
+		node_source_code_lines="[249]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	163 -> 164	[key=0,
+		edge_type=if_true,
+		label=True];
+	166	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+revert()()
+
+IRs:
+TMP_116(None) = SOLIDITY_CALL revert()()",
+		node_expression="revert()()",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_116(None) = SOLIDITY_CALL revert()()",
+		node_source_code_lines="[251]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	163 -> 166	[key=0,
+		edge_type=if_false,
+		label=False];
+	165	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+msg.sender.transfer(splitJackpot)
+
+IRs:
+Transfer dest:msg.sender value:splitJackpot",
+		node_expression="msg.sender.transfer(splitJackpot)",
+		node_info_vulnerabilities=None,
+		node_irs="Transfer dest:msg.sender value:splitJackpot",
+		node_source_code_lines="[250]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	164 -> 165	[key=0,
+		edge_type=next,
+		label=Next];
+	167	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[248, 249, 250, 251]",
+		node_type=END_IF,
+		source_file="buggy_45.sol"];
+	165 -> 167	[key=0,
+		edge_type=next,
+		label=Next];
+	166 -> 167	[key=0,
+		edge_type=next,
+		label=Next];
+	169	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+inState(State.PLAYERS_WIN)
+
+IRs:
+REF_70(StockBet.State) -> State.PLAYERS_WIN
+MODIFIER_CALL, StockBet.inState(\
+StockBet.State)(REF_70)",
+		node_expression="inState(State.PLAYERS_WIN)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_70(StockBet.State) -> State.PLAYERS_WIN
+MODIFIER_CALL, StockBet.inState(StockBet.State)(REF_70)",
+		node_source_code_lines="[247]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	168 -> 169	[key=0,
+		edge_type=next,
+		label=Next];
+	169 -> 163	[key=0,
+		edge_type=next,
+		label=Next];
+	170	[contract_name=StockBet,
+		function_fullname="collectPlayerWinnings()",
+		label="buggy_45.sol_StockBet_collectPlayerWinnings()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[247, 248, 249, 250, 251, 252]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	170 -> 162	[key=0,
+		edge_type=next,
+		label=Next];
+	171	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[253, 254, 255, 256]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	172	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_119(bool) = tx.origin == owner_txorigin30
+\
+TMP_120(None) = SOLIDITY_CALL require(bool)(TMP_119)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_119(bool) = tx.origin == owner_txorigin30
+TMP_120(None) = SOLIDITY_CALL require(bool)(TMP_119)",
+		node_source_code_lines="[254]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	171 -> 172	[key=0,
+		edge_type=next,
+		label=Next];
+	173	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_121 = CONVERT this to address
+REF_72 -> \
+BALANCE TMP_121
+Transfer dest:_recipient value:REF_72",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_121 = CONVERT this to address
+REF_72 -> BALANCE TMP_121
+Transfer dest:_recipient value:REF_72",
+		node_source_code_lines="[255]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	172 -> 173	[key=0,
+		edge_type=next,
+		label=Next];
+	174	[contract_name=StockBet,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_45.sol_StockBet_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[253, 254, 255, 256]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	174 -> 171	[key=0,
+		edge_type=next,
+		label=Next];
+	175	[contract_name=StockBet,
+		function_fullname="getBalance()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[258, 259, 260]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	176	[contract_name=StockBet,
+		function_fullname="getBalance()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+address(this).balance
+
+IRs:
+TMP_123 = CONVERT this to address
+REF_73 -> BALANCE TMP_123
+RETURN REF_\
+73",
+		node_expression="address(this).balance",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_123 = CONVERT this to address
+REF_73 -> BALANCE TMP_123
+RETURN REF_73",
+		node_source_code_lines="[259]",
+		node_type=RETURN,
+		source_file="buggy_45.sol"];
+	175 -> 176	[key=0,
+		edge_type=next,
+		label=Next];
+	177	[contract_name=StockBet,
+		function_fullname="getBalance()",
+		label="buggy_45.sol_StockBet_getBalance()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[258, 259, 260]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	177 -> 175	[key=0,
+		edge_type=next,
+		label=Next];
+	178	[contract_name=StockBet,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[261, 262, 263]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	179	[contract_name=StockBet,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_124(bool) = tx.origin == owner_txorigin8
+\
+TMP_125(None) = SOLIDITY_CALL require(bool)(TMP_124)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs="TMP_124(bool) = tx.origin == owner_txorigin8
+TMP_125(None) = SOLIDITY_CALL require(bool)(TMP_124)",
+		node_source_code_lines="[262]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	178 -> 179	[key=0,
+		edge_type=next,
+		label=Next];
+	180	[contract_name=StockBet,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_45.sol_StockBet_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[261, 262, 263]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	180 -> 178	[key=0,
+		edge_type=next,
+		label=Next];
+	181	[contract_name=StockBet,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+UP = 1
+
+IRs:
+UP(uint256) := 1(uint256)",
+		node_expression="UP = 1",
+		node_info_vulnerabilities=None,
+		node_irs="UP(uint256) := 1(uint256)",
+		node_source_code_lines="[111]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_45.sol"];
+	182	[contract_name=StockBet,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+DOWN = 0
+
+IRs:
+DOWN(uint256) := 0(uint256)",
+		node_expression="DOWN = 0",
+		node_info_vulnerabilities=None,
+		node_irs="DOWN(uint256) := 0(uint256)",
+		node_source_code_lines="[116]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="buggy_45.sol"];
+	181 -> 182	[key=0,
+		edge_type=next,
+		label=Next];
+	183	[contract_name=StockBet,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="buggy_45.sol_StockBet_slitherConstructorConstantVariables()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [9, 10, 11, 12, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 32, 33, 34, 35, 38, 39, 40, 41, 43, 44, 45, 46, \
+64, 65, 66, 68, 69, 70, 71, 73, 74, 75, 76, 79, 80, 81, 82, 85, 86, 87, 88, 91, 92, 93, 94, 96, 97, 98, 99, 101, 102, 103, 104, \
+107, 108, 109, 110, 112, 113, 114, 115, 151, 152, 153, 154, 161, 162, 163, 171, 172, 173, 180, 181, 182, 183, 193, 194, 195, 205, \
+206, 207, 208, 234, 235, 236, 237, 242, 243, 244, 245, 253, 254, 255, 256, 261, 262, 263], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, \
+40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, \
+72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, \
+104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, \
+130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, \
+156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, \
+182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, \
+208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, \
+234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, \
+260, 261, 262, 263, 264, 265]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	183 -> 181	[key=0,
+		edge_type=next,
+		label=Next];
+	184	[contract_name=StockBet,
+		function_fullname="byPlayer()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[120, 121, 122, 123]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	185	[contract_name=StockBet,
+		function_fullname="byPlayer()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender != oracle)
+
+IRs:
+TMP_126(bool) = msg.sender != oracle
+TMP_127(None) = \
+SOLIDITY_CALL require(bool)(TMP_126)",
+		node_expression="require(bool)(msg.sender != oracle)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_126(bool) = msg.sender != oracle
+TMP_127(None) = SOLIDITY_CALL require(bool)(TMP_126)",
+		node_source_code_lines="[121]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	184 -> 185	[key=0,
+		edge_type=next,
+		label=Next];
+	186	[contract_name=StockBet,
+		function_fullname="byPlayer()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[122]",
+		node_type=_,
+		source_file="buggy_45.sol"];
+	185 -> 186	[key=0,
+		edge_type=next,
+		label=Next];
+	187	[contract_name=StockBet,
+		function_fullname="byPlayer()",
+		label="buggy_45.sol_StockBet_byPlayer()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[120, 121, 122, 123]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	187 -> 184	[key=0,
+		edge_type=next,
+		label=Next];
+	188	[contract_name=StockBet,
+		function_fullname="byOwner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[125, 126, 127, 128]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	189	[contract_name=StockBet,
+		function_fullname="byOwner()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == owner)
+
+IRs:
+TMP_128(bool) = msg.sender == owner
+TMP_129(None) = \
+SOLIDITY_CALL require(bool)(TMP_128)",
+		node_expression="require(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_128(bool) = msg.sender == owner
+TMP_129(None) = SOLIDITY_CALL require(bool)(TMP_128)",
+		node_source_code_lines="[126]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	188 -> 189	[key=0,
+		edge_type=next,
+		label=Next];
+	190	[contract_name=StockBet,
+		function_fullname="byOwner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[127]",
+		node_type=_,
+		source_file="buggy_45.sol"];
+	189 -> 190	[key=0,
+		edge_type=next,
+		label=Next];
+	191	[contract_name=StockBet,
+		function_fullname="byOwner()",
+		label="buggy_45.sol_StockBet_byOwner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[125, 126, 127, 128]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	191 -> 188	[key=0,
+		edge_type=next,
+		label=Next];
+	192	[contract_name=StockBet,
+		function_fullname="byOracle()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	193	[contract_name=StockBet,
+		function_fullname="byOracle()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == oracle)
+
+IRs:
+TMP_130(bool) = msg.sender == oracle
+TMP_131(None) = \
+SOLIDITY_CALL require(bool)(TMP_130)",
+		node_expression="require(bool)(msg.sender == oracle)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_130(bool) = msg.sender == oracle
+TMP_131(None) = SOLIDITY_CALL require(bool)(TMP_130)",
+		node_source_code_lines="[131]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	192 -> 193	[key=0,
+		edge_type=next,
+		label=Next];
+	194	[contract_name=StockBet,
+		function_fullname="byOracle()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[132]",
+		node_type=_,
+		source_file="buggy_45.sol"];
+	193 -> 194	[key=0,
+		edge_type=next,
+		label=Next];
+	195	[contract_name=StockBet,
+		function_fullname="byOracle()",
+		label="buggy_45.sol_StockBet_byOracle()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	195 -> 192	[key=0,
+		edge_type=next,
+		label=Next];
+	196	[contract_name=StockBet,
+		function_fullname="inState(StockBet.State)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[135, 136, 137, 138]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_45.sol"];
+	197	[contract_name=StockBet,
+		function_fullname="inState(StockBet.State)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(state == expected)
+
+IRs:
+TMP_132(bool) = state == expected
+TMP_133(None) = SOLIDITY_\
+CALL require(bool)(TMP_132)",
+		node_expression="require(bool)(state == expected)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_132(bool) = state == expected
+TMP_133(None) = SOLIDITY_CALL require(bool)(TMP_132)",
+		node_source_code_lines="[136]",
+		node_type=EXPRESSION,
+		source_file="buggy_45.sol"];
+	196 -> 197	[key=0,
+		edge_type=next,
+		label=Next];
+	198	[contract_name=StockBet,
+		function_fullname="inState(StockBet.State)",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[137]",
+		node_type=_,
+		source_file="buggy_45.sol"];
+	197 -> 198	[key=0,
+		edge_type=next,
+		label=Next];
+	199	[contract_name=StockBet,
+		function_fullname="inState(StockBet.State)",
+		label="buggy_45.sol_StockBet_inState(StockBet.State)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[135, 136, 137, 138]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_45.sol"];
+	199 -> 196	[key=0,
+		edge_type=next,
+		label=Next];
+}

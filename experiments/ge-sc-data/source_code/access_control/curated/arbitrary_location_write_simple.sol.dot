@@ -1,0 +1,331 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Wallet,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=ENTRY_POINT,
+		source_file="arbitrary_location_write_simple.sol"];
+	1	[contract_name=Wallet,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+bonusCodes = new uint256[](0)
+
+IRs:
+TMP_1 = new uint256[](0)
+bonusCodes(uint256[]) := TMP_1(uint256)",
+		node_expression="bonusCodes = new uint256[](0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_1 = new uint256[](0)
+bonusCodes(uint256[]) := TMP_1(uint256)",
+		node_source_code_lines="[14]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Wallet,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = msg.sender
+
+IRs:
+owner(address) := msg.sender(address)",
+		node_expression="owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := msg.sender(address)",
+		node_source_code_lines="[15]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Wallet,
+		function_fullname="constructor()",
+		label="arbitrary_location_write_simple.sol_Wallet_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[13, 14, 15, 16]",
+		node_type=FUNCTION_NAME,
+		source_file="arbitrary_location_write_simple.sol"];
+	3 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=Wallet,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[18, 19]",
+		node_type=ENTRY_POINT,
+		source_file="arbitrary_location_write_simple.sol"];
+	5	[contract_name=Wallet,
+		function_fullname="fallback()",
+		label="arbitrary_location_write_simple.sol_Wallet_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[18, 19]",
+		node_type=FUNCTION_NAME,
+		source_file="arbitrary_location_write_simple.sol"];
+	5 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=Wallet,
+		function_fullname="PushBonusCode(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[21, 22, 23]",
+		node_type=ENTRY_POINT,
+		source_file="arbitrary_location_write_simple.sol"];
+	7	[contract_name=Wallet,
+		function_fullname="PushBonusCode(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+bonusCodes.push(c)
+
+IRs:
+REF_1 -> LENGTH bonusCodes
+TMP_3(uint256) := REF_1(uint256)
+TMP_4(uint256) = \
+TMP_3 + 1
+REF_1 (->bonusCodes) := TMP_4(uint256)
+REF_2(uint256) -> bonusCodes[TMP_3]
+REF_2 (->bonusCodes) := c(uint256)",
+		node_expression="bonusCodes.push(c)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_1 -> LENGTH bonusCodes
+TMP_3(uint256) := REF_1(uint256)
+TMP_4(uint256) = TMP_3 + 1
+REF_1 (->bonusCodes) := TMP_4(uint256)
+REF_\
+2(uint256) -> bonusCodes[TMP_3]
+REF_2 (->bonusCodes) := c(uint256)",
+		node_source_code_lines="[22]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=Wallet,
+		function_fullname="PushBonusCode(uint256)",
+		label="arbitrary_location_write_simple.sol_Wallet_PushBonusCode(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[21, 22, 23]",
+		node_type=FUNCTION_NAME,
+		source_file="arbitrary_location_write_simple.sol"];
+	8 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	9	[contract_name=Wallet,
+		function_fullname="PopBonusCode()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28]",
+		node_type=ENTRY_POINT,
+		source_file="arbitrary_location_write_simple.sol"];
+	10	[contract_name=Wallet,
+		function_fullname="PopBonusCode()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(0 <= bonusCodes.length)
+
+IRs:
+REF_3 -> LENGTH bonusCodes
+TMP_5(bool) = 0 <= REF_\
+3
+TMP_6(None) = SOLIDITY_CALL require(bool)(TMP_5)",
+		node_expression="require(bool)(0 <= bonusCodes.length)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_3 -> LENGTH bonusCodes
+TMP_5(bool) = 0 <= REF_3
+TMP_6(None) = SOLIDITY_CALL require(bool)(TMP_5)",
+		node_source_code_lines="[26]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=Wallet,
+		function_fullname="PopBonusCode()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+bonusCodes.length --
+
+IRs:
+REF_4 -> LENGTH bonusCodes
+TMP_7(uint256) := REF_4(uint256)
+REF_4(\
+-> bonusCodes) = REF_4 - 1",
+		node_expression="bonusCodes.length --",
+		node_info_vulnerabilities="[{'lines': [27], 'category': 'access_control'}]",
+		node_irs="REF_4 -> LENGTH bonusCodes
+TMP_7(uint256) := REF_4(uint256)
+REF_4(-> bonusCodes) = REF_4 - 1",
+		node_source_code_lines="[27]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	10 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=Wallet,
+		function_fullname="PopBonusCode()",
+		label="arbitrary_location_write_simple.sol_Wallet_PopBonusCode()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [27], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[25, 26, 27, 28]",
+		node_type=FUNCTION_NAME,
+		source_file="arbitrary_location_write_simple.sol"];
+	12 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	13	[contract_name=Wallet,
+		function_fullname="UpdateBonusCodeAt(uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[30, 31, 32, 33]",
+		node_type=ENTRY_POINT,
+		source_file="arbitrary_location_write_simple.sol"];
+	14	[contract_name=Wallet,
+		function_fullname="UpdateBonusCodeAt(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(idx < bonusCodes.length)
+
+IRs:
+REF_5 -> LENGTH bonusCodes
+TMP_8(bool) = idx < REF_\
+5
+TMP_9(None) = SOLIDITY_CALL require(bool)(TMP_8)",
+		node_expression="require(bool)(idx < bonusCodes.length)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_5 -> LENGTH bonusCodes
+TMP_8(bool) = idx < REF_5
+TMP_9(None) = SOLIDITY_CALL require(bool)(TMP_8)",
+		node_source_code_lines="[31]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	13 -> 14	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=Wallet,
+		function_fullname="UpdateBonusCodeAt(uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+bonusCodes[idx] = c
+
+IRs:
+REF_6(uint256) -> bonusCodes[idx]
+REF_6 (->bonusCodes) := c(uint256)",
+		node_expression="bonusCodes[idx] = c",
+		node_info_vulnerabilities=None,
+		node_irs="REF_6(uint256) -> bonusCodes[idx]
+REF_6 (->bonusCodes) := c(uint256)",
+		node_source_code_lines="[32]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	14 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	16	[contract_name=Wallet,
+		function_fullname="UpdateBonusCodeAt(uint256,uint256)",
+		label="arbitrary_location_write_simple.sol_Wallet_UpdateBonusCodeAt(uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[30, 31, 32, 33]",
+		node_type=FUNCTION_NAME,
+		source_file="arbitrary_location_write_simple.sol"];
+	16 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	17	[contract_name=Wallet,
+		function_fullname="Destroy()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[35, 36, 37, 38]",
+		node_type=ENTRY_POINT,
+		source_file="arbitrary_location_write_simple.sol"];
+	18	[contract_name=Wallet,
+		function_fullname="Destroy()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == owner)
+
+IRs:
+TMP_10(bool) = msg.sender == owner
+TMP_11(None) = SOLIDITY_\
+CALL require(bool)(TMP_10)",
+		node_expression="require(bool)(msg.sender == owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_10(bool) = msg.sender == owner
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_source_code_lines="[36]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	17 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=Wallet,
+		function_fullname="Destroy()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+selfdestruct(address)(msg.sender)
+
+IRs:
+TMP_12(None) = SOLIDITY_CALL selfdestruct(address)(msg.sender)",
+		node_expression="selfdestruct(address)(msg.sender)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_12(None) = SOLIDITY_CALL selfdestruct(address)(msg.sender)",
+		node_source_code_lines="[37]",
+		node_type=EXPRESSION,
+		source_file="arbitrary_location_write_simple.sol"];
+	18 -> 19	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=Wallet,
+		function_fullname="Destroy()",
+		label="arbitrary_location_write_simple.sol_Wallet_Destroy()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[35, 36, 37, 38]",
+		node_type=FUNCTION_NAME,
+		source_file="arbitrary_location_write_simple.sol"];
+	20 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+}

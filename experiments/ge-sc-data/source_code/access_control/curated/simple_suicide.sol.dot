@@ -1,0 +1,43 @@
+digraph "" {
+	node [label="\N"];
+	"SimpleSuicide_sudicideAnyone()_0"	[contract_name=SimpleSuicide,
+		function_fullname="sudicideAnyone()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [12, 13], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[12, 13, 14]",
+		node_type=ENTRY_POINT,
+		source_file="simple_suicide.sol"];
+	"SimpleSuicide_sudicideAnyone()_1"	[contract_name=SimpleSuicide,
+		function_fullname="sudicideAnyone()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+selfdestruct(address)(msg.sender)
+
+IRs:
+TMP_0(None) = SOLIDITY_CALL selfdestruct(address)(msg.sender)",
+		node_expression="selfdestruct(address)(msg.sender)",
+		node_info_vulnerabilities="[{'lines': [12, 13], 'category': 'access_control'}]",
+		node_irs="TMP_0(None) = SOLIDITY_CALL selfdestruct(address)(msg.sender)",
+		node_source_code_lines="[13]",
+		node_type=EXPRESSION,
+		source_file="simple_suicide.sol"];
+	"SimpleSuicide_sudicideAnyone()_0" -> "SimpleSuicide_sudicideAnyone()_1"	[key=0,
+		edge_type=next,
+		label=Next];
+	"SimpleSuicide_sudicideAnyone()_simple_suicide.sol_SimpleSuicide_sudicideAnyone()"	[contract_name=SimpleSuicide,
+		function_fullname="sudicideAnyone()",
+		label="simple_suicide.sol_SimpleSuicide_sudicideAnyone()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [12, 13], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[12, 13, 14]",
+		node_type=FUNCTION_NAME,
+		source_file="simple_suicide.sol"];
+	"SimpleSuicide_sudicideAnyone()_simple_suicide.sol_SimpleSuicide_sudicideAnyone()" -> "SimpleSuicide_sudicideAnyone()_0"	[key=0,
+		edge_type=next,
+		label=Next];
+}

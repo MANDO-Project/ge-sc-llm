@@ -1,0 +1,12 @@
+digraph  {
+13 [label="2_ mapping (address => uint) userBalances;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [label="3_ function withdrawBalance() {  \n		uint amountToWithdraw = userBalances[msg.sender];\n		userBalances[msg.sender] = 0;\n		msg.sender.send(amountToWithdraw);\n	}\n19-function_definition-4-8", method="withdrawBalance()", type_label=function_definition];
+22 [label="4_ uint amountToWithdraw = userBalances[msg.sender];\n22-new_variable-5-5", method="withdrawBalance()", type_label=new_variable];
+32 [label="5_ userBalances[msg.sender] = 0;\n32-expression_statement-6-6", method="withdrawBalance()", type_label=expression_statement];
+40 [label="6_ msg.sender.send(amountToWithdraw);\n40-expression_statement-7-7", method="withdrawBalance()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+19 -> 22  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+22 -> 32  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 40  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

@@ -1,0 +1,10 @@
+digraph  {
+13 [label="2_ bytes32 constant public hash = 0xb5b5b97fafd9855eec9b41f74dfb6c38f5951141f9a3ecd7f44d5479b630ee0a;\n13-new_variable-3-3", method="", type_label=new_variable];
+21 [label="4_ function solve(string solution) public {\n        require(hash == sha3(solution));\n        msg.sender.transfer(1000 ether);\n    }\n21-function_definition-5-8", method="solve(string solution)", type_label=function_definition];
+29 [label="5_ require(hash == sha3(solution));\n29-expression_statement-6-6", method="solve(string solution)", type_label=expression_statement];
+39 [label="6_ msg.sender.transfer(1000 ether);\n39-expression_statement-7-7", method="solve(string solution)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+21 -> 29  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+29 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

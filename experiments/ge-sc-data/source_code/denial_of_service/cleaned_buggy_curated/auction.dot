@@ -1,0 +1,21 @@
+digraph  {
+13 [label="2_ address currentFrontrunner;\n13-new_variable-3-3", method="", type_label=new_variable];
+17 [label="3_ uint currentBid;\n17-new_variable-4-4", method="", type_label=new_variable];
+21 [label="4_ function bid() payable {\n    require(msg.value > currentBid);\n    if (currentFrontrunner != 0) {\n      require(currentFrontrunner.send(currentBid));\n    }\n    currentFrontrunner = msg.sender;\n    currentBid         = msg.value;\n  }\n21-function_definition-5-12", method="bid()", type_label=function_definition];
+25 [label="5_ require(msg.value > currentBid);\n25-expression_statement-6-6", method="bid()", type_label=expression_statement];
+34 [label="6_ if_currentFrontrunner != 0\n34-if-7-9", method="bid()", type_label=if];
+90 [label="6_ end_if", method="bid()", type_label=end_if];
+39 [label="7_ require(currentFrontrunner.send(currentBid));\n39-expression_statement-8-8", method="bid()", type_label=expression_statement];
+49 [label="9_ currentFrontrunner = msg.sender;\n49-expression_statement-10-10", method="bid()", type_label=expression_statement];
+55 [label="10_ currentBid         = msg.value;\n55-expression_statement-11-11", method="bid()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 17  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+21 -> 25  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+25 -> 34  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 39  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+34 -> 90  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+90 -> 49  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+39 -> 90  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+49 -> 55  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

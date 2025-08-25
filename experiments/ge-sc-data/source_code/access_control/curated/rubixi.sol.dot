@@ -1,0 +1,2022 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Rubixi,
+		function_fullname="DynamicPyramid()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [23, 24], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	1	[contract_name=Rubixi,
+		function_fullname="DynamicPyramid()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+creator = msg.sender
+
+IRs:
+creator(address) := msg.sender(address)",
+		node_expression="creator = msg.sender",
+		node_info_vulnerabilities="[{'lines': [23, 24], 'category': 'access_control'}]",
+		node_irs="creator(address) := msg.sender(address)",
+		node_source_code_lines="[24]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Rubixi,
+		function_fullname="DynamicPyramid()",
+		label="rubixi.sol_Rubixi_DynamicPyramid()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [23, 24], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[23, 24, 25]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	2 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Rubixi,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[39, 40, 41]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	4	[contract_name=Rubixi,
+		function_fullname="fallback()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+init()
+
+IRs:
+INTERNAL_CALL, Rubixi.init()()",
+		node_expression="init()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, Rubixi.init()()",
+		node_source_code_lines="[40]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	3 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Rubixi,
+		function_fullname="fallback()",
+		label="rubixi.sol_Rubixi_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[39, 40, 41]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	5 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	7	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: IF
+
+EXPRESSION:
+msg.value < 1000000000000000000
+
+IRs:
+TMP_1(bool) = msg.value < 1000000000000000000
+CONDITION TMP_1",
+		node_expression="msg.value < 1000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_1(bool) = msg.value < 1000000000000000000
+CONDITION TMP_1",
+		node_source_code_lines="[46]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+collectedFees += msg.value
+
+IRs:
+collectedFees(uint256) = collectedFees + msg.value",
+		node_expression="collectedFees += msg.value",
+		node_info_vulnerabilities=None,
+		node_irs="collectedFees(uint256) = collectedFees + msg.value",
+		node_source_code_lines="[47]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	7 -> 8	[key=0,
+		edge_type=if_true,
+		label=True];
+	10	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[46, 47, 48, 49]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	7 -> 10	[key=0,
+		edge_type=if_false,
+		label=False];
+	9	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[48]",
+		node_type=RETURN,
+		source_file="rubixi.sol"];
+	8 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+_fee = feePercent
+
+IRs:
+_fee(uint256) := feePercent(uint256)",
+		node_expression="_fee = feePercent",
+		node_info_vulnerabilities=None,
+		node_irs="_fee(uint256) := feePercent(uint256)",
+		node_source_code_lines="[51]",
+		node_type="NEW VARIABLE",
+		source_file="rubixi.sol"];
+	10 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: IF
+
+EXPRESSION:
+msg.value >= 50000000000000000000
+
+IRs:
+TMP_2(bool) = msg.value >= 50000000000000000000
+CONDITION TMP_\
+2",
+		node_expression="msg.value >= 50000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_2(bool) = msg.value >= 50000000000000000000
+CONDITION TMP_2",
+		node_source_code_lines="[53]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	11 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	13	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_fee /= 2
+
+IRs:
+_fee(uint256) = _fee / 2",
+		node_expression="_fee /= 2",
+		node_info_vulnerabilities=None,
+		node_irs="_fee(uint256) = _fee / 2",
+		node_source_code_lines="[53]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	12 -> 13	[key=0,
+		edge_type=if_true,
+		label=True];
+	14	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[53]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	12 -> 14	[key=0,
+		edge_type=if_false,
+		label=False];
+	13 -> 14	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+addPayout(_fee)
+
+IRs:
+INTERNAL_CALL, Rubixi.addPayout(uint256)(_fee)",
+		node_expression="addPayout(_fee)",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, Rubixi.addPayout(uint256)(_fee)",
+		node_source_code_lines="[55]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	14 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	16	[contract_name=Rubixi,
+		function_fullname="init()",
+		label="rubixi.sol_Rubixi_init()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	16 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	17	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	18	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+participants.push(Participant(msg.sender,(msg.value * pyramidMultiplier) / 100))
+
+IRs:
+TMP_4(\
+uint256) = msg.value * pyramidMultiplier
+TMP_5(uint256) = TMP_4 / 100
+TMP_6 = new Participant(msg.sender,TMP_5)
+REF_1 -> LENGTH \
+participants
+TMP_8(uint256) := REF_1(uint256)
+TMP_9(uint256) = TMP_8 + 1
+REF_1 (->participants) := TMP_9(uint256)
+REF_2(Rubixi.Participant) \
+-> participants[TMP_8]
+REF_2 (->participants) := TMP_6(Rubixi.Participant)",
+		node_expression="participants.push(Participant(msg.sender,(msg.value * pyramidMultiplier) / 100))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_4(uint256) = msg.value * pyramidMultiplier
+TMP_5(uint256) = TMP_4 / 100
+TMP_6 = new Participant(msg.sender,TMP_5)
+REF_1 -> LENGTH \
+participants
+TMP_8(uint256) := REF_1(uint256)
+TMP_9(uint256) = TMP_8 + 1
+REF_1 (->participants) := TMP_9(uint256)
+REF_2(Rubixi.Participant) \
+-> participants[TMP_8]
+REF_2 (->participants) := TMP_6(Rubixi.Participant)",
+		node_source_code_lines="[61]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	17 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+participants.length == 10
+
+IRs:
+REF_3 -> LENGTH participants
+TMP_10(bool) = REF_3 == 10
+CONDITION TMP_\
+10",
+		node_expression="participants.length == 10",
+		node_info_vulnerabilities=None,
+		node_irs="REF_3 -> LENGTH participants
+TMP_10(bool) = REF_3 == 10
+CONDITION TMP_10",
+		node_source_code_lines="[64]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	18 -> 19	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pyramidMultiplier = 200
+
+IRs:
+pyramidMultiplier(uint256) := 200(uint256)",
+		node_expression="pyramidMultiplier = 200",
+		node_info_vulnerabilities=None,
+		node_irs="pyramidMultiplier(uint256) := 200(uint256)",
+		node_source_code_lines="[64]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	19 -> 20	[key=0,
+		edge_type=if_true,
+		label=True];
+	21	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+participants.length == 25
+
+IRs:
+REF_4 -> LENGTH participants
+TMP_11(bool) = REF_4 == 25
+CONDITION TMP_\
+11",
+		node_expression="participants.length == 25",
+		node_info_vulnerabilities=None,
+		node_irs="REF_4 -> LENGTH participants
+TMP_11(bool) = REF_4 == 25
+CONDITION TMP_11",
+		node_source_code_lines="[65]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	19 -> 21	[key=0,
+		edge_type=if_false,
+		label=False];
+	24	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[64, 65]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	20 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pyramidMultiplier = 150
+
+IRs:
+pyramidMultiplier(uint256) := 150(uint256)",
+		node_expression="pyramidMultiplier = 150",
+		node_info_vulnerabilities=None,
+		node_irs="pyramidMultiplier(uint256) := 150(uint256)",
+		node_source_code_lines="[65]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	21 -> 22	[key=0,
+		edge_type=if_true,
+		label=True];
+	23	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[65]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	21 -> 23	[key=0,
+		edge_type=if_false,
+		label=False];
+	22 -> 23	[key=0,
+		edge_type=next,
+		label=Next];
+	23 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	25	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balance += (msg.value * (100 - _fee)) / 100
+
+IRs:
+TMP_12(uint256) = 100 - _fee
+TMP_13(uint256) = \
+msg.value * TMP_12
+TMP_14(uint256) = TMP_13 / 100
+balance(uint256) = balance + TMP_14",
+		node_expression="balance += (msg.value * (100 - _fee)) / 100",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_12(uint256) = 100 - _fee
+TMP_13(uint256) = msg.value * TMP_12
+TMP_14(uint256) = TMP_13 / 100
+balance(uint256) = balance + TMP_\
+14",
+		node_source_code_lines="[68]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	24 -> 25	[key=0,
+		edge_type=next,
+		label=Next];
+	26	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+collectedFees += (msg.value * _fee) / 100
+
+IRs:
+TMP_15(uint256) = msg.value * _fee
+TMP_16(uint256) = \
+TMP_15 / 100
+collectedFees(uint256) = collectedFees + TMP_16",
+		node_expression="collectedFees += (msg.value * _fee) / 100",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_15(uint256) = msg.value * _fee
+TMP_16(uint256) = TMP_15 / 100
+collectedFees(uint256) = collectedFees + TMP_16",
+		node_source_code_lines="[69]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	25 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	27	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[72, 73, 74, 75, 76, 77, 78]",
+		node_type=BEGIN_LOOP,
+		source_file="rubixi.sol"];
+	26 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+balance > participants[payoutOrder].payout
+
+IRs:
+REF_5(Rubixi.Participant) -> participants[payoutOrder]
+\
+REF_6(uint256) -> REF_5.payout
+TMP_17(bool) = balance > REF_6
+CONDITION TMP_17",
+		node_expression="balance > participants[payoutOrder].payout",
+		node_info_vulnerabilities=None,
+		node_irs="REF_5(Rubixi.Participant) -> participants[payoutOrder]
+REF_6(uint256) -> REF_5.payout
+TMP_17(bool) = balance > REF_6
+CONDITION TMP_\
+17",
+		node_source_code_lines="[72]",
+		node_type=IF_LOOP,
+		source_file="rubixi.sol"];
+	27 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+payoutToSend = participants[payoutOrder].payout
+
+IRs:
+REF_7(Rubixi.Participant) -> participants[\
+payoutOrder]
+REF_8(uint256) -> REF_7.payout
+payoutToSend(uint256) := REF_8(uint256)",
+		node_expression="payoutToSend = participants[payoutOrder].payout",
+		node_info_vulnerabilities=None,
+		node_irs="REF_7(Rubixi.Participant) -> participants[payoutOrder]
+REF_8(uint256) -> REF_7.payout
+payoutToSend(uint256) := REF_8(uint256)",
+		node_source_code_lines="[73]",
+		node_type="NEW VARIABLE",
+		source_file="rubixi.sol"];
+	28 -> 29	[key=0,
+		edge_type=if_true,
+		label=True];
+	33	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[72, 73, 74, 75, 76, 77, 78]",
+		node_type=END_LOOP,
+		source_file="rubixi.sol"];
+	28 -> 33	[key=0,
+		edge_type=if_false,
+		label=False];
+	30	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+participants[payoutOrder].etherAddress.send(payoutToSend)
+
+IRs:
+REF_9(Rubixi.Participant) -> \
+participants[payoutOrder]
+REF_10(address) -> REF_9.etherAddress
+TMP_18 = SEND dest:REF_10 value:payoutToSend",
+		node_expression="participants[payoutOrder].etherAddress.send(payoutToSend)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_9(Rubixi.Participant) -> participants[payoutOrder]
+REF_10(address) -> REF_9.etherAddress
+TMP_18 = SEND dest:REF_10 value:payoutToSend",
+		node_source_code_lines="[74]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	29 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	31	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balance -= participants[payoutOrder].payout
+
+IRs:
+REF_12(Rubixi.Participant) -> participants[\
+payoutOrder]
+REF_13(uint256) -> REF_12.payout
+balance(uint256) = balance - REF_13",
+		node_expression="balance -= participants[payoutOrder].payout",
+		node_info_vulnerabilities=None,
+		node_irs="REF_12(Rubixi.Participant) -> participants[payoutOrder]
+REF_13(uint256) -> REF_12.payout
+balance(uint256) = balance - REF_13",
+		node_source_code_lines="[76]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+payoutOrder += 1
+
+IRs:
+payoutOrder(uint256) = payoutOrder + 1",
+		node_expression="payoutOrder += 1",
+		node_info_vulnerabilities=None,
+		node_irs="payoutOrder(uint256) = payoutOrder + 1",
+		node_source_code_lines="[77]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	31 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	32 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=Rubixi,
+		function_fullname="addPayout(uint256)",
+		label="rubixi.sol_Rubixi_addPayout(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	34 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	35	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[82, 83, 84, 85, 86, 87]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	41	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_source_code_lines="[82]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	35 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	36	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: IF
+
+EXPRESSION:
+collectedFees == 0
+
+IRs:
+TMP_19(bool) = collectedFees == 0
+CONDITION TMP_19",
+		node_expression="collectedFees == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_19(bool) = collectedFees == 0
+CONDITION TMP_19",
+		node_source_code_lines="[83]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	37	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[83]",
+		node_type=THROW,
+		source_file="rubixi.sol"];
+	36 -> 37	[key=0,
+		edge_type=if_true,
+		label=True];
+	38	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[83]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	36 -> 38	[key=0,
+		edge_type=if_false,
+		label=False];
+	39	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+creator.send(collectedFees)
+
+IRs:
+TMP_20 = SEND dest:creator value:collectedFees",
+		node_expression="creator.send(collectedFees)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_20 = SEND dest:creator value:collectedFees",
+		node_source_code_lines="[85]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	38 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	40	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+collectedFees = 0
+
+IRs:
+collectedFees(uint256) := 0(uint256)",
+		node_expression="collectedFees = 0",
+		node_info_vulnerabilities=None,
+		node_irs="collectedFees(uint256) := 0(uint256)",
+		node_source_code_lines="[86]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	39 -> 40	[key=0,
+		edge_type=next,
+		label=Next];
+	41 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	42	[contract_name=Rubixi,
+		function_fullname="collectAllFees()",
+		label="rubixi.sol_Rubixi_collectAllFees()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[82, 83, 84, 85, 86, 87]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	42 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[89, 90, 91, 92, 93, 94, 95, 96, 97]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	53	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_source_code_lines="[89]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	43 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	44	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_amt *= 1000000000000000000
+
+IRs:
+_amt(uint256) = _amt * 1000000000000000000",
+		node_expression="_amt *= 1000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="_amt(uint256) = _amt * 1000000000000000000",
+		node_source_code_lines="[90]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	45	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+_amt > collectedFees
+
+IRs:
+TMP_22(bool) = _amt > collectedFees
+CONDITION TMP_22",
+		node_expression="_amt > collectedFees",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_22(bool) = _amt > collectedFees
+CONDITION TMP_22",
+		node_source_code_lines="[91]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	44 -> 45	[key=0,
+		edge_type=next,
+		label=Next];
+	46	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+collectAllFees()
+
+IRs:
+INTERNAL_CALL, Rubixi.collectAllFees()()",
+		node_expression="collectAllFees()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, Rubixi.collectAllFees()()",
+		node_source_code_lines="[91]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	45 -> 46	[key=0,
+		edge_type=if_true,
+		label=True];
+	47	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[91]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	45 -> 47	[key=0,
+		edge_type=if_false,
+		label=False];
+	46 -> 47	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+collectedFees == 0
+
+IRs:
+TMP_24(bool) = collectedFees == 0
+CONDITION TMP_24",
+		node_expression="collectedFees == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_24(bool) = collectedFees == 0
+CONDITION TMP_24",
+		node_source_code_lines="[93]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	47 -> 48	[key=0,
+		edge_type=next,
+		label=Next];
+	49	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93]",
+		node_type=THROW,
+		source_file="rubixi.sol"];
+	48 -> 49	[key=0,
+		edge_type=if_true,
+		label=True];
+	50	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[93]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	48 -> 50	[key=0,
+		edge_type=if_false,
+		label=False];
+	51	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+creator.send(_amt)
+
+IRs:
+TMP_25 = SEND dest:creator value:_amt",
+		node_expression="creator.send(_amt)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_25 = SEND dest:creator value:_amt",
+		node_source_code_lines="[95]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	50 -> 51	[key=0,
+		edge_type=next,
+		label=Next];
+	52	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+collectedFees -= _amt
+
+IRs:
+collectedFees(uint256) = collectedFees - _amt",
+		node_expression="collectedFees -= _amt",
+		node_info_vulnerabilities=None,
+		node_irs="collectedFees(uint256) = collectedFees - _amt",
+		node_source_code_lines="[96]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	51 -> 52	[key=0,
+		edge_type=next,
+		label=Next];
+	53 -> 44	[key=0,
+		edge_type=next,
+		label=Next];
+	54	[contract_name=Rubixi,
+		function_fullname="collectFeesInEther(uint256)",
+		label="rubixi.sol_Rubixi_collectFeesInEther(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[89, 90, 91, 92, 93, 94, 95, 96, 97]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	54 -> 43	[key=0,
+		edge_type=next,
+		label=Next];
+	55	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[99, 100, 101, 102, 103, 104, 105]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	62	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_source_code_lines="[99]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	55 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+collectedFees == 0 || _pcent > 100
+
+IRs:
+TMP_27(bool) = collectedFees == 0
+TMP_28(bool) = _pcent > 100
+\
+TMP_29(bool) = TMP_27 || TMP_28
+CONDITION TMP_29",
+		node_expression="collectedFees == 0 || _pcent > 100",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_27(bool) = collectedFees == 0
+TMP_28(bool) = _pcent > 100
+TMP_29(bool) = TMP_27 || TMP_28
+CONDITION TMP_29",
+		node_source_code_lines="[100]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	57	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[100]",
+		node_type=THROW,
+		source_file="rubixi.sol"];
+	56 -> 57	[key=0,
+		edge_type=if_true,
+		label=True];
+	58	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[100]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	56 -> 58	[key=0,
+		edge_type=if_false,
+		label=False];
+	59	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+feesToCollect = collectedFees / 100 * _pcent
+
+IRs:
+TMP_30(uint256) = collectedFees / 100
+TMP_\
+31(uint256) = TMP_30 * _pcent
+feesToCollect(uint256) := TMP_31(uint256)",
+		node_expression="feesToCollect = collectedFees / 100 * _pcent",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_30(uint256) = collectedFees / 100
+TMP_31(uint256) = TMP_30 * _pcent
+feesToCollect(uint256) := TMP_31(uint256)",
+		node_source_code_lines="[102]",
+		node_type="NEW VARIABLE",
+		source_file="rubixi.sol"];
+	58 -> 59	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+creator.send(feesToCollect)
+
+IRs:
+TMP_32 = SEND dest:creator value:feesToCollect",
+		node_expression="creator.send(feesToCollect)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_32 = SEND dest:creator value:feesToCollect",
+		node_source_code_lines="[103]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	59 -> 60	[key=0,
+		edge_type=next,
+		label=Next];
+	61	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+collectedFees -= feesToCollect
+
+IRs:
+collectedFees(uint256) = collectedFees - feesToCollect",
+		node_expression="collectedFees -= feesToCollect",
+		node_info_vulnerabilities=None,
+		node_irs="collectedFees(uint256) = collectedFees - feesToCollect",
+		node_source_code_lines="[104]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	60 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	62 -> 56	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=Rubixi,
+		function_fullname="collectPercentOfFees(uint256)",
+		label="rubixi.sol_Rubixi_collectPercentOfFees(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[99, 100, 101, 102, 103, 104, 105]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	63 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=Rubixi,
+		function_fullname="changeOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[108, 109, 110]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	66	[contract_name=Rubixi,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_source_code_lines="[108]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	64 -> 66	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=Rubixi,
+		function_fullname="changeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+creator = _owner
+
+IRs:
+creator(address) := _owner(address)",
+		node_expression="creator = _owner",
+		node_info_vulnerabilities=None,
+		node_irs="creator(address) := _owner(address)",
+		node_source_code_lines="[109]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	66 -> 65	[key=0,
+		edge_type=next,
+		label=Next];
+	67	[contract_name=Rubixi,
+		function_fullname="changeOwner(address)",
+		label="rubixi.sol_Rubixi_changeOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[108, 109, 110]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	67 -> 64	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[112, 113, 114, 115, 116]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	73	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_source_code_lines="[112]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	68 -> 73	[key=0,
+		edge_type=next,
+		label=Next];
+	69	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+_mult > 300 || _mult < 120
+
+IRs:
+TMP_35(bool) = _mult > 300
+TMP_36(bool) = _mult < 120
+TMP_37(bool) = \
+TMP_35 || TMP_36
+CONDITION TMP_37",
+		node_expression="_mult > 300 || _mult < 120",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_35(bool) = _mult > 300
+TMP_36(bool) = _mult < 120
+TMP_37(bool) = TMP_35 || TMP_36
+CONDITION TMP_37",
+		node_source_code_lines="[113]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	70	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113]",
+		node_type=THROW,
+		source_file="rubixi.sol"];
+	69 -> 70	[key=0,
+		edge_type=if_true,
+		label=True];
+	71	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	69 -> 71	[key=0,
+		edge_type=if_false,
+		label=False];
+	72	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pyramidMultiplier = _mult
+
+IRs:
+pyramidMultiplier(uint256) := _mult(uint256)",
+		node_expression="pyramidMultiplier = _mult",
+		node_info_vulnerabilities=None,
+		node_irs="pyramidMultiplier(uint256) := _mult(uint256)",
+		node_source_code_lines="[115]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	71 -> 72	[key=0,
+		edge_type=next,
+		label=Next];
+	73 -> 69	[key=0,
+		edge_type=next,
+		label=Next];
+	74	[contract_name=Rubixi,
+		function_fullname="changeMultiplier(uint256)",
+		label="rubixi.sol_Rubixi_changeMultiplier(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[112, 113, 114, 115, 116]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	74 -> 68	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[118, 119, 120, 121, 122]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	80	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, Rubixi.onlyowner()()",
+		node_source_code_lines="[118]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	75 -> 80	[key=0,
+		edge_type=next,
+		label=Next];
+	76	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+_fee > 10
+
+IRs:
+TMP_39(bool) = _fee > 10
+CONDITION TMP_39",
+		node_expression="_fee > 10",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_39(bool) = _fee > 10
+CONDITION TMP_39",
+		node_source_code_lines="[119]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	77	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[119]",
+		node_type=THROW,
+		source_file="rubixi.sol"];
+	76 -> 77	[key=0,
+		edge_type=if_true,
+		label=True];
+	78	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[119]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	76 -> 78	[key=0,
+		edge_type=if_false,
+		label=False];
+	79	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+feePercent = _fee
+
+IRs:
+feePercent(uint256) := _fee(uint256)",
+		node_expression="feePercent = _fee",
+		node_info_vulnerabilities=None,
+		node_irs="feePercent(uint256) := _fee(uint256)",
+		node_source_code_lines="[121]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	78 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	80 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	81	[contract_name=Rubixi,
+		function_fullname="changeFeePercentage(uint256)",
+		label="rubixi.sol_Rubixi_changeFeePercentage(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[118, 119, 120, 121, 122]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	81 -> 75	[key=0,
+		edge_type=next,
+		label=Next];
+	82	[contract_name=Rubixi,
+		function_fullname="currentMultiplier()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[125, 126, 127, 128]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	83	[contract_name=Rubixi,
+		function_fullname="currentMultiplier()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+multiplier = pyramidMultiplier
+
+IRs:
+multiplier(uint256) := pyramidMultiplier(uint256)",
+		node_expression="multiplier = pyramidMultiplier",
+		node_info_vulnerabilities=None,
+		node_irs="multiplier(uint256) := pyramidMultiplier(uint256)",
+		node_source_code_lines="[126]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	82 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=Rubixi,
+		function_fullname="currentMultiplier()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+info = This multiplier applies to you as soon as transaction is received, may be lowered to hasten \
+payouts or increased if payouts are fast enough. Due to no float or decimals, multiplier is x100 for a fractional multiplier e.g. \
+250 is actually a 2.5x multiplier. Capped at 3x max and 1.2x min.
+
+IRs:
+info(string) := This multiplier applies to you as soon as \
+transaction is received, may be lowered to hasten payouts or increased if payouts are fast enough. Due to no float or decimals, \
+multiplier is x100 for a fractional multiplier e.g. 250 is actually a 2.5x multiplier. Capped at 3x max and 1.2x min.(string)",
+		node_expression="info = This multiplier applies to you as soon as transaction is received, may be lowered to hasten payouts or increased if payouts \
+are fast enough. Due to no float or decimals, multiplier is x100 for a fractional multiplier e.g. 250 is actually a 2.5x multiplier. \
+Capped at 3x max and 1.2x min.",
+		node_info_vulnerabilities=None,
+		node_irs="info(string) := This multiplier applies to you as soon as transaction is received, may be lowered to hasten payouts or increased \
+if payouts are fast enough. Due to no float or decimals, multiplier is x100 for a fractional multiplier e.g. 250 is actually a 2.5x \
+multiplier. Capped at 3x max and 1.2x min.(string)",
+		node_source_code_lines="[127]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=Rubixi,
+		function_fullname="currentMultiplier()",
+		label="rubixi.sol_Rubixi_currentMultiplier()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[125, 126, 127, 128]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	85 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=Rubixi,
+		function_fullname="currentFeePercentage()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	87	[contract_name=Rubixi,
+		function_fullname="currentFeePercentage()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+fee = feePercent
+
+IRs:
+fee(uint256) := feePercent(uint256)",
+		node_expression="fee = feePercent",
+		node_info_vulnerabilities=None,
+		node_irs="fee(uint256) := feePercent(uint256)",
+		node_source_code_lines="[131]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	86 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=Rubixi,
+		function_fullname="currentFeePercentage()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+info = Shown in % form. Fee is halved(50%) for amounts equal or greater than 50 ethers. (Fee \
+may change, but is capped to a maximum of 10%)
+
+IRs:
+info(string) := Shown in % form. Fee is halved(50%) for amounts equal or greater \
+than 50 ethers. (Fee may change, but is capped to a maximum of 10%)(string)",
+		node_expression="info = Shown in % form. Fee is halved(50%) for amounts equal or greater than 50 ethers. (Fee may change, but is capped to a maximum \
+of 10%)",
+		node_info_vulnerabilities=None,
+		node_irs="info(string) := Shown in % form. Fee is halved(50%) for amounts equal or greater than 50 ethers. (Fee may change, but is capped \
+to a maximum of 10%)(string)",
+		node_source_code_lines="[132]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	87 -> 88	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=Rubixi,
+		function_fullname="currentFeePercentage()",
+		label="rubixi.sol_Rubixi_currentFeePercentage()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[130, 131, 132, 133]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	89 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=Rubixi,
+		function_fullname="currentPyramidBalanceApproximately()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[135, 136, 137, 138]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	91	[contract_name=Rubixi,
+		function_fullname="currentPyramidBalanceApproximately()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pyramidBalance = balance / 1000000000000000000
+
+IRs:
+TMP_41(uint256) = balance / 1000000000000000000
+\
+pyramidBalance(uint256) := TMP_41(uint256)",
+		node_expression="pyramidBalance = balance / 1000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_41(uint256) = balance / 1000000000000000000
+pyramidBalance(uint256) := TMP_41(uint256)",
+		node_source_code_lines="[136]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	90 -> 91	[key=0,
+		edge_type=next,
+		label=Next];
+	92	[contract_name=Rubixi,
+		function_fullname="currentPyramidBalanceApproximately()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+info = All balance values are measured in Ethers, note that due to no decimal placing, these \
+values show up as integers only, within the contract itself you will get the exact decimal value you are supposed to
+
+IRs:
+info(\
+string) := All balance values are measured in Ethers, note that due to no decimal placing, these values show up as integers only, \
+within the contract itself you will get the exact decimal value you are supposed to(string)",
+		node_expression="info = All balance values are measured in Ethers, note that due to no decimal placing, these values show up as integers only, within \
+the contract itself you will get the exact decimal value you are supposed to",
+		node_info_vulnerabilities=None,
+		node_irs="info(string) := All balance values are measured in Ethers, note that due to no decimal placing, these values show up as integers \
+only, within the contract itself you will get the exact decimal value you are supposed to(string)",
+		node_source_code_lines="[137]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	91 -> 92	[key=0,
+		edge_type=next,
+		label=Next];
+	93	[contract_name=Rubixi,
+		function_fullname="currentPyramidBalanceApproximately()",
+		label="rubixi.sol_Rubixi_currentPyramidBalanceApproximately()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[135, 136, 137, 138]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	93 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	94	[contract_name=Rubixi,
+		function_fullname="nextPayoutWhenPyramidBalanceTotalsApproximately()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	95	[contract_name=Rubixi,
+		function_fullname="nextPayoutWhenPyramidBalanceTotalsApproximately()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+balancePayout = participants[payoutOrder].payout / 1000000000000000000
+
+IRs:
+REF_17(Rubixi.Participant) \
+-> participants[payoutOrder]
+REF_18(uint256) -> REF_17.payout
+TMP_42(uint256) = REF_18 / 1000000000000000000
+balancePayout(uint256) := \
+TMP_42(uint256)",
+		node_expression="balancePayout = participants[payoutOrder].payout / 1000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="REF_17(Rubixi.Participant) -> participants[payoutOrder]
+REF_18(uint256) -> REF_17.payout
+TMP_42(uint256) = REF_18 / 1000000000000000000
+\
+balancePayout(uint256) := TMP_42(uint256)",
+		node_source_code_lines="[141]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	94 -> 95	[key=0,
+		edge_type=next,
+		label=Next];
+	96	[contract_name=Rubixi,
+		function_fullname="nextPayoutWhenPyramidBalanceTotalsApproximately()",
+		label="rubixi.sol_Rubixi_nextPayoutWhenPyramidBalanceTotalsApproximately()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	96 -> 94	[key=0,
+		edge_type=next,
+		label=Next];
+	97	[contract_name=Rubixi,
+		function_fullname="feesSeperateFromBalanceApproximately()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[144, 145, 146]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	98	[contract_name=Rubixi,
+		function_fullname="feesSeperateFromBalanceApproximately()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+fees = collectedFees / 1000000000000000000
+
+IRs:
+TMP_43(uint256) = collectedFees / 1000000000000000000
+\
+fees(uint256) := TMP_43(uint256)",
+		node_expression="fees = collectedFees / 1000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_43(uint256) = collectedFees / 1000000000000000000
+fees(uint256) := TMP_43(uint256)",
+		node_source_code_lines="[145]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	97 -> 98	[key=0,
+		edge_type=next,
+		label=Next];
+	99	[contract_name=Rubixi,
+		function_fullname="feesSeperateFromBalanceApproximately()",
+		label="rubixi.sol_Rubixi_feesSeperateFromBalanceApproximately()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[144, 145, 146]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	99 -> 97	[key=0,
+		edge_type=next,
+		label=Next];
+	100	[contract_name=Rubixi,
+		function_fullname="totalParticipants()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[148, 149, 150]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	101	[contract_name=Rubixi,
+		function_fullname="totalParticipants()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+count = participants.length
+
+IRs:
+REF_19 -> LENGTH participants
+count(uint256) := REF_19(uint256)",
+		node_expression="count = participants.length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_19 -> LENGTH participants
+count(uint256) := REF_19(uint256)",
+		node_source_code_lines="[149]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	100 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	102	[contract_name=Rubixi,
+		function_fullname="totalParticipants()",
+		label="rubixi.sol_Rubixi_totalParticipants()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[148, 149, 150]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	102 -> 100	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=Rubixi,
+		function_fullname="numberOfParticipantsWaitingForPayout()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[152, 153, 154]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	104	[contract_name=Rubixi,
+		function_fullname="numberOfParticipantsWaitingForPayout()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+count = participants.length - payoutOrder
+
+IRs:
+REF_20 -> LENGTH participants
+TMP_44(uint256) = \
+REF_20 - payoutOrder
+count(uint256) := TMP_44(uint256)",
+		node_expression="count = participants.length - payoutOrder",
+		node_info_vulnerabilities=None,
+		node_irs="REF_20 -> LENGTH participants
+TMP_44(uint256) = REF_20 - payoutOrder
+count(uint256) := TMP_44(uint256)",
+		node_source_code_lines="[153]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	103 -> 104	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=Rubixi,
+		function_fullname="numberOfParticipantsWaitingForPayout()",
+		label="rubixi.sol_Rubixi_numberOfParticipantsWaitingForPayout()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[152, 153, 154]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	105 -> 103	[key=0,
+		edge_type=next,
+		label=Next];
+	106	[contract_name=Rubixi,
+		function_fullname="participantDetails(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157, 158, 159, 160, 161]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	107	[contract_name=Rubixi,
+		function_fullname="participantDetails(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+orderInPyramid <= participants.length
+
+IRs:
+REF_21 -> LENGTH participants
+TMP_45(bool) = orderInPyramid <= \
+REF_21
+CONDITION TMP_45",
+		node_expression="orderInPyramid <= participants.length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_21 -> LENGTH participants
+TMP_45(bool) = orderInPyramid <= REF_21
+CONDITION TMP_45",
+		node_source_code_lines="[157]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	106 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	108	[contract_name=Rubixi,
+		function_fullname="participantDetails(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Address = participants[orderInPyramid].etherAddress
+
+IRs:
+REF_22(Rubixi.Participant) -> participants[\
+orderInPyramid]
+REF_23(address) -> REF_22.etherAddress
+Address(address) := REF_23(address)",
+		node_expression="Address = participants[orderInPyramid].etherAddress",
+		node_info_vulnerabilities=None,
+		node_irs="REF_22(Rubixi.Participant) -> participants[orderInPyramid]
+REF_23(address) -> REF_22.etherAddress
+Address(address) := REF_23(address)",
+		node_source_code_lines="[158]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	107 -> 108	[key=0,
+		edge_type=if_true,
+		label=True];
+	110	[contract_name=Rubixi,
+		function_fullname="participantDetails(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[157, 158, 159, 160]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	107 -> 110	[key=0,
+		edge_type=if_false,
+		label=False];
+	109	[contract_name=Rubixi,
+		function_fullname="participantDetails(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Payout = participants[orderInPyramid].payout / 1000000000000000000
+
+IRs:
+REF_24(Rubixi.Participant) \
+-> participants[orderInPyramid]
+REF_25(uint256) -> REF_24.payout
+TMP_46(uint256) = REF_25 / 1000000000000000000
+Payout(uint256) := \
+TMP_46(uint256)",
+		node_expression="Payout = participants[orderInPyramid].payout / 1000000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="REF_24(Rubixi.Participant) -> participants[orderInPyramid]
+REF_25(uint256) -> REF_24.payout
+TMP_46(uint256) = REF_25 / 1000000000000000000
+\
+Payout(uint256) := TMP_46(uint256)",
+		node_source_code_lines="[159]",
+		node_type=EXPRESSION,
+		source_file="rubixi.sol"];
+	108 -> 109	[key=0,
+		edge_type=next,
+		label=Next];
+	109 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	111	[contract_name=Rubixi,
+		function_fullname="participantDetails(uint256)",
+		label="rubixi.sol_Rubixi_participantDetails(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157, 158, 159, 160, 161]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	111 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	112	[contract_name=Rubixi,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+balance = 0
+
+IRs:
+balance(uint256) := 0(uint256)",
+		node_expression="balance = 0",
+		node_info_vulnerabilities=None,
+		node_irs="balance(uint256) := 0(uint256)",
+		node_source_code_lines="[13]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="rubixi.sol"];
+	113	[contract_name=Rubixi,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+collectedFees = 0
+
+IRs:
+collectedFees(uint256) := 0(uint256)",
+		node_expression="collectedFees = 0",
+		node_info_vulnerabilities=None,
+		node_irs="collectedFees(uint256) := 0(uint256)",
+		node_source_code_lines="[14]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="rubixi.sol"];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	114	[contract_name=Rubixi,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+feePercent = 10
+
+IRs:
+feePercent(uint256) := 10(uint256)",
+		node_expression="feePercent = 10",
+		node_info_vulnerabilities=None,
+		node_irs="feePercent(uint256) := 10(uint256)",
+		node_source_code_lines="[15]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="rubixi.sol"];
+	113 -> 114	[key=0,
+		edge_type=next,
+		label=Next];
+	115	[contract_name=Rubixi,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+pyramidMultiplier = 300
+
+IRs:
+pyramidMultiplier(uint256) := 300(uint256)",
+		node_expression="pyramidMultiplier = 300",
+		node_info_vulnerabilities=None,
+		node_irs="pyramidMultiplier(uint256) := 300(uint256)",
+		node_source_code_lines="[16]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="rubixi.sol"];
+	114 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	116	[contract_name=Rubixi,
+		function_fullname="slitherConstructorVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+payoutOrder = 0
+
+IRs:
+payoutOrder(uint256) := 0(uint256)",
+		node_expression="payoutOrder = 0",
+		node_info_vulnerabilities=None,
+		node_irs="payoutOrder(uint256) := 0(uint256)",
+		node_source_code_lines="[17]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="rubixi.sol"];
+	115 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=Rubixi,
+		function_fullname="slitherConstructorVariables()",
+		label="rubixi.sol_Rubixi_slitherConstructorVariables()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [23, 24], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, \
+42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, \
+74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, \
+105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, \
+131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, \
+157, 158, 159, 160, 161, 162]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	117 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=Rubixi,
+		function_fullname="onlyowner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[27, 28, 29]",
+		node_type=ENTRY_POINT,
+		source_file="rubixi.sol"];
+	119	[contract_name=Rubixi,
+		function_fullname="onlyowner()",
+		label="Node Type: IF
+
+EXPRESSION:
+msg.sender == creator
+
+IRs:
+TMP_47(bool) = msg.sender == creator
+CONDITION TMP_47",
+		node_expression="msg.sender == creator",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_47(bool) = msg.sender == creator
+CONDITION TMP_47",
+		node_source_code_lines="[28]",
+		node_type=IF,
+		source_file="rubixi.sol"];
+	118 -> 119	[key=0,
+		edge_type=next,
+		label=Next];
+	120	[contract_name=Rubixi,
+		function_fullname="onlyowner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28]",
+		node_type=_,
+		source_file="rubixi.sol"];
+	119 -> 120	[key=0,
+		edge_type=if_true,
+		label=True];
+	121	[contract_name=Rubixi,
+		function_fullname="onlyowner()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[28]",
+		node_type=END_IF,
+		source_file="rubixi.sol"];
+	119 -> 121	[key=0,
+		edge_type=if_false,
+		label=False];
+	120 -> 121	[key=0,
+		edge_type=next,
+		label=Next];
+	122	[contract_name=Rubixi,
+		function_fullname="onlyowner()",
+		label="rubixi.sol_Rubixi_onlyowner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[27, 28, 29]",
+		node_type=FUNCTION_NAME,
+		source_file="rubixi.sol"];
+	122 -> 118	[key=0,
+		edge_type=next,
+		label=Next];
+}

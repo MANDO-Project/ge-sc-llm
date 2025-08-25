@@ -1,0 +1,32 @@
+digraph  {
+12 [label="2_ address public owner;\n12-new_variable-3-3", method="", type_label=new_variable];
+27 [label="4_ modifier onlyOwner() {\n        require(msg.sender == owner, \"Can only be called by the owner\");\n        _;\n    }\n27-expression_statement-5-8", method="", type_label=expression_statement];
+30 [label="5_ require(msg.sender == owner, \"Can only be called by the owner\");\n30-expression_statement-6-6", method="", type_label=expression_statement];
+42 [label="6_ _;\n42-expression_statement-7-7", method="", type_label=expression_statement];
+44 [label="8_ modifier onlyValidAddress(address addr) {\n        require(addr != address(0), \"Address cannot be zero\");\n        _;\n    }\n44-expression_statement-9-12", method="", type_label=expression_statement];
+51 [label="9_ require(addr != address(0), \"Address cannot be zero\");\n51-expression_statement-10-10", method="", type_label=expression_statement];
+63 [label="10_ _;\n63-expression_statement-11-11", method="", type_label=expression_statement];
+67 [label="13_ owner = msg.sender;\n67-expression_statement-14-14", method="", type_label=expression_statement];
+73 [label="15_ function transferOwnership(address newOwner)\n        public\n        onlyOwner\n        onlyValidAddress(newOwner)\n    {\n        emit OwnershipTransferred(owner, newOwner);\n        owner = newOwner;\n    }\n73-function_definition-16-23", method="transferOwnership(address newOwner)", type_label=function_definition];
+80 [label="17_ onlyOwner\n80-expression_statement-18-18", method="transferOwnership(address newOwner)", type_label=expression_statement];
+82 [label="18_ onlyValidAddress(newOwner)\n82-expression_statement-19-19", method="transferOwnership(address newOwner)", type_label=expression_statement];
+93 [label="21_ owner = newOwner;\n93-expression_statement-22-22", method="transferOwnership(address newOwner)", type_label=expression_statement];
+103 [label="25_ uint256 public last_completed_migration;\n103-new_variable-26-26", method="", type_label=new_variable];
+108 [label="26_ function setCompleted(uint256 completed) public onlyOwner {\n        last_completed_migration = completed;\n    }\n108-function_definition-27-29", method="setCompleted(uint256 completed)", type_label=function_definition];
+115 [label="26_ onlyOwner\n115-expression_statement-27-27", method="setCompleted(uint256 completed)", type_label=expression_statement];
+118 [label="27_ last_completed_migration = completed;\n118-expression_statement-28-28", method="setCompleted(uint256 completed)", type_label=expression_statement];
+122 [label="29_ function upgrade(address new_address) public onlyOwner {\n        Migrations upgraded = Migrations(new_address);\n        upgraded.setCompleted(last_completed_migration);\n    }\n122-function_definition-30-33", method="upgrade(address new_address)", type_label=function_definition];
+129 [label="29_ onlyOwner\n129-expression_statement-30-30", method="upgrade(address new_address)", type_label=expression_statement];
+132 [label="30_ Migrations upgraded = Migrations(new_address);\n132-new_variable-31-31", method="upgrade(address new_address)", type_label=new_variable];
+142 [label="31_ upgraded.setCompleted(last_completed_migration);\n142-expression_statement-32-32", method="upgrade(address new_address)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+27 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+30 -> 42  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+51 -> 63  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+73 -> 93  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+80 -> 82  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+108 -> 118  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+122 -> 132  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+132 -> 142  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

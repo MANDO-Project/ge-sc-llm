@@ -1,0 +1,25 @@
+digraph  {
+13 [label="2_ mapping (address => uint) userBalances;\n13-new_variable-3-3", method="", type_label=new_variable];
+19 [label="3_ function getBalance(address user) constant returns(uint) {  \n		return userBalances[user];\n	}\n19-function_definition-4-6", method="getBalance(address user)", type_label=function_definition];
+25 [label="3_ constant\n25-expression_statement-4-4", method="getBalance(address user)", type_label=expression_statement];
+32 [label="4_ return userBalances[user];\n32-return-5-5", method="getBalance(address user)", type_label=return];
+36 [label="6_ function addToBalance() {  \n		userBalances[msg.sender] += msg.value;\n	}\n36-function_definition-7-9", method="addToBalance()", type_label=function_definition];
+39 [label="7_ userBalances[msg.sender] += msg.value;\n39-expression_statement-8-8", method="addToBalance()", type_label=expression_statement];
+49 [label="9_ function withdrawBalance() {  \n		uint amountToWithdraw = userBalances[msg.sender];\n		if (!(msg.sender.call.value(amountToWithdraw)())) { throw; }\n		userBalances[msg.sender] = 0;\n	}\n49-function_definition-10-14", method="withdrawBalance()", type_label=function_definition];
+52 [label="10_ uint amountToWithdraw = userBalances[msg.sender];\n52-new_variable-11-11", method="withdrawBalance()", type_label=new_variable];
+62 [label="11_ if\n62-if-12-12", method="withdrawBalance()", type_label=if];
+144 [label="11_ end_if", method="withdrawBalance()", type_label=end_if];
+77 [label="11_ throw;\n77-expression_statement-12-12", method="withdrawBalance()", type_label=expression_statement];
+79 [label="12_ userBalances[msg.sender] = 0;\n79-expression_statement-13-13", method="withdrawBalance()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+19 -> 32  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+36 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+49 -> 52  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+52 -> 62  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+62 -> 77  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+62 -> 144  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+144 -> 79  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+77 -> 144  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

@@ -1,0 +1,4623 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=WalletAbi,
+		function_fullname="revoke(bytes32)",
+		label="parity_wallet_bug_2.sol_WalletAbi_revoke(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[48]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	1	[contract_name=WalletAbi,
+		function_fullname="changeOwner(address,address)",
+		label="parity_wallet_bug_2.sol_WalletAbi_changeOwner(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[51]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	2	[contract_name=WalletAbi,
+		function_fullname="addOwner(address)",
+		label="parity_wallet_bug_2.sol_WalletAbi_addOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[53]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	3	[contract_name=WalletAbi,
+		function_fullname="removeOwner(address)",
+		label="parity_wallet_bug_2.sol_WalletAbi_removeOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[55]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	4	[contract_name=WalletAbi,
+		function_fullname="changeRequirement(uint256)",
+		label="parity_wallet_bug_2.sol_WalletAbi_changeRequirement(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[57]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	5	[contract_name=WalletAbi,
+		function_fullname="isOwner(address)",
+		label="parity_wallet_bug_2.sol_WalletAbi_isOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[59]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	6	[contract_name=WalletAbi,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="parity_wallet_bug_2.sol_WalletAbi_hasConfirmed(bytes32,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[61]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	7	[contract_name=WalletAbi,
+		function_fullname="setDailyLimit(uint256)",
+		label="parity_wallet_bug_2.sol_WalletAbi_setDailyLimit(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[64]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	8	[contract_name=WalletAbi,
+		function_fullname="execute(address,uint256,bytes)",
+		label="parity_wallet_bug_2.sol_WalletAbi_execute(address,uint256,bytes)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[66]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	9	[contract_name=WalletAbi,
+		function_fullname="confirm(bytes32)",
+		label="parity_wallet_bug_2.sol_WalletAbi_confirm(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[67]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	10	[contract_name=WalletLibrary,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[105, 106, 107, 108, 109]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	11	[contract_name=WalletLibrary,
+		function_fullname="fallback()",
+		label="Node Type: IF
+
+EXPRESSION:
+msg.value > 0
+
+IRs:
+TMP_0(bool) = msg.value > 0
+CONDITION TMP_0",
+		node_expression="msg.value > 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_0(bool) = msg.value > 0
+CONDITION TMP_0",
+		node_source_code_lines="[107]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	10 -> 11	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=WalletLibrary,
+		function_fullname="fallback()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Deposit(msg.sender,msg.value)
+
+IRs:
+Emit Deposit(msg.sender.msg.value)",
+		node_expression="Deposit(msg.sender,msg.value)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Deposit(msg.sender.msg.value)",
+		node_source_code_lines="[108]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	11 -> 12	[key=0,
+		edge_type=if_true,
+		label=True];
+	13	[contract_name=WalletLibrary,
+		function_fullname="fallback()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[107, 108]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	11 -> 13	[key=0,
+		edge_type=if_false,
+		label=False];
+	12 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=WalletLibrary,
+		function_fullname="fallback()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[105, 106, 107, 108, 109]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	14 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	27	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+only_uninitialized()
+
+IRs:
+MODIFIER_CALL, WalletLibrary.only_uninitialized()()",
+		node_expression="only_uninitialized()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WalletLibrary.only_uninitialized()()",
+		node_source_code_lines="[113]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	15 -> 27	[key=0,
+		edge_type=next,
+		label=Next];
+	16	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_numOwners = _owners.length + 1
+
+IRs:
+REF_0 -> LENGTH _owners
+TMP_2(uint256) = REF_0 + 1
+m_numOwners(\
+uint256) := TMP_2(uint256)",
+		node_expression="m_numOwners = _owners.length + 1",
+		node_info_vulnerabilities=None,
+		node_irs="REF_0 -> LENGTH _owners
+TMP_2(uint256) = REF_0 + 1
+m_numOwners(uint256) := TMP_2(uint256)",
+		node_source_code_lines="[114]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	17	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[1] = uint256(msg.sender)
+
+IRs:
+REF_1(uint256) -> m_owners[1]
+TMP_3 = CONVERT msg.sender \
+to uint256
+REF_1 (->m_owners) := TMP_3(uint256)",
+		node_expression="m_owners[1] = uint256(msg.sender)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_1(uint256) -> m_owners[1]
+TMP_3 = CONVERT msg.sender to uint256
+REF_1 (->m_owners) := TMP_3(uint256)",
+		node_source_code_lines="[115]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[uint256(msg.sender)] = 1
+
+IRs:
+TMP_4 = CONVERT msg.sender to uint256
+REF_2(uint256) \
+-> m_ownerIndex[TMP_4]
+REF_2 (->m_ownerIndex) := 1(uint256)",
+		node_expression="m_ownerIndex[uint256(msg.sender)] = 1",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_4 = CONVERT msg.sender to uint256
+REF_2(uint256) -> m_ownerIndex[TMP_4]
+REF_2 (->m_ownerIndex) := 1(uint256)",
+		node_source_code_lines="[116]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	17 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	21	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+i = 0
+
+IRs:
+i(uint256) := 0(uint256)",
+		node_expression="i = 0",
+		node_info_vulnerabilities=None,
+		node_irs="i(uint256) := 0(uint256)",
+		node_source_code_lines="[117]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	18 -> 21	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[117, 118, 119, 120, 121]",
+		node_type=BEGIN_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	22	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+i < _owners.length
+
+IRs:
+REF_3 -> LENGTH _owners
+TMP_5(bool) = i < REF_3
+CONDITION TMP_5",
+		node_expression="i < _owners.length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_3 -> LENGTH _owners
+TMP_5(bool) = i < REF_3
+CONDITION TMP_5",
+		node_source_code_lines="[117]",
+		node_type=IF_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	19 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[117, 118, 119, 120, 121]",
+		node_type=END_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	26	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_required = _required
+
+IRs:
+m_required(uint256) := _required(uint256)",
+		node_expression="m_required = _required",
+		node_info_vulnerabilities=None,
+		node_irs="m_required(uint256) := _required(uint256)",
+		node_source_code_lines="[122]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	20 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	21 -> 19	[key=0,
+		edge_type=next,
+		label=Next];
+	22 -> 20	[key=0,
+		edge_type=if_false,
+		label=False];
+	23	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[2 + i] = uint256(_owners[i])
+
+IRs:
+TMP_6(uint256) = 2 + i
+REF_4(uint256) -> m_owners[\
+TMP_6]
+REF_5(address) -> _owners[i]
+TMP_7 = CONVERT REF_5 to uint256
+REF_4 (->m_owners) := TMP_7(uint256)",
+		node_expression="m_owners[2 + i] = uint256(_owners[i])",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_6(uint256) = 2 + i
+REF_4(uint256) -> m_owners[TMP_6]
+REF_5(address) -> _owners[i]
+TMP_7 = CONVERT REF_5 to uint256
+REF_4 (->\
+m_owners) := TMP_7(uint256)",
+		node_source_code_lines="[119]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	22 -> 23	[key=0,
+		edge_type=if_true,
+		label=True];
+	24	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[uint256(_owners[i])] = 2 + i
+
+IRs:
+REF_6(address) -> _owners[i]
+TMP_8 = CONVERT \
+REF_6 to uint256
+REF_7(uint256) -> m_ownerIndex[TMP_8]
+TMP_9(uint256) = 2 + i
+REF_7 (->m_ownerIndex) := TMP_9(uint256)",
+		node_expression="m_ownerIndex[uint256(_owners[i])] = 2 + i",
+		node_info_vulnerabilities=None,
+		node_irs="REF_6(address) -> _owners[i]
+TMP_8 = CONVERT REF_6 to uint256
+REF_7(uint256) -> m_ownerIndex[TMP_8]
+TMP_9(uint256) = 2 + i
+REF_7 (\
+->m_ownerIndex) := TMP_9(uint256)",
+		node_source_code_lines="[120]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	23 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	25	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+++ i
+
+IRs:
+i(uint256) = i + 1",
+		node_expression="++ i",
+		node_info_vulnerabilities=None,
+		node_irs="i(uint256) = i + 1",
+		node_source_code_lines="[117]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	24 -> 25	[key=0,
+		edge_type=next,
+		label=Next];
+	25 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	27 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=WalletLibrary,
+		function_fullname="initMultiowned(address[],uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_initMultiowned(address[],uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	28 -> 15	[key=0,
+		edge_type=next,
+		label=Next];
+	29	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	30	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndex = m_ownerIndex[uint256(msg.sender)]
+
+IRs:
+TMP_11 = CONVERT msg.sender to uint256
+\
+REF_8(uint256) -> m_ownerIndex[TMP_11]
+ownerIndex(uint256) := REF_8(uint256)",
+		node_expression="ownerIndex = m_ownerIndex[uint256(msg.sender)]",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_11 = CONVERT msg.sender to uint256
+REF_8(uint256) -> m_ownerIndex[TMP_11]
+ownerIndex(uint256) := REF_8(uint256)",
+		node_source_code_lines="[127]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	29 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	31	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+ownerIndex == 0
+
+IRs:
+TMP_12(bool) = ownerIndex == 0
+CONDITION TMP_12",
+		node_expression="ownerIndex == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_12(bool) = ownerIndex == 0
+CONDITION TMP_12",
+		node_source_code_lines="[129]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	30 -> 31	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[129]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	31 -> 32	[key=0,
+		edge_type=if_true,
+		label=True];
+	33	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[129]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	31 -> 33	[key=0,
+		edge_type=if_false,
+		label=False];
+	34	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndexBit = 2 ** ownerIndex
+
+IRs:
+TMP_13(uint256) = 2 ** ownerIndex
+ownerIndexBit(uint256) := \
+TMP_13(uint256)",
+		node_expression="ownerIndexBit = 2 ** ownerIndex",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_13(uint256) = 2 ** ownerIndex
+ownerIndexBit(uint256) := TMP_13(uint256)",
+		node_source_code_lines="[130]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	33 -> 34	[key=0,
+		edge_type=next,
+		label=Next];
+	35	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+pending = m_pending[_operation]
+
+IRs:
+REF_9(WalletLibrary.PendingState) -> m_pending[_operation]
+\
+pending(WalletLibrary.PendingState) := REF_9(WalletLibrary.PendingState)",
+		node_expression="pending = m_pending[_operation]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_9(WalletLibrary.PendingState) -> m_pending[_operation]
+pending(WalletLibrary.PendingState) := REF_9(WalletLibrary.PendingState)",
+		node_source_code_lines="[131]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	34 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	36	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+pending.ownersDone & ownerIndexBit > 0
+
+IRs:
+REF_10(uint256) -> pending.ownersDone
+TMP_14(uint256) = \
+REF_10 & ownerIndexBit
+TMP_15(bool) = TMP_14 > 0
+CONDITION TMP_15",
+		node_expression="pending.ownersDone & ownerIndexBit > 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_10(uint256) -> pending.ownersDone
+TMP_14(uint256) = REF_10 & ownerIndexBit
+TMP_15(bool) = TMP_14 > 0
+CONDITION TMP_15",
+		node_source_code_lines="[132]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	35 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.yetNeeded ++
+
+IRs:
+REF_11(uint256) -> pending.yetNeeded
+TMP_16(uint256) := REF_11(uint256)
+\
+REF_11(-> pending) = REF_11 + 1",
+		node_expression="pending.yetNeeded ++",
+		node_info_vulnerabilities=None,
+		node_irs="REF_11(uint256) -> pending.yetNeeded
+TMP_16(uint256) := REF_11(uint256)
+REF_11(-> pending) = REF_11 + 1",
+		node_source_code_lines="[133]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	36 -> 37	[key=0,
+		edge_type=if_true,
+		label=True];
+	40	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[132, 133, 134, 135, 136]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	36 -> 40	[key=0,
+		edge_type=if_false,
+		label=False];
+	38	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.ownersDone -= ownerIndexBit
+
+IRs:
+REF_12(uint256) -> pending.ownersDone
+REF_12(-> pending) = \
+REF_12 - ownerIndexBit",
+		node_expression="pending.ownersDone -= ownerIndexBit",
+		node_info_vulnerabilities=None,
+		node_irs="REF_12(uint256) -> pending.ownersDone
+REF_12(-> pending) = REF_12 - ownerIndexBit",
+		node_source_code_lines="[134]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	37 -> 38	[key=0,
+		edge_type=next,
+		label=Next];
+	39	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Revoke(msg.sender,_operation)
+
+IRs:
+Emit Revoke(msg.sender._operation)",
+		node_expression="Revoke(msg.sender,_operation)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Revoke(msg.sender._operation)",
+		node_source_code_lines="[135]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	38 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	39 -> 40	[key=0,
+		edge_type=next,
+		label=Next];
+	41	[contract_name=WalletLibrary,
+		function_fullname="revoke(bytes32)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_revoke(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	41 -> 29	[key=0,
+		edge_type=next,
+		label=Next];
+	42	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	55	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_26(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_26)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_26(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_26)",
+		node_source_code_lines="[140]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	42 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: IF
+
+EXPRESSION:
+isOwner(_to)
+
+IRs:
+TMP_18(bool) = INTERNAL_CALL, WalletLibrary.isOwner(address)(_to)
+CONDITION TMP_18",
+		node_expression="isOwner(_to)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_18(bool) = INTERNAL_CALL, WalletLibrary.isOwner(address)(_to)
+CONDITION TMP_18",
+		node_source_code_lines="[141]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	44	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[141]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	43 -> 44	[key=0,
+		edge_type=if_true,
+		label=True];
+	45	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[141]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	43 -> 45	[key=0,
+		edge_type=if_false,
+		label=False];
+	46	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndex = m_ownerIndex[uint256(_from)]
+
+IRs:
+TMP_19 = CONVERT _from to uint256
+REF_13(uint256) \
+-> m_ownerIndex[TMP_19]
+ownerIndex(uint256) := REF_13(uint256)",
+		node_expression="ownerIndex = m_ownerIndex[uint256(_from)]",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_19 = CONVERT _from to uint256
+REF_13(uint256) -> m_ownerIndex[TMP_19]
+ownerIndex(uint256) := REF_13(uint256)",
+		node_source_code_lines="[142]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	45 -> 46	[key=0,
+		edge_type=next,
+		label=Next];
+	47	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: IF
+
+EXPRESSION:
+ownerIndex == 0
+
+IRs:
+TMP_20(bool) = ownerIndex == 0
+CONDITION TMP_20",
+		node_expression="ownerIndex == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_20(bool) = ownerIndex == 0
+CONDITION TMP_20",
+		node_source_code_lines="[143]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	46 -> 47	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[143]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	47 -> 48	[key=0,
+		edge_type=if_true,
+		label=True];
+	49	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[143]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	47 -> 49	[key=0,
+		edge_type=if_false,
+		label=False];
+	50	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+clearPending()
+
+IRs:
+INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_expression="clearPending()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_source_code_lines="[145]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	49 -> 50	[key=0,
+		edge_type=next,
+		label=Next];
+	51	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[ownerIndex] = uint256(_to)
+
+IRs:
+REF_14(uint256) -> m_owners[ownerIndex]
+TMP_22 = CONVERT _\
+to to uint256
+REF_14 (->m_owners) := TMP_22(uint256)",
+		node_expression="m_owners[ownerIndex] = uint256(_to)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_14(uint256) -> m_owners[ownerIndex]
+TMP_22 = CONVERT _to to uint256
+REF_14 (->m_owners) := TMP_22(uint256)",
+		node_source_code_lines="[146]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	50 -> 51	[key=0,
+		edge_type=next,
+		label=Next];
+	52	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[uint256(_from)] = 0
+
+IRs:
+TMP_23 = CONVERT _from to uint256
+REF_15(uint256) -> m_\
+ownerIndex[TMP_23]
+REF_15 (->m_ownerIndex) := 0(uint256)",
+		node_expression="m_ownerIndex[uint256(_from)] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_23 = CONVERT _from to uint256
+REF_15(uint256) -> m_ownerIndex[TMP_23]
+REF_15 (->m_ownerIndex) := 0(uint256)",
+		node_source_code_lines="[147]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	51 -> 52	[key=0,
+		edge_type=next,
+		label=Next];
+	53	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[uint256(_to)] = ownerIndex
+
+IRs:
+TMP_24 = CONVERT _to to uint256
+REF_16(uint256) \
+-> m_ownerIndex[TMP_24]
+REF_16 (->m_ownerIndex) := ownerIndex(uint256)",
+		node_expression="m_ownerIndex[uint256(_to)] = ownerIndex",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_24 = CONVERT _to to uint256
+REF_16(uint256) -> m_ownerIndex[TMP_24]
+REF_16 (->m_ownerIndex) := ownerIndex(uint256)",
+		node_source_code_lines="[148]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	52 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	54	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+OwnerChanged(_from,_to)
+
+IRs:
+Emit OwnerChanged(_from._to)",
+		node_expression="OwnerChanged(_from,_to)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit OwnerChanged(_from._to)",
+		node_source_code_lines="[149]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	53 -> 54	[key=0,
+		edge_type=next,
+		label=Next];
+	55 -> 43	[key=0,
+		edge_type=next,
+		label=Next];
+	56	[contract_name=WalletLibrary,
+		function_fullname="changeOwner(address,address)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_changeOwner(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	56 -> 42	[key=0,
+		edge_type=next,
+		label=Next];
+	57	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	72	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_37(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_37)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_37(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_37)",
+		node_source_code_lines="[152]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	57 -> 72	[key=0,
+		edge_type=next,
+		label=Next];
+	58	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: IF
+
+EXPRESSION:
+isOwner(_owner)
+
+IRs:
+TMP_28(bool) = INTERNAL_CALL, WalletLibrary.isOwner(address)(_owner)
+CONDITION \
+TMP_28",
+		node_expression="isOwner(_owner)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_28(bool) = INTERNAL_CALL, WalletLibrary.isOwner(address)(_owner)
+CONDITION TMP_28",
+		node_source_code_lines="[153]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	59	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[153]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	58 -> 59	[key=0,
+		edge_type=if_true,
+		label=True];
+	60	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[153]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	58 -> 60	[key=0,
+		edge_type=if_false,
+		label=False];
+	61	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+clearPending()
+
+IRs:
+INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_expression="clearPending()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_source_code_lines="[155]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	60 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	62	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_numOwners >= c_maxOwners
+
+IRs:
+TMP_30(bool) = m_numOwners >= c_maxOwners
+CONDITION TMP_30",
+		node_expression="m_numOwners >= c_maxOwners",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_30(bool) = m_numOwners >= c_maxOwners
+CONDITION TMP_30",
+		node_source_code_lines="[156]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	61 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+reorganizeOwners()
+
+IRs:
+INTERNAL_CALL, WalletLibrary.reorganizeOwners()()",
+		node_expression="reorganizeOwners()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.reorganizeOwners()()",
+		node_source_code_lines="[157]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	62 -> 63	[key=0,
+		edge_type=if_true,
+		label=True];
+	64	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[156, 157]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	62 -> 64	[key=0,
+		edge_type=if_false,
+		label=False];
+	63 -> 64	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_numOwners >= c_maxOwners
+
+IRs:
+TMP_32(bool) = m_numOwners >= c_maxOwners
+CONDITION TMP_32",
+		node_expression="m_numOwners >= c_maxOwners",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_32(bool) = m_numOwners >= c_maxOwners
+CONDITION TMP_32",
+		node_source_code_lines="[158]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	64 -> 65	[key=0,
+		edge_type=next,
+		label=Next];
+	66	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[159]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	65 -> 66	[key=0,
+		edge_type=if_true,
+		label=True];
+	67	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[158, 159]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	65 -> 67	[key=0,
+		edge_type=if_false,
+		label=False];
+	68	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_numOwners ++
+
+IRs:
+TMP_33(uint256) := m_numOwners(uint256)
+m_numOwners(uint256) = m_numOwners + \
+1",
+		node_expression="m_numOwners ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_33(uint256) := m_numOwners(uint256)
+m_numOwners(uint256) = m_numOwners + 1",
+		node_source_code_lines="[160]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	67 -> 68	[key=0,
+		edge_type=next,
+		label=Next];
+	69	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[m_numOwners] = uint256(_owner)
+
+IRs:
+REF_17(uint256) -> m_owners[m_numOwners]
+TMP_34 = \
+CONVERT _owner to uint256
+REF_17 (->m_owners) := TMP_34(uint256)",
+		node_expression="m_owners[m_numOwners] = uint256(_owner)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_17(uint256) -> m_owners[m_numOwners]
+TMP_34 = CONVERT _owner to uint256
+REF_17 (->m_owners) := TMP_34(uint256)",
+		node_source_code_lines="[161]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	68 -> 69	[key=0,
+		edge_type=next,
+		label=Next];
+	70	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[uint256(_owner)] = m_numOwners
+
+IRs:
+TMP_35 = CONVERT _owner to uint256
+REF_18(uint256) \
+-> m_ownerIndex[TMP_35]
+REF_18 (->m_ownerIndex) := m_numOwners(uint256)",
+		node_expression="m_ownerIndex[uint256(_owner)] = m_numOwners",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_35 = CONVERT _owner to uint256
+REF_18(uint256) -> m_ownerIndex[TMP_35]
+REF_18 (->m_ownerIndex) := m_numOwners(uint256)",
+		node_source_code_lines="[162]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	69 -> 70	[key=0,
+		edge_type=next,
+		label=Next];
+	71	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+OwnerAdded(_owner)
+
+IRs:
+Emit OwnerAdded(_owner)",
+		node_expression="OwnerAdded(_owner)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit OwnerAdded(_owner)",
+		node_source_code_lines="[163]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	70 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	72 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=WalletLibrary,
+		function_fullname="addOwner(address)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_addOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	73 -> 57	[key=0,
+		edge_type=next,
+		label=Next];
+	74	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	87	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_47(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_47)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_47(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_47)",
+		node_source_code_lines="[166]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	74 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndex = m_ownerIndex[uint256(_owner)]
+
+IRs:
+TMP_39 = CONVERT _owner to uint256
+REF_19(\
+uint256) -> m_ownerIndex[TMP_39]
+ownerIndex(uint256) := REF_19(uint256)",
+		node_expression="ownerIndex = m_ownerIndex[uint256(_owner)]",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_39 = CONVERT _owner to uint256
+REF_19(uint256) -> m_ownerIndex[TMP_39]
+ownerIndex(uint256) := REF_19(uint256)",
+		node_source_code_lines="[167]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	76	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: IF
+
+EXPRESSION:
+ownerIndex == 0
+
+IRs:
+TMP_40(bool) = ownerIndex == 0
+CONDITION TMP_40",
+		node_expression="ownerIndex == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_40(bool) = ownerIndex == 0
+CONDITION TMP_40",
+		node_source_code_lines="[168]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	75 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	77	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[168]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	76 -> 77	[key=0,
+		edge_type=if_true,
+		label=True];
+	78	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[168]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	76 -> 78	[key=0,
+		edge_type=if_false,
+		label=False];
+	79	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_required > m_numOwners - 1
+
+IRs:
+TMP_41(uint256) = m_numOwners - 1
+TMP_42(bool) = m_required > TMP_\
+41
+CONDITION TMP_42",
+		node_expression="m_required > m_numOwners - 1",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_41(uint256) = m_numOwners - 1
+TMP_42(bool) = m_required > TMP_41
+CONDITION TMP_42",
+		node_source_code_lines="[169]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	78 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	80	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[169]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	79 -> 80	[key=0,
+		edge_type=if_true,
+		label=True];
+	81	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[169]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	79 -> 81	[key=0,
+		edge_type=if_false,
+		label=False];
+	82	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[ownerIndex] = 0
+
+IRs:
+REF_20(uint256) -> m_owners[ownerIndex]
+REF_20 (->m_owners) := \
+0(uint256)",
+		node_expression="m_owners[ownerIndex] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_20(uint256) -> m_owners[ownerIndex]
+REF_20 (->m_owners) := 0(uint256)",
+		node_source_code_lines="[171]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	81 -> 82	[key=0,
+		edge_type=next,
+		label=Next];
+	83	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[uint256(_owner)] = 0
+
+IRs:
+TMP_43 = CONVERT _owner to uint256
+REF_21(uint256) -> \
+m_ownerIndex[TMP_43]
+REF_21 (->m_ownerIndex) := 0(uint256)",
+		node_expression="m_ownerIndex[uint256(_owner)] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_43 = CONVERT _owner to uint256
+REF_21(uint256) -> m_ownerIndex[TMP_43]
+REF_21 (->m_ownerIndex) := 0(uint256)",
+		node_source_code_lines="[172]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	82 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	84	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+clearPending()
+
+IRs:
+INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_expression="clearPending()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_source_code_lines="[173]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+reorganizeOwners()
+
+IRs:
+INTERNAL_CALL, WalletLibrary.reorganizeOwners()()",
+		node_expression="reorganizeOwners()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.reorganizeOwners()()",
+		node_source_code_lines="[174]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	84 -> 85	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+OwnerRemoved(_owner)
+
+IRs:
+Emit OwnerRemoved(_owner)",
+		node_expression="OwnerRemoved(_owner)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit OwnerRemoved(_owner)",
+		node_source_code_lines="[175]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	85 -> 86	[key=0,
+		edge_type=next,
+		label=Next];
+	87 -> 75	[key=0,
+		edge_type=next,
+		label=Next];
+	88	[contract_name=WalletLibrary,
+		function_fullname="removeOwner(address)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_removeOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	88 -> 74	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[178, 179, 180, 181, 182, 183]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	96	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_52(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_52)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_52(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_52)",
+		node_source_code_lines="[178]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	89 -> 96	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+_newRequired > m_numOwners
+
+IRs:
+TMP_49(bool) = _newRequired > m_numOwners
+CONDITION TMP_49",
+		node_expression="_newRequired > m_numOwners",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_49(bool) = _newRequired > m_numOwners
+CONDITION TMP_49",
+		node_source_code_lines="[179]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	91	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[179]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	90 -> 91	[key=0,
+		edge_type=if_true,
+		label=True];
+	92	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[179]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	90 -> 92	[key=0,
+		edge_type=if_false,
+		label=False];
+	93	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_required = _newRequired
+
+IRs:
+m_required(uint256) := _newRequired(uint256)",
+		node_expression="m_required = _newRequired",
+		node_info_vulnerabilities=None,
+		node_irs="m_required(uint256) := _newRequired(uint256)",
+		node_source_code_lines="[180]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	92 -> 93	[key=0,
+		edge_type=next,
+		label=Next];
+	94	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+clearPending()
+
+IRs:
+INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_expression="clearPending()",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.clearPending()()",
+		node_source_code_lines="[181]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	93 -> 94	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+RequirementChanged(_newRequired)
+
+IRs:
+Emit RequirementChanged(_newRequired)",
+		node_expression="RequirementChanged(_newRequired)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit RequirementChanged(_newRequired)",
+		node_source_code_lines="[182]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	94 -> 95	[key=0,
+		edge_type=next,
+		label=Next];
+	96 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	97	[contract_name=WalletLibrary,
+		function_fullname="changeRequirement(uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_changeRequirement(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[178, 179, 180, 181, 182, 183]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	97 -> 89	[key=0,
+		edge_type=next,
+		label=Next];
+	98	[contract_name=WalletLibrary,
+		function_fullname="getOwner(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[186, 187, 188]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	99	[contract_name=WalletLibrary,
+		function_fullname="getOwner(uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+address(m_owners[ownerIndex + 1])
+
+IRs:
+TMP_54(uint256) = ownerIndex + 1
+REF_22(uint256) -> m_owners[\
+TMP_54]
+TMP_55 = CONVERT REF_22 to address
+RETURN TMP_55",
+		node_expression="address(m_owners[ownerIndex + 1])",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_54(uint256) = ownerIndex + 1
+REF_22(uint256) -> m_owners[TMP_54]
+TMP_55 = CONVERT REF_22 to address
+RETURN TMP_55",
+		node_source_code_lines="[187]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	98 -> 99	[key=0,
+		edge_type=next,
+		label=Next];
+	100	[contract_name=WalletLibrary,
+		function_fullname="getOwner(uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_getOwner(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[186, 187, 188]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	100 -> 98	[key=0,
+		edge_type=next,
+		label=Next];
+	101	[contract_name=WalletLibrary,
+		function_fullname="isOwner(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[190, 191, 192]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	102	[contract_name=WalletLibrary,
+		function_fullname="isOwner(address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+m_ownerIndex[uint256(_addr)] > 0
+
+IRs:
+TMP_56 = CONVERT _addr to uint256
+REF_23(uint256) -> m_ownerIndex[\
+TMP_56]
+TMP_57(bool) = REF_23 > 0
+RETURN TMP_57",
+		node_expression="m_ownerIndex[uint256(_addr)] > 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_56 = CONVERT _addr to uint256
+REF_23(uint256) -> m_ownerIndex[TMP_56]
+TMP_57(bool) = REF_23 > 0
+RETURN TMP_57",
+		node_source_code_lines="[191]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	101 -> 102	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=WalletLibrary,
+		function_fullname="isOwner(address)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_isOwner(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[190, 191, 192]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	103 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	104	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	105	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+pending = m_pending[_operation]
+
+IRs:
+REF_24(WalletLibrary.PendingState) -> m_pending[_operation]
+\
+pending(WalletLibrary.PendingState) := REF_24(WalletLibrary.PendingState)",
+		node_expression="pending = m_pending[_operation]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_24(WalletLibrary.PendingState) -> m_pending[_operation]
+pending(WalletLibrary.PendingState) := REF_24(WalletLibrary.PendingState)",
+		node_source_code_lines="[195]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	104 -> 105	[key=0,
+		edge_type=next,
+		label=Next];
+	106	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndex = m_ownerIndex[uint256(_owner)]
+
+IRs:
+TMP_58 = CONVERT _owner to uint256
+REF_25(\
+uint256) -> m_ownerIndex[TMP_58]
+ownerIndex(uint256) := REF_25(uint256)",
+		node_expression="ownerIndex = m_ownerIndex[uint256(_owner)]",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_58 = CONVERT _owner to uint256
+REF_25(uint256) -> m_ownerIndex[TMP_58]
+ownerIndex(uint256) := REF_25(uint256)",
+		node_source_code_lines="[196]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	105 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	107	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: IF
+
+EXPRESSION:
+ownerIndex == 0
+
+IRs:
+TMP_59(bool) = ownerIndex == 0
+CONDITION TMP_59",
+		node_expression="ownerIndex == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_59(bool) = ownerIndex == 0
+CONDITION TMP_59",
+		node_source_code_lines="[199]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	106 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	108	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+false
+
+IRs:
+RETURN False",
+		node_expression=false,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN False",
+		node_source_code_lines="[199]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	107 -> 108	[key=0,
+		edge_type=if_true,
+		label=True];
+	109	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[199]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	107 -> 109	[key=0,
+		edge_type=if_false,
+		label=False];
+	110	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndexBit = 2 ** ownerIndex
+
+IRs:
+TMP_60(uint256) = 2 ** ownerIndex
+ownerIndexBit(uint256) := \
+TMP_60(uint256)",
+		node_expression="ownerIndexBit = 2 ** ownerIndex",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_60(uint256) = 2 ** ownerIndex
+ownerIndexBit(uint256) := TMP_60(uint256)",
+		node_source_code_lines="[202]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	109 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	111	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+! (pending.ownersDone & ownerIndexBit == 0)
+
+IRs:
+REF_26(uint256) -> pending.ownersDone
+TMP_61(uint256) = \
+REF_26 & ownerIndexBit
+TMP_62(bool) = TMP_61 == 0
+TMP_63 = ! TMP_62 
+RETURN TMP_63",
+		node_expression="! (pending.ownersDone & ownerIndexBit == 0)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_26(uint256) -> pending.ownersDone
+TMP_61(uint256) = REF_26 & ownerIndexBit
+TMP_62(bool) = TMP_61 == 0
+TMP_63 = ! TMP_62 
+RETURN \
+TMP_63",
+		node_source_code_lines="[203]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	110 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	112	[contract_name=WalletLibrary,
+		function_fullname="hasConfirmed(bytes32,address)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_hasConfirmed(bytes32,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	112 -> 104	[key=0,
+		edge_type=next,
+		label=Next];
+	113	[contract_name=WalletLibrary,
+		function_fullname="initDaylimit(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[207, 208, 209, 210]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	116	[contract_name=WalletLibrary,
+		function_fullname="initDaylimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+only_uninitialized()
+
+IRs:
+MODIFIER_CALL, WalletLibrary.only_uninitialized()()",
+		node_expression="only_uninitialized()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WalletLibrary.only_uninitialized()()",
+		node_source_code_lines="[207]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	113 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	114	[contract_name=WalletLibrary,
+		function_fullname="initDaylimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_dailyLimit = _limit
+
+IRs:
+m_dailyLimit(uint256) := _limit(uint256)",
+		node_expression="m_dailyLimit = _limit",
+		node_info_vulnerabilities=None,
+		node_irs="m_dailyLimit(uint256) := _limit(uint256)",
+		node_source_code_lines="[208]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	115	[contract_name=WalletLibrary,
+		function_fullname="initDaylimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_lastDay = today()
+
+IRs:
+TMP_64(uint256) = INTERNAL_CALL, WalletLibrary.today()()
+m_lastDay(\
+uint256) := TMP_64(uint256)",
+		node_expression="m_lastDay = today()",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_64(uint256) = INTERNAL_CALL, WalletLibrary.today()()
+m_lastDay(uint256) := TMP_64(uint256)",
+		node_source_code_lines="[209]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	114 -> 115	[key=0,
+		edge_type=next,
+		label=Next];
+	116 -> 114	[key=0,
+		edge_type=next,
+		label=Next];
+	117	[contract_name=WalletLibrary,
+		function_fullname="initDaylimit(uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_initDaylimit(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[207, 208, 209, 210]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	117 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=WalletLibrary,
+		function_fullname="setDailyLimit(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[212, 213, 214]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	120	[contract_name=WalletLibrary,
+		function_fullname="setDailyLimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_66(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_66)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_66(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_66)",
+		node_source_code_lines="[212]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	118 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=WalletLibrary,
+		function_fullname="setDailyLimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_dailyLimit = _newLimit
+
+IRs:
+m_dailyLimit(uint256) := _newLimit(uint256)",
+		node_expression="m_dailyLimit = _newLimit",
+		node_info_vulnerabilities=None,
+		node_irs="m_dailyLimit(uint256) := _newLimit(uint256)",
+		node_source_code_lines="[213]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	120 -> 119	[key=0,
+		edge_type=next,
+		label=Next];
+	121	[contract_name=WalletLibrary,
+		function_fullname="setDailyLimit(uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_setDailyLimit(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[212, 213, 214]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	121 -> 118	[key=0,
+		edge_type=next,
+		label=Next];
+	122	[contract_name=WalletLibrary,
+		function_fullname="resetSpentToday()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[216, 217, 218]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	124	[contract_name=WalletLibrary,
+		function_fullname="resetSpentToday()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_68(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_68)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_68(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_68)",
+		node_source_code_lines="[216]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	122 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	123	[contract_name=WalletLibrary,
+		function_fullname="resetSpentToday()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_spentToday = 0
+
+IRs:
+m_spentToday(uint256) := 0(uint256)",
+		node_expression="m_spentToday = 0",
+		node_info_vulnerabilities=None,
+		node_irs="m_spentToday(uint256) := 0(uint256)",
+		node_source_code_lines="[217]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	124 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	125	[contract_name=WalletLibrary,
+		function_fullname="resetSpentToday()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_resetSpentToday()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[216, 217, 218]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	125 -> 122	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=WalletLibrary,
+		function_fullname="initWallet(address[],uint256,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [226], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[226, 227, 228, 229]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	129	[contract_name=WalletLibrary,
+		function_fullname="initWallet(address[],uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+only_uninitialized()
+
+IRs:
+MODIFIER_CALL, WalletLibrary.only_uninitialized()()",
+		node_expression="only_uninitialized()",
+		node_info_vulnerabilities="[{'lines': [226], 'category': 'access_control'}]",
+		node_irs="MODIFIER_CALL, WalletLibrary.only_uninitialized()()",
+		node_source_code_lines="[226]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	126 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	127	[contract_name=WalletLibrary,
+		function_fullname="initWallet(address[],uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+initDaylimit(_daylimit)
+
+IRs:
+INTERNAL_CALL, WalletLibrary.initDaylimit(uint256)(_daylimit)",
+		node_expression="initDaylimit(_daylimit)",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.initDaylimit(uint256)(_daylimit)",
+		node_source_code_lines="[227]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	128	[contract_name=WalletLibrary,
+		function_fullname="initWallet(address[],uint256,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+initMultiowned(_owners,_required)
+
+IRs:
+INTERNAL_CALL, WalletLibrary.initMultiowned(address[],\
+uint256)(_owners,_required)",
+		node_expression="initMultiowned(_owners,_required)",
+		node_info_vulnerabilities=None,
+		node_irs="INTERNAL_CALL, WalletLibrary.initMultiowned(address[],uint256)(_owners,_required)",
+		node_source_code_lines="[228]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	127 -> 128	[key=0,
+		edge_type=next,
+		label=Next];
+	129 -> 127	[key=0,
+		edge_type=next,
+		label=Next];
+	130	[contract_name=WalletLibrary,
+		function_fullname="initWallet(address[],uint256,uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_initWallet(address[],uint256,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [226], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[226, 227, 228, 229]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	130 -> 126	[key=0,
+		edge_type=next,
+		label=Next];
+	131	[contract_name=WalletLibrary,
+		function_fullname="kill(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [233], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[233, 234, 235]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	133	[contract_name=WalletLibrary,
+		function_fullname="kill(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(sha3()(msg.data))
+
+IRs:
+TMP_74(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_\
+CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_74)",
+		node_expression="onlymanyowners(sha3()(msg.data))",
+		node_info_vulnerabilities="[{'lines': [233], 'category': 'access_control'}]",
+		node_irs="TMP_74(bytes32) = SOLIDITY_CALL sha3()(msg.data)
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(TMP_74)",
+		node_source_code_lines="[233]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	131 -> 133	[key=0,
+		edge_type=next,
+		label=Next];
+	132	[contract_name=WalletLibrary,
+		function_fullname="kill(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+suicide(address)(_to)
+
+IRs:
+TMP_73(None) = SOLIDITY_CALL suicide(address)(_to)",
+		node_expression="suicide(address)(_to)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_73(None) = SOLIDITY_CALL suicide(address)(_to)",
+		node_source_code_lines="[234]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	133 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	134	[contract_name=WalletLibrary,
+		function_fullname="kill(address)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_kill(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [233], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[233, 234, 235]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	134 -> 131	[key=0,
+		edge_type=next,
+		label=Next];
+	135	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	155	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, WalletLibrary.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WalletLibrary.onlyowner()()",
+		node_source_code_lines="[241]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	135 -> 155	[key=0,
+		edge_type=next,
+		label=Next];
+	136	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: IF
+
+EXPRESSION:
+(_data.length == 0 && underLimit(_value)) || m_required == 1
+
+IRs:
+REF_27 -> LENGTH _data
+TMP_76(bool) = \
+REF_27 == 0
+TMP_77(bool) = INTERNAL_CALL, WalletLibrary.underLimit(uint256)(_value)
+TMP_78(bool) = TMP_76 && TMP_77
+TMP_79(bool) = \
+m_required == 1
+TMP_80(bool) = TMP_78 || TMP_79
+CONDITION TMP_80",
+		node_expression="(_data.length == 0 && underLimit(_value)) || m_required == 1",
+		node_info_vulnerabilities=None,
+		node_irs="REF_27 -> LENGTH _data
+TMP_76(bool) = REF_27 == 0
+TMP_77(bool) = INTERNAL_CALL, WalletLibrary.underLimit(uint256)(_value)
+TMP_78(\
+bool) = TMP_76 && TMP_77
+TMP_79(bool) = m_required == 1
+TMP_80(bool) = TMP_78 || TMP_79
+CONDITION TMP_80",
+		node_source_code_lines="[243]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	137	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: NEW VARIABLE
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[245]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	136 -> 137	[key=0,
+		edge_type=if_true,
+		label=True];
+	145	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+o_hash = sha3()(msg.data,block.number)
+
+IRs:
+TMP_87(bytes32) = SOLIDITY_CALL sha3()(msg.data,\
+block.number)
+o_hash(bytes32) := TMP_87(bytes32)",
+		node_expression="o_hash = sha3()(msg.data,block.number)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_87(bytes32) = SOLIDITY_CALL sha3()(msg.data,block.number)
+o_hash(bytes32) := TMP_87(bytes32)",
+		node_source_code_lines="[255]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	136 -> 145	[key=0,
+		edge_type=if_false,
+		label=False];
+	138	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: IF
+
+EXPRESSION:
+_to == 0
+
+IRs:
+TMP_81(bool) = _to == 0
+CONDITION TMP_81",
+		node_expression="_to == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_81(bool) = _to == 0
+CONDITION TMP_81",
+		node_source_code_lines="[246]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	137 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	139	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+created = create(_value,_data)
+
+IRs:
+TMP_82(address) = INTERNAL_CALL, WalletLibrary.create(uint256,\
+bytes)(_value,_data)
+created(address) := TMP_82(address)",
+		node_expression="created = create(_value,_data)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_82(address) = INTERNAL_CALL, WalletLibrary.create(uint256,bytes)(_value,_data)
+created(address) := TMP_82(address)",
+		node_source_code_lines="[247]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	138 -> 139	[key=0,
+		edge_type=if_true,
+		label=True];
+	140	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: IF
+
+EXPRESSION:
+! _to.call.value(_value)(_data)
+
+IRs:
+TMP_84(bool) = LOW_LEVEL_CALL, dest:_to, function:call, arguments:['_\
+data'] value:_value 
+TMP_85 = ! TMP_84 
+CONDITION TMP_85",
+		node_expression="! _to.call.value(_value)(_data)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_84(bool) = LOW_LEVEL_CALL, dest:_to, function:call, arguments:['_data'] value:_value 
+TMP_85 = ! TMP_84 
+CONDITION TMP_85",
+		node_source_code_lines="[249]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	138 -> 140	[key=0,
+		edge_type=if_false,
+		label=False];
+	143	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[246, 247, 248, 249, 250, 251]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	139 -> 143	[key=0,
+		edge_type=next,
+		label=Next];
+	141	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[250]",
+		node_type=THROW,
+		source_file="parity_wallet_bug_2.sol"];
+	140 -> 141	[key=0,
+		edge_type=if_true,
+		label=True];
+	142	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[249, 250]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	140 -> 142	[key=0,
+		edge_type=if_false,
+		label=False];
+	142 -> 143	[key=0,
+		edge_type=next,
+		label=Next];
+	144	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+SingleTransact(msg.sender,_value,_to,_data,created)
+
+IRs:
+Emit SingleTransact(msg.sender._value._\
+to._data.created)",
+		node_expression="SingleTransact(msg.sender,_value,_to,_data,created)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit SingleTransact(msg.sender._value._to._data.created)",
+		node_source_code_lines="[252]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	143 -> 144	[key=0,
+		edge_type=next,
+		label=Next];
+	154	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	144 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	146	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_txs[o_hash].to == 0 && m_txs[o_hash].value == 0 && m_txs[o_hash].data.length == 0
+
+IRs:
+REF_30(WalletLibrary.Transaction) \
+-> m_txs[o_hash]
+REF_31(address) -> REF_30.to
+TMP_88(bool) = REF_31 == 0
+REF_32(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_\
+33(uint256) -> REF_32.value
+TMP_89(bool) = REF_33 == 0
+TMP_90(bool) = TMP_88 && TMP_89
+REF_34(WalletLibrary.Transaction) -> m_txs[\
+o_hash]
+REF_35(bytes) -> REF_34.data
+REF_36 -> LENGTH REF_35
+TMP_91(bool) = REF_36 == 0
+TMP_92(bool) = TMP_90 && TMP_91
+CONDITION \
+TMP_92",
+		node_expression="m_txs[o_hash].to == 0 && m_txs[o_hash].value == 0 && m_txs[o_hash].data.length == 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_30(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_31(address) -> REF_30.to
+TMP_88(bool) = REF_31 == 0
+REF_32(WalletLibrary.Transaction) \
+-> m_txs[o_hash]
+REF_33(uint256) -> REF_32.value
+TMP_89(bool) = REF_33 == 0
+TMP_90(bool) = TMP_88 && TMP_89
+REF_34(WalletLibrary.Transaction) \
+-> m_txs[o_hash]
+REF_35(bytes) -> REF_34.data
+REF_36 -> LENGTH REF_35
+TMP_91(bool) = REF_36 == 0
+TMP_92(bool) = TMP_90 && TMP_91
+\
+CONDITION TMP_92",
+		node_source_code_lines="[257]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	145 -> 146	[key=0,
+		edge_type=next,
+		label=Next];
+	147	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_txs[o_hash].to = _to
+
+IRs:
+REF_37(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_38(address) \
+-> REF_37.to
+REF_38 (->m_txs) := _to(address)",
+		node_expression="m_txs[o_hash].to = _to",
+		node_info_vulnerabilities=None,
+		node_irs="REF_37(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_38(address) -> REF_37.to
+REF_38 (->m_txs) := _to(address)",
+		node_source_code_lines="[258]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	146 -> 147	[key=0,
+		edge_type=if_true,
+		label=True];
+	150	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[257, 258, 259, 260, 261]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	146 -> 150	[key=0,
+		edge_type=if_false,
+		label=False];
+	148	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_txs[o_hash].value = _value
+
+IRs:
+REF_39(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_40(\
+uint256) -> REF_39.value
+REF_40 (->m_txs) := _value(uint256)",
+		node_expression="m_txs[o_hash].value = _value",
+		node_info_vulnerabilities=None,
+		node_irs="REF_39(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_40(uint256) -> REF_39.value
+REF_40 (->m_txs) := _value(uint256)",
+		node_source_code_lines="[259]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	147 -> 148	[key=0,
+		edge_type=next,
+		label=Next];
+	149	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_txs[o_hash].data = _data
+
+IRs:
+REF_41(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_42(bytes) \
+-> REF_41.data
+REF_42 (->m_txs) := _data(bytes)",
+		node_expression="m_txs[o_hash].data = _data",
+		node_info_vulnerabilities=None,
+		node_irs="REF_41(WalletLibrary.Transaction) -> m_txs[o_hash]
+REF_42(bytes) -> REF_41.data
+REF_42 (->m_txs) := _data(bytes)",
+		node_source_code_lines="[260]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	148 -> 149	[key=0,
+		edge_type=next,
+		label=Next];
+	149 -> 150	[key=0,
+		edge_type=next,
+		label=Next];
+	151	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: IF
+
+EXPRESSION:
+! confirm(o_hash)
+
+IRs:
+TMP_93(bool) = INTERNAL_CALL, WalletLibrary.confirm(bytes32)(o_hash)
+TMP_94 = ! \
+TMP_93 
+CONDITION TMP_94",
+		node_expression="! confirm(o_hash)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_93(bool) = INTERNAL_CALL, WalletLibrary.confirm(bytes32)(o_hash)
+TMP_94 = ! TMP_93 
+CONDITION TMP_94",
+		node_source_code_lines="[262]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	150 -> 151	[key=0,
+		edge_type=next,
+		label=Next];
+	152	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+ConfirmationNeeded(o_hash,msg.sender,_value,_to,_data)
+
+IRs:
+Emit ConfirmationNeeded(o_hash.msg.sender._\
+value._to._data)",
+		node_expression="ConfirmationNeeded(o_hash,msg.sender,_value,_to,_data)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit ConfirmationNeeded(o_hash.msg.sender._value._to._data)",
+		node_source_code_lines="[263]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	151 -> 152	[key=0,
+		edge_type=if_true,
+		label=True];
+	153	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[262, 263, 264]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	151 -> 153	[key=0,
+		edge_type=if_false,
+		label=False];
+	152 -> 153	[key=0,
+		edge_type=next,
+		label=Next];
+	153 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	155 -> 136	[key=0,
+		edge_type=next,
+		label=Next];
+	156	[contract_name=WalletLibrary,
+		function_fullname="execute(address,uint256,bytes)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_execute(address,uint256,bytes)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	156 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	157	[contract_name=WalletLibrary,
+		function_fullname="create(uint256,bytes)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[268, 269, 270, 271, 272, 273, 274, 275]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	158	[contract_name=WalletLibrary,
+		function_fullname="create(uint256,bytes)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_create(uint256,bytes)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[268, 269, 270, 271, 272, 273, 274, 275]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	158 -> 157	[key=0,
+		edge_type=next,
+		label=Next];
+	159	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	172	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlymanyowners(_h)
+
+IRs:
+MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(_h)",
+		node_expression="onlymanyowners(_h)",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WalletLibrary.onlymanyowners(bytes32)(_h)",
+		node_source_code_lines="[279]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	159 -> 172	[key=0,
+		edge_type=next,
+		label=Next];
+	160	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_txs[_h].to != 0 || m_txs[_h].value != 0 || m_txs[_h].data.length != 0
+
+IRs:
+REF_43(WalletLibrary.Transaction) \
+-> m_txs[_h]
+REF_44(address) -> REF_43.to
+TMP_97(bool) = REF_44 != 0
+REF_45(WalletLibrary.Transaction) -> m_txs[_h]
+REF_46(uint256) \
+-> REF_45.value
+TMP_98(bool) = REF_46 != 0
+TMP_99(bool) = TMP_97 || TMP_98
+REF_47(WalletLibrary.Transaction) -> m_txs[_h]
+REF_48(\
+bytes) -> REF_47.data
+REF_49 -> LENGTH REF_48
+TMP_100(bool) = REF_49 != 0
+TMP_101(bool) = TMP_99 || TMP_100
+CONDITION TMP_101",
+		node_expression="m_txs[_h].to != 0 || m_txs[_h].value != 0 || m_txs[_h].data.length != 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_43(WalletLibrary.Transaction) -> m_txs[_h]
+REF_44(address) -> REF_43.to
+TMP_97(bool) = REF_44 != 0
+REF_45(WalletLibrary.Transaction) \
+-> m_txs[_h]
+REF_46(uint256) -> REF_45.value
+TMP_98(bool) = REF_46 != 0
+TMP_99(bool) = TMP_97 || TMP_98
+REF_47(WalletLibrary.Transaction) \
+-> m_txs[_h]
+REF_48(bytes) -> REF_47.data
+REF_49 -> LENGTH REF_48
+TMP_100(bool) = REF_49 != 0
+TMP_101(bool) = TMP_99 || TMP_100
+\
+CONDITION TMP_101",
+		node_source_code_lines="[280]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	161	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: NEW VARIABLE
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[281]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	160 -> 161	[key=0,
+		edge_type=if_true,
+		label=True];
+	171	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	160 -> 171	[key=0,
+		edge_type=if_false,
+		label=False];
+	162	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_txs[_h].to == 0
+
+IRs:
+REF_50(WalletLibrary.Transaction) -> m_txs[_h]
+REF_51(address) -> REF_50.to
+TMP_\
+102(bool) = REF_51 == 0
+CONDITION TMP_102",
+		node_expression="m_txs[_h].to == 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_50(WalletLibrary.Transaction) -> m_txs[_h]
+REF_51(address) -> REF_50.to
+TMP_102(bool) = REF_51 == 0
+CONDITION TMP_102",
+		node_source_code_lines="[282]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	161 -> 162	[key=0,
+		edge_type=next,
+		label=Next];
+	163	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+created = create(m_txs[_h].value,m_txs[_h].data)
+
+IRs:
+REF_52(WalletLibrary.Transaction) -> m_\
+txs[_h]
+REF_53(uint256) -> REF_52.value
+REF_54(WalletLibrary.Transaction) -> m_txs[_h]
+REF_55(bytes) -> REF_54.data
+TMP_103(address) = \
+INTERNAL_CALL, WalletLibrary.create(uint256,bytes)(REF_53,REF_55)
+created(address) := TMP_103(address)",
+		node_expression="created = create(m_txs[_h].value,m_txs[_h].data)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_52(WalletLibrary.Transaction) -> m_txs[_h]
+REF_53(uint256) -> REF_52.value
+REF_54(WalletLibrary.Transaction) -> m_txs[_h]
+REF_\
+55(bytes) -> REF_54.data
+TMP_103(address) = INTERNAL_CALL, WalletLibrary.create(uint256,bytes)(REF_53,REF_55)
+created(address) := \
+TMP_103(address)",
+		node_source_code_lines="[283]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	162 -> 163	[key=0,
+		edge_type=if_true,
+		label=True];
+	164	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+! m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)
+
+IRs:
+REF_56(WalletLibrary.Transaction) -> \
+m_txs[_h]
+REF_57(address) -> REF_56.to
+REF_60(WalletLibrary.Transaction) -> m_txs[_h]
+REF_61(uint256) -> REF_60.value
+REF_62(WalletLibrary.Transaction) \
+-> m_txs[_h]
+REF_63(bytes) -> REF_62.data
+TMP_105(bool) = LOW_LEVEL_CALL, dest:REF_57, function:call, arguments:['REF_63'] value:\
+REF_61 
+TMP_106 = ! TMP_105 
+CONDITION TMP_106",
+		node_expression="! m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_56(WalletLibrary.Transaction) -> m_txs[_h]
+REF_57(address) -> REF_56.to
+REF_60(WalletLibrary.Transaction) -> m_txs[_h]
+REF_61(\
+uint256) -> REF_60.value
+REF_62(WalletLibrary.Transaction) -> m_txs[_h]
+REF_63(bytes) -> REF_62.data
+TMP_105(bool) = LOW_LEVEL_CALL, \
+dest:REF_57, function:call, arguments:['REF_63'] value:REF_61 
+TMP_106 = ! TMP_105 
+CONDITION TMP_106",
+		node_source_code_lines="[285]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	162 -> 164	[key=0,
+		edge_type=if_false,
+		label=False];
+	167	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[282, 283, 284, 285, 286, 287]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	163 -> 167	[key=0,
+		edge_type=next,
+		label=Next];
+	165	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[286]",
+		node_type=THROW,
+		source_file="parity_wallet_bug_2.sol"];
+	164 -> 165	[key=0,
+		edge_type=if_true,
+		label=True];
+	166	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[285, 286]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	164 -> 166	[key=0,
+		edge_type=if_false,
+		label=False];
+	166 -> 167	[key=0,
+		edge_type=next,
+		label=Next];
+	168	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+MultiTransact(msg.sender,_h,m_txs[_h].value,m_txs[_h].to,m_txs[_h].data,created)
+
+IRs:
+REF_64(\
+WalletLibrary.Transaction) -> m_txs[_h]
+REF_65(uint256) -> REF_64.value
+REF_66(WalletLibrary.Transaction) -> m_txs[_h]
+REF_67(address) \
+-> REF_66.to
+REF_68(WalletLibrary.Transaction) -> m_txs[_h]
+REF_69(bytes) -> REF_68.data
+Emit MultiTransact(msg.sender._h.REF_65.REF_\
+67.REF_69.created)",
+		node_expression="MultiTransact(msg.sender,_h,m_txs[_h].value,m_txs[_h].to,m_txs[_h].data,created)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_64(WalletLibrary.Transaction) -> m_txs[_h]
+REF_65(uint256) -> REF_64.value
+REF_66(WalletLibrary.Transaction) -> m_txs[_h]
+REF_\
+67(address) -> REF_66.to
+REF_68(WalletLibrary.Transaction) -> m_txs[_h]
+REF_69(bytes) -> REF_68.data
+Emit MultiTransact(msg.sender._\
+h.REF_65.REF_67.REF_69.created)",
+		node_source_code_lines="[289]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	167 -> 168	[key=0,
+		edge_type=next,
+		label=Next];
+	169	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+delete m_txs[_h]
+
+IRs:
+REF_70(WalletLibrary.Transaction) -> m_txs[_h]
+m_txs = delete REF_70 ",
+		node_expression="delete m_txs[_h]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_70(WalletLibrary.Transaction) -> m_txs[_h]
+m_txs = delete REF_70 ",
+		node_source_code_lines="[290]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	168 -> 169	[key=0,
+		edge_type=next,
+		label=Next];
+	170	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[291]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	169 -> 170	[key=0,
+		edge_type=next,
+		label=Next];
+	172 -> 160	[key=0,
+		edge_type=next,
+		label=Next];
+	173	[contract_name=WalletLibrary,
+		function_fullname="confirm(bytes32)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_confirm(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	173 -> 159	[key=0,
+		edge_type=next,
+		label=Next];
+	174	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, \
+323, 324, 325, 326, 327, 328, 329, 330, 331, 332]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	175	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndex = m_ownerIndex[uint256(msg.sender)]
+
+IRs:
+TMP_109 = CONVERT msg.sender to uint256
+\
+REF_71(uint256) -> m_ownerIndex[TMP_109]
+ownerIndex(uint256) := REF_71(uint256)",
+		node_expression="ownerIndex = m_ownerIndex[uint256(msg.sender)]",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_109 = CONVERT msg.sender to uint256
+REF_71(uint256) -> m_ownerIndex[TMP_109]
+ownerIndex(uint256) := REF_71(uint256)",
+		node_source_code_lines="[299]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	174 -> 175	[key=0,
+		edge_type=next,
+		label=Next];
+	176	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+ownerIndex == 0
+
+IRs:
+TMP_110(bool) = ownerIndex == 0
+CONDITION TMP_110",
+		node_expression="ownerIndex == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_110(bool) = ownerIndex == 0
+CONDITION TMP_110",
+		node_source_code_lines="[301]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	175 -> 176	[key=0,
+		edge_type=next,
+		label=Next];
+	177	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: RETURN
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[301]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	176 -> 177	[key=0,
+		edge_type=if_true,
+		label=True];
+	178	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[301]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	176 -> 178	[key=0,
+		edge_type=if_false,
+		label=False];
+	179	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+pending = m_pending[_operation]
+
+IRs:
+REF_72(WalletLibrary.PendingState) -> m_pending[_operation]
+\
+pending(WalletLibrary.PendingState) := REF_72(WalletLibrary.PendingState)",
+		node_expression="pending = m_pending[_operation]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_72(WalletLibrary.PendingState) -> m_pending[_operation]
+pending(WalletLibrary.PendingState) := REF_72(WalletLibrary.PendingState)",
+		node_source_code_lines="[303]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	178 -> 179	[key=0,
+		edge_type=next,
+		label=Next];
+	180	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+pending.yetNeeded == 0
+
+IRs:
+REF_73(uint256) -> pending.yetNeeded
+TMP_111(bool) = REF_73 == 0
+CONDITION \
+TMP_111",
+		node_expression="pending.yetNeeded == 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_73(uint256) -> pending.yetNeeded
+TMP_111(bool) = REF_73 == 0
+CONDITION TMP_111",
+		node_source_code_lines="[305]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	179 -> 180	[key=0,
+		edge_type=next,
+		label=Next];
+	181	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.yetNeeded = m_required
+
+IRs:
+REF_74(uint256) -> pending.yetNeeded
+REF_74 (->pending) := \
+m_required(uint256)",
+		node_expression="pending.yetNeeded = m_required",
+		node_info_vulnerabilities=None,
+		node_irs="REF_74(uint256) -> pending.yetNeeded
+REF_74 (->pending) := m_required(uint256)",
+		node_source_code_lines="[307]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	180 -> 181	[key=0,
+		edge_type=if_true,
+		label=True];
+	185	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[305, 306, 307, 308, 309, 310, 311, 312]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	180 -> 185	[key=0,
+		edge_type=if_false,
+		label=False];
+	182	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.ownersDone = 0
+
+IRs:
+REF_75(uint256) -> pending.ownersDone
+REF_75 (->pending) := 0(uint256)",
+		node_expression="pending.ownersDone = 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_75(uint256) -> pending.ownersDone
+REF_75 (->pending) := 0(uint256)",
+		node_source_code_lines="[309]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	181 -> 182	[key=0,
+		edge_type=next,
+		label=Next];
+	183	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.index = m_pendingIndex.length ++
+
+IRs:
+REF_76(uint256) -> pending.index
+REF_77 -> LENGTH \
+m_pendingIndex
+TMP_112(uint256) := REF_77(uint256)
+REF_77(-> m_pendingIndex) = REF_77 + 1
+REF_76 (->pending) := TMP_112(uint256)",
+		node_expression="pending.index = m_pendingIndex.length ++",
+		node_info_vulnerabilities=None,
+		node_irs="REF_76(uint256) -> pending.index
+REF_77 -> LENGTH m_pendingIndex
+TMP_112(uint256) := REF_77(uint256)
+REF_77(-> m_pendingIndex) = \
+REF_77 + 1
+REF_76 (->pending) := TMP_112(uint256)",
+		node_source_code_lines="[310]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	182 -> 183	[key=0,
+		edge_type=next,
+		label=Next];
+	184	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_pendingIndex[pending.index] = _operation
+
+IRs:
+REF_78(uint256) -> pending.index
+REF_79(bytes32) \
+-> m_pendingIndex[REF_78]
+REF_79 (->m_pendingIndex) := _operation(bytes32)",
+		node_expression="m_pendingIndex[pending.index] = _operation",
+		node_info_vulnerabilities=None,
+		node_irs="REF_78(uint256) -> pending.index
+REF_79(bytes32) -> m_pendingIndex[REF_78]
+REF_79 (->m_pendingIndex) := _operation(bytes32)",
+		node_source_code_lines="[311]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	183 -> 184	[key=0,
+		edge_type=next,
+		label=Next];
+	184 -> 185	[key=0,
+		edge_type=next,
+		label=Next];
+	186	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+ownerIndexBit = 2 ** ownerIndex
+
+IRs:
+TMP_113(uint256) = 2 ** ownerIndex
+ownerIndexBit(uint256) := \
+TMP_113(uint256)",
+		node_expression="ownerIndexBit = 2 ** ownerIndex",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_113(uint256) = 2 ** ownerIndex
+ownerIndexBit(uint256) := TMP_113(uint256)",
+		node_source_code_lines="[314]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	185 -> 186	[key=0,
+		edge_type=next,
+		label=Next];
+	187	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+pending.ownersDone & ownerIndexBit == 0
+
+IRs:
+REF_80(uint256) -> pending.ownersDone
+TMP_114(uint256) = \
+REF_80 & ownerIndexBit
+TMP_115(bool) = TMP_114 == 0
+CONDITION TMP_115",
+		node_expression="pending.ownersDone & ownerIndexBit == 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_80(uint256) -> pending.ownersDone
+TMP_114(uint256) = REF_80 & ownerIndexBit
+TMP_115(bool) = TMP_114 == 0
+CONDITION TMP_115",
+		node_source_code_lines="[316]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	186 -> 187	[key=0,
+		edge_type=next,
+		label=Next];
+	188	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+Confirmation(msg.sender,_operation)
+
+IRs:
+Emit Confirmation(msg.sender._operation)",
+		node_expression="Confirmation(msg.sender,_operation)",
+		node_info_vulnerabilities=None,
+		node_irs="Emit Confirmation(msg.sender._operation)",
+		node_source_code_lines="[317]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	187 -> 188	[key=0,
+		edge_type=if_true,
+		label=True];
+	196	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	187 -> 196	[key=0,
+		edge_type=if_false,
+		label=False];
+	189	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+pending.yetNeeded <= 1
+
+IRs:
+REF_81(uint256) -> pending.yetNeeded
+TMP_117(bool) = REF_81 <= 1
+CONDITION \
+TMP_117",
+		node_expression="pending.yetNeeded <= 1",
+		node_info_vulnerabilities=None,
+		node_irs="REF_81(uint256) -> pending.yetNeeded
+TMP_117(bool) = REF_81 <= 1
+CONDITION TMP_117",
+		node_source_code_lines="[319]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	188 -> 189	[key=0,
+		edge_type=next,
+		label=Next];
+	190	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+delete m_pendingIndex[m_pending[_operation].index]
+
+IRs:
+REF_82(WalletLibrary.PendingState) -> \
+m_pending[_operation]
+REF_83(uint256) -> REF_82.index
+REF_84(bytes32) -> m_pendingIndex[REF_83]
+m_pendingIndex = delete REF_84 ",
+		node_expression="delete m_pendingIndex[m_pending[_operation].index]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_82(WalletLibrary.PendingState) -> m_pending[_operation]
+REF_83(uint256) -> REF_82.index
+REF_84(bytes32) -> m_pendingIndex[REF_\
+83]
+m_pendingIndex = delete REF_84 ",
+		node_source_code_lines="[321]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	189 -> 190	[key=0,
+		edge_type=if_true,
+		label=True];
+	193	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.yetNeeded --
+
+IRs:
+REF_86(uint256) -> pending.yetNeeded
+TMP_118(uint256) := REF_86(uint256)
+\
+REF_86(-> pending) = REF_86 - 1",
+		node_expression="pending.yetNeeded --",
+		node_info_vulnerabilities=None,
+		node_irs="REF_86(uint256) -> pending.yetNeeded
+TMP_118(uint256) := REF_86(uint256)
+REF_86(-> pending) = REF_86 - 1",
+		node_source_code_lines="[328]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	189 -> 193	[key=0,
+		edge_type=if_false,
+		label=False];
+	191	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+delete m_pending[_operation]
+
+IRs:
+REF_85(WalletLibrary.PendingState) -> m_pending[_operation]
+\
+m_pending = delete REF_85 ",
+		node_expression="delete m_pending[_operation]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_85(WalletLibrary.PendingState) -> m_pending[_operation]
+m_pending = delete REF_85 ",
+		node_source_code_lines="[322]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	190 -> 191	[key=0,
+		edge_type=next,
+		label=Next];
+	192	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[323]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	191 -> 192	[key=0,
+		edge_type=next,
+		label=Next];
+	194	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+pending.ownersDone |= ownerIndexBit
+
+IRs:
+REF_87(uint256) -> pending.ownersDone
+REF_87(-> pending) = \
+REF_87 | ownerIndexBit",
+		node_expression="pending.ownersDone |= ownerIndexBit",
+		node_info_vulnerabilities=None,
+		node_irs="REF_87(uint256) -> pending.ownersDone
+REF_87(-> pending) = REF_87 | ownerIndexBit",
+		node_source_code_lines="[329]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	193 -> 194	[key=0,
+		edge_type=next,
+		label=Next];
+	195	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	194 -> 195	[key=0,
+		edge_type=next,
+		label=Next];
+	195 -> 196	[key=0,
+		edge_type=next,
+		label=Next];
+	197	[contract_name=WalletLibrary,
+		function_fullname="confirmAndCheck(bytes32)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_confirmAndCheck(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, \
+323, 324, 325, 326, 327, 328, 329, 330, 331, 332]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	197 -> 174	[key=0,
+		edge_type=next,
+		label=Next];
+	198	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	199	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+free = 1
+
+IRs:
+free(uint256) := 1(uint256)",
+		node_expression="free = 1",
+		node_info_vulnerabilities=None,
+		node_irs="free(uint256) := 1(uint256)",
+		node_source_code_lines="[335]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	198 -> 199	[key=0,
+		edge_type=next,
+		label=Next];
+	200	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346]",
+		node_type=BEGIN_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	199 -> 200	[key=0,
+		edge_type=next,
+		label=Next];
+	201	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+free < m_numOwners
+
+IRs:
+TMP_119(bool) = free < m_numOwners
+CONDITION TMP_119",
+		node_expression="free < m_numOwners",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_119(bool) = free < m_numOwners
+CONDITION TMP_119",
+		node_source_code_lines="[336]",
+		node_type=IF_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	200 -> 201	[key=0,
+		edge_type=next,
+		label=Next];
+	202	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[338]",
+		node_type=BEGIN_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	201 -> 202	[key=0,
+		edge_type=if_true,
+		label=True];
+	215	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346]",
+		node_type=END_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	201 -> 215	[key=0,
+		edge_type=if_false,
+		label=False];
+	203	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+free < m_numOwners && m_owners[free] != 0
+
+IRs:
+TMP_120(bool) = free < m_numOwners
+REF_88(uint256) \
+-> m_owners[free]
+TMP_121(bool) = REF_88 != 0
+TMP_122(bool) = TMP_120 && TMP_121
+CONDITION TMP_122",
+		node_expression="free < m_numOwners && m_owners[free] != 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_120(bool) = free < m_numOwners
+REF_88(uint256) -> m_owners[free]
+TMP_121(bool) = REF_88 != 0
+TMP_122(bool) = TMP_120 && TMP_\
+121
+CONDITION TMP_122",
+		node_source_code_lines="[338]",
+		node_type=IF_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	202 -> 203	[key=0,
+		edge_type=next,
+		label=Next];
+	204	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+free ++
+
+IRs:
+TMP_123(uint256) := free(uint256)
+free(uint256) = free + 1",
+		node_expression="free ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_123(uint256) := free(uint256)
+free(uint256) = free + 1",
+		node_source_code_lines="[338]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	203 -> 204	[key=0,
+		edge_type=if_true,
+		label=True];
+	205	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[338]",
+		node_type=END_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	203 -> 205	[key=0,
+		edge_type=if_false,
+		label=False];
+	204 -> 203	[key=0,
+		edge_type=next,
+		label=Next];
+	206	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[339]",
+		node_type=BEGIN_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	205 -> 206	[key=0,
+		edge_type=next,
+		label=Next];
+	207	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+m_numOwners > 1 && m_owners[m_numOwners] == 0
+
+IRs:
+TMP_124(bool) = m_numOwners > 1
+REF_89(uint256) \
+-> m_owners[m_numOwners]
+TMP_125(bool) = REF_89 == 0
+TMP_126(bool) = TMP_124 && TMP_125
+CONDITION TMP_126",
+		node_expression="m_numOwners > 1 && m_owners[m_numOwners] == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_124(bool) = m_numOwners > 1
+REF_89(uint256) -> m_owners[m_numOwners]
+TMP_125(bool) = REF_89 == 0
+TMP_126(bool) = TMP_124 && \
+TMP_125
+CONDITION TMP_126",
+		node_source_code_lines="[339]",
+		node_type=IF_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	206 -> 207	[key=0,
+		edge_type=next,
+		label=Next];
+	208	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_numOwners --
+
+IRs:
+TMP_127(uint256) := m_numOwners(uint256)
+m_numOwners(uint256) = m_numOwners \
+- 1",
+		node_expression="m_numOwners --",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_127(uint256) := m_numOwners(uint256)
+m_numOwners(uint256) = m_numOwners - 1",
+		node_source_code_lines="[339]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	207 -> 208	[key=0,
+		edge_type=if_true,
+		label=True];
+	209	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[339]",
+		node_type=END_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	207 -> 209	[key=0,
+		edge_type=if_false,
+		label=False];
+	208 -> 207	[key=0,
+		edge_type=next,
+		label=Next];
+	210	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: IF
+
+EXPRESSION:
+free < m_numOwners && m_owners[m_numOwners] != 0 && m_owners[free] == 0
+
+IRs:
+TMP_128(bool) = free < \
+m_numOwners
+REF_90(uint256) -> m_owners[m_numOwners]
+TMP_129(bool) = REF_90 != 0
+TMP_130(bool) = TMP_128 && TMP_129
+REF_91(uint256) \
+-> m_owners[free]
+TMP_131(bool) = REF_91 == 0
+TMP_132(bool) = TMP_130 && TMP_131
+CONDITION TMP_132",
+		node_expression="free < m_numOwners && m_owners[m_numOwners] != 0 && m_owners[free] == 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_128(bool) = free < m_numOwners
+REF_90(uint256) -> m_owners[m_numOwners]
+TMP_129(bool) = REF_90 != 0
+TMP_130(bool) = TMP_128 && \
+TMP_129
+REF_91(uint256) -> m_owners[free]
+TMP_131(bool) = REF_91 == 0
+TMP_132(bool) = TMP_130 && TMP_131
+CONDITION TMP_132",
+		node_source_code_lines="[340]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	209 -> 210	[key=0,
+		edge_type=next,
+		label=Next];
+	211	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[free] = m_owners[m_numOwners]
+
+IRs:
+REF_92(uint256) -> m_owners[free]
+REF_93(uint256) \
+-> m_owners[m_numOwners]
+REF_92 (->m_owners) := REF_93(uint256)",
+		node_expression="m_owners[free] = m_owners[m_numOwners]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_92(uint256) -> m_owners[free]
+REF_93(uint256) -> m_owners[m_numOwners]
+REF_92 (->m_owners) := REF_93(uint256)",
+		node_source_code_lines="[342]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	210 -> 211	[key=0,
+		edge_type=if_true,
+		label=True];
+	214	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[340, 341, 342, 343, 344, 345]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	210 -> 214	[key=0,
+		edge_type=if_false,
+		label=False];
+	212	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_ownerIndex[m_owners[free]] = free
+
+IRs:
+REF_94(uint256) -> m_owners[free]
+REF_95(uint256) -> \
+m_ownerIndex[REF_94]
+REF_95 (->m_ownerIndex) := free(uint256)",
+		node_expression="m_ownerIndex[m_owners[free]] = free",
+		node_info_vulnerabilities=None,
+		node_irs="REF_94(uint256) -> m_owners[free]
+REF_95(uint256) -> m_ownerIndex[REF_94]
+REF_95 (->m_ownerIndex) := free(uint256)",
+		node_source_code_lines="[343]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	211 -> 212	[key=0,
+		edge_type=next,
+		label=Next];
+	213	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_owners[m_numOwners] = 0
+
+IRs:
+REF_96(uint256) -> m_owners[m_numOwners]
+REF_96 (->m_owners) := \
+0(uint256)",
+		node_expression="m_owners[m_numOwners] = 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_96(uint256) -> m_owners[m_numOwners]
+REF_96 (->m_owners) := 0(uint256)",
+		node_source_code_lines="[344]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	212 -> 213	[key=0,
+		edge_type=next,
+		label=Next];
+	213 -> 214	[key=0,
+		edge_type=next,
+		label=Next];
+	214 -> 201	[key=0,
+		edge_type=next,
+		label=Next];
+	216	[contract_name=WalletLibrary,
+		function_fullname="reorganizeOwners()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_reorganizeOwners()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	216 -> 198	[key=0,
+		edge_type=next,
+		label=Next];
+	217	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	227	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyowner()
+
+IRs:
+MODIFIER_CALL, WalletLibrary.onlyowner()()",
+		node_expression="onlyowner()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, WalletLibrary.onlyowner()()",
+		node_source_code_lines="[351]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	217 -> 227	[key=0,
+		edge_type=next,
+		label=Next];
+	218	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+today() > m_lastDay
+
+IRs:
+TMP_133(uint256) = INTERNAL_CALL, WalletLibrary.today()()
+TMP_134(bool) = TMP_\
+133 > m_lastDay
+CONDITION TMP_134",
+		node_expression="today() > m_lastDay",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_133(uint256) = INTERNAL_CALL, WalletLibrary.today()()
+TMP_134(bool) = TMP_133 > m_lastDay
+CONDITION TMP_134",
+		node_source_code_lines="[353]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	219	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_spentToday = 0
+
+IRs:
+m_spentToday(uint256) := 0(uint256)",
+		node_expression="m_spentToday = 0",
+		node_info_vulnerabilities=None,
+		node_irs="m_spentToday(uint256) := 0(uint256)",
+		node_source_code_lines="[354]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	218 -> 219	[key=0,
+		edge_type=if_true,
+		label=True];
+	221	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[353, 354, 355, 356]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	218 -> 221	[key=0,
+		edge_type=if_false,
+		label=False];
+	220	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_lastDay = today()
+
+IRs:
+TMP_135(uint256) = INTERNAL_CALL, WalletLibrary.today()()
+m_lastDay(\
+uint256) := TMP_135(uint256)",
+		node_expression="m_lastDay = today()",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_135(uint256) = INTERNAL_CALL, WalletLibrary.today()()
+m_lastDay(uint256) := TMP_135(uint256)",
+		node_source_code_lines="[355]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	219 -> 220	[key=0,
+		edge_type=next,
+		label=Next];
+	220 -> 221	[key=0,
+		edge_type=next,
+		label=Next];
+	222	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: IF
+
+EXPRESSION:
+m_spentToday + _value >= m_spentToday && m_spentToday + _value <= m_dailyLimit
+
+IRs:
+TMP_136(uint256) = \
+m_spentToday + _value
+TMP_137(bool) = TMP_136 >= m_spentToday
+TMP_138(uint256) = m_spentToday + _value
+TMP_139(bool) = TMP_138 <= \
+m_dailyLimit
+TMP_140(bool) = TMP_137 && TMP_139
+CONDITION TMP_140",
+		node_expression="m_spentToday + _value >= m_spentToday && m_spentToday + _value <= m_dailyLimit",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_136(uint256) = m_spentToday + _value
+TMP_137(bool) = TMP_136 >= m_spentToday
+TMP_138(uint256) = m_spentToday + _value
+TMP_139(\
+bool) = TMP_138 <= m_dailyLimit
+TMP_140(bool) = TMP_137 && TMP_139
+CONDITION TMP_140",
+		node_source_code_lines="[359]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	221 -> 222	[key=0,
+		edge_type=next,
+		label=Next];
+	223	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+m_spentToday += _value
+
+IRs:
+m_spentToday(uint256) = m_spentToday + _value",
+		node_expression="m_spentToday += _value",
+		node_info_vulnerabilities=None,
+		node_irs="m_spentToday(uint256) = m_spentToday + _value",
+		node_source_code_lines="[360]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	222 -> 223	[key=0,
+		edge_type=if_true,
+		label=True];
+	225	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[359, 360, 361, 362]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	222 -> 225	[key=0,
+		edge_type=if_false,
+		label=False];
+	224	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+true
+
+IRs:
+RETURN True",
+		node_expression=true,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN True",
+		node_source_code_lines="[361]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	223 -> 224	[key=0,
+		edge_type=next,
+		label=Next];
+	226	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+false
+
+IRs:
+RETURN False",
+		node_expression=false,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN False",
+		node_source_code_lines="[363]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	225 -> 226	[key=0,
+		edge_type=next,
+		label=Next];
+	227 -> 218	[key=0,
+		edge_type=next,
+		label=Next];
+	228	[contract_name=WalletLibrary,
+		function_fullname="underLimit(uint256)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_underLimit(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	228 -> 217	[key=0,
+		edge_type=next,
+		label=Next];
+	229	[contract_name=WalletLibrary,
+		function_fullname="today()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[367]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	230	[contract_name=WalletLibrary,
+		function_fullname="today()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+now / 86400
+
+IRs:
+TMP_142(uint256) = now / 86400
+RETURN TMP_142",
+		node_expression="now / 86400",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_142(uint256) = now / 86400
+RETURN TMP_142",
+		node_source_code_lines="[367]",
+		node_type=RETURN,
+		source_file="parity_wallet_bug_2.sol"];
+	229 -> 230	[key=0,
+		edge_type=next,
+		label=Next];
+	231	[contract_name=WalletLibrary,
+		function_fullname="today()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_today()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[367]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	231 -> 229	[key=0,
+		edge_type=next,
+		label=Next];
+	232	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	233	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+length = m_pendingIndex.length
+
+IRs:
+REF_97 -> LENGTH m_pendingIndex
+length(uint256) := REF_\
+97(uint256)",
+		node_expression="length = m_pendingIndex.length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_97 -> LENGTH m_pendingIndex
+length(uint256) := REF_97(uint256)",
+		node_source_code_lines="[370]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	232 -> 233	[key=0,
+		edge_type=next,
+		label=Next];
+	236	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+i = 0
+
+IRs:
+i(uint256) := 0(uint256)",
+		node_expression="i = 0",
+		node_info_vulnerabilities=None,
+		node_irs="i(uint256) := 0(uint256)",
+		node_source_code_lines="[372]",
+		node_type="NEW VARIABLE",
+		source_file="parity_wallet_bug_2.sol"];
+	233 -> 236	[key=0,
+		edge_type=next,
+		label=Next];
+	234	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: BEGIN_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[372, 373, 374, 375, 376, 377]",
+		node_type=BEGIN_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	237	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: IF_LOOP
+
+EXPRESSION:
+i < length
+
+IRs:
+TMP_143(bool) = i < length
+CONDITION TMP_143",
+		node_expression="i < length",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_143(bool) = i < length
+CONDITION TMP_143",
+		node_source_code_lines="[372]",
+		node_type=IF_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	234 -> 237	[key=0,
+		edge_type=next,
+		label=Next];
+	235	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: END_LOOP
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[372, 373, 374, 375, 376, 377]",
+		node_type=END_LOOP,
+		source_file="parity_wallet_bug_2.sol"];
+	243	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+delete m_pendingIndex
+
+IRs:
+m_pendingIndex = delete m_pendingIndex ",
+		node_expression="delete m_pendingIndex",
+		node_info_vulnerabilities=None,
+		node_irs="m_pendingIndex = delete m_pendingIndex ",
+		node_source_code_lines="[379]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	235 -> 243	[key=0,
+		edge_type=next,
+		label=Next];
+	236 -> 234	[key=0,
+		edge_type=next,
+		label=Next];
+	237 -> 235	[key=0,
+		edge_type=if_false,
+		label=False];
+	238	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+delete m_txs[m_pendingIndex[i]]
+
+IRs:
+REF_98(bytes32) -> m_pendingIndex[i]
+REF_99(WalletLibrary.Transaction) \
+-> m_txs[REF_98]
+m_txs = delete REF_99 ",
+		node_expression="delete m_txs[m_pendingIndex[i]]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_98(bytes32) -> m_pendingIndex[i]
+REF_99(WalletLibrary.Transaction) -> m_txs[REF_98]
+m_txs = delete REF_99 ",
+		node_source_code_lines="[373]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	237 -> 238	[key=0,
+		edge_type=if_true,
+		label=True];
+	239	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: IF
+
+EXPRESSION:
+m_pendingIndex[i] != 0
+
+IRs:
+REF_100(bytes32) -> m_pendingIndex[i]
+TMP_144(bool) = REF_100 != 0
+CONDITION \
+TMP_144",
+		node_expression="m_pendingIndex[i] != 0",
+		node_info_vulnerabilities=None,
+		node_irs="REF_100(bytes32) -> m_pendingIndex[i]
+TMP_144(bool) = REF_100 != 0
+CONDITION TMP_144",
+		node_source_code_lines="[375]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	238 -> 239	[key=0,
+		edge_type=next,
+		label=Next];
+	240	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+delete m_pending[m_pendingIndex[i]]
+
+IRs:
+REF_101(bytes32) -> m_pendingIndex[i]
+REF_102(WalletLibrary.PendingState) \
+-> m_pending[REF_101]
+m_pending = delete REF_102 ",
+		node_expression="delete m_pending[m_pendingIndex[i]]",
+		node_info_vulnerabilities=None,
+		node_irs="REF_101(bytes32) -> m_pendingIndex[i]
+REF_102(WalletLibrary.PendingState) -> m_pending[REF_101]
+m_pending = delete REF_102 ",
+		node_source_code_lines="[376]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	239 -> 240	[key=0,
+		edge_type=if_true,
+		label=True];
+	241	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[375, 376]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	239 -> 241	[key=0,
+		edge_type=if_false,
+		label=False];
+	240 -> 241	[key=0,
+		edge_type=next,
+		label=Next];
+	242	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+++ i
+
+IRs:
+i(uint256) = i + 1",
+		node_expression="++ i",
+		node_info_vulnerabilities=None,
+		node_irs="i(uint256) = i + 1",
+		node_source_code_lines="[372]",
+		node_type=EXPRESSION,
+		source_file="parity_wallet_bug_2.sol"];
+	241 -> 242	[key=0,
+		edge_type=next,
+		label=Next];
+	242 -> 237	[key=0,
+		edge_type=next,
+		label=Next];
+	244	[contract_name=WalletLibrary,
+		function_fullname="clearPending()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_clearPending()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	244 -> 232	[key=0,
+		edge_type=next,
+		label=Next];
+	245	[contract_name=WalletLibrary,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+_walletLibrary = 0xcafecafecafecafecafecafecafecafecafecafe
+
+IRs:
+_walletLibrary(address) := \
+1158898208370148791445375540046301417554592058110(uint256)",
+		node_expression="_walletLibrary = 0xcafecafecafecafecafecafecafecafecafecafe",
+		node_info_vulnerabilities=None,
+		node_irs="_walletLibrary(address) := 1158898208370148791445375540046301417554592058110(uint256)",
+		node_source_code_lines="[383]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="parity_wallet_bug_2.sol"];
+	246	[contract_name=WalletLibrary,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="Node Type: OTHER_ENTRYPOINT
+
+EXPRESSION:
+c_maxOwners = 250
+
+IRs:
+c_maxOwners(uint256) := 250(uint256)",
+		node_expression="c_maxOwners = 250",
+		node_info_vulnerabilities=None,
+		node_irs="c_maxOwners(uint256) := 250(uint256)",
+		node_source_code_lines="[397]",
+		node_type=OTHER_ENTRYPOINT,
+		source_file="parity_wallet_bug_2.sol"];
+	245 -> 246	[key=0,
+		edge_type=next,
+		label=Next];
+	247	[contract_name=WalletLibrary,
+		function_fullname="slitherConstructorConstantVariables()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_slitherConstructorConstantVariables()",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [226], 'category': 'access_control'}, {'lines': [233], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, \
+102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, \
+128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, \
+154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, \
+180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, \
+206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, \
+232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, \
+258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, \
+284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, \
+310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, \
+336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, \
+362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, \
+388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	247 -> 245	[key=0,
+		edge_type=next,
+		label=Next];
+	248	[contract_name=WalletLibrary,
+		function_fullname="onlyowner()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[90, 91, 92, 93]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	249	[contract_name=WalletLibrary,
+		function_fullname="onlyowner()",
+		label="Node Type: IF
+
+EXPRESSION:
+isOwner(msg.sender)
+
+IRs:
+TMP_145(bool) = INTERNAL_CALL, WalletLibrary.isOwner(address)(msg.sender)
+CONDITION \
+TMP_145",
+		node_expression="isOwner(msg.sender)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_145(bool) = INTERNAL_CALL, WalletLibrary.isOwner(address)(msg.sender)
+CONDITION TMP_145",
+		node_source_code_lines="[91]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	248 -> 249	[key=0,
+		edge_type=next,
+		label=Next];
+	250	[contract_name=WalletLibrary,
+		function_fullname="onlyowner()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[92]",
+		node_type=_,
+		source_file="parity_wallet_bug_2.sol"];
+	249 -> 250	[key=0,
+		edge_type=if_true,
+		label=True];
+	251	[contract_name=WalletLibrary,
+		function_fullname="onlyowner()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[91, 92]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	249 -> 251	[key=0,
+		edge_type=if_false,
+		label=False];
+	250 -> 251	[key=0,
+		edge_type=next,
+		label=Next];
+	252	[contract_name=WalletLibrary,
+		function_fullname="onlyowner()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_onlyowner()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[90, 91, 92, 93]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	252 -> 248	[key=0,
+		edge_type=next,
+		label=Next];
+	253	[contract_name=WalletLibrary,
+		function_fullname="onlymanyowners(bytes32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[97, 98, 99, 100]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	254	[contract_name=WalletLibrary,
+		function_fullname="onlymanyowners(bytes32)",
+		label="Node Type: IF
+
+EXPRESSION:
+confirmAndCheck(_operation)
+
+IRs:
+TMP_146(bool) = INTERNAL_CALL, WalletLibrary.confirmAndCheck(bytes32)(_\
+operation)
+CONDITION TMP_146",
+		node_expression="confirmAndCheck(_operation)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_146(bool) = INTERNAL_CALL, WalletLibrary.confirmAndCheck(bytes32)(_operation)
+CONDITION TMP_146",
+		node_source_code_lines="[98]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	253 -> 254	[key=0,
+		edge_type=next,
+		label=Next];
+	255	[contract_name=WalletLibrary,
+		function_fullname="onlymanyowners(bytes32)",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[99]",
+		node_type=_,
+		source_file="parity_wallet_bug_2.sol"];
+	254 -> 255	[key=0,
+		edge_type=if_true,
+		label=True];
+	256	[contract_name=WalletLibrary,
+		function_fullname="onlymanyowners(bytes32)",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[98, 99]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	254 -> 256	[key=0,
+		edge_type=if_false,
+		label=False];
+	255 -> 256	[key=0,
+		edge_type=next,
+		label=Next];
+	257	[contract_name=WalletLibrary,
+		function_fullname="onlymanyowners(bytes32)",
+		label="parity_wallet_bug_2.sol_WalletLibrary_onlymanyowners(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[97, 98, 99, 100]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	257 -> 253	[key=0,
+		edge_type=next,
+		label=Next];
+	258	[contract_name=WalletLibrary,
+		function_fullname="only_uninitialized()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221]",
+		node_type=ENTRY_POINT,
+		source_file="parity_wallet_bug_2.sol"];
+	259	[contract_name=WalletLibrary,
+		function_fullname="only_uninitialized()",
+		label="Node Type: IF
+
+EXPRESSION:
+m_numOwners > 0
+
+IRs:
+TMP_147(bool) = m_numOwners > 0
+CONDITION TMP_147",
+		node_expression="m_numOwners > 0",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_147(bool) = m_numOwners > 0
+CONDITION TMP_147",
+		node_source_code_lines="[221]",
+		node_type=IF,
+		source_file="parity_wallet_bug_2.sol"];
+	258 -> 259	[key=0,
+		edge_type=next,
+		label=Next];
+	260	[contract_name=WalletLibrary,
+		function_fullname="only_uninitialized()",
+		label="Node Type: THROW
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221]",
+		node_type=THROW,
+		source_file="parity_wallet_bug_2.sol"];
+	259 -> 260	[key=0,
+		edge_type=if_true,
+		label=True];
+	261	[contract_name=WalletLibrary,
+		function_fullname="only_uninitialized()",
+		label="Node Type: END_IF
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221]",
+		node_type=END_IF,
+		source_file="parity_wallet_bug_2.sol"];
+	259 -> 261	[key=0,
+		edge_type=if_false,
+		label=False];
+	262	[contract_name=WalletLibrary,
+		function_fullname="only_uninitialized()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221]",
+		node_type=_,
+		source_file="parity_wallet_bug_2.sol"];
+	261 -> 262	[key=0,
+		edge_type=next,
+		label=Next];
+	263	[contract_name=WalletLibrary,
+		function_fullname="only_uninitialized()",
+		label="parity_wallet_bug_2.sol_WalletLibrary_only_uninitialized()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[221]",
+		node_type=FUNCTION_NAME,
+		source_file="parity_wallet_bug_2.sol"];
+	263 -> 258	[key=0,
+		edge_type=next,
+		label=Next];
+}

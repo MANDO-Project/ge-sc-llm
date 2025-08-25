@@ -1,0 +1,26 @@
+digraph  {
+13 [label="2_ mapping(address => uint) public balances;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ mapping(address => uint) public lockTime;\n20-new_variable-4-4", method="", type_label=new_variable];
+27 [label="4_ function deposit() public payable {\n         balances[msg.sender] += msg.value;\n         lockTime[msg.sender] = now + 1 weeks;\n     }\n27-function_definition-5-8", method="deposit()", type_label=function_definition];
+32 [label="5_ balances[msg.sender] += msg.value;\n32-expression_statement-6-6", method="deposit()", type_label=expression_statement];
+42 [label="6_ lockTime[msg.sender] = now + 1 weeks;\n42-expression_statement-7-7", method="deposit()", type_label=expression_statement];
+53 [label="8_ function increaseLockTime(uint _secondsToIncrease) public {\n         lockTime[msg.sender] += _secondsToIncrease;\n     }\n53-function_definition-9-11", method="increaseLockTime(uint _secondsToIncrease)", type_label=function_definition];
+61 [label="9_ lockTime[msg.sender] += _secondsToIncrease;\n61-expression_statement-10-10", method="increaseLockTime(uint _secondsToIncrease)", type_label=expression_statement];
+69 [label="11_ function withdraw() public {\n         require(balances[msg.sender] > 0);\n         require(now > lockTime[msg.sender]);\n         uint transferValue = balances[msg.sender];\n         balances[msg.sender] = 0;\n         msg.sender.transfer(transferValue);\n     }\n69-function_definition-12-18", method="withdraw()", type_label=function_definition];
+73 [label="12_ require(balances[msg.sender] > 0);\n73-expression_statement-13-13", method="withdraw()", type_label=expression_statement];
+84 [label="13_ require(now > lockTime[msg.sender]);\n84-expression_statement-14-14", method="withdraw()", type_label=expression_statement];
+95 [label="14_ uint transferValue = balances[msg.sender];\n95-new_variable-15-15", method="withdraw()", type_label=new_variable];
+105 [label="15_ balances[msg.sender] = 0;\n105-expression_statement-16-16", method="withdraw()", type_label=expression_statement];
+113 [label="16_ msg.sender.transfer(transferValue);\n113-expression_statement-17-17", method="withdraw()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 32  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 42  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+53 -> 61  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+69 -> 73  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+73 -> 84  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+84 -> 95  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+95 -> 105  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+105 -> 113  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

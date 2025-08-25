@@ -1,0 +1,35 @@
+digraph  {
+13 [label="2_ address public root;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ mapping (address => address) public owners;\n18-new_variable-4-4", method="", type_label=new_variable];
+27 [label="5_ root = msg.sender;\n27-expression_statement-6-6", method="", type_label=expression_statement];
+33 [label="6_ owners[root] = root;\n33-expression_statement-7-7", method="", type_label=expression_statement];
+39 [label="8_ modifier onlyOwner() {\n    require(owners[msg.sender] != 0);\n    _;\n  }\n39-expression_statement-9-12", method="", type_label=expression_statement];
+42 [label="9_ require(owners[msg.sender] != 0);\n42-expression_statement-10-10", method="", type_label=expression_statement];
+53 [label="10_ _;\n53-expression_statement-11-11", method="", type_label=expression_statement];
+55 [label="12_ function newOwner(address _owner) external returns (bool) {\n    require(_owner != 0);\n    owners[_owner] = msg.sender;\n    return true;\n  }\n55-function_definition-13-17", method="newOwner(address _owner)", type_label=function_definition];
+67 [label="13_ require(_owner != 0);\n67-expression_statement-14-14", method="newOwner(address _owner)", type_label=expression_statement];
+74 [label="14_ owners[_owner] = msg.sender;\n74-expression_statement-15-15", method="newOwner(address _owner)", type_label=expression_statement];
+82 [label="15_ return true;\n82-return-16-16", method="newOwner(address _owner)", type_label=return];
+85 [label="17_ function deleteOwner(address _owner) onlyOwner external returns (bool) {\n    require(owners[_owner] == msg.sender || (owners[_owner] != 0 && msg.sender == root));\n    owners[_owner] = 0;\n    return true;\n  }\n85-function_definition-18-22", method="deleteOwner(address _owner)", type_label=function_definition];
+91 [label="17_ onlyOwner\n91-expression_statement-18-18", method="deleteOwner(address _owner)", type_label=expression_statement];
+99 [label="18_ require(owners[_owner] == msg.sender || (owners[_owner] != 0 && msg.sender == root));\n99-expression_statement-19-19", method="deleteOwner(address _owner)", type_label=expression_statement];
+123 [label="19_ owners[_owner] = 0;\n123-expression_statement-20-20", method="deleteOwner(address _owner)", type_label=expression_statement];
+129 [label="20_ return true;\n129-return-21-21", method="deleteOwner(address _owner)", type_label=return];
+138 [label="24_ function withdrawAll() onlyOwner {\n    msg.sender.transfer(this.balance);\n  }\n138-function_definition-25-27", method="withdrawAll()", type_label=function_definition];
+140 [label="24_ onlyOwner\n140-expression_statement-25-25", method="withdrawAll()", type_label=expression_statement];
+143 [label="25_ msg.sender.transfer(this.balance);\n143-expression_statement-26-26", method="withdrawAll()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 33  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+42 -> 53  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+55 -> 67  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+67 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+74 -> 82  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+82 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+85 -> 99  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+99 -> 123  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+123 -> 129  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+129 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+138 -> 143  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

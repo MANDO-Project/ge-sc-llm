@@ -1,0 +1,3217 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[10, 11, 12, 13]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	1	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin2)
+
+IRs:
+TMP_0(bool) = tx.origin == owner_txorigin2
+\
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(tx.origin == owner_txorigin2)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = tx.origin == owner_txorigin2
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[11]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_2 = CONVERT this to address
+REF_1 -> BALANCE \
+TMP_2
+Transfer dest:_recipient value:REF_1",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_2 = CONVERT this to address
+REF_1 -> BALANCE TMP_2
+Transfer dest:_recipient value:REF_1",
+		node_source_code_lines="[12]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	1 -> 2	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin2(address,address)",
+		label="buggy_50.sol_digitalNotary_withdrawAll_txorigin2(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[10, 11, 12, 13]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	3 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	4	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[16, 17, 18, 19]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	5	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin17)
+
+IRs:
+TMP_4(bool) = tx.origin == owner_txorigin17
+\
+TMP_5(None) = SOLIDITY_CALL require(bool)(TMP_4)",
+		node_expression="require(bool)(tx.origin == owner_txorigin17)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_4(bool) = tx.origin == owner_txorigin17
+TMP_5(None) = SOLIDITY_CALL require(bool)(TMP_4)",
+		node_source_code_lines="[17]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	4 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+	6	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[18]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	5 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin17(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_sendto_txorigin17(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[16, 17, 18, 19]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	7 -> 4	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[22, 23, 24, 25]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	9	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin37)
+
+IRs:
+TMP_7(bool) = tx.origin == owner_txorigin37
+\
+TMP_8(None) = SOLIDITY_CALL require(bool)(TMP_7)",
+		node_expression="require(bool)(tx.origin == owner_txorigin37)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_7(bool) = tx.origin == owner_txorigin37
+TMP_8(None) = SOLIDITY_CALL require(bool)(TMP_7)",
+		node_source_code_lines="[23]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	8 -> 9	[key=0,
+		edge_type=next,
+		label=Next];
+	10	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[24]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	9 -> 10	[key=0,
+		edge_type=next,
+		label=Next];
+	11	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin37(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_sendto_txorigin37(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[22, 23, 24, 25]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	11 -> 8	[key=0,
+		edge_type=next,
+		label=Next];
+	12	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	13	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin3)
+
+IRs:
+TMP_10(bool) = tx.origin == owner_txorigin3
+\
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_expression="require(bool)(tx.origin == owner_txorigin3)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_10(bool) = tx.origin == owner_txorigin3
+TMP_11(None) = SOLIDITY_CALL require(bool)(TMP_10)",
+		node_source_code_lines="[29]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	12 -> 13	[key=0,
+		edge_type=next,
+		label=Next];
+	14	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_4(None) -> to.call
+REF_5(None) -> REF_4.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_4(None) -> to.call
+REF_5(None) -> REF_4.value",
+		node_source_code_lines="[30]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	13 -> 14	[key=0,
+		edge_type=next,
+		label=Next];
+	15	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin3(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin3(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[28, 29, 30, 31]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	15 -> 12	[key=0,
+		edge_type=next,
+		label=Next];
+	16	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[40, 41, 42, 43]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	17	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin9)
+
+IRs:
+TMP_13(bool) = tx.origin == owner_txorigin9
+\
+TMP_14(None) = SOLIDITY_CALL require(bool)(TMP_13)",
+		node_expression="require(bool)(tx.origin == owner_txorigin9)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_13(bool) = tx.origin == owner_txorigin9
+TMP_14(None) = SOLIDITY_CALL require(bool)(TMP_13)",
+		node_source_code_lines="[41]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	16 -> 17	[key=0,
+		edge_type=next,
+		label=Next];
+	18	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[42]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	17 -> 18	[key=0,
+		edge_type=next,
+		label=Next];
+	19	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin9(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_sendto_txorigin9(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[40, 41, 42, 43]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	19 -> 16	[key=0,
+		edge_type=next,
+		label=Next];
+	20	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[46, 47, 48, 49]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	21	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin25)
+
+IRs:
+TMP_16(bool) = tx.origin == owner_txorigin25
+\
+TMP_17(None) = SOLIDITY_CALL require(bool)(TMP_16)",
+		node_expression="require(bool)(tx.origin == owner_txorigin25)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_16(bool) = tx.origin == owner_txorigin25
+TMP_17(None) = SOLIDITY_CALL require(bool)(TMP_16)",
+		node_source_code_lines="[47]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	20 -> 21	[key=0,
+		edge_type=next,
+		label=Next];
+	22	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[48]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	21 -> 22	[key=0,
+		edge_type=next,
+		label=Next];
+	23	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin25(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_sendto_txorigin25(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[46, 47, 48, 49]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	23 -> 20	[key=0,
+		edge_type=next,
+		label=Next];
+	24	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[52, 53, 54, 55]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	25	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin31)
+
+IRs:
+TMP_19(bool) = tx.origin == owner_txorigin31
+\
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_expression="require(bool)(tx.origin == owner_txorigin31)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_19(bool) = tx.origin == owner_txorigin31
+TMP_20(None) = SOLIDITY_CALL require(bool)(TMP_19)",
+		node_source_code_lines="[53]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	24 -> 25	[key=0,
+		edge_type=next,
+		label=Next];
+	26	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_8(None) -> to.call
+REF_9(None) -> REF_8.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_8(None) -> to.call
+REF_9(None) -> REF_8.value",
+		node_source_code_lines="[54]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	25 -> 26	[key=0,
+		edge_type=next,
+		label=Next];
+	27	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin31(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin31(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[52, 53, 54, 55]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	27 -> 24	[key=0,
+		edge_type=next,
+		label=Next];
+	28	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	29	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin13)
+
+IRs:
+TMP_22(bool) = tx.origin == owner_txorigin13
+\
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_expression="require(bool)(tx.origin == owner_txorigin13)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_22(bool) = tx.origin == owner_txorigin13
+TMP_23(None) = SOLIDITY_CALL require(bool)(TMP_22)",
+		node_source_code_lines="[59]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	28 -> 29	[key=0,
+		edge_type=next,
+		label=Next];
+	30	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[60]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	29 -> 30	[key=0,
+		edge_type=next,
+		label=Next];
+	31	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin13(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_sendto_txorigin13(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[58, 59, 60, 61]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	31 -> 28	[key=0,
+		edge_type=next,
+		label=Next];
+	32	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	33	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+manager = msg.sender
+
+IRs:
+manager(address) := msg.sender(address)",
+		node_expression="manager = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="manager(address) := msg.sender(address)",
+		node_source_code_lines="[67]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	32 -> 33	[key=0,
+		edge_type=next,
+		label=Next];
+	34	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+contractactive = true
+
+IRs:
+contractactive(bool) := True(bool)",
+		node_expression="contractactive = true",
+		node_info_vulnerabilities=None,
+		node_irs="contractactive(bool) := True(bool)",
+		node_source_code_lines="[69]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	33 -> 34	[key=0,
+		edge_type=next,
+		label=Next];
+	35	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+hashfee = 5000000000000000
+
+IRs:
+hashfee(uint256) := 5000000000000000(uint256)",
+		node_expression="hashfee = 5000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="hashfee(uint256) := 5000000000000000(uint256)",
+		node_source_code_lines="[71]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	34 -> 35	[key=0,
+		edge_type=next,
+		label=Next];
+	36	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+changehashownerfee = 25000000000000000
+
+IRs:
+changehashownerfee(uint256) := 25000000000000000(\
+uint256)",
+		node_expression="changehashownerfee = 25000000000000000",
+		node_info_vulnerabilities=None,
+		node_irs="changehashownerfee(uint256) := 25000000000000000(uint256)",
+		node_source_code_lines="[73]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	35 -> 36	[key=0,
+		edge_type=next,
+		label=Next];
+	37	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+HashListLength = 0
+
+IRs:
+HashListLength(uint256) := 0(uint256)",
+		node_expression="HashListLength = 0",
+		node_info_vulnerabilities=None,
+		node_irs="HashListLength(uint256) := 0(uint256)",
+		node_source_code_lines="[75]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	36 -> 37	[key=0,
+		edge_type=next,
+		label=Next];
+	38	[contract_name=digitalNotary,
+		function_fullname="constructor()",
+		label="buggy_50.sol_digitalNotary_constructor()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	38 -> 32	[key=0,
+		edge_type=next,
+		label=Next];
+	39	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[78, 79, 80, 81]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	40	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin19)
+
+IRs:
+TMP_25(bool) = tx.origin == owner_txorigin19
+\
+TMP_26(None) = SOLIDITY_CALL require(bool)(TMP_25)",
+		node_expression="require(bool)(tx.origin == owner_txorigin19)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_25(bool) = tx.origin == owner_txorigin19
+TMP_26(None) = SOLIDITY_CALL require(bool)(TMP_25)",
+		node_source_code_lines="[79]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	39 -> 40	[key=0,
+		edge_type=next,
+		label=Next];
+	41	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_11(None) -> to.call
+REF_12(None) -> REF_11.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_11(None) -> to.call
+REF_12(None) -> REF_11.value",
+		node_source_code_lines="[80]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	40 -> 41	[key=0,
+		edge_type=next,
+		label=Next];
+	42	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin19(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin19(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[78, 79, 80, 81]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	42 -> 39	[key=0,
+		edge_type=next,
+		label=Next];
+	43	[contract_name=digitalNotary,
+		function_fullname="gethashfee()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[91, 92, 93]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	44	[contract_name=digitalNotary,
+		function_fullname="gethashfee()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+hashfee
+
+IRs:
+RETURN hashfee",
+		node_expression=hashfee,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN hashfee",
+		node_source_code_lines="[92]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	43 -> 44	[key=0,
+		edge_type=next,
+		label=Next];
+	45	[contract_name=digitalNotary,
+		function_fullname="gethashfee()",
+		label="buggy_50.sol_digitalNotary_gethashfee()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[90, 91, 92, 93]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	45 -> 43	[key=0,
+		edge_type=next,
+		label=Next];
+	46	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[94, 95, 96, 97]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	47	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin26)
+
+IRs:
+TMP_28(bool) = tx.origin == owner_txorigin26
+\
+TMP_29(None) = SOLIDITY_CALL require(bool)(TMP_28)",
+		node_expression="require(bool)(tx.origin == owner_txorigin26)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_28(bool) = tx.origin == owner_txorigin26
+TMP_29(None) = SOLIDITY_CALL require(bool)(TMP_28)",
+		node_source_code_lines="[95]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	46 -> 47	[key=0,
+		edge_type=next,
+		label=Next];
+	48	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_30 = CONVERT this to address
+REF_14 -> BALANCE \
+TMP_30
+Transfer dest:_recipient value:REF_14",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_30 = CONVERT this to address
+REF_14 -> BALANCE TMP_30
+Transfer dest:_recipient value:REF_14",
+		node_source_code_lines="[96]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	47 -> 48	[key=0,
+		edge_type=next,
+		label=Next];
+	49	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin26(address,address)",
+		label="buggy_50.sol_digitalNotary_withdrawAll_txorigin26(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[94, 95, 96, 97]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	49 -> 46	[key=0,
+		edge_type=next,
+		label=Next];
+	50	[contract_name=digitalNotary,
+		function_fullname="sethashfee(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[100, 101, 102, 103, 104]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	53	[contract_name=digitalNotary,
+		function_fullname="sethashfee(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyManager()
+
+IRs:
+MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_expression="onlyManager()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_source_code_lines="[99]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	50 -> 53	[key=0,
+		edge_type=next,
+		label=Next];
+	51	[contract_name=digitalNotary,
+		function_fullname="sethashfee(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(newfee >= 0)
+
+IRs:
+TMP_32(bool) = newfee >= 0
+TMP_33(None) = SOLIDITY_CALL require(\
+bool)(TMP_32)",
+		node_expression="require(bool)(newfee >= 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_32(bool) = newfee >= 0
+TMP_33(None) = SOLIDITY_CALL require(bool)(TMP_32)",
+		node_source_code_lines="[101]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	52	[contract_name=digitalNotary,
+		function_fullname="sethashfee(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+hashfee = newfee
+
+IRs:
+hashfee(uint256) := newfee(uint256)",
+		node_expression="hashfee = newfee",
+		node_info_vulnerabilities=None,
+		node_irs="hashfee(uint256) := newfee(uint256)",
+		node_source_code_lines="[103]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	51 -> 52	[key=0,
+		edge_type=next,
+		label=Next];
+	53 -> 51	[key=0,
+		edge_type=next,
+		label=Next];
+	54	[contract_name=digitalNotary,
+		function_fullname="sethashfee(uint256)",
+		label="buggy_50.sol_digitalNotary_sethashfee(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[99, 100, 101, 102, 103, 104]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	54 -> 50	[key=0,
+		edge_type=next,
+		label=Next];
+	55	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[105, 106, 107]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	56	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin20(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin20)
+
+IRs:
+TMP_35(bool) = tx.origin == owner_txorigin20
+\
+TMP_36(None) = SOLIDITY_CALL require(bool)(TMP_35)",
+		node_expression="require(bool)(tx.origin == owner_txorigin20)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_35(bool) = tx.origin == owner_txorigin20
+TMP_36(None) = SOLIDITY_CALL require(bool)(TMP_35)",
+		node_source_code_lines="[106]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	55 -> 56	[key=0,
+		edge_type=next,
+		label=Next];
+	57	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin20(address)",
+		label="buggy_50.sol_digitalNotary_bug_txorigin20(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[105, 106, 107]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	57 -> 55	[key=0,
+		edge_type=next,
+		label=Next];
+	58	[contract_name=digitalNotary,
+		function_fullname="getchangehashownerfee()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[110, 111, 112]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	59	[contract_name=digitalNotary,
+		function_fullname="getchangehashownerfee()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+changehashownerfee
+
+IRs:
+RETURN changehashownerfee",
+		node_expression=changehashownerfee,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN changehashownerfee",
+		node_source_code_lines="[111]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	58 -> 59	[key=0,
+		edge_type=next,
+		label=Next];
+	60	[contract_name=digitalNotary,
+		function_fullname="getchangehashownerfee()",
+		label="buggy_50.sol_digitalNotary_getchangehashownerfee()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[109, 110, 111, 112]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	60 -> 58	[key=0,
+		edge_type=next,
+		label=Next];
+	61	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	62	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin32(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin32)
+
+IRs:
+TMP_37(bool) = tx.origin == owner_txorigin32
+\
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_expression="require(bool)(tx.origin == owner_txorigin32)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_37(bool) = tx.origin == owner_txorigin32
+TMP_38(None) = SOLIDITY_CALL require(bool)(TMP_37)",
+		node_source_code_lines="[114]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	61 -> 62	[key=0,
+		edge_type=next,
+		label=Next];
+	63	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin32(address)",
+		label="buggy_50.sol_digitalNotary_bug_txorigin32(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[113, 114, 115]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	63 -> 61	[key=0,
+		edge_type=next,
+		label=Next];
+	64	[contract_name=digitalNotary,
+		function_fullname="setchangehashownerfee(uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[118, 119, 120, 121, 122]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	67	[contract_name=digitalNotary,
+		function_fullname="setchangehashownerfee(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyManager()
+
+IRs:
+MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_expression="onlyManager()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_source_code_lines="[117]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	64 -> 67	[key=0,
+		edge_type=next,
+		label=Next];
+	65	[contract_name=digitalNotary,
+		function_fullname="setchangehashownerfee(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(newfee >= 0)
+
+IRs:
+TMP_39(bool) = newfee >= 0
+TMP_40(None) = SOLIDITY_CALL require(\
+bool)(TMP_39)",
+		node_expression="require(bool)(newfee >= 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_39(bool) = newfee >= 0
+TMP_40(None) = SOLIDITY_CALL require(bool)(TMP_39)",
+		node_source_code_lines="[119]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	66	[contract_name=digitalNotary,
+		function_fullname="setchangehashownerfee(uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+changehashownerfee = newfee
+
+IRs:
+changehashownerfee(uint256) := newfee(uint256)",
+		node_expression="changehashownerfee = newfee",
+		node_info_vulnerabilities=None,
+		node_irs="changehashownerfee(uint256) := newfee(uint256)",
+		node_source_code_lines="[121]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	65 -> 66	[key=0,
+		edge_type=next,
+		label=Next];
+	67 -> 65	[key=0,
+		edge_type=next,
+		label=Next];
+	68	[contract_name=digitalNotary,
+		function_fullname="setchangehashownerfee(uint256)",
+		label="buggy_50.sol_digitalNotary_setchangehashownerfee(uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[117, 118, 119, 120, 121, 122]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	68 -> 64	[key=0,
+		edge_type=next,
+		label=Next];
+	69	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[123, 124, 125, 126]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	70	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin38)
+
+IRs:
+TMP_42(bool) = tx.origin == owner_txorigin38
+\
+TMP_43(None) = SOLIDITY_CALL require(bool)(TMP_42)",
+		node_expression="require(bool)(tx.origin == owner_txorigin38)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_42(bool) = tx.origin == owner_txorigin38
+TMP_43(None) = SOLIDITY_CALL require(bool)(TMP_42)",
+		node_source_code_lines="[124]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	69 -> 70	[key=0,
+		edge_type=next,
+		label=Next];
+	71	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_44 = CONVERT this to address
+REF_16 -> BALANCE \
+TMP_44
+Transfer dest:_recipient value:REF_16",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_44 = CONVERT this to address
+REF_16 -> BALANCE TMP_44
+Transfer dest:_recipient value:REF_16",
+		node_source_code_lines="[125]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	70 -> 71	[key=0,
+		edge_type=next,
+		label=Next];
+	72	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin38(address,address)",
+		label="buggy_50.sol_digitalNotary_withdrawAll_txorigin38(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[123, 124, 125, 126]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	72 -> 69	[key=0,
+		edge_type=next,
+		label=Next];
+	73	[contract_name=digitalNotary,
+		function_fullname="getcontractactive()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[129, 130, 131]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	74	[contract_name=digitalNotary,
+		function_fullname="getcontractactive()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+contractactive
+
+IRs:
+RETURN contractactive",
+		node_expression=contractactive,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN contractactive",
+		node_source_code_lines="[130]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	73 -> 74	[key=0,
+		edge_type=next,
+		label=Next];
+	75	[contract_name=digitalNotary,
+		function_fullname="getcontractactive()",
+		label="buggy_50.sol_digitalNotary_getcontractactive()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[128, 129, 130, 131]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	75 -> 73	[key=0,
+		edge_type=next,
+		label=Next];
+	76	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[132, 133, 134]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	77	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin4(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin4)
+
+IRs:
+TMP_46(bool) = tx.origin == owner_txorigin4
+\
+TMP_47(None) = SOLIDITY_CALL require(bool)(TMP_46)",
+		node_expression="require(bool)(tx.origin == owner_txorigin4)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_46(bool) = tx.origin == owner_txorigin4
+TMP_47(None) = SOLIDITY_CALL require(bool)(TMP_46)",
+		node_source_code_lines="[133]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	76 -> 77	[key=0,
+		edge_type=next,
+		label=Next];
+	78	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin4(address)",
+		label="buggy_50.sol_digitalNotary_bug_txorigin4(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[132, 133, 134]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	78 -> 76	[key=0,
+		edge_type=next,
+		label=Next];
+	79	[contract_name=digitalNotary,
+		function_fullname="setcontractactive(bool)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[137, 138, 139]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	81	[contract_name=digitalNotary,
+		function_fullname="setcontractactive(bool)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyManager()
+
+IRs:
+MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_expression="onlyManager()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_source_code_lines="[136]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	79 -> 81	[key=0,
+		edge_type=next,
+		label=Next];
+	80	[contract_name=digitalNotary,
+		function_fullname="setcontractactive(bool)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+contractactive = contactive
+
+IRs:
+contractactive(bool) := contactive(bool)",
+		node_expression="contractactive = contactive",
+		node_info_vulnerabilities=None,
+		node_irs="contractactive(bool) := contactive(bool)",
+		node_source_code_lines="[138]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	81 -> 80	[key=0,
+		edge_type=next,
+		label=Next];
+	82	[contract_name=digitalNotary,
+		function_fullname="setcontractactive(bool)",
+		label="buggy_50.sol_digitalNotary_setcontractactive(bool)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[136, 137, 138, 139]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	82 -> 79	[key=0,
+		edge_type=next,
+		label=Next];
+	83	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142, 143]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	84	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin7)
+
+IRs:
+TMP_49(bool) = tx.origin == owner_txorigin7
+\
+TMP_50(None) = SOLIDITY_CALL require(bool)(TMP_49)",
+		node_expression="require(bool)(tx.origin == owner_txorigin7)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_49(bool) = tx.origin == owner_txorigin7
+TMP_50(None) = SOLIDITY_CALL require(bool)(TMP_49)",
+		node_source_code_lines="[141]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	83 -> 84	[key=0,
+		edge_type=next,
+		label=Next];
+	85	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_17(None) -> to.call
+REF_18(None) -> REF_17.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_17(None) -> to.call
+REF_18(None) -> REF_17.value",
+		node_source_code_lines="[142]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	84 -> 85	[key=0,
+		edge_type=next,
+		label=Next];
+	86	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin7(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin7(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[140, 141, 142, 143]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	86 -> 83	[key=0,
+		edge_type=next,
+		label=Next];
+	87	[contract_name=digitalNotary,
+		function_fullname="getmanager()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[146, 147, 148]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	88	[contract_name=digitalNotary,
+		function_fullname="getmanager()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+manager
+
+IRs:
+RETURN manager",
+		node_expression=manager,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN manager",
+		node_source_code_lines="[147]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	87 -> 88	[key=0,
+		edge_type=next,
+		label=Next];
+	89	[contract_name=digitalNotary,
+		function_fullname="getmanager()",
+		label="buggy_50.sol_digitalNotary_getmanager()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[145, 146, 147, 148]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	89 -> 87	[key=0,
+		edge_type=next,
+		label=Next];
+	90	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[149, 150, 151, 152]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	91	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin23)
+
+IRs:
+TMP_52(bool) = tx.origin == owner_txorigin23
+\
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_expression="require(bool)(tx.origin == owner_txorigin23)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_52(bool) = tx.origin == owner_txorigin23
+TMP_53(None) = SOLIDITY_CALL require(bool)(TMP_52)",
+		node_source_code_lines="[150]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	90 -> 91	[key=0,
+		edge_type=next,
+		label=Next];
+	92	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_19(None) -> to.call
+REF_20(None) -> REF_19.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_19(None) -> to.call
+REF_20(None) -> REF_19.value",
+		node_source_code_lines="[151]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	91 -> 92	[key=0,
+		edge_type=next,
+		label=Next];
+	93	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin23(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin23(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[149, 150, 151, 152]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	93 -> 90	[key=0,
+		edge_type=next,
+		label=Next];
+	94	[contract_name=digitalNotary,
+		function_fullname="setmanager(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[155, 156, 157, 158]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	97	[contract_name=digitalNotary,
+		function_fullname="setmanager(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyManager()
+
+IRs:
+MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_expression="onlyManager()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_source_code_lines="[154]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	94 -> 97	[key=0,
+		edge_type=next,
+		label=Next];
+	95	[contract_name=digitalNotary,
+		function_fullname="setmanager(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(newmngr.balance > 0)
+
+IRs:
+REF_21 -> BALANCE newmngr
+TMP_55(bool) = REF_21 > 0
+\
+TMP_56(None) = SOLIDITY_CALL require(bool)(TMP_55)",
+		node_expression="require(bool)(newmngr.balance > 0)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_21 -> BALANCE newmngr
+TMP_55(bool) = REF_21 > 0
+TMP_56(None) = SOLIDITY_CALL require(bool)(TMP_55)",
+		node_source_code_lines="[156]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	96	[contract_name=digitalNotary,
+		function_fullname="setmanager(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+manager = newmngr
+
+IRs:
+manager(address) := newmngr(address)",
+		node_expression="manager = newmngr",
+		node_info_vulnerabilities=None,
+		node_irs="manager(address) := newmngr(address)",
+		node_source_code_lines="[157]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	95 -> 96	[key=0,
+		edge_type=next,
+		label=Next];
+	97 -> 95	[key=0,
+		edge_type=next,
+		label=Next];
+	98	[contract_name=digitalNotary,
+		function_fullname="setmanager(address)",
+		label="buggy_50.sol_digitalNotary_setmanager(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[154, 155, 156, 157, 158]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	98 -> 94	[key=0,
+		edge_type=next,
+		label=Next];
+	99	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[159, 160, 161, 162]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	100	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin14)
+
+IRs:
+TMP_58(bool) = tx.origin == owner_txorigin14
+\
+TMP_59(None) = SOLIDITY_CALL require(bool)(TMP_58)",
+		node_expression="require(bool)(tx.origin == owner_txorigin14)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_58(bool) = tx.origin == owner_txorigin14
+TMP_59(None) = SOLIDITY_CALL require(bool)(TMP_58)",
+		node_source_code_lines="[160]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	99 -> 100	[key=0,
+		edge_type=next,
+		label=Next];
+	101	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_60 = CONVERT this to address
+REF_23 -> BALANCE \
+TMP_60
+Transfer dest:_recipient value:REF_23",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_60 = CONVERT this to address
+REF_23 -> BALANCE TMP_60
+Transfer dest:_recipient value:REF_23",
+		node_source_code_lines="[161]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	100 -> 101	[key=0,
+		edge_type=next,
+		label=Next];
+	102	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin14(address,address)",
+		label="buggy_50.sol_digitalNotary_withdrawAll_txorigin14(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[159, 160, 161, 162]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	102 -> 99	[key=0,
+		edge_type=next,
+		label=Next];
+	103	[contract_name=digitalNotary,
+		function_fullname="getcontractbalance()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[165, 166, 167, 168]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	104	[contract_name=digitalNotary,
+		function_fullname="getcontractbalance()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+address(this).balance
+
+IRs:
+TMP_62 = CONVERT this to address
+REF_24 -> BALANCE TMP_62
+RETURN REF_\
+24",
+		node_expression="address(this).balance",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_62 = CONVERT this to address
+REF_24 -> BALANCE TMP_62
+RETURN REF_24",
+		node_source_code_lines="[167]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	103 -> 104	[key=0,
+		edge_type=next,
+		label=Next];
+	105	[contract_name=digitalNotary,
+		function_fullname="getcontractbalance()",
+		label="buggy_50.sol_digitalNotary_getcontractbalance()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[164, 165, 166, 167, 168]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	105 -> 103	[key=0,
+		edge_type=next,
+		label=Next];
+	106	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[169, 170, 171, 172]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	107	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin30)
+
+IRs:
+TMP_63(bool) = tx.origin == owner_txorigin30
+\
+TMP_64(None) = SOLIDITY_CALL require(bool)(TMP_63)",
+		node_expression="require(bool)(tx.origin == owner_txorigin30)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_63(bool) = tx.origin == owner_txorigin30
+TMP_64(None) = SOLIDITY_CALL require(bool)(TMP_63)",
+		node_source_code_lines="[170]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	106 -> 107	[key=0,
+		edge_type=next,
+		label=Next];
+	108	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(address(this).balance)
+
+IRs:
+TMP_65 = CONVERT this to address
+REF_26 -> BALANCE \
+TMP_65
+Transfer dest:_recipient value:REF_26",
+		node_expression="_recipient.transfer(address(this).balance)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_65 = CONVERT this to address
+REF_26 -> BALANCE TMP_65
+Transfer dest:_recipient value:REF_26",
+		node_source_code_lines="[171]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	107 -> 108	[key=0,
+		edge_type=next,
+		label=Next];
+	109	[contract_name=digitalNotary,
+		function_fullname="withdrawAll_txorigin30(address,address)",
+		label="buggy_50.sol_digitalNotary_withdrawAll_txorigin30(address,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[169, 170, 171, 172]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	109 -> 106	[key=0,
+		edge_type=next,
+		label=Next];
+	110	[contract_name=digitalNotary,
+		function_fullname="transfercontractbalance()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[175, 176, 177, 178, 179, 180, 181]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	114	[contract_name=digitalNotary,
+		function_fullname="transfercontractbalance()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+onlyManager()
+
+IRs:
+MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_expression="onlyManager()",
+		node_info_vulnerabilities=None,
+		node_irs="MODIFIER_CALL, digitalNotary.onlyManager()()",
+		node_source_code_lines="[174]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	110 -> 114	[key=0,
+		edge_type=next,
+		label=Next];
+	111	[contract_name=digitalNotary,
+		function_fullname="transfercontractbalance()",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+cb = address(this).balance
+
+IRs:
+TMP_67 = CONVERT this to address
+REF_27 -> BALANCE TMP_67
+\
+cb(uint256) := REF_27(uint256)",
+		node_expression="cb = address(this).balance",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_67 = CONVERT this to address
+REF_27 -> BALANCE TMP_67
+cb(uint256) := REF_27(uint256)",
+		node_source_code_lines="[176]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_50.sol"];
+	112	[contract_name=digitalNotary,
+		function_fullname="transfercontractbalance()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(cb > 0)
+
+IRs:
+TMP_68(bool) = cb > 0
+TMP_69(None) = SOLIDITY_CALL require(bool)(\
+TMP_68)",
+		node_expression="require(bool)(cb > 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_68(bool) = cb > 0
+TMP_69(None) = SOLIDITY_CALL require(bool)(TMP_68)",
+		node_source_code_lines="[178]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	111 -> 112	[key=0,
+		edge_type=next,
+		label=Next];
+	113	[contract_name=digitalNotary,
+		function_fullname="transfercontractbalance()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+manager.transfer(cb)
+
+IRs:
+Transfer dest:manager value:cb",
+		node_expression="manager.transfer(cb)",
+		node_info_vulnerabilities=None,
+		node_irs="Transfer dest:manager value:cb",
+		node_source_code_lines="[180]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	112 -> 113	[key=0,
+		edge_type=next,
+		label=Next];
+	114 -> 111	[key=0,
+		edge_type=next,
+		label=Next];
+	115	[contract_name=digitalNotary,
+		function_fullname="transfercontractbalance()",
+		label="buggy_50.sol_digitalNotary_transfercontractbalance()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[174, 175, 176, 177, 178, 179, 180, 181]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	115 -> 110	[key=0,
+		edge_type=next,
+		label=Next];
+	116	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[182, 183, 184]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	117	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin8(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin8)
+
+IRs:
+TMP_72(bool) = tx.origin == owner_txorigin8
+\
+TMP_73(None) = SOLIDITY_CALL require(bool)(TMP_72)",
+		node_expression="require(bool)(tx.origin == owner_txorigin8)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_72(bool) = tx.origin == owner_txorigin8
+TMP_73(None) = SOLIDITY_CALL require(bool)(TMP_72)",
+		node_source_code_lines="[183]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	116 -> 117	[key=0,
+		edge_type=next,
+		label=Next];
+	118	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin8(address)",
+		label="buggy_50.sol_digitalNotary_bug_txorigin8(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[182, 183, 184]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	118 -> 116	[key=0,
+		edge_type=next,
+		label=Next];
+	119	[contract_name=digitalNotary,
+		function_fullname="getHashOwnersCount(bytes32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[187, 188, 189]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	120	[contract_name=digitalNotary,
+		function_fullname="getHashOwnersCount(bytes32)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+HashList[hash].length
+
+IRs:
+REF_29(digitalNotary.HashRegistration[]) -> HashList[hash]
+REF_30 -> \
+LENGTH REF_29
+RETURN REF_30",
+		node_expression="HashList[hash].length",
+		node_info_vulnerabilities=None,
+		node_irs="REF_29(digitalNotary.HashRegistration[]) -> HashList[hash]
+REF_30 -> LENGTH REF_29
+RETURN REF_30",
+		node_source_code_lines="[188]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	119 -> 120	[key=0,
+		edge_type=next,
+		label=Next];
+	121	[contract_name=digitalNotary,
+		function_fullname="getHashOwnersCount(bytes32)",
+		label="buggy_50.sol_digitalNotary_getHashOwnersCount(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[186, 187, 188, 189]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	121 -> 119	[key=0,
+		edge_type=next,
+		label=Next];
+	122	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[190, 191, 192, 193]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	123	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin39)
+
+IRs:
+TMP_74(bool) = tx.origin == owner_txorigin39
+\
+TMP_75(None) = SOLIDITY_CALL require(bool)(TMP_74)",
+		node_expression="require(bool)(tx.origin == owner_txorigin39)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_74(bool) = tx.origin == owner_txorigin39
+TMP_75(None) = SOLIDITY_CALL require(bool)(TMP_74)",
+		node_source_code_lines="[191]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	122 -> 123	[key=0,
+		edge_type=next,
+		label=Next];
+	124	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_31(None) -> to.call
+REF_32(None) -> REF_31.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_31(None) -> to.call
+REF_32(None) -> REF_31.value",
+		node_source_code_lines="[192]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	123 -> 124	[key=0,
+		edge_type=next,
+		label=Next];
+	125	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin39(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin39(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[190, 191, 192, 193]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	125 -> 122	[key=0,
+		edge_type=next,
+		label=Next];
+	126	[contract_name=digitalNotary,
+		function_fullname="getNumberofHashesRegistered()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[196, 197, 198]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	127	[contract_name=digitalNotary,
+		function_fullname="getNumberofHashesRegistered()",
+		label="Node Type: RETURN
+
+EXPRESSION:
+HashListLength
+
+IRs:
+RETURN HashListLength",
+		node_expression=HashListLength,
+		node_info_vulnerabilities=None,
+		node_irs="RETURN HashListLength",
+		node_source_code_lines="[197]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	126 -> 127	[key=0,
+		edge_type=next,
+		label=Next];
+	128	[contract_name=digitalNotary,
+		function_fullname="getNumberofHashesRegistered()",
+		label="buggy_50.sol_digitalNotary_getNumberofHashesRegistered()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[195, 196, 197, 198]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	128 -> 126	[key=0,
+		edge_type=next,
+		label=Next];
+	129	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[199, 200, 201]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	130	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin36(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin36)
+
+IRs:
+TMP_77(bool) = tx.origin == owner_txorigin36
+\
+TMP_78(None) = SOLIDITY_CALL require(bool)(TMP_77)",
+		node_expression="require(bool)(tx.origin == owner_txorigin36)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_77(bool) = tx.origin == owner_txorigin36
+TMP_78(None) = SOLIDITY_CALL require(bool)(TMP_77)",
+		node_source_code_lines="[200]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	129 -> 130	[key=0,
+		edge_type=next,
+		label=Next];
+	131	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin36(address)",
+		label="buggy_50.sol_digitalNotary_bug_txorigin36(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[199, 200, 201]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	131 -> 129	[key=0,
+		edge_type=next,
+		label=Next];
+	132	[contract_name=digitalNotary,
+		function_fullname="getHashDetails(bytes32,uint256)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[204, 205, 206, 207, 208, 209, 210, 211]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	133	[contract_name=digitalNotary,
+		function_fullname="getHashDetails(bytes32,uint256)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+owncount = getHashOwnersCount(hash)
+
+IRs:
+TMP_79(uint256) = INTERNAL_CALL, digitalNotary.getHashOwnersCount(\
+bytes32)(hash)
+owncount(uint256) := TMP_79(uint256)",
+		node_expression="owncount = getHashOwnersCount(hash)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_79(uint256) = INTERNAL_CALL, digitalNotary.getHashOwnersCount(bytes32)(hash)
+owncount(uint256) := TMP_79(uint256)",
+		node_source_code_lines="[206]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_50.sol"];
+	132 -> 133	[key=0,
+		edge_type=next,
+		label=Next];
+	134	[contract_name=digitalNotary,
+		function_fullname="getHashDetails(bytes32,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(owncount > 0)
+
+IRs:
+TMP_80(bool) = owncount > 0
+TMP_81(None) = SOLIDITY_CALL require(\
+bool)(TMP_80)",
+		node_expression="require(bool)(owncount > 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_80(bool) = owncount > 0
+TMP_81(None) = SOLIDITY_CALL require(bool)(TMP_80)",
+		node_source_code_lines="[207]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	133 -> 134	[key=0,
+		edge_type=next,
+		label=Next];
+	135	[contract_name=digitalNotary,
+		function_fullname="getHashDetails(bytes32,uint256)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(indx < owncount)
+
+IRs:
+TMP_82(bool) = indx < owncount
+TMP_83(None) = SOLIDITY_CALL \
+require(bool)(TMP_82)",
+		node_expression="require(bool)(indx < owncount)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_82(bool) = indx < owncount
+TMP_83(None) = SOLIDITY_CALL require(bool)(TMP_82)",
+		node_source_code_lines="[208]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	134 -> 135	[key=0,
+		edge_type=next,
+		label=Next];
+	136	[contract_name=digitalNotary,
+		function_fullname="getHashDetails(bytes32,uint256)",
+		label="Node Type: RETURN
+
+EXPRESSION:
+(HashList[hash][indx].owner,HashList[hash][indx].registrationtime)
+
+IRs:
+REF_33(digitalNotary.HashRegistration[]) \
+-> HashList[hash]
+REF_34(digitalNotary.HashRegistration) -> REF_33[indx]
+REF_35(address) -> REF_34.owner
+REF_36(digitalNotary.HashRegistration[]) \
+-> HashList[hash]
+REF_37(digitalNotary.HashRegistration) -> REF_36[indx]
+REF_38(uint256) -> REF_37.registrationtime
+RETURN REF_35,\
+REF_38",
+		node_expression="(HashList[hash][indx].owner,HashList[hash][indx].registrationtime)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_33(digitalNotary.HashRegistration[]) -> HashList[hash]
+REF_34(digitalNotary.HashRegistration) -> REF_33[indx]
+REF_35(address) \
+-> REF_34.owner
+REF_36(digitalNotary.HashRegistration[]) -> HashList[hash]
+REF_37(digitalNotary.HashRegistration) -> REF_36[indx]
+\
+REF_38(uint256) -> REF_37.registrationtime
+RETURN REF_35,REF_38",
+		node_source_code_lines="[210]",
+		node_type=RETURN,
+		source_file="buggy_50.sol"];
+	135 -> 136	[key=0,
+		edge_type=next,
+		label=Next];
+	137	[contract_name=digitalNotary,
+		function_fullname="getHashDetails(bytes32,uint256)",
+		label="buggy_50.sol_digitalNotary_getHashDetails(bytes32,uint256)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[203, 204, 205, 206, 207, 208, 209, 210, 211]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	137 -> 132	[key=0,
+		edge_type=next,
+		label=Next];
+	138	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[212, 213, 214, 215]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	139	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin35)
+
+IRs:
+TMP_84(bool) = tx.origin == owner_txorigin35
+\
+TMP_85(None) = SOLIDITY_CALL require(bool)(TMP_84)",
+		node_expression="require(bool)(tx.origin == owner_txorigin35)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_84(bool) = tx.origin == owner_txorigin35
+TMP_85(None) = SOLIDITY_CALL require(bool)(TMP_84)",
+		node_source_code_lines="[213]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	138 -> 139	[key=0,
+		edge_type=next,
+		label=Next];
+	140	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_39(None) -> to.call
+REF_40(None) -> REF_39.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_39(None) -> to.call
+REF_40(None) -> REF_39.value",
+		node_source_code_lines="[214]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	139 -> 140	[key=0,
+		edge_type=next,
+		label=Next];
+	141	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin35(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin35(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[212, 213, 214, 215]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	141 -> 138	[key=0,
+		edge_type=next,
+		label=Next];
+	142	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	143	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(contractactive == true)
+
+IRs:
+TMP_87(bool) = contractactive == True
+TMP_88(None) = \
+SOLIDITY_CALL require(bool)(TMP_87)",
+		node_expression="require(bool)(contractactive == true)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_87(bool) = contractactive == True
+TMP_88(None) = SOLIDITY_CALL require(bool)(TMP_87)",
+		node_source_code_lines="[220]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	142 -> 143	[key=0,
+		edge_type=next,
+		label=Next];
+	144	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(getHashOwnersCount(hash) == 0)
+
+IRs:
+TMP_89(uint256) = INTERNAL_CALL, digitalNotary.getHashOwnersCount(\
+bytes32)(hash)
+TMP_90(bool) = TMP_89 == 0
+TMP_91(None) = SOLIDITY_CALL require(bool)(TMP_90)",
+		node_expression="require(bool)(getHashOwnersCount(hash) == 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_89(uint256) = INTERNAL_CALL, digitalNotary.getHashOwnersCount(bytes32)(hash)
+TMP_90(bool) = TMP_89 == 0
+TMP_91(None) = SOLIDITY_\
+CALL require(bool)(TMP_90)",
+		node_source_code_lines="[221]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	143 -> 144	[key=0,
+		edge_type=next,
+		label=Next];
+	145	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.value == hashfee)
+
+IRs:
+TMP_92(bool) = msg.value == hashfee
+TMP_93(None) = \
+SOLIDITY_CALL require(bool)(TMP_92)",
+		node_expression="require(bool)(msg.value == hashfee)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_92(bool) = msg.value == hashfee
+TMP_93(None) = SOLIDITY_CALL require(bool)(TMP_92)",
+		node_source_code_lines="[222]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	144 -> 145	[key=0,
+		edge_type=next,
+		label=Next];
+	146	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: NEW VARIABLE
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[224]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_50.sol"];
+	145 -> 146	[key=0,
+		edge_type=next,
+		label=Next];
+	147	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+thisregistration.owner = msg.sender
+
+IRs:
+REF_41(address) -> thisregistration.owner
+REF_41 (->\
+thisregistration) := msg.sender(address)",
+		node_expression="thisregistration.owner = msg.sender",
+		node_info_vulnerabilities=None,
+		node_irs="REF_41(address) -> thisregistration.owner
+REF_41 (->thisregistration) := msg.sender(address)",
+		node_source_code_lines="[225]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	146 -> 147	[key=0,
+		edge_type=next,
+		label=Next];
+	148	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+thisregistration.registrationtime = now
+
+IRs:
+REF_42(uint256) -> thisregistration.registrationtime
+\
+REF_42 (->thisregistration) := now(uint256)",
+		node_expression="thisregistration.registrationtime = now",
+		node_info_vulnerabilities=None,
+		node_irs="REF_42(uint256) -> thisregistration.registrationtime
+REF_42 (->thisregistration) := now(uint256)",
+		node_source_code_lines="[226]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	147 -> 148	[key=0,
+		edge_type=next,
+		label=Next];
+	149	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+HashList[hash].push(thisregistration)
+
+IRs:
+REF_43(digitalNotary.HashRegistration[]) -> HashList[\
+hash]
+REF_45 -> LENGTH REF_43
+TMP_95(uint256) := REF_45(uint256)
+TMP_96(uint256) = TMP_95 + 1
+REF_45 (->HashList) := TMP_96(uint256)
+\
+REF_46(digitalNotary.HashRegistration) -> REF_43[TMP_95]
+REF_46 (->HashList) := thisregistration(digitalNotary.HashRegistration)",
+		node_expression="HashList[hash].push(thisregistration)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_43(digitalNotary.HashRegistration[]) -> HashList[hash]
+REF_45 -> LENGTH REF_43
+TMP_95(uint256) := REF_45(uint256)
+TMP_96(uint256) = \
+TMP_95 + 1
+REF_45 (->HashList) := TMP_96(uint256)
+REF_46(digitalNotary.HashRegistration) -> REF_43[TMP_95]
+REF_46 (->HashList) := \
+thisregistration(digitalNotary.HashRegistration)",
+		node_source_code_lines="[228]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	148 -> 149	[key=0,
+		edge_type=next,
+		label=Next];
+	150	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+HashListLength ++
+
+IRs:
+TMP_97(uint256) := HashListLength(uint256)
+HashListLength(uint256) = \
+HashListLength + 1",
+		node_expression="HashListLength ++",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_97(uint256) := HashListLength(uint256)
+HashListLength(uint256) = HashListLength + 1",
+		node_source_code_lines="[230]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	149 -> 150	[key=0,
+		edge_type=next,
+		label=Next];
+	151	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+RegisterHashEvent(thisregistration.owner,hash,thisregistration.registrationtime)
+
+IRs:
+REF_47(\
+address) -> thisregistration.owner
+REF_48(uint256) -> thisregistration.registrationtime
+Emit RegisterHashEvent(REF_47.hash.REF_48)",
+		node_expression="RegisterHashEvent(thisregistration.owner,hash,thisregistration.registrationtime)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_47(address) -> thisregistration.owner
+REF_48(uint256) -> thisregistration.registrationtime
+Emit RegisterHashEvent(REF_47.hash.REF_\
+48)",
+		node_source_code_lines="[232]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	150 -> 151	[key=0,
+		edge_type=next,
+		label=Next];
+	152	[contract_name=digitalNotary,
+		function_fullname="registerHash(bytes32)",
+		label="buggy_50.sol_digitalNotary_registerHash(bytes32)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	152 -> 142	[key=0,
+		edge_type=next,
+		label=Next];
+	153	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[235, 236, 237]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	154	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin40(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin40)
+
+IRs:
+TMP_99(bool) = tx.origin == owner_txorigin40
+\
+TMP_100(None) = SOLIDITY_CALL require(bool)(TMP_99)",
+		node_expression="require(bool)(tx.origin == owner_txorigin40)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_99(bool) = tx.origin == owner_txorigin40
+TMP_100(None) = SOLIDITY_CALL require(bool)(TMP_99)",
+		node_source_code_lines="[236]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	153 -> 154	[key=0,
+		edge_type=next,
+		label=Next];
+	155	[contract_name=digitalNotary,
+		function_fullname="bug_txorigin40(address)",
+		label="buggy_50.sol_digitalNotary_bug_txorigin40(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[235, 236, 237]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	155 -> 153	[key=0,
+		edge_type=next,
+		label=Next];
+	156	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	157	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(contractactive == true)
+
+IRs:
+TMP_101(bool) = contractactive == True
+TMP_102(None) = \
+SOLIDITY_CALL require(bool)(TMP_101)",
+		node_expression="require(bool)(contractactive == true)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_101(bool) = contractactive == True
+TMP_102(None) = SOLIDITY_CALL require(bool)(TMP_101)",
+		node_source_code_lines="[242]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	156 -> 157	[key=0,
+		edge_type=next,
+		label=Next];
+	158	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: NEW VARIABLE
+
+EXPRESSION:
+owncount = getHashOwnersCount(hash)
+
+IRs:
+TMP_103(uint256) = INTERNAL_CALL, digitalNotary.getHashOwnersCount(\
+bytes32)(hash)
+owncount(uint256) := TMP_103(uint256)",
+		node_expression="owncount = getHashOwnersCount(hash)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_103(uint256) = INTERNAL_CALL, digitalNotary.getHashOwnersCount(bytes32)(hash)
+owncount(uint256) := TMP_103(uint256)",
+		node_source_code_lines="[243]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_50.sol"];
+	157 -> 158	[key=0,
+		edge_type=next,
+		label=Next];
+	159	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(owncount > 0)
+
+IRs:
+TMP_104(bool) = owncount > 0
+TMP_105(None) = SOLIDITY_CALL \
+require(bool)(TMP_104)",
+		node_expression="require(bool)(owncount > 0)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_104(bool) = owncount > 0
+TMP_105(None) = SOLIDITY_CALL require(bool)(TMP_104)",
+		node_source_code_lines="[244]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	158 -> 159	[key=0,
+		edge_type=next,
+		label=Next];
+	160	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == HashList[hash][owncount - 1].owner)
+
+IRs:
+REF_49(digitalNotary.HashRegistration[]) \
+-> HashList[hash]
+TMP_106(uint256) = owncount - 1
+REF_50(digitalNotary.HashRegistration) -> REF_49[TMP_106]
+REF_51(address) -> REF_\
+50.owner
+TMP_107(bool) = msg.sender == REF_51
+TMP_108(None) = SOLIDITY_CALL require(bool)(TMP_107)",
+		node_expression="require(bool)(msg.sender == HashList[hash][owncount - 1].owner)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_49(digitalNotary.HashRegistration[]) -> HashList[hash]
+TMP_106(uint256) = owncount - 1
+REF_50(digitalNotary.HashRegistration) \
+-> REF_49[TMP_106]
+REF_51(address) -> REF_50.owner
+TMP_107(bool) = msg.sender == REF_51
+TMP_108(None) = SOLIDITY_CALL require(bool)(\
+TMP_107)",
+		node_source_code_lines="[245]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	159 -> 160	[key=0,
+		edge_type=next,
+		label=Next];
+	161	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.value == changehashownerfee)
+
+IRs:
+TMP_109(bool) = msg.value == changehashownerfee
+\
+TMP_110(None) = SOLIDITY_CALL require(bool)(TMP_109)",
+		node_expression="require(bool)(msg.value == changehashownerfee)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_109(bool) = msg.value == changehashownerfee
+TMP_110(None) = SOLIDITY_CALL require(bool)(TMP_109)",
+		node_source_code_lines="[246]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	160 -> 161	[key=0,
+		edge_type=next,
+		label=Next];
+	162	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: NEW VARIABLE
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[248]",
+		node_type="NEW VARIABLE",
+		source_file="buggy_50.sol"];
+	161 -> 162	[key=0,
+		edge_type=next,
+		label=Next];
+	163	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+thisregistration.owner = newowner
+
+IRs:
+REF_52(address) -> thisregistration.owner
+REF_52 (->thisregistration) := \
+newowner(address)",
+		node_expression="thisregistration.owner = newowner",
+		node_info_vulnerabilities=None,
+		node_irs="REF_52(address) -> thisregistration.owner
+REF_52 (->thisregistration) := newowner(address)",
+		node_source_code_lines="[249]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	162 -> 163	[key=0,
+		edge_type=next,
+		label=Next];
+	164	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+thisregistration.registrationtime = now
+
+IRs:
+REF_53(uint256) -> thisregistration.registrationtime
+\
+REF_53 (->thisregistration) := now(uint256)",
+		node_expression="thisregistration.registrationtime = now",
+		node_info_vulnerabilities=None,
+		node_irs="REF_53(uint256) -> thisregistration.registrationtime
+REF_53 (->thisregistration) := now(uint256)",
+		node_source_code_lines="[250]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	163 -> 164	[key=0,
+		edge_type=next,
+		label=Next];
+	165	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+HashList[hash].push(thisregistration)
+
+IRs:
+REF_54(digitalNotary.HashRegistration[]) -> HashList[\
+hash]
+REF_56 -> LENGTH REF_54
+TMP_112(uint256) := REF_56(uint256)
+TMP_113(uint256) = TMP_112 + 1
+REF_56 (->HashList) := TMP_113(\
+uint256)
+REF_57(digitalNotary.HashRegistration) -> REF_54[TMP_112]
+REF_57 (->HashList) := thisregistration(digitalNotary.HashRegistration)",
+		node_expression="HashList[hash].push(thisregistration)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_54(digitalNotary.HashRegistration[]) -> HashList[hash]
+REF_56 -> LENGTH REF_54
+TMP_112(uint256) := REF_56(uint256)
+TMP_113(uint256) = \
+TMP_112 + 1
+REF_56 (->HashList) := TMP_113(uint256)
+REF_57(digitalNotary.HashRegistration) -> REF_54[TMP_112]
+REF_57 (->HashList) := \
+thisregistration(digitalNotary.HashRegistration)",
+		node_source_code_lines="[252]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	164 -> 165	[key=0,
+		edge_type=next,
+		label=Next];
+	166	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+ChangeHashOwnershipEvent(msg.sender,thisregistration.owner,hash,thisregistration.registrationtime)
+
+\
+IRs:
+REF_58(address) -> thisregistration.owner
+REF_59(uint256) -> thisregistration.registrationtime
+Emit ChangeHashOwnershipEvent(\
+msg.sender.REF_58.hash.REF_59)",
+		node_expression="ChangeHashOwnershipEvent(msg.sender,thisregistration.owner,hash,thisregistration.registrationtime)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_58(address) -> thisregistration.owner
+REF_59(uint256) -> thisregistration.registrationtime
+Emit ChangeHashOwnershipEvent(msg.sender.REF_\
+58.hash.REF_59)",
+		node_source_code_lines="[254]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	165 -> 166	[key=0,
+		edge_type=next,
+		label=Next];
+	167	[contract_name=digitalNotary,
+		function_fullname="changeHashOwnership(bytes32,address)",
+		label="buggy_50.sol_digitalNotary_changeHashOwnership(bytes32,address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	167 -> 156	[key=0,
+		edge_type=next,
+		label=Next];
+	168	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[256, 257, 258, 259]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	169	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin33)
+
+IRs:
+TMP_115(bool) = tx.origin == owner_txorigin33
+\
+TMP_116(None) = SOLIDITY_CALL require(bool)(TMP_115)",
+		node_expression="require(bool)(tx.origin == owner_txorigin33)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_115(bool) = tx.origin == owner_txorigin33
+TMP_116(None) = SOLIDITY_CALL require(bool)(TMP_115)",
+		node_source_code_lines="[257]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	168 -> 169	[key=0,
+		edge_type=next,
+		label=Next];
+	170	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+receiver.transfer(amount)
+
+IRs:
+Transfer dest:receiver value:amount",
+		node_expression="receiver.transfer(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="Transfer dest:receiver value:amount",
+		node_source_code_lines="[258]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	169 -> 170	[key=0,
+		edge_type=next,
+		label=Next];
+	171	[contract_name=digitalNotary,
+		function_fullname="sendto_txorigin33(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_sendto_txorigin33(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[256, 257, 258, 259]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	171 -> 168	[key=0,
+		edge_type=next,
+		label=Next];
+	172	[contract_name=digitalNotary,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[262, 263, 264]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	173	[contract_name=digitalNotary,
+		function_fullname="fallback()",
+		label="buggy_50.sol_digitalNotary_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[261, 262, 263, 264]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	173 -> 172	[key=0,
+		edge_type=next,
+		label=Next];
+	174	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[265, 266, 267, 268]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	175	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner_txorigin27)
+
+IRs:
+TMP_118(bool) = tx.origin == owner_txorigin27
+\
+TMP_119(None) = SOLIDITY_CALL require(bool)(TMP_118)",
+		node_expression="require(bool)(tx.origin == owner_txorigin27)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="TMP_118(bool) = tx.origin == owner_txorigin27
+TMP_119(None) = SOLIDITY_CALL require(bool)(TMP_118)",
+		node_source_code_lines="[266]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	174 -> 175	[key=0,
+		edge_type=next,
+		label=Next];
+	176	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+to.call.value(amount)
+
+IRs:
+REF_61(None) -> to.call
+REF_62(None) -> REF_61.value",
+		node_expression="to.call.value(amount)",
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs="REF_61(None) -> to.call
+REF_62(None) -> REF_61.value",
+		node_source_code_lines="[267]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	175 -> 176	[key=0,
+		edge_type=next,
+		label=Next];
+	177	[contract_name=digitalNotary,
+		function_fullname="transferTo_txorigin27(address,uint256,address)",
+		label="buggy_50.sol_digitalNotary_transferTo_txorigin27(address,uint256,address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [59, 60, 61, 62, 53, 54, 55, 56, 266, 267, 268, 269, 257, 258, 259, 260, 236, 237, 238, 213, 214, 215, 216, 200, 201, \
+202, 191, 192, 193, 194, 183, 184, 185, 170, 171, 172, 173, 160, 161, 162, 163, 150, 151, 152, 153, 141, 142, 143, 144, 133, 134, \
+135, 124, 125, 126, 127, 114, 115, 116, 106, 107, 108, 95, 96, 97, 98, 79, 80, 81, 82, 47, 48, 49, 50, 41, 42, 43, 44, 29, 30, 31, \
+32, 23, 24, 25, 26, 17, 18, 19, 20, 10, 11, 12, 13, 14], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[265, 266, 267, 268]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	177 -> 174	[key=0,
+		edge_type=next,
+		label=Next];
+	178	[contract_name=digitalNotary,
+		function_fullname="onlyManager()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[84, 85, 86, 87]",
+		node_type=ENTRY_POINT,
+		source_file="buggy_50.sol"];
+	179	[contract_name=digitalNotary,
+		function_fullname="onlyManager()",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(msg.sender == manager)
+
+IRs:
+TMP_121(bool) = msg.sender == manager
+TMP_122(None) = \
+SOLIDITY_CALL require(bool)(TMP_121)",
+		node_expression="require(bool)(msg.sender == manager)",
+		node_info_vulnerabilities=None,
+		node_irs="TMP_121(bool) = msg.sender == manager
+TMP_122(None) = SOLIDITY_CALL require(bool)(TMP_121)",
+		node_source_code_lines="[85]",
+		node_type=EXPRESSION,
+		source_file="buggy_50.sol"];
+	178 -> 179	[key=0,
+		edge_type=next,
+		label=Next];
+	180	[contract_name=digitalNotary,
+		function_fullname="onlyManager()",
+		label="Node Type: _
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[86]",
+		node_type=_,
+		source_file="buggy_50.sol"];
+	179 -> 180	[key=0,
+		edge_type=next,
+		label=Next];
+	181	[contract_name=digitalNotary,
+		function_fullname="onlyManager()",
+		label="buggy_50.sol_digitalNotary_onlyManager()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[83, 84, 85, 86, 87]",
+		node_type=FUNCTION_NAME,
+		source_file="buggy_50.sol"];
+	181 -> 178	[key=0,
+		edge_type=next,
+		label=Next];
+}

@@ -1,0 +1,33 @@
+digraph  {
+13 [label="2_ uint constant TICKET_AMOUNT = 10;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [label="3_ uint constant FEE_AMOUNT = 1;\n18-new_variable-4-4", method="", type_label=new_variable];
+23 [label="4_ address public bank;\n23-new_variable-5-5", method="", type_label=new_variable];
+28 [label="5_ uint public pot;\n28-new_variable-6-6", method="", type_label=new_variable];
+33 [label="6_ function EtherLotto() {\n        bank = msg.sender;\n    }\n33-function_definition-7-9", method="EtherLotto()", type_label=function_definition];
+36 [label="7_ bank = msg.sender;\n36-expression_statement-8-8", method="EtherLotto()", type_label=expression_statement];
+42 [label="9_ function play() payable {\n        assert(msg.value == TICKET_AMOUNT);\n        pot += msg.value;\n        var random = uint(sha3(block.timestamp)) % 2;\n        if (random == 0) {\n            bank.transfer(FEE_AMOUNT);\n            msg.sender.transfer(pot - FEE_AMOUNT);\n            pot = 0;\n        }\n    }\n42-function_definition-10-19", method="play()", type_label=function_definition];
+46 [label="10_ assert(msg.value == TICKET_AMOUNT);\n46-expression_statement-11-11", method="play()", type_label=expression_statement];
+55 [label="11_ pot += msg.value;\n55-expression_statement-12-12", method="play()", type_label=expression_statement];
+61 [label="12_ var random = uint(sha3(block.timestamp)) % 2;\n61-new_variable-13-13", method="play()", type_label=new_variable];
+76 [label="13_ if_random == 0\n76-if-14-18", method="play()", type_label=if];
+174 [label="13_ end_if", method="play()", type_label=end_if];
+81 [label="14_ bank.transfer(FEE_AMOUNT);\n81-expression_statement-15-15", method="play()", type_label=expression_statement];
+88 [label="15_ msg.sender.transfer(pot - FEE_AMOUNT);\n88-expression_statement-16-16", method="play()", type_label=expression_statement];
+99 [label="16_ pot = 0;\n99-expression_statement-17-17", method="play()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+18 -> 23  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+23 -> 28  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+33 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+42 -> 46  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 55  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+55 -> 61  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+61 -> 76  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+76 -> 81  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+76 -> 174  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+174 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+81 -> 88  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+88 -> 99  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+99 -> 174  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+}

@@ -1,0 +1,18 @@
+digraph  {
+9 [label="1_ uint storedData;\n9-new_variable-2-2", method="", type_label=new_variable];
+13 [label="2_ address storedAddress;\n13-new_variable-3-3", method="", type_label=new_variable];
+27 [label="4_ function set(uint x, address y) {\n        storedData = x;\n        storedAddress = y;\n    }\n27-function_definition-5-8", method="set(uint x,address y)", type_label=function_definition];
+38 [label="5_ storedData = x;\n38-expression_statement-6-6", method="set(uint x,address y)", type_label=expression_statement];
+42 [label="6_ storedAddress = y;\n42-expression_statement-7-7", method="set(uint x,address y)", type_label=expression_statement];
+46 [label="8_ function get() constant returns (uint retVal, address retAddr) {\n        return (storedData, storedAddress);\n        flag(storedData, storedAddress);\n    }\n46-function_definition-9-12", method="get()", type_label=function_definition];
+48 [label="8_ constant\n48-expression_statement-9-9", method="get()", type_label=expression_statement];
+60 [label="9_ return (storedData, storedAddress);\n60-return-10-10", method="get()", type_label=return];
+64 [label="10_ flag(storedData, storedAddress);\n64-expression_statement-11-11", method="get()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+9 -> 13  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+27 -> 38  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+38 -> 42  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 60  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+60 -> 2  [color=red, controlflow_type=return_exit, edge_type=CFG_edge, key=0, label=return_exit];
+}

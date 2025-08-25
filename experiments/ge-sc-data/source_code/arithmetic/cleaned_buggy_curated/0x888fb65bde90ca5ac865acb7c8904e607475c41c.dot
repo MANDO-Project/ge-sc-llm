@@ -1,0 +1,17 @@
+digraph  {
+13 [label="2_ mapping (address => uint256) public balanceOf;\n13-new_variable-3-3", type_label=new_variable];
+20 [label="3_ MyToken\n20-function_definition-4-8", type_label=function_definition];
+28 [label="6_ balanceOf[msg.sender] = initialSupply;\n28-expression_statement-7-7", type_label=expression_statement];
+36 [label="8_ transfer\n36-function_definition-9-14", type_label=function_definition];
+48 [label="9_ require(balanceOf[msg.sender] >= _value);\n48-expression_statement-10-10", type_label=expression_statement];
+59 [label="10_ require(balanceOf[_to] + _value >= balanceOf[_to]);\n59-expression_statement-11-11", type_label=expression_statement];
+72 [label="11_ balanceOf[msg.sender] -= _value;\n72-expression_statement-12-12", type_label=expression_statement];
+80 [label="12_ balanceOf[_to] += _value;\n80-expression_statement-13-13", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+20 -> 28  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+36 -> 48  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+48 -> 59  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+59 -> 72  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+72 -> 80  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

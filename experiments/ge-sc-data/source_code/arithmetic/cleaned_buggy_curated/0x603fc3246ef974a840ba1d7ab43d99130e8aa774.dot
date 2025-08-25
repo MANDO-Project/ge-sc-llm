@@ -1,0 +1,20 @@
+digraph  {
+13 [label="2_ transfer\n13-function_definition-3-3", type_label=function_definition];
+28 [label="3_ transferFrom\n28-function_definition-4-4", type_label=function_definition];
+47 [label="4_ balanceOf\n47-function_definition-5-5", type_label=function_definition];
+76 [label="8_ lock\n76-function_definition-9-9", type_label=function_definition];
+94 [label="11_ KNCLock public KNCLockContract = KNCLock(0x980358360409b1cc913A916bC0Bf6f52F775242A);\n94-new_variable-12-12", type_label=new_variable];
+104 [label="12_ IERC20 public KNC = IERC20(0xdd974D5C2e2928deA5F71b9825b8b646686BD200);\n104-new_variable-13-13", type_label=new_variable];
+121 [label="14_ KNC = knc;\n121-expression_statement-15-15", type_label=expression_statement];
+125 [label="16_ triggerLock\n125-function_definition-17-20", type_label=function_definition];
+137 [label="17_ uint qty = KNC.balanceOf(address(this));\n137-new_variable-18-18", type_label=new_variable];
+150 [label="18_ KNCLockContract.lock(qty, eosAddr, eosRecipientName);\n150-expression_statement-19-19", type_label=expression_statement];
+161 [label="20_ setKNCLockAddress\n161-function_definition-21-23", type_label=function_definition];
+170 [label="21_ KNCLockContract = lockContract;\n170-expression_statement-22-22", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+94 -> 104  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+125 -> 137  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+137 -> 150  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+161 -> 170  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

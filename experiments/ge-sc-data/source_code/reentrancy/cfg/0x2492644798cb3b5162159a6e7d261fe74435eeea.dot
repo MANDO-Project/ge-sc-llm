@@ -1,0 +1,8 @@
+digraph  {
+12 [label="2_ uint public count = 0;\n12-new_variable-3-3", method="", type_label=new_variable];
+30 [label="5_ function prove(string name1, string name2) external {\n        count += 1;\n        emit Love(name1, name2);\n    }\n30-function_definition-6-9", method="prove(string name1,string name2)", type_label=function_definition];
+42 [label="6_ count += 1;\n42-expression_statement-7-7", method="prove(string name1,string name2)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+30 -> 42  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

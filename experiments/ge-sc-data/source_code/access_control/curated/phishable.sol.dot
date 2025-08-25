@@ -1,0 +1,129 @@
+digraph "" {
+	node [label="\N"];
+	0	[contract_name=Phishable,
+		function_fullname="constructor(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[12, 13, 14]",
+		node_type=ENTRY_POINT,
+		source_file="phishable.sol"];
+	1	[contract_name=Phishable,
+		function_fullname="constructor(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+owner = _owner
+
+IRs:
+owner(address) := _owner(address)",
+		node_expression="owner = _owner",
+		node_info_vulnerabilities=None,
+		node_irs="owner(address) := _owner(address)",
+		node_source_code_lines="[13]",
+		node_type=EXPRESSION,
+		source_file="phishable.sol"];
+	0 -> 1	[key=0,
+		edge_type=next,
+		label=Next];
+	2	[contract_name=Phishable,
+		function_fullname="constructor(address)",
+		label="phishable.sol_Phishable_constructor(address)",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[12, 13, 14]",
+		node_type=FUNCTION_NAME,
+		source_file="phishable.sol"];
+	2 -> 0	[key=0,
+		edge_type=next,
+		label=Next];
+	3	[contract_name=Phishable,
+		function_fullname="fallback()",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[16]",
+		node_type=ENTRY_POINT,
+		source_file="phishable.sol"];
+	4	[contract_name=Phishable,
+		function_fullname="fallback()",
+		label="phishable.sol_Phishable_fallback()",
+		node_expression=None,
+		node_info_vulnerabilities=None,
+		node_irs=None,
+		node_source_code_lines="[16]",
+		node_type=FUNCTION_NAME,
+		source_file="phishable.sol"];
+	4 -> 3	[key=0,
+		edge_type=next,
+		label=Next];
+	5	[contract_name=Phishable,
+		function_fullname="withdrawAll(address)",
+		label="Node Type: ENTRY_POINT
+",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [20], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21, 22]",
+		node_type=ENTRY_POINT,
+		source_file="phishable.sol"];
+	6	[contract_name=Phishable,
+		function_fullname="withdrawAll(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+require(bool)(tx.origin == owner)
+
+IRs:
+TMP_0(bool) = tx.origin == owner
+TMP_1(None) = SOLIDITY_\
+CALL require(bool)(TMP_0)",
+		node_expression="require(bool)(tx.origin == owner)",
+		node_info_vulnerabilities="[{'lines': [20], 'category': 'access_control'}]",
+		node_irs="TMP_0(bool) = tx.origin == owner
+TMP_1(None) = SOLIDITY_CALL require(bool)(TMP_0)",
+		node_source_code_lines="[20]",
+		node_type=EXPRESSION,
+		source_file="phishable.sol"];
+	5 -> 6	[key=0,
+		edge_type=next,
+		label=Next];
+	7	[contract_name=Phishable,
+		function_fullname="withdrawAll(address)",
+		label="Node Type: EXPRESSION
+
+EXPRESSION:
+_recipient.transfer(this.balance)
+
+IRs:
+REF_1 -> BALANCE this
+Transfer dest:_recipient value:\
+REF_1",
+		node_expression="_recipient.transfer(this.balance)",
+		node_info_vulnerabilities=None,
+		node_irs="REF_1 -> BALANCE this
+Transfer dest:_recipient value:REF_1",
+		node_source_code_lines="[21]",
+		node_type=EXPRESSION,
+		source_file="phishable.sol"];
+	6 -> 7	[key=0,
+		edge_type=next,
+		label=Next];
+	8	[contract_name=Phishable,
+		function_fullname="withdrawAll(address)",
+		label="phishable.sol_Phishable_withdrawAll(address)",
+		node_expression=None,
+		node_info_vulnerabilities="[{'lines': [20], 'category': 'access_control'}]",
+		node_irs=None,
+		node_source_code_lines="[18, 19, 20, 21, 22]",
+		node_type=FUNCTION_NAME,
+		source_file="phishable.sol"];
+	8 -> 5	[key=0,
+		edge_type=next,
+		label=Next];
+}

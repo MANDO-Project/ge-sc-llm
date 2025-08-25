@@ -1,0 +1,15 @@
+digraph  {
+13 [code="address private owner;", label="2_ address private owner;\n13-new_variable-3-3", method="", type_label=new_variable];
+18 [code="modifier onlyowner {\n        require(msg.sender==owner);\n        _;\n    }", label="3_ modifier onlyowner {\n        require(msg.sender==owner);\n        _;\n    }\n18-expression_statement-4-7", method="", type_label=expression_statement];
+21 [code="require(msg.sender==owner);", label="4_ require(msg.sender==owner);\n21-expression_statement-5-5", method="", type_label=expression_statement];
+30 [code="_;", label="5_ _;\n30-expression_statement-6-6", method="", type_label=expression_statement];
+32 [code="function Constructor()\n        public\n    {\n        owner = msg.sender;\n    }", label="7_ function Constructor()\n        public\n    {\n        owner = msg.sender;\n    }\n32-function_definition-8-12", method="Constructor()", type_label=function_definition];
+36 [code="owner = msg.sender;", label="10_ owner = msg.sender;\n36-expression_statement-11-11", method="Constructor()", type_label=expression_statement];
+45 [code="function withdraw()\n        public\n        onlyowner\n    {\n       owner.transfer(this.balance);\n    }", label="13_ function withdraw()\n        public\n        onlyowner\n    {\n       owner.transfer(this.balance);\n    }\n45-function_definition-14-19", method="withdraw()", type_label=function_definition];
+48 [code=onlyowner, label="15_ onlyowner\n48-expression_statement-16-16", method="withdraw()", type_label=expression_statement];
+51 [code="owner.transfer(this.balance);", label="17_ owner.transfer(this.balance);\n51-expression_statement-18-18", method="withdraw()", type_label=expression_statement];
+13 -> 18  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+21 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+32 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+45 -> 51  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

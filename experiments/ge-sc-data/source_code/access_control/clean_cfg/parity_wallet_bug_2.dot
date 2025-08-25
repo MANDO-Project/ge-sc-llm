@@ -1,0 +1,18 @@
+digraph  {
+16 [label="2_ struct PendingState {\n    uint yetNeeded;\n    uint ownersDone;\n    uint index;\n  }\n16-expression_statement-3-7", type_label=expression_statement];
+30 [label="7_ struct Transaction {\n    address to;\n    uint value;\n    bytes data;\n  }\n30-expression_statement-8-12", type_label=expression_statement];
+44 [label="12_ modifier onlyowner {\n    if (isOwner(msg.sender))\n      _;\n  }\n44-expression_statement-13-16", type_label=expression_statement];
+47 [label="13_ if\n47-if-14-15", type_label=if];
+98 [label="13_ end_if", type_label=end_if];
+54 [label="14_ _;\n54-expression_statement-15-15", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+"(98, (13, 4), (14, 8))";
+16 -> 30  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+30 -> 44  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+47 -> 54  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+47 -> "(98, (13, 4), (14, 8))"  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+54 -> "(98, (13, 4), (14, 8))"  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+"(98, (13, 4), (14, 8))" -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+"(98, (13, 4), (14, 8))" -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=1, label=next_line];
+}

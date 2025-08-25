@@ -1,0 +1,29 @@
+digraph  {
+13 [label="2_ uint[] private bonusCodes;\n13-new_variable-3-3", type_label=new_variable];
+19 [label="3_ address private owner;\n19-new_variable-4-4", type_label=new_variable];
+26 [label="5_ bonusCodes = new uint[](0);\n26-expression_statement-6-6", type_label=expression_statement];
+36 [label="6_ owner = msg.sender;\n36-expression_statement-7-7", type_label=expression_statement];
+46 [label="10_ PushBonusCode\n46-function_definition-11-13", type_label=function_definition];
+54 [label="11_ bonusCodes.push(c);\n54-expression_statement-12-12", type_label=expression_statement];
+61 [label="13_ PopBonusCode\n61-function_definition-14-17", type_label=function_definition];
+65 [label="14_ require(0 <= bonusCodes.length);\n65-expression_statement-15-15", type_label=expression_statement];
+74 [label="15_ bonusCodes.length--;\n74-expression_statement-16-16", type_label=expression_statement];
+75 [label="15_ bonusCodes.length--\n75-expression_statement-16-16", type_label=expression_statement];
+79 [label="17_ UpdateBonusCodeAt\n79-function_definition-18-21", type_label=function_definition];
+91 [label="18_ require(idx < bonusCodes.length);\n91-expression_statement-19-19", type_label=expression_statement];
+100 [label="19_ bonusCodes[idx] = c;\n100-expression_statement-20-20", type_label=expression_statement];
+106 [label="21_ Destroy\n106-function_definition-22-25", type_label=function_definition];
+110 [label="22_ require(msg.sender == owner);\n110-expression_statement-23-23", type_label=expression_statement];
+119 [label="23_ selfdestruct(msg.sender);\n119-expression_statement-24-24", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+13 -> 19  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+26 -> 36  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+61 -> 65  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 74  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+79 -> 91  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+91 -> 100  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+106 -> 110  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+110 -> 119  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

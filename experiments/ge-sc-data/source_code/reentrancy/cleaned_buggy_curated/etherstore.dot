@@ -1,0 +1,25 @@
+digraph  {
+13 [label="2_ uint256 public withdrawalLimit = 1 ether;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ mapping(address => uint256) public lastWithdrawTime;\n20-new_variable-4-4", method="", type_label=new_variable];
+27 [label="4_ mapping(address => uint256) public balances;\n27-new_variable-5-5", method="", type_label=new_variable];
+34 [label="5_ function depositFunds() public payable {\n        balances[msg.sender] += msg.value;\n    }\n34-function_definition-6-8", method="depositFunds()", type_label=function_definition];
+39 [label="6_ balances[msg.sender] += msg.value;\n39-expression_statement-7-7", method="depositFunds()", type_label=expression_statement];
+49 [label="8_ function withdrawFunds (uint256 _weiToWithdraw) public {\n        require(balances[msg.sender] >= _weiToWithdraw);\n        require(_weiToWithdraw <= withdrawalLimit);\n        require(now >= lastWithdrawTime[msg.sender] + 1 weeks);\n        require(msg.sender.call.value(_weiToWithdraw)());\n        balances[msg.sender] -= _weiToWithdraw;\n        lastWithdrawTime[msg.sender] = now;\n    }\n49-function_definition-9-16", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=function_definition];
+57 [label="9_ require(balances[msg.sender] >= _weiToWithdraw);\n57-expression_statement-10-10", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=expression_statement];
+68 [label="10_ require(_weiToWithdraw <= withdrawalLimit);\n68-expression_statement-11-11", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=expression_statement];
+75 [label="11_ require(now >= lastWithdrawTime[msg.sender] + 1 weeks);\n75-expression_statement-12-12", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=expression_statement];
+89 [label="12_ require(msg.sender.call.value(_weiToWithdraw)());\n89-expression_statement-13-13", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=expression_statement];
+104 [label="13_ balances[msg.sender] -= _weiToWithdraw;\n104-expression_statement-14-14", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=expression_statement];
+112 [label="14_ lastWithdrawTime[msg.sender] = now;\n112-expression_statement-15-15", method="withdrawFunds(uint256 _weiToWithdraw)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+13 -> 20  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+20 -> 27  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+34 -> 39  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+49 -> 57  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+57 -> 68  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+68 -> 75  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+75 -> 89  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+89 -> 104  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+104 -> 112  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

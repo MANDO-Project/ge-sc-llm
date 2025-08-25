@@ -1,0 +1,25 @@
+digraph  {
+13 [label="2_ mapping (address => uint) private userBalances;\n13-new_variable-3-3", method="", type_label=new_variable];
+20 [label="3_ function transfer(address to, uint amount) {\n        if (userBalances[msg.sender] >= amount) {\n            userBalances[to] += amount;\n            userBalances[msg.sender] -= amount;\n        }\n    }\n20-function_definition-4-9", method="transfer(address to,uint amount)", type_label=function_definition];
+31 [label="4_ if_userBalances[msg.sender] >= amount\n31-if-5-8", method="transfer(address to,uint amount)", type_label=if];
+127 [label="4_ end_if", method="transfer(address to,uint amount)", type_label=end_if];
+40 [label="5_ userBalances[to] += amount;\n40-expression_statement-6-6", method="transfer(address to,uint amount)", type_label=expression_statement];
+46 [label="6_ userBalances[msg.sender] -= amount;\n46-expression_statement-7-7", method="transfer(address to,uint amount)", type_label=expression_statement];
+54 [label="9_ function withdrawBalance() public {\n        uint amountToWithdraw = userBalances[msg.sender];\n        (bool success, ) = msg.sender.call.value(amountToWithdraw)(\"\");  \n        require(success);\n        userBalances[msg.sender] = 0;\n    }\n54-function_definition-10-15", method="withdrawBalance()", type_label=function_definition];
+58 [label="10_ uint amountToWithdraw = userBalances[msg.sender];\n58-new_variable-11-11", method="withdrawBalance()", type_label=new_variable];
+68 [label="11_ (bool success, ) = msg.sender.call.value(amountToWithdraw)(\"\");\n68-new_variable-12-12", method="withdrawBalance()", type_label=new_variable];
+88 [label="12_ require(success);\n88-expression_statement-13-13", method="withdrawBalance()", type_label=expression_statement];
+93 [label="13_ userBalances[msg.sender] = 0;\n93-expression_statement-14-14", method="withdrawBalance()", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+20 -> 31  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+31 -> 40  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+31 -> 127  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+127 -> 54  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+40 -> 46  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+46 -> 127  [color=red, controlflow_type=end_if, edge_type=CFG_edge, key=0, label=end_if];
+54 -> 58  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 68  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+68 -> 88  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+88 -> 93  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

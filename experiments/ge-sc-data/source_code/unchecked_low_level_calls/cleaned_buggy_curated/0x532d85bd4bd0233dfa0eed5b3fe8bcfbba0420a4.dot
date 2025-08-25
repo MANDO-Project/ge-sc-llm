@@ -1,0 +1,23 @@
+digraph  {
+13 [label="2_ address public owner = msg.sender;\n13-new_variable-3-3", type_label=new_variable];
+21 [label="3_ mapping(bytes32 => uint256) public hashToTimestamp;\n21-new_variable-4-4", type_label=new_variable];
+28 [label="4_ mapping(bytes32 => uint256) public hashToNumber;\n28-new_variable-5-5", type_label=new_variable];
+41 [label="6_ store\n41-function_definition-7-13", type_label=function_definition];
+49 [label="7_ assert(msg.sender == owner);\n49-expression_statement-8-8", type_label=expression_statement];
+58 [label="8_ assert(hashToTimestamp[hash] <= 0);\n58-expression_statement-9-9", type_label=expression_statement];
+67 [label="9_ hashToTimestamp[hash] = block.timestamp;\n67-expression_statement-10-10", type_label=expression_statement];
+75 [label="10_ hashToNumber[hash] = block.number;\n75-expression_statement-11-11", type_label=expression_statement];
+87 [label="13_ changeOwner\n87-function_definition-14-17", type_label=function_definition];
+95 [label="14_ assert(msg.sender == owner);\n95-expression_statement-15-15", type_label=expression_statement];
+104 [label="15_ owner = ownerNew;\n104-expression_statement-16-16", type_label=expression_statement];
+1 [label="0_ start_node", type_label=start];
+2 [label="0_ exit_node", type_label=exit];
+13 -> 21  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+21 -> 28  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+41 -> 49  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+49 -> 58  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+58 -> 67  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+67 -> 75  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+87 -> 95  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+95 -> 104  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+}

@@ -1,0 +1,30 @@
+digraph  {
+13 [label="2_ function transfer(address _to, uint _value) returns (bool success);\n13-function_definition-3-3", method="transfer(address _to,uint _value)", type_label=function_definition];
+28 [label="3_ function balanceOf(address _owner) constant returns (uint balance);\n28-function_definition-4-4", method="balanceOf(address _owner)", type_label=function_definition];
+34 [label="3_ constant\n34-expression_statement-4-4", method="balanceOf(address _owner)", type_label=expression_statement];
+44 [label="6_ address owner;\n44-new_variable-7-7", method="", type_label=new_variable];
+48 [label="7_ function EtherGet() {\n        owner = msg.sender;\n    }\n48-function_definition-8-10", method="EtherGet()", type_label=function_definition];
+51 [label="8_ owner = msg.sender;\n51-expression_statement-9-9", method="EtherGet()", type_label=expression_statement];
+57 [label="10_ function withdrawTokens(address tokenContract) public {\n        Token tc = Token(tokenContract);\n        tc.transfer(owner, tc.balanceOf(this));\n    }\n57-function_definition-11-14", method="withdrawTokens(address tokenContract)", type_label=function_definition];
+65 [label="11_ Token tc = Token(tokenContract);\n65-new_variable-12-12", method="withdrawTokens(address tokenContract)", type_label=new_variable];
+75 [label="12_ tc.transfer(owner, tc.balanceOf(this));\n75-expression_statement-13-13", method="withdrawTokens(address tokenContract)", type_label=expression_statement];
+89 [label="14_ function withdrawEther() public {\n        owner.transfer(this.balance);\n    }\n89-function_definition-15-17", method="withdrawEther()", type_label=function_definition];
+93 [label="15_ owner.transfer(this.balance);\n93-expression_statement-16-16", method="withdrawEther()", type_label=expression_statement];
+102 [label="17_ function getTokens(uint num, address addr) public {\n        for(uint i = 0; i < num; i++){\n            addr.call.value(0 wei)();\n        }\n    }\n102-function_definition-18-22", method="getTokens(uint num,address addr)", type_label=function_definition];
+114 [label="18_ for(i < num;;i++)\n114-for-19-21", method="getTokens(uint num,address addr)", type_label=for];
+248 [label="18_ end_loop", method="getTokens(uint num,address addr)", type_label=end_loop];
+125 [label="18_ i++\n125-expression_statement-19-19", method="getTokens(uint num,address addr)", type_label=expression_statement];
+128 [label="19_ addr.call.value(0 wei)();\n128-expression_statement-20-20", method="getTokens(uint num,address addr)", type_label=expression_statement];
+1 [label="0_ start_node", method="", type_label=start];
+2 [label="0_ exit_node", method="", type_label=exit];
+48 -> 51  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+57 -> 65  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+65 -> 75  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+89 -> 93  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+102 -> 114  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+114 -> 128  [color=red, controlflow_type=pos_next, edge_type=CFG_edge, key=0, label=pos_next];
+114 -> 248  [color=red, controlflow_type=neg_next, edge_type=CFG_edge, key=0, label=neg_next];
+248 -> 2  [color=red, controlflow_type=next_line, edge_type=CFG_edge, key=0, label=next_line];
+125 -> 114  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+128 -> 125  [color=red, controlflow_type=loop_update, edge_type=CFG_edge, key=0, label=loop_update];
+}
