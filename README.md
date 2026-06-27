@@ -16,6 +16,7 @@ The source code is the next version of our two previous frameworks [MANDO](https
 - [Table of contents](#table-of-contents)
 - [How to train the models?](#how-to-train-the-models)
   - [Dataset](#dataset)
+  - [Checkpoints and Graphs](#pretrained-checkpoints-and-compressed-graphs)
   - [System Description](#system-description)
   - [Install Environment](#install-environment)
   - [Inspection scripts](#inspection-scripts)
@@ -43,6 +44,9 @@ The source code is the next version of our two previous frameworks [MANDO](https
 
 ## Dataset
 - We prepared dataset for [experiments](experiments/ge-sc-data/source_code).
+
+## Pretrained checkpoints and compressed graphs
+- We provide our trained weight checkpoints and compressed graphs for training and inference in the [Google Drive](https://drive.google.com/drive/folders/1Ne3ozncJK1Oqaf6hlF_NdQAiS4VgWulx?usp=sharing).
 
 ## System Description
 
