@@ -515,6 +515,7 @@ class HGTVulGraphClassifier(nn.Module):
             self.adapt_ws.append(nn.Linear(self.in_size, self.hidden_size))
         print('Hidden size: ', self.hidden_size)
         print('Ntype dict: ', len(self.ntypes_dict))
+        print(self.ntypes_dict)
         print('Etype dict: ', len(self.etypes_dict))
 
         for _ in range(self.num_layers):

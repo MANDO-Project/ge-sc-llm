@@ -1,5 +1,6 @@
 import ast
 from collections import defaultdict
+import pickle
 
 import torch
 import networkx as nx
@@ -331,8 +332,15 @@ def get_nx_subgraphs(nx_graph):
     return nx_subgraphs_dict
 
 
+def read_gpickle(path):
+    if hasattr(nx, 'read_gpickle'):
+        return nx.read_gpickle(path)
+    with open(path, 'rb') as f:
+        return pickle.load(f)
+
+
 def load_hetero_nx_graph(nx_graph_path):
-    nx_graph = nx.read_gpickle(nx_graph_path)
+    nx_graph = read_gpickle(nx_graph_path)
     nx_graph = nx.convert_node_labels_to_integers(nx_graph)
     nx_graph = add_hetero_ids(nx_graph)
     return nx_graph

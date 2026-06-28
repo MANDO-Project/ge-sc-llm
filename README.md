@@ -14,9 +14,10 @@ The source code is the next version of our two previous frameworks [MANDO](https
 - [Smart Contract Vulnerabilities](#smart-contract-vulnerabilities)
 - [Multi-Level Graph Embeddings](#multi-level-graph-embeddings)
 - [Table of contents](#table-of-contents)
-- [How to train the models?](#how-to-train-the-models)
+- [How to run the models?](#how-to-run-the-models)
+  - [Quickstart](#quickstart)
   - [Dataset](#dataset)
-  - [Checkpoints and Graphs](#pretrained-checkpoints-and-compressed-graphs)
+  - [Pretrained checkpoints and compressed graphs](#pretrained-checkpoints-and-compressed-graphs)
   - [System Description](#system-description)
   - [Install Environment](#install-environment)
   - [Inspection scripts](#inspection-scripts)
@@ -30,7 +31,7 @@ The source code is the next version of our two previous frameworks [MANDO](https
       - [Usage](#usage-1)
       - [Examples](#examples-1)
   - [Testing](#testing)
-  - [Visuallization](#visuallization)
+  - [Visualization](#visualization)
   - [Results](#results)
     - [Combine HCFGs and HCGs in Form-A Fusion.](#combine-hcfgs-and-hcgs-in-form-a-fusion)
       - [Coarse-Grained Contract-Level Detection](#coarse-grained-contract-level-detection)
@@ -40,13 +41,18 @@ The source code is the next version of our two previous frameworks [MANDO](https
     - [Combine CFGs and CGs in Form-B Fusion.](#combine-cfgs-and-cgs-in-form-b-fusion)
       - [Fine-Grained Function-Level Detection](#fine-grained-function-level-detection)
 
-# How to train the models?
+# How to run the models?
+
+## Quickstart
+- We provide a quickstart guide for the refactored direct classifier scripts in [docs/classifier-quickstart.md](docs/classifier-quickstart.md).
+
 
 ## Dataset
 - We prepared dataset for [experiments](experiments/ge-sc-data/source_code).
 
 ## Pretrained checkpoints and compressed graphs
 - We provide our trained weight checkpoints and compressed graphs for training and inference in the [Google Drive](https://drive.google.com/drive/folders/1Ne3ozncJK1Oqaf6hlF_NdQAiS4VgWulx?usp=sharing).
+- For hands-on direct script usage after the classifier refactor, see [Classifier Quickstart](docs/classifier-quickstart.md). The default assets live under `mando-assets/` and use `nodetype` node features.
 
 ## System Description
 
@@ -59,7 +65,7 @@ We run all experiments on
 
 Install python required packages.
 ```bash
-pip install -r requirements.txt -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html -f https://data.pyg.org/whl/torch-1.8.0+cu111.html -f https://data.dgl.ai/wheels/repo.html
+pip install -r requirements.txt
 ```
 
 ## Inspection scripts
@@ -305,4 +311,3 @@ tensorboard --logdir LOG_DIR
 #### Fine-Grained Function-Level Detection
 
 [![CGs](./assets/function_level_fusion_form_B.png)](https://anonymous.4open.science/r/ge-sc-FE31)
-

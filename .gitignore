@@ -13,6 +13,7 @@ logs/
 logs*/
 *.ipynb
 *.txt
+!requirements.txt
 **/logs/
 **/logs*/
 **/dataset/
@@ -22,3 +23,5 @@ results/
 *.gpickle
 *.json
 forensics/graph_hiddends/*
+experiments/DAppSCAN/
+docs/superpowers/

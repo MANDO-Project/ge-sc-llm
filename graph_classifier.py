@@ -4,19 +4,16 @@ from shutil import rmtree
 import gc
 import numpy as np
 import torch
-from tabulate import tabulate
-from torch.nn.functional import cross_entropy
-from sklearn.metrics import f1_score, precision_recall_fscore_support
-from sklearn.model_selection import KFold, StratifiedKFold
-from dgl.dataloading import GraphDataLoader
-from torch.utils.tensorboard import SummaryWriter
+from sklearn.model_selection import StratifiedKFold
 
-from sco_models.dataloader import EthIdsDataset
-from sco_models.model_hetero import MANDOGraphClassifier
-from sco_models.model_hgt import HGTVulGraphClassifier
-from sco_models.visualization import visualize_average_k_folds, visualize_k_folds
 from sco_models.utils import score, get_classification_report, get_confusion_matrix
 from sco_models.tools import EarlyStopping
+from sco_models.classifier_cli import (
+    build_graph_parser,
+    ensure_output_parent,
+    finalize_graph_args,
+    validate_paths,
+)
 
 
 def train(args, model, train_loader, optimizer, loss_fcn, epoch):
@@ -24,6 +21,7 @@ def train(args, model, train_loader, optimizer, loss_fcn, epoch):
     total_accucracy =  0
     total_macro_f1 = 0
     total_micro_f1 = 0
+    total_buggy_f1 = 0
     total_loss = 0
     circle_lrs = []
     for idx, (batched_graph, labels) in enumerate(train_loader):
@@ -38,10 +36,11 @@ def train(args, model, train_loader, optimizer, loss_fcn, epoch):
         total_accucracy += train_acc
         total_micro_f1 += train_micro_f1
         total_macro_f1 += train_macro_f1
+        total_buggy_f1 += train_buggy_f1
         total_loss += loss.item()
         circle_lrs.append(optimizer.param_groups[0]["lr"])
     steps = idx + 1
-    return model, total_loss/steps, total_micro_f1/steps, train_macro_f1/steps, total_accucracy/steps, train_buggy_f1/steps, circle_lrs
+    return model, total_loss/steps, total_micro_f1/steps, total_macro_f1/steps, total_accucracy/steps, total_buggy_f1/steps, circle_lrs
 
 
 def validate(args, model, val_loader, loss_fcn):
@@ -50,6 +49,7 @@ def validate(args, model, val_loader, loss_fcn):
     total_macro_f1 = 0
     total_micro_f1 = 0
     total_accucracy =  0
+    total_buggy_f1 = 0
     with torch.no_grad():
         for idx, (batched_graph, labels) in enumerate(val_loader):
             labels = labels.to(args['device'])
@@ -60,8 +60,9 @@ def validate(args, model, val_loader, loss_fcn):
             total_accucracy += val_acc
             total_micro_f1 += val_micro_f1
             total_macro_f1 += val_macro_f1
+            total_buggy_f1 += val_buggy_f1
     steps = idx + 1
-    return total_loss/steps, total_micro_f1/steps, val_macro_f1/steps, total_accucracy/steps, val_buggy_f1/steps
+    return total_loss/steps, total_micro_f1/steps, total_macro_f1/steps, total_accucracy/steps, total_buggy_f1/steps
 
 
 def test(args, model, test_loader):
@@ -87,7 +88,7 @@ def test(args, model, test_loader):
     total_target = torch.tensor(total_target)
     classification_report = get_classification_report(total_target, total_logits, output_dict=True)
     confusion_report = get_confusion_matrix(total_target, total_logits)
-    return total_micro_f1/steps, test_macro_f1/steps, total_accucracy/steps, classification_report, confusion_report
+    return total_micro_f1/steps, total_macro_f1/steps, total_accucracy/steps, classification_report, confusion_report
 
 def get_class_distribution(dataset, sample_ids):
     categories = {}
@@ -102,6 +103,11 @@ def get_class_distribution(dataset, sample_ids):
 
 
 def main(args):
+    from dgl.dataloading import GraphDataLoader
+
+    from sco_models.dataloader import EthIdsDataset
+    from sco_models.model_hgt import HGTVulGraphClassifier
+
     print('===============================================')
     print('Graph file ', args['compressed_graph'])
     epochs = args['num_epochs']
@@ -252,57 +258,68 @@ def main(args):
 
 
 def load_model(model_path):
+    from sco_models.model_hgt import HGTVulGraphClassifier
+
     model = HGTVulGraphClassifier()
     model.load_state_dict(torch.load(model_path))
     return model.eval()
 
 
+def _graph_test_ids(dataset, testset):
+    if not testset or not os.path.isdir(testset):
+        return list(range(len(dataset)))
+    test_names = {f for f in os.listdir(testset) if f.endswith('.sol')}
+    if not test_names:
+        return list(range(len(dataset)))
+    selected = []
+    for idx, graph_name in enumerate(dataset.graphs):
+        if graph_name in test_names or os.path.basename(graph_name) in test_names:
+            selected.append(idx)
+    return selected or list(range(len(dataset)))
+
+
+def run_inference(args):
+    from dgl.dataloading import GraphDataLoader
+
+    from sco_models.dataloader import EthIdsDataset
+    from sco_models.model_hgt import HGTVulGraphClassifier
+
+    validate_paths(args, ['compressed_graph', 'checkpoint', 'label'])
+    ethdataset = EthIdsDataset(args['label'])
+    test_ids = _graph_test_ids(ethdataset, args.get('testset'))
+    test_subsampler = torch.utils.data.SubsetRandomSampler(test_ids)
+    test_dataloader = GraphDataLoader(
+        ethdataset,
+        batch_size=args['batch_size'],
+        drop_last=False,
+        sampler=test_subsampler,
+    )
+    model = HGTVulGraphClassifier(
+        args['compressed_graph'],
+        feature_extractor=args['feature_extractor'],
+        node_feature=args['node_feature'],
+        device=args['device'],
+    )
+    model.load_state_dict(torch.load(args['checkpoint'], map_location=args['device']))
+    model.to(args['device'])
+    model.eval()
+    test_micro_f1, test_macro_f1, test_acc, report, confusion = test(args, model, test_dataloader)
+    print(f'Testing on {len(test_ids)} smart contracts')
+    print('Test Micro f1:   {:.4f} | Test Macro f1:   {:.4f} | Test Accuracy:   {:.4f}'.format(test_micro_f1, test_macro_f1, test_acc))
+    print('Classification report', '\n', report)
+    print('Confusion matrix', '\n', confusion)
+
+
 if __name__ == '__main__':
-    import argparse
-
-    parser = argparse.ArgumentParser('MANDO Graph Classifier')
-    parser.add_argument('-s', '--seed', type=int, default=1,
-                        help='Random seed')
-    archive_params = parser.add_argument_group(title='Storage', description='Directories for util results')
-    archive_params.add_argument('-ld', '--log_dir', type=str, default='./logs/graph_classification', help='Directory for saving training logs and visualization')
-    archive_params.add_argument('--output_models', type=str, default='./models/call_graph', help='Where you want to save your models')
-    dataset_params = parser.add_argument_group(title='Dataset', description='Dataset paths')
-    dataset_params.add_argument('--compressed_graph', type=str, default='./dataset/call_graph/compressed_graph/compress_call_graphs_no_solidity_calls.gpickle', help='Compressed graphs of dataset which was extracted by graph helper tools')
-    dataset_params.add_argument('--dataset', type=str, default='./dataset/aggregate/source_code', help='Dicrectory of all souce code files which were used to extract the compressed graph')
-    dataset_params.add_argument('--testset', type=str, default='./dataset/smartbugs/source_code', help='Dicrectory of all souce code files which is a partition of the dataset for testing')
-    dataset_params.add_argument('--label', type=str, default='./dataset/aggregate/labels.json', help='Label of sources in source code storage')
-    dataset_params.add_argument('--checkpoint', type=str, default='./models/ijcai2020_smartbugs/han_fold_1.pth', help='Checkpoint of trained models')
-    node_feature_params = parser.add_argument_group(title='Node feature', description='Define the way to get node features')
-    node_feature_params.add_argument('--feature_extractor', type=str, default='./models/metapath2vec_cfg/han_fold_1.pth', help='If "node_feature" is "GAE" or "LINE" or "Node2vec", we need a extracted features from those models')
-    node_feature_params.add_argument('--node_feature', type=str, default='metapath2vec', help='Kind of node features we want to use, here is one of "nodetype", "metapath2vec", "han", "gae", "line", "node2vec"')
-    train_option_params = parser.add_argument_group(title='Optional configures', description='Advanced options')
-    train_option_params.add_argument('--num_epochs', type=int, default=100, help='Config number of epochs')
-    train_option_params.add_argument('--k_folds', type=int, default=5, help='Config for cross validate strategy')
-    train_option_params.add_argument('--test', action='store_true', help='Set true if you only want to run test phase')
-    train_option_params.add_argument('--non_visualize', action='store_true', help='Wheather you want to visualize the metrics')
-    args = parser.parse_args().__dict__
-
-    default_configure = {
-    'lr': 0.0005,             # Learning rate
-    'num_heads': 8,        # Number of attention heads for node-level attention
-    'hidden_units': 8,
-    'dropout': 0.6,
-    'weight_decay': 0.001,
-    # 'num_epochs': 20,
-    'batch_size': 256,
-    'patience': 10,
-    'device': 'cuda:0' if torch.cuda.is_available() else 'cpu'
-    }
-    args.update(default_configure)
+    parser = build_graph_parser()
+    args = finalize_graph_args(parser.parse_args())
     torch.manual_seed(args['seed'])
-
-    os.makedirs(os.path.split(args['output_models'])[0], exist_ok=True)
-    # if not os.path.exists(args['output_models']):
-    #     os.makedirs(args['output_models'])
+    ensure_output_parent(args['output_models'])
 
     # Training
     if not args['test']:
         print('Training phase')
+        validate_paths(args, ['compressed_graph', 'label'])
         train_results, val_results = main(args)
         if not args['non_visualize']:
             print('Visualizing')
@@ -315,13 +332,4 @@ if __name__ == '__main__':
     # Testing
     else:
         print('Testing phase')
-        # ethdataset = EthIdsDataset(args['dataset'], args['label'])
-        # smartbugs_ids = [ethdataset.filename_mapping[sc] for sc in os.listdir(args['testset'])]
-        # test_dataloader = GraphDataLoader(ethdataset, batch_size=256, drop_last=False, sampler=smartbugs_ids)
-        for i in range(args['k_folds']):
-            model = HGTVulGraphClassifier('/Users/minh/Documents/2022/smart_contract/mando/ge-sc-machine/sco/graphs/graph_detection/reentrancy_cfg_cg_compressed_graphs.gpickle', feature_extractor=args['feature_extractor'], node_feature=args['node_feature'], device=args['device'])
-            model.load_state_dict(torch.load('/Users/minh/Documents/2022/smart_contract/mando/ge-sc-machine/sco/models/graph_detection/nodetype/reentrancy_hgt.pth'))
-            model.to(args['device'])
-            model.eval()
-            # test_micro_f1, test_macro_f1, test_acc = test(args, model, test_dataloader)
-            # print('Test Micro f1:   {:.4f} | Test Macro f1:   {:.4f} | Test Accuracy:   {:.4f}'.format(test_micro_f1, test_macro_f1, test_acc))
+        run_inference(args)
