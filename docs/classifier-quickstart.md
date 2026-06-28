@@ -124,6 +124,7 @@ The expected output is the predicted labels of the test set in JSON format.
   },
   ...
 }
+```
 
 and a summary of the test metrics included:
 
