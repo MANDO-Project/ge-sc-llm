@@ -107,8 +107,14 @@ class HGTLayer(nn.Module):
 
                 sub_graph.edata['t'] = attn_score.unsqueeze(-1)
 
-            G.multi_update_all({etype : (fn.u_mul_e('v_%d' % e_id, 't', 'm'), fn.sum('m', 't')) \
-                                for etype, e_id in edge_dict.items()}, cross_reducer = 'mean')
+            active_edge_dict = {
+                etype: edge_dict[etype]
+                for etype in G.canonical_etypes
+                if etype in edge_dict
+            }
+            if active_edge_dict:
+                G.multi_update_all({etype : (fn.u_mul_e('v_%d' % e_id, 't', 'm'), fn.sum('m', 't')) \
+                                    for etype, e_id in active_edge_dict.items()}, cross_reducer = 'mean')
 
             new_h = {}
             for ntype in G.ntypes:
@@ -118,7 +124,15 @@ class HGTLayer(nn.Module):
                 '''
                 n_id = node_dict[ntype]
                 alpha = torch.sigmoid(self.skip[n_id])
-                t = G.nodes[ntype].data['t'].view(-1, self.out_dim)
+                if 't' in G.nodes[ntype].data:
+                    t = G.nodes[ntype].data['t'].view(-1, self.out_dim)
+                else:
+                    t = torch.zeros(
+                        G.num_nodes(ntype),
+                        self.out_dim,
+                        device=h[ntype].device,
+                        dtype=h[ntype].dtype,
+                    )
                 trans_out = self.drop(self.a_linears[n_id](t))
                 trans_out = trans_out * alpha + h[ntype] * (1-alpha)
                 if self.use_norm:
@@ -327,27 +341,48 @@ class HGTVulNodeClassifier(nn.Module):
         self.classify = nn.Linear(self.hidden_size, self.out_size)
 
     def extend_forward(self, new_graph):
-        nx_graph = new_graph
+        nx_graph = new_graph.copy()
+        for _, node_data in nx_graph.nodes(data=True):
+            node_data.setdefault('node_info_vulnerabilities', None)
         nx_graph = nx.convert_node_labels_to_integers(nx_graph)
         nx_graph = add_hetero_ids(nx_graph)
+        unsupported_node_types = sorted(
+            {
+                node_data['node_type']
+                for _, node_data in nx_graph.nodes(data=True)
+                if node_data['node_type'] not in self.ntypes_dict
+            }
+        )
+        if unsupported_node_types:
+            raise ValueError(
+                'new graph contains node types not present in the checkpoint graph: '
+                + ', '.join(unsupported_node_types)
+            )
         nx_g_data = generate_hetero_graph_data(nx_graph)
 
         # Get Node Labels
         node_labels, labeled_node_ids, label_ids = get_node_label(nx_graph)
-        print('Bug dict: ', label_ids)
         node_ids_dict = get_node_ids_dict(nx_graph)
 
         # Reflect graph data
         symmetrical_global_graph_data = reflect_graph(nx_g_data)
+        unsupported_edge_types = sorted(
+            str(etype) for etype in symmetrical_global_graph_data if etype not in self.etypes_dict
+        )
+        if unsupported_edge_types:
+            raise ValueError(
+                'new graph contains edge types not present in the checkpoint graph: '
+                + ', '.join(unsupported_edge_types)
+            )
         number_of_nodes = get_number_of_nodes(nx_graph)
         symmetrical_global_graph = dgl.heterograph(symmetrical_global_graph_data, num_nodes_dict=number_of_nodes, device=self.device)
         # Create input node features
         features = {}
         if self.node_feature == 'nodetype':
-            for ntype in self.symmetrical_global_graph.ntypes:
+            for ntype in symmetrical_global_graph.ntypes:
                 features[ntype] = self._nodetype2onehot(ntype).repeat(symmetrical_global_graph.num_nodes(ntype), 1).to(self.device)
             self.in_size = len(self.node_types)
-        for ntype in self.symmetrical_global_graph.ntypes:
+        for ntype in symmetrical_global_graph.ntypes:
             emb = nn.Parameter(features[ntype], requires_grad = False)
             symmetrical_global_graph.nodes[ntype].data['inp'] = emb.to(self.device)
 

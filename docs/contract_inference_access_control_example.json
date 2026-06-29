@@ -1,0 +1,241 @@
+{
+  "source_file": "experiments/ge-sc-data/source_code/access_control/cleaned_buggy_curated/arbitrary_location_write_simple.sol",
+  "bug_type": "access_control",
+  "compressed_graph": "mando-assets/graphs/node_detection/access_control_tree_sitter_cfg_compressed_graphs.gpickle",
+  "checkpoint": "mando-assets/checkpoints/node_detection/nodetype/access_control_tree_sitter_cfg_cg_hgt.pth",
+  "contract_prediction": "vulnerable",
+  "max_vulnerability_probability": 0.7092918157577515,
+  "node_count": 16,
+  "edge_count": 9,
+  "vulnerable_node_count": 1,
+  "schema_report": {
+    "removed_nodes": 2,
+    "removed_node_types": {
+      "contract_declaration": 1,
+      "constructor_definition": 1
+    },
+    "removed_edges": 0,
+    "removed_edge_types": {}
+  },
+  "nodes": [
+    {
+      "node_id": 5,
+      "original_node_id": 54,
+      "node_type": "expression_statement",
+      "method": "PushBonusCode(uint c)",
+      "source_lines": [
+        12
+      ],
+      "code": "bonusCodes.push(c);",
+      "prediction": "vulnerable",
+      "valid_probability": 0.29070818424224854,
+      "vulnerability_probability": 0.7092918157577515
+    },
+    {
+      "node_id": 7,
+      "original_node_id": 65,
+      "node_type": "expression_statement",
+      "method": "PopBonusCode()",
+      "source_lines": [
+        15
+      ],
+      "code": "require(0 <= bonusCodes.length);",
+      "prediction": "valid",
+      "valid_probability": 0.5013601183891296,
+      "vulnerability_probability": 0.49863991141319275
+    },
+    {
+      "node_id": 11,
+      "original_node_id": 91,
+      "node_type": "expression_statement",
+      "method": "UpdateBonusCodeAt(uint idx,uint c)",
+      "source_lines": [
+        19
+      ],
+      "code": "require(idx < bonusCodes.length);",
+      "prediction": "valid",
+      "valid_probability": 0.5013601183891296,
+      "vulnerability_probability": 0.49863991141319275
+    },
+    {
+      "node_id": 14,
+      "original_node_id": 110,
+      "node_type": "expression_statement",
+      "method": "Destroy()",
+      "source_lines": [
+        23
+      ],
+      "code": "require(msg.sender == owner);",
+      "prediction": "valid",
+      "valid_probability": 0.5013601183891296,
+      "vulnerability_probability": 0.49863991141319275
+    },
+    {
+      "node_id": 9,
+      "original_node_id": 75,
+      "node_type": "expression_statement",
+      "method": "PopBonusCode()",
+      "source_lines": [
+        16
+      ],
+      "code": "bonusCodes.length--",
+      "prediction": "valid",
+      "valid_probability": 0.906738817691803,
+      "vulnerability_probability": 0.09326119720935822
+    },
+    {
+      "node_id": 2,
+      "original_node_id": 26,
+      "node_type": "expression_statement",
+      "method": "",
+      "source_lines": [
+        6
+      ],
+      "code": "bonusCodes = new uint[](0);",
+      "prediction": "valid",
+      "valid_probability": 0.9462206959724426,
+      "vulnerability_probability": 0.05377930402755737
+    },
+    {
+      "node_id": 3,
+      "original_node_id": 36,
+      "node_type": "expression_statement",
+      "method": "",
+      "source_lines": [
+        7
+      ],
+      "code": "owner = msg.sender;",
+      "prediction": "valid",
+      "valid_probability": 0.9462206959724426,
+      "vulnerability_probability": 0.05377930402755737
+    },
+    {
+      "node_id": 8,
+      "original_node_id": 74,
+      "node_type": "expression_statement",
+      "method": "PopBonusCode()",
+      "source_lines": [
+        16
+      ],
+      "code": "bonusCodes.length--;",
+      "prediction": "valid",
+      "valid_probability": 0.9479748010635376,
+      "vulnerability_probability": 0.05202518403530121
+    },
+    {
+      "node_id": 12,
+      "original_node_id": 100,
+      "node_type": "expression_statement",
+      "method": "UpdateBonusCodeAt(uint idx,uint c)",
+      "source_lines": [
+        20
+      ],
+      "code": "bonusCodes[idx] = c;",
+      "prediction": "valid",
+      "valid_probability": 0.9479748010635376,
+      "vulnerability_probability": 0.05202518403530121
+    },
+    {
+      "node_id": 15,
+      "original_node_id": 119,
+      "node_type": "expression_statement",
+      "method": "Destroy()",
+      "source_lines": [
+        24
+      ],
+      "code": "selfdestruct(msg.sender);",
+      "prediction": "valid",
+      "valid_probability": 0.9479748010635376,
+      "vulnerability_probability": 0.05202518403530121
+    },
+    {
+      "node_id": 0,
+      "original_node_id": 13,
+      "node_type": "new_variable",
+      "method": "Wallet()",
+      "source_lines": [
+        3
+      ],
+      "code": "uint[] private bonusCodes;",
+      "prediction": "valid",
+      "valid_probability": 0.9945358037948608,
+      "vulnerability_probability": 0.005464203655719757
+    },
+    {
+      "node_id": 1,
+      "original_node_id": 19,
+      "node_type": "new_variable",
+      "method": "Wallet()",
+      "source_lines": [
+        4
+      ],
+      "code": "address private owner;",
+      "prediction": "valid",
+      "valid_probability": 0.9945358037948608,
+      "vulnerability_probability": 0.005464203655719757
+    },
+    {
+      "node_id": 4,
+      "original_node_id": 46,
+      "node_type": "function_definition",
+      "method": "PushBonusCode(uint c)",
+      "source_lines": [
+        11,
+        12,
+        13
+      ],
+      "code": "function PushBonusCode(uint c) public {\n         bonusCodes.push(c);\n     }",
+      "prediction": "valid",
+      "valid_probability": 0.9973485469818115,
+      "vulnerability_probability": 0.0026514423079788685
+    },
+    {
+      "node_id": 6,
+      "original_node_id": 61,
+      "node_type": "function_definition",
+      "method": "PopBonusCode()",
+      "source_lines": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "code": "function PopBonusCode() public {\n         require(0 <= bonusCodes.length);  \n         bonusCodes.length--;  \n     }",
+      "prediction": "valid",
+      "valid_probability": 0.9974410533905029,
+      "vulnerability_probability": 0.0025589424185454845
+    },
+    {
+      "node_id": 10,
+      "original_node_id": 79,
+      "node_type": "function_definition",
+      "method": "UpdateBonusCodeAt(uint idx,uint c)",
+      "source_lines": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "code": "function UpdateBonusCodeAt(uint idx, uint c) public {\n         require(idx < bonusCodes.length);\n         bonusCodes[idx] = c;  \n     }",
+      "prediction": "valid",
+      "valid_probability": 0.9974410533905029,
+      "vulnerability_probability": 0.0025589424185454845
+    },
+    {
+      "node_id": 13,
+      "original_node_id": 106,
+      "node_type": "function_definition",
+      "method": "Destroy()",
+      "source_lines": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "code": "function Destroy() public {\n         require(msg.sender == owner);\n         selfdestruct(msg.sender);\n     }",
+      "prediction": "valid",
+      "valid_probability": 0.9974410533905029,
+      "vulnerability_probability": 0.0025589424185454845
+    }
+  ]
+}

@@ -54,7 +54,7 @@ unchecked_low_level_calls
 
 ## 3. Run Graph Classification Inference
 
-### Run inference
+### Batch inference
 Choose a vulnerability type and set the matching paths. This example uses `reentrancy`.
 
 ```bash
@@ -94,7 +94,7 @@ Where `0` indicates no vulnerability and `1` indicates a vulnerability.
 
 ## 4. Run Node Classification Inference
 
-### Run inference
+### Batch inference
 For node detection, use the matching node graph and node checkpoint. This example again uses `reentrancy`.
 
 ```bash
@@ -150,7 +150,33 @@ Confusion matrix
 Where `0` indicates no vulnerability and `1` indicates a vulnerability.
 
 
-## 5. Run Direct Training
+## 5. Single file inference
+
+Use `infer_smart_contract.py` when you want to analyze one Solidity source file instead of an existing test split. This mode generates a tree-sitter CFG for the file, loads the tree-sitter node-detection checkpoint for the selected vulnerability type, and runs `HGTVulNodeClassifier.extend_forward` on the generated graph.
+
+```bash
+BUG=access_control
+SOURCE=experiments/ge-sc-data/source_code/access_control/cleaned_buggy_curated/arbitrary_location_write_simple.sol
+
+python infer_smart_contract.py "$SOURCE" \
+  --bug_type "$BUG" \
+  --top_k 10 \
+  --output_json docs/contract_inference_access_control_example.json
+```
+
+By default, the script resolves assets from:
+
+```text
+mando-assets/graphs/node_detection/${BUG}_tree_sitter_cfg_compressed_graphs.gpickle
+mando-assets/checkpoints/node_detection/nodetype/${BUG}_tree_sitter_cfg_cg_hgt.pth
+```
+
+Override those paths with `--compressed_graph` and `--checkpoint` if you are testing a custom model. The output is node-level: `contract_prediction` is an aggregate that becomes `vulnerable` when at least one generated node is predicted vulnerable. Inspect the ranked `nodes` list for line numbers, node type, source snippet, and vulnerability probability.
+
+Example output is attached at [`docs/contract_inference_access_control_example.json`](contract_inference_access_control_example.json).
+
+
+## 6. Run Direct Training
 
 Training uses the same direct scripts, but omit `--test` and set `--output_models`.
 
@@ -179,6 +205,6 @@ python node_classifier.py \
   --seed 1
 ```
 
-## 6. Common Checks
+## 7. Common Checks
 
 - Use `--node_feature nodetype` with `mando-assets` defaults.
